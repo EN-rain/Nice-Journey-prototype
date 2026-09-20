@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="UiIconCatalog" load_steps=30 format=3]
+
+[ext_resource type="Script" path="res://src/ui/presentation/ui_icon_catalog.gd" id="1_catalog"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/class_melee.tres" id="2_class_melee"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/class_ranged.tres" id="3_class_ranged"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/class_mage.tres" id="4_class_mage"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/quest_family_escort.tres" id="5_quest_family_escort"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/quest_family_tower_defense.tres" id="6_quest_family_tower_defense"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/quest_family_annihilation.tres" id="7_quest_family_annihilation"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/status_burn.tres" id="8_status_burn"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/status_slow.tres" id="9_status_slow"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/tower_sigil.tres" id="10_tower_sigil"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/map_marker_sheet.tres" id="11_map_marker_sheet"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_aegis_ward.tres" id="12_skill_aegis_ward"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_arcane_lance.tres" id="13_skill_arcane_lance"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_arc_cleave.tres" id="14_skill_arc_cleave"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_backstep_shot.tres" id="15_skill_backstep_shot"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_breaker.tres" id="16_skill_breaker"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_delayed_pulse.tres" id="17_skill_delayed_pulse"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_driving_thrust.tres" id="18_skill_driving_thrust"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_efficient_footwork.tres" id="19_skill_efficient_footwork"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_expose.tres" id="20_skill_expose"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_fan_shot.tres" id="21_skill_fan_shot"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_fleet_recovery.tres" id="22_skill_fleet_recovery"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_flow_recovery.tres" id="23_skill_flow_recovery"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_longshot.tres" id="24_skill_longshot"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_mana_weave.tres" id="25_skill_mana_weave"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_parry_recovery.tres" id="26_skill_parry_recovery"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_piercing_shot.tres" id="27_skill_piercing_shot"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_riposte.tres" id="28_skill_riposte"]
+[ext_resource type="Resource" path="res://src/ui/presentation/profiles/skill_stable_casting.tres" id="29_skill_stable_casting"]
+
+[resource]
+script = ExtResource("1_catalog")
+profiles = Array[Resource]([
+ExtResource("2_class_melee"),
+ExtResource("3_class_ranged"),
+ExtResource("4_class_mage"),
+ExtResource("5_quest_family_escort"),
+ExtResource("6_quest_family_tower_defense"),
+ExtResource("7_quest_family_annihilation"),
+ExtResource("8_status_burn"),
+ExtResource("9_status_slow"),
+ExtResource("10_tower_sigil"),
+ExtResource("11_map_marker_sheet"),
+ExtResource("12_skill_aegis_ward"),
+ExtResource("13_skill_arcane_lance"),
+ExtResource("14_skill_arc_cleave"),
+ExtResource("15_skill_backstep_shot"),
+ExtResource("16_skill_breaker"),
+ExtResource("17_skill_delayed_pulse"),
+ExtResource("18_skill_driving_thrust"),
+ExtResource("19_skill_efficient_footwork"),
+ExtResource("20_skill_expose"),
+ExtResource("21_skill_fan_shot"),
+ExtResource("22_skill_fleet_recovery"),
+ExtResource("23_skill_flow_recovery"),
+ExtResource("24_skill_longshot"),
+ExtResource("25_skill_mana_weave"),
+ExtResource("26_skill_parry_recovery"),
+ExtResource("27_skill_piercing_shot"),
+ExtResource("28_skill_riposte"),
+ExtResource("29_skill_stable_casting")
+])

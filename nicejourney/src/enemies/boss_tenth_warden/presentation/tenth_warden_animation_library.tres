@@ -1,0 +1,159 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://bm0e2dqvydg4n"]
+
+[ext_resource type="Texture2D" uid="uid://clydxcyls12xc" path="res://assets/art/enemies/boss_tenth_warden/tenth_warden_idle_v01.png" id="1_idle"]
+[ext_resource type="Texture2D" uid="uid://dt4wxw0p64wdq" path="res://assets/art/enemies/boss_tenth_warden/tenth_warden_phase_two_v01.png" id="2_phase_two"]
+[ext_resource type="Texture2D" uid="uid://dtelvms4kxp01" path="res://assets/art/enemies/boss_tenth_warden/tenth_warden_twin_cut_v01.png" id="3_twin_cut"]
+[ext_resource type="Texture2D" uid="uid://csajuvwxtxdej" path="res://assets/art/enemies/boss_tenth_warden/tenth_warden_warden_lunge_v01.png" id="4_warden_lunge"]
+[ext_resource type="Texture2D" uid="uid://bhgmbtn306027" path="res://assets/art/enemies/boss_tenth_warden/tenth_warden_arc_volley_v01.png" id="5_arc_volley"]
+[ext_resource type="Texture2D" uid="uid://cic724bb8lfs8" path="res://assets/art/enemies/boss_tenth_warden/tenth_warden_crescent_sweep_v01.png" id="6_crescent_sweep"]
+[ext_resource type="Texture2D" uid="uid://c4ngt5jpvs0r2" path="res://assets/art/enemies/boss_tenth_warden/tenth_warden_punishing_step_v01.png" id="7_punishing_step"]
+[ext_resource type="Texture2D" uid="uid://c6gaxvaybjvtq" path="res://assets/art/enemies/boss_tenth_warden/tenth_warden_hit_v01.png" id="8_hit"]
+[ext_resource type="Texture2D" uid="uid://djgae4sdejs0b" path="res://assets/art/enemies/boss_tenth_warden/tenth_warden_death_v01.png" id="9_death"]
+
+[sub_resource type="Animation" id="Animation_arc_volley"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_arc_volley")]
+}
+
+[sub_resource type="Animation" id="Animation_crescent_sweep"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_crescent_sweep")]
+}
+
+[sub_resource type="Animation" id="Animation_death"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_death")]
+}
+
+[sub_resource type="Animation" id="Animation_hit"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_hit")]
+}
+
+[sub_resource type="Animation" id="Animation_idle"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_idle")]
+}
+
+[sub_resource type="Animation" id="Animation_phase_two"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_phase_two")]
+}
+
+[sub_resource type="Animation" id="Animation_punishing_step"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_punishing_step")]
+}
+
+[sub_resource type="Animation" id="Animation_twin_cut"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_twin_cut")]
+}
+
+[sub_resource type="Animation" id="Animation_warden_lunge"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_warden_lunge")]
+}
+
+[resource]
+_data = {
+&"arc_volley": SubResource("Animation_arc_volley"),
+&"crescent_sweep": SubResource("Animation_crescent_sweep"),
+&"death": SubResource("Animation_death"),
+&"hit": SubResource("Animation_hit"),
+&"idle": SubResource("Animation_idle"),
+&"phase_two": SubResource("Animation_phase_two"),
+&"punishing_step": SubResource("Animation_punishing_step"),
+&"twin_cut": SubResource("Animation_twin_cut"),
+&"warden_lunge": SubResource("Animation_warden_lunge")
+}

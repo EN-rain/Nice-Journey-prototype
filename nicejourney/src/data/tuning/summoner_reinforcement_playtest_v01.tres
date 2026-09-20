@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SummonerReinforcementPlaytestTuning" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/data/tuning/summoner_reinforcement_playtest_tuning.gd" id="1_tuning"]
+[ext_resource type="Resource" path="res://src/data/tuning/tower_prototype_enemy_runtime_default.tres" id="2_stats"]
+
+[resource]
+resource_name = "PLAYTEST Summoner finite reinforcements v01"
+script = ExtResource("1_tuning")
+calls_per_summoner = 2
+reinforcement_archetype_id = &"duelist"
+spawn_min_distance_from_player_px = 80.0
+enemy_state_tuning = ExtResource("2_stats")

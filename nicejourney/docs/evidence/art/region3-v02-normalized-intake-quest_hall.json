@@ -1,0 +1,31 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "quest_hall",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\buildings\\region3_quest_hall_source_v02.png",
+  "accepted_mechanically": true,
+  "errors": [],
+  "warnings": [],
+  "sha256": "8c3c22286ac929253412e6d0fad0a0c11737bd203c1bf08781735b2e3de071bc",
+  "source_mode": "RGBA",
+  "width": 1318,
+  "height": 1318,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.5673083786764791,
+    "partial_fraction": 0.4322800214607593,
+    "opaque_fraction": 0.0004115998627616681
+  },
+  "opaque_bbox": [
+    32,
+    53,
+    1272,
+    1252
+  ],
+  "touches_source_edge": {
+    "left": false,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 32
+}

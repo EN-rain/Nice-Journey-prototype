@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="TowerRoomVisualCatalog" load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://src/world/tower/presentation/tower_room_visual_catalog.gd" id="1_catalog"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/combat_visual_profile.tres" id="2_combat"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/safe_visual_profile.tres" id="3_safe"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/reward_visual_profile.tres" id="4_reward"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/vendor_visual_profile.tres" id="5_vendor"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/secret_visual_profile.tres" id="6_secret"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/elite_visual_profile.tres" id="7_elite"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/objective_visual_profile.tres" id="8_objective"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/boss_visual_profile.tres" id="9_boss"]
+
+[resource]
+script = ExtResource("1_catalog")
+profiles = [
+ExtResource("2_combat"),
+ExtResource("3_safe"),
+ExtResource("4_reward"),
+ExtResource("5_vendor"),
+ExtResource("6_secret"),
+ExtResource("7_elite"),
+ExtResource("8_objective"),
+ExtResource("9_boss")
+]

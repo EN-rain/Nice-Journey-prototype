@@ -1,0 +1,108 @@
+[gd_resource type="Resource" script_class="EnemyArchetypePlaytestStatsCatalog" load_steps=15 format=3]
+
+[ext_resource type="Script" path="res://src/data/tuning/enemy_archetype_playtest_stats.gd" id="1_stats"]
+[ext_resource type="Script" path="res://src/data/tuning/enemy_archetype_playtest_stats_catalog.gd" id="2_catalog"]
+
+[sub_resource type="Resource" id="Stats_duelist"]
+script = ExtResource("1_stats")
+archetype_id = &"duelist"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[sub_resource type="Resource" id="Stats_bruiser"]
+script = ExtResource("1_stats")
+archetype_id = &"bruiser"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[sub_resource type="Resource" id="Stats_defender"]
+script = ExtResource("1_stats")
+archetype_id = &"defender"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[sub_resource type="Resource" id="Stats_skirmisher"]
+script = ExtResource("1_stats")
+archetype_id = &"skirmisher"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[sub_resource type="Resource" id="Stats_assassin"]
+script = ExtResource("1_stats")
+archetype_id = &"assassin"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[sub_resource type="Resource" id="Stats_marksman"]
+script = ExtResource("1_stats")
+archetype_id = &"marksman"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[sub_resource type="Resource" id="Stats_mobile_ranged"]
+script = ExtResource("1_stats")
+archetype_id = &"mobile_ranged"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[sub_resource type="Resource" id="Stats_caster"]
+script = ExtResource("1_stats")
+archetype_id = &"caster"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[sub_resource type="Resource" id="Stats_support"]
+script = ExtResource("1_stats")
+archetype_id = &"support"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[sub_resource type="Resource" id="Stats_summoner"]
+script = ExtResource("1_stats")
+archetype_id = &"summoner"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[sub_resource type="Resource" id="Stats_flying_harrier"]
+script = ExtResource("1_stats")
+archetype_id = &"flying_harrier"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[sub_resource type="Resource" id="Stats_controller_disruptor"]
+script = ExtResource("1_stats")
+archetype_id = &"controller_disruptor"
+difficulty_rating = -1
+xp_reward = -1
+gold_reward = -1
+
+[resource]
+script = ExtResource("2_catalog")
+resource_name = "PLAYTEST twelve archetype stat identities - neutral roles; difficulty and rewards unauthored"
+playtest_placeholder = true
+stats_by_archetype = {
+"duelist": SubResource("Stats_duelist"),
+"bruiser": SubResource("Stats_bruiser"),
+"defender": SubResource("Stats_defender"),
+"skirmisher": SubResource("Stats_skirmisher"),
+"assassin": SubResource("Stats_assassin"),
+"marksman": SubResource("Stats_marksman"),
+"mobile_ranged": SubResource("Stats_mobile_ranged"),
+"caster": SubResource("Stats_caster"),
+"support": SubResource("Stats_support"),
+"summoner": SubResource("Stats_summoner"),
+"flying_harrier": SubResource("Stats_flying_harrier"),
+"controller_disruptor": SubResource("Stats_controller_disruptor")
+}
+

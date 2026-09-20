@@ -1,0 +1,315 @@
+[gd_scene load_steps=49 format=3]
+
+[ext_resource type="Script" path="res://src/app/gameplay.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://src/player/player.tscn" id="2_player"]
+[ext_resource type="Script" path="res://src/core/input/pause_coordinator.gd" id="3_pause"]
+[ext_resource type="Script" path="res://src/core/input/input_ownership.gd" id="4_input"]
+[ext_resource type="Script" path="res://src/world/presentation/foreground_occluder.gd" id="5_occluder"]
+[ext_resource type="Script" path="res://src/world/interactions/climb_link.gd" id="6_climb"]
+[ext_resource type="Script" path="res://src/ui/accessibility_settings_menu.gd" id="7_accessibility"]
+[ext_resource type="PackedScene" path="res://src/ui/accessibility_settings_panel.tscn" id="8_settings_panel"]
+[ext_resource type="Script" path="res://src/combat/actions/action_state_machine.gd" id="9_action_machine"]
+[ext_resource type="Script" path="res://src/combat/actions/action_intent_controller.gd" id="10_action_intent"]
+[ext_resource type="Script" path="res://src/combat/classes/class_combat_runtime.gd" id="11_class_combat"]
+[ext_resource type="Resource" path="res://src/data/tuning/starter_combat_default.tres" id="12_starter_combat_tuning"]
+[ext_resource type="Script" path="res://src/world/tower/tower_floor_session_host.gd" id="13_tower_host"]
+[ext_resource type="Script" path="res://src/core/guards/gameplay_operation_guard.gd" id="14_operation_guard"]
+[ext_resource type="PackedScene" path="res://src/ui/tower_access_menu.tscn" id="15_tower_menu"]
+[ext_resource type="Script" path="res://src/world/tower/encounters/tower_encounter_session_host.gd" id="16_tower_encounter_host"]
+[ext_resource type="PackedScene" path="res://src/ui/death_retry_overlay.tscn" id="17_death_retry_overlay"]
+[ext_resource type="PackedScene" path="res://src/ui/map_menu.tscn" id="18_map_menu"]
+[ext_resource type="PackedScene" path="res://src/ui/combat_hud.tscn" id="19_combat_hud"]
+[ext_resource type="PackedScene" path="res://src/ui/quest_log_menu.tscn" id="20_quest_log"]
+[ext_resource type="PackedScene" path="res://src/ui/skills_menu.tscn" id="21_skills"]
+[ext_resource type="PackedScene" path="res://src/ui/inventory_menu.tscn" id="22_inventory"]
+[ext_resource type="Script" path="res://src/world/region3/region3_town_session_host.gd" id="23_region3_host"]
+[ext_resource type="PackedScene" path="res://src/ui/storage_house_menu.tscn" id="24_storage_house"]
+[ext_resource type="PackedScene" path="res://src/ui/merchant_menu.tscn" id="25_merchant"]
+[ext_resource type="PackedScene" path="res://src/ui/blacksmith_menu.tscn" id="26_blacksmith"]
+[ext_resource type="Resource" path="res://src/data/tuning/tower_escort_runtime_production_v01.tres" id="27_escort_tuning"]
+[ext_resource type="Resource" path="res://src/enemies/boss_tenth_warden/runtime/tenth_warden_playtest_v01.tres" id="28_warden_playtest"]
+[ext_resource type="Resource" path="res://src/data/tuning/player_defender_facts_playtest_v01.tres" id="29_defender_playtest"]
+[ext_resource type="Resource" path="res://src/data/tuning/region3_services_playtest_v01.tres" id="30_services_playtest"]
+[ext_resource type="Resource" path="res://src/data/tuning/progression_playtest_v01.tres" id="31_progression_playtest"]
+[ext_resource type="Resource" path="res://src/data/tuning/enemy_attacks_playtest_v01.tres" id="32_enemy_attacks_playtest"]
+[ext_resource type="Resource" path="res://src/data/tuning/status_effects_playtest_v01.tres" id="33_status_playtest"]
+[ext_resource type="Resource" path="res://src/data/tuning/region3_side_quests_playtest_v01.tres" id="34_side_quests_playtest"]
+[ext_resource type="Resource" path="res://src/data/tuning/active_skills_playtest_v01.tres" id="35_active_skills_playtest"]
+[ext_resource type="Script" path="res://src/combat/skills/player_playtest_attack_delivery.gd" id="36_player_delivery"]
+[ext_resource type="Resource" path="res://src/data/tuning/player_attacks_playtest_v01.tres" id="37_player_attacks_playtest"]
+[ext_resource type="Script" path="res://src/enemies/runtime/enemy_playtest_live_delivery.gd" id="38_enemy_live_delivery"]
+[ext_resource type="PackedScene" path="res://src/combat/skills/player_projectile_placeholder.tscn" id="39_enemy_marker"]
+[ext_resource type="Script" path="res://src/enemies/runtime/enemy_non_damage_playtest_delivery.gd" id="40_non_damage_delivery"]
+[ext_resource type="Resource" path="res://src/data/tuning/enemy_non_damage_playtest_v01.tres" id="41_non_damage_tuning"]
+[ext_resource type="Resource" path="res://src/data/tuning/player_equipment_playtest_v01.tres" id="42_equipment_playtest"]
+[ext_resource type="Resource" path="res://src/data/tuning/consumables_playtest_v01.tres" id="43_consumable_playtest"]
+[ext_resource type="Resource" path="res://src/combat/skills/passive_skills_playtest_v01.tres" id="44_passives_playtest"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h"]
+size = Vector2(640, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v"]
+size = Vector2(16, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_block"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_climb"]
+size = Vector2(32, 24)
+
+[node name="Gameplay" type="Node2D"]
+texture_filter = 1
+y_sort_enabled = true
+script = ExtResource("1_main")
+tenth_warden_production_authoring = ExtResource("28_warden_playtest")
+player_defender_facts_tuning = ExtResource("29_defender_playtest")
+region3_playtest_content = ExtResource("30_services_playtest")
+progression_playtest_content = ExtResource("31_progression_playtest")
+enemy_playtest_attacks = ExtResource("32_enemy_attacks_playtest")
+status_playtest_tuning = ExtResource("33_status_playtest")
+side_quests_playtest = ExtResource("34_side_quests_playtest")
+active_skills_playtest = ExtResource("35_active_skills_playtest")
+passive_skills_playtest = ExtResource("44_passives_playtest")
+consumable_playtest_tuning = ExtResource("43_consumable_playtest")
+
+[node name="TopWall" type="StaticBody2D" parent="."]
+position = Vector2(320, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall"]
+shape = SubResource("RectangleShape2D_h")
+
+[node name="BottomWall" type="StaticBody2D" parent="."]
+position = Vector2(320, 352)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWall"]
+shape = SubResource("RectangleShape2D_h")
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(8, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+shape = SubResource("RectangleShape2D_v")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(632, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+shape = SubResource("RectangleShape2D_v")
+
+[node name="CenterBlock" type="StaticBody2D" parent="."]
+position = Vector2(384, 240)
+
+[node name="Visual" type="Polygon2D" parent="CenterBlock"]
+position = Vector2(0, -32)
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+color = Color(0.22, 0.24, 0.3, 1)
+
+[node name="OccluderVisual" type="Polygon2D" parent="CenterBlock"]
+position = Vector2(0, -64)
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 0, -32, 0)
+color = Color(0.3, 0.32, 0.4, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CenterBlock"]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_block")
+
+[node name="Occluder" type="Node2D" parent="CenterBlock"]
+script = ExtResource("5_occluder")
+target_path = NodePath("../../Player")
+visual_path = NodePath("../OccluderVisual")
+local_occlusion_rect = Rect2(-40, -96, 80, 64)
+occluded_alpha = 0.35
+
+[node name="ClimbLink" type="Area2D" parent="."]
+position = Vector2(120, 120)
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("6_climb")
+
+[node name="Trigger" type="CollisionShape2D" parent="ClimbLink"]
+shape = SubResource("RectangleShape2D_climb")
+
+[node name="LinkVisual" type="Polygon2D" parent="ClimbLink"]
+polygon = PackedVector2Array(-10, -12, 10, -12, 10, 12, -10, 12)
+color = Color(0.32, 0.52, 0.72, 0.45)
+
+[node name="Landing" type="Marker2D" parent="ClimbLink"]
+position = Vector2(0, 64)
+
+[node name="Region3TownSessionHost" type="Node2D" parent="."]
+script = ExtResource("23_region3_host")
+
+[node name="TowerFloorSessionHost" type="Node2D" parent="."]
+script = ExtResource("13_tower_host")
+escort_tuning = ExtResource("27_escort_tuning")
+
+[node name="TowerEncounterSessionHost" type="Node2D" parent="."]
+script = ExtResource("16_tower_encounter_host")
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(160, 180)
+
+[node name="InputOwnership" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("4_input")
+
+[node name="GameplayOperationGuard" type="Node" parent="."]
+script = ExtResource("14_operation_guard")
+
+[node name="TowerAccessMenu" parent="." instance=ExtResource("15_tower_menu")]
+
+[node name="MapMenu" parent="." instance=ExtResource("18_map_menu")]
+
+[node name="QuestLogMenu" parent="." instance=ExtResource("20_quest_log")]
+
+[node name="SkillsMenu" parent="." instance=ExtResource("21_skills")]
+
+[node name="InventoryMenu" parent="." instance=ExtResource("22_inventory")]
+
+[node name="StorageHouseMenu" parent="." instance=ExtResource("24_storage_house")]
+
+[node name="MerchantMenu" parent="." instance=ExtResource("25_merchant")]
+
+[node name="BlacksmithMenu" parent="." instance=ExtResource("26_blacksmith")]
+
+[node name="DeathRetryOverlay" parent="." instance=ExtResource("17_death_retry_overlay")]
+
+[node name="ActionStateMachine" type="Node" parent="."]
+script = ExtResource("9_action_machine")
+
+[node name="ActionIntentController" type="Node" parent="."]
+script = ExtResource("10_action_intent")
+input_ownership_path = NodePath("../InputOwnership")
+action_state_machine_path = NodePath("../ActionStateMachine")
+
+[node name="EnemyPlaytestLiveDelivery" type="Node2D" parent="."]
+script = ExtResource("38_enemy_live_delivery")
+projectile_placeholder_scene = ExtResource("39_enemy_marker")
+
+[node name="EnemyNonDamagePlaytestDelivery" type="Node2D" parent="."]
+script = ExtResource("40_non_damage_delivery")
+content = ExtResource("41_non_damage_tuning")
+status_tuning = ExtResource("33_status_playtest")
+
+[node name="PlayerPlaytestAttackDelivery" type="Node2D" parent="."]
+script = ExtResource("36_player_delivery")
+content = ExtResource("37_player_attacks_playtest")
+
+[node name="ClassCombatRuntime" type="Node" parent="."]
+script = ExtResource("11_class_combat")
+action_state_machine_path = NodePath("../ActionStateMachine")
+action_intent_controller_path = NodePath("../ActionIntentController")
+tuning = ExtResource("12_starter_combat_tuning")
+equipment_playtest_tuning = ExtResource("42_equipment_playtest")
+
+[node name="CombatHUD" parent="." instance=ExtResource("19_combat_hud")]
+
+[node name="PauseLayer" type="CanvasLayer" parent="."]
+layer = 100
+process_mode = 3
+
+[node name="PausePanel" type="Control" parent="PauseLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+process_mode = 3
+
+[node name="Dim" type="ColorRect" parent="PauseLayer/PausePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.02, 0.03, 0.78)
+
+[node name="Menu" type="PanelContainer" parent="PauseLayer/PausePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -112.0
+offset_right = 120.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="PauseLayer/PausePanel/Menu"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="PauseLayer/PausePanel/Menu/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="PauseLayer/PausePanel/Menu/Layout"]
+layout_mode = 2
+text = "Resume"
+process_mode = 3
+
+[node name="SaveButton" type="Button" parent="PauseLayer/PausePanel/Menu/Layout"]
+layout_mode = 2
+text = "Save Game"
+process_mode = 3
+
+[node name="SaveStatus" type="Label" parent="PauseLayer/PausePanel/Menu/Layout"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+text = "Save captures the current supported out-of-combat state."
+horizontal_alignment = 1
+autowrap_mode = 2
+process_mode = 3
+
+[node name="SettingsButton" type="Button" parent="PauseLayer/PausePanel/Menu/Layout"]
+layout_mode = 2
+text = "Accessibility Settings"
+process_mode = 3
+
+[node name="SettingsPanel" parent="PauseLayer/PausePanel" instance=ExtResource("8_settings_panel")]
+
+[node name="PauseCoordinator" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("3_pause")
+overlay_path = NodePath("../PauseLayer/PausePanel")
+resume_button_path = NodePath("../PauseLayer/PausePanel/Menu/Layout/ResumeButton")
+input_ownership_path = NodePath("../InputOwnership")
+
+[node name="AccessibilitySettingsMenu" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("7_accessibility")
+pause_menu_path = NodePath("../PauseLayer/PausePanel/Menu")
+settings_panel_path = NodePath("../PauseLayer/PausePanel/SettingsPanel")
+map_overlay_path = NodePath("../MapMenu/Overlay")
+tower_access_overlay_path = NodePath("../TowerAccessMenu/Overlay")
+quest_log_overlay_path = NodePath("../QuestLogMenu/Overlay")
+skills_overlay_path = NodePath("../SkillsMenu/Overlay")
+inventory_overlay_path = NodePath("../InventoryMenu/Overlay")
+merchant_overlay_path = NodePath("../MerchantMenu/Overlay")
+blacksmith_overlay_path = NodePath("../BlacksmithMenu/Overlay")
+storage_overlay_path = NodePath("../StorageHouseMenu/Overlay")
+combat_hud_root_path = NodePath("../CombatHUD/Root")
+settings_button_path = NodePath("../PauseLayer/PausePanel/Menu/Layout/SettingsButton")
+back_button_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/BackButton")
+run_mode_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/RunRow/RunMode")
+reduced_motion_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/ReducedMotion")
+shake_intensity_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/ShakeRow/ShakeIntensity")
+ui_scale_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/UIScaleRow/UIScale")
+text_scale_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/TextScaleRow/TextScale")
+control_action_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/BindingRow/ControlAction")
+current_binding_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/BindingRow/CurrentBinding")
+rebind_button_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/BindingButtons/RebindButton")
+reset_controls_button_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/BindingButtons/ResetControlsButton")
+binding_status_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/BindingStatus")
+status_path = NodePath("../PauseLayer/PausePanel/SettingsPanel/Scroller/Layout/Status")
+input_ownership_path = NodePath("../InputOwnership")
+pause_coordinator_path = NodePath("../PauseCoordinator")
+player_path = NodePath("../Player")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="StaminaTuning" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/data/tuning/stamina_tuning.gd" id="1_stamina_tuning"]
+
+[resource]
+script = ExtResource("1_stamina_tuning")
+max_stamina = 100.0
+regeneration_per_second = 24.0
+regeneration_delay = 0.45

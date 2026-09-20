@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Region3SideQuestsPlaytest" format=3]
+
+[ext_resource type="Script" path="res://src/data/tuning/region3_side_quests_playtest.gd" id="1_db6rw"]
+
+[resource]
+resource_name = "PLAYTEST Region 3 side quests A/B/C — authored actor anchors required"
+script = ExtResource("1_db6rw")
+quest_specs = Array[Dictionary]([{
+"enemy_counts_by_wave": PackedInt32Array(3),
+"leave_policy_id": &"leave:escort_playtest",
+"objective_family": &"escort",
+"retry_policy_id": &"retry:escort_playtest",
+"runtime_enabled": true,
+"slot_id": &"R3-SIDE-A",
+"staging_route_name": &"SouthApproach",
+"xp_reward": 40
+}, {
+"enemy_counts_by_wave": PackedInt32Array(5),
+"leave_policy_id": &"leave:annihilation_playtest",
+"objective_family": &"annihilation",
+"retry_policy_id": &"retry:annihilation_playtest",
+"runtime_enabled": true,
+"slot_id": &"R3-SIDE-B",
+"staging_route_name": &"WestApproach",
+"xp_reward": 60
+}, {
+"enemy_counts_by_wave": PackedInt32Array(2, 2, 2),
+"leave_policy_id": &"leave:defense_playtest",
+"objective_family": &"tower_defense",
+"retry_policy_id": &"retry:defense_playtest",
+"runtime_enabled": true,
+"slot_id": &"R3-SIDE-C",
+"staging_route_name": &"NorthApproach",
+"xp_reward": 80
+}])

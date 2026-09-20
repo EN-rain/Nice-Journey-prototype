@@ -1,0 +1,564 @@
+{
+  "schema": "region3-support-derivation/v02",
+  "source": "nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\decorative_support_v02\\region3_town_props_source_v02.png",
+  "source_sha256": "81dbc0dbc6d55550e902a1ade7eb7981de77853fbbab2e661200ef90042880e4",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "alpha_threshold": 24,
+  "kind": "support",
+  "grid": [
+    4,
+    4
+  ],
+  "output_cell_size": 64,
+  "atlas": "region3_prop_sheet_v02.png",
+  "atlas_sha256": "a5e8ddd8d5094bc7a704dd9b1ba73a49dbc1fda7c66dafcdb544c1dee7fb35e8",
+  "cells": [
+    {
+      "index": 0,
+      "row": 0,
+      "col": 0,
+      "nominal_rect": [
+        0,
+        0,
+        314,
+        314
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            60,
+            60,
+            292,
+            311
+          ],
+          "centroid": [
+            178.4648973628111,
+            193.7660063714101
+          ],
+          "pixels": 41749
+        }
+      ],
+      "bbox": [
+        60,
+        60,
+        292,
+        311
+      ],
+      "output": "region3_prop_sheet_v02_00.png",
+      "sha256": "e82b0c1b66ee4c425870d2b036f1a5ab8f982415c9274b89a136f12ec401171f"
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "col": 1,
+      "nominal_rect": [
+        314,
+        0,
+        627,
+        314
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            400,
+            79,
+            554,
+            296
+          ],
+          "centroid": [
+            476.48269270869537,
+            187.29540557447694
+          ],
+          "pixels": 28774
+        }
+      ],
+      "bbox": [
+        400,
+        79,
+        554,
+        296
+      ],
+      "output": "region3_prop_sheet_v02_01.png",
+      "sha256": "500e13d1b3c0ab7623124bd1c0454920b82d7be7cb1fd09b11a570b98f1270fe"
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "col": 2,
+      "nominal_rect": [
+        627,
+        0,
+        940,
+        314
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            651,
+            71,
+            915,
+            300
+          ],
+          "centroid": [
+            773.8044761932194,
+            191.69101592879568
+          ],
+          "pixels": 34717
+        }
+      ],
+      "bbox": [
+        651,
+        71,
+        915,
+        300
+      ],
+      "output": "region3_prop_sheet_v02_02.png",
+      "sha256": "e8ef013ee9213a3955e160270224f6adf2ffac39de1dee2549500c256ba7cdc0"
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "col": 3,
+      "nominal_rect": [
+        940,
+        0,
+        1254,
+        314
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            964,
+            93,
+            1202,
+            316
+          ],
+          "centroid": [
+            1091.543034957627,
+            200.49874205508473
+          ],
+          "pixels": 30208
+        }
+      ],
+      "bbox": [
+        964,
+        93,
+        1202,
+        316
+      ],
+      "output": "region3_prop_sheet_v02_03.png",
+      "sha256": "3b356ba5f5b197a39ba564ec068d8ac6105714c9f117181bcc2fc28d0bb128ff"
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "col": 0,
+      "nominal_rect": [
+        0,
+        314,
+        314,
+        627
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            99,
+            341,
+            279,
+            608
+          ],
+          "centroid": [
+            174.678469311817,
+            474.95648427401983
+          ],
+          "pixels": 25531
+        }
+      ],
+      "bbox": [
+        99,
+        341,
+        279,
+        608
+      ],
+      "output": "region3_prop_sheet_v02_04.png",
+      "sha256": "766ef84e08b2806b1b1c105fd0297f709a6c62ef04a076fa75751ef92b46b87a"
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "col": 1,
+      "nominal_rect": [
+        314,
+        314,
+        627,
+        627
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            375,
+            341,
+            554,
+            609
+          ],
+          "centroid": [
+            464.01588458175456,
+            473.0755246283882
+          ],
+          "pixels": 27448
+        }
+      ],
+      "bbox": [
+        375,
+        341,
+        554,
+        609
+      ],
+      "output": "region3_prop_sheet_v02_05.png",
+      "sha256": "1e92360bde4545774b47360d33356771ed13cb42c80b8e4dfa44db701bd05da4"
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "col": 2,
+      "nominal_rect": [
+        627,
+        314,
+        940,
+        627
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            676,
+            377,
+            892,
+            609
+          ],
+          "centroid": [
+            784.9138653640489,
+            499.187733040437
+          ],
+          "pixels": 34597
+        }
+      ],
+      "bbox": [
+        676,
+        377,
+        892,
+        609
+      ],
+      "output": "region3_prop_sheet_v02_06.png",
+      "sha256": "29bfc068724d333987c2a7864c9f45fb45e38dcda16fc88394b62b2aedfc0336"
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "col": 3,
+      "nominal_rect": [
+        940,
+        314,
+        1254,
+        627
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            954,
+            370,
+            1225,
+            615
+          ],
+          "centroid": [
+            1088.6300970040347,
+            501.4895985349243
+          ],
+          "pixels": 34947
+        }
+      ],
+      "bbox": [
+        954,
+        370,
+        1225,
+        615
+      ],
+      "output": "region3_prop_sheet_v02_07.png",
+      "sha256": "f74ad15e1d5f77c87b13279fc3852cd4b40c2175cd802b3ba5ed51a9bfe53eac"
+    },
+    {
+      "index": 8,
+      "row": 2,
+      "col": 0,
+      "nominal_rect": [
+        0,
+        627,
+        314,
+        940
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            78,
+            635,
+            265,
+            913
+          ],
+          "centroid": [
+            168.15251924422674,
+            763.2778166550034
+          ],
+          "pixels": 28580
+        }
+      ],
+      "bbox": [
+        78,
+        635,
+        265,
+        913
+      ],
+      "output": "region3_prop_sheet_v02_08.png",
+      "sha256": "2fee0f7af4e342f39e2ec94d286dfca99004f725553a2431a282491cc750f107"
+    },
+    {
+      "index": 9,
+      "row": 2,
+      "col": 1,
+      "nominal_rect": [
+        314,
+        627,
+        627,
+        940
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            371,
+            687,
+            564,
+            891
+          ],
+          "centroid": [
+            467.9329795112318,
+            799.7628980498642
+          ],
+          "pixels": 24306
+        }
+      ],
+      "bbox": [
+        371,
+        687,
+        564,
+        891
+      ],
+      "output": "region3_prop_sheet_v02_09.png",
+      "sha256": "0788fe2346fcc7a7896cdb263e62ff4bfdd73ff1bf4d65c535a55c728872eb31"
+    },
+    {
+      "index": 10,
+      "row": 2,
+      "col": 2,
+      "nominal_rect": [
+        627,
+        627,
+        940,
+        940
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            691,
+            643,
+            881,
+            929
+          ],
+          "centroid": [
+            782.7599792830454,
+            785.2381339943029
+          ],
+          "pixels": 27031
+        }
+      ],
+      "bbox": [
+        691,
+        643,
+        881,
+        929
+      ],
+      "output": "region3_prop_sheet_v02_10.png",
+      "sha256": "434768f30d8539fe40c7e99c724f401904e943ce2cac840cace274dffa872243"
+    },
+    {
+      "index": 11,
+      "row": 2,
+      "col": 3,
+      "nominal_rect": [
+        940,
+        627,
+        1254,
+        940
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            974,
+            678,
+            1187,
+            914
+          ],
+          "centroid": [
+            1093.4955701300196,
+            795.3046254746289
+          ],
+          "pixels": 34764
+        }
+      ],
+      "bbox": [
+        974,
+        678,
+        1187,
+        914
+      ],
+      "output": "region3_prop_sheet_v02_11.png",
+      "sha256": "28d5c51c385b9b16c1d1520bbbce3af484fb1dbf450074a06622fc6b3ee0607a"
+    },
+    {
+      "index": 12,
+      "row": 3,
+      "col": 0,
+      "nominal_rect": [
+        0,
+        940,
+        314,
+        1254
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            38,
+            935,
+            304,
+            1203
+          ],
+          "centroid": [
+            171.22829137608437,
+            1064.7907807450247
+          ],
+          "pixels": 47032
+        }
+      ],
+      "bbox": [
+        38,
+        935,
+        304,
+        1203
+      ],
+      "output": "region3_prop_sheet_v02_12.png",
+      "sha256": "3489ec227571a9e1be7927a81d6dcbf1a1f4e447e4fd7b64efa2a7b9e913ad5e"
+    },
+    {
+      "index": 13,
+      "row": 3,
+      "col": 1,
+      "nominal_rect": [
+        314,
+        940,
+        627,
+        1254
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            349,
+            911,
+            601,
+            1206
+          ],
+          "centroid": [
+            471.34913638846507,
+            1070.7012299636474
+          ],
+          "pixels": 53091
+        }
+      ],
+      "bbox": [
+        349,
+        911,
+        601,
+        1206
+      ],
+      "output": "region3_prop_sheet_v02_13.png",
+      "sha256": "5f2095b49e71c8d869896b94ec70e2a7ffc5d1b082d299ba328eb1691219b3b1"
+    },
+    {
+      "index": 14,
+      "row": 3,
+      "col": 2,
+      "nominal_rect": [
+        627,
+        940,
+        940,
+        1254
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            690,
+            958,
+            863,
+            1195
+          ],
+          "centroid": [
+            776.7279558404558,
+            1077.4635683760685
+          ],
+          "pixels": 28080
+        }
+      ],
+      "bbox": [
+        690,
+        958,
+        863,
+        1195
+      ],
+      "output": "region3_prop_sheet_v02_14.png",
+      "sha256": "04788524ad9a45d494bec016d7b9a04f80ffa43227ff7c907eabcf01cf3db795"
+    },
+    {
+      "index": 15,
+      "row": 3,
+      "col": 3,
+      "nominal_rect": [
+        940,
+        940,
+        1254,
+        1254
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            949,
+            985,
+            1219,
+            1202
+          ],
+          "centroid": [
+            1082.0558843056317,
+            1098.9863753139161
+          ],
+          "pixels": 34643
+        }
+      ],
+      "bbox": [
+        949,
+        985,
+        1219,
+        1202
+      ],
+      "output": "region3_prop_sheet_v02_15.png",
+      "sha256": "03521847babb71d461e9ffab31c9e0372c64d96c1e653ecd97e65228c3a784a7"
+    }
+  ]
+}

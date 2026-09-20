@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/ui/blacksmith_menu.gd" id="1_menu"]
+
+[node name="BlacksmithMenu" type="CanvasLayer"]
+layer = 88
+process_mode = 3
+script = ExtResource("1_menu")
+
+[node name="Overlay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+process_mode = 3
+
+[node name="Dim" type="ColorRect" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.02, 0.03, 0.84)
+mouse_filter = 1
+
+[node name="Panel" type="Panel" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -145.0
+offset_right = 260.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="Overlay/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = -10.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="Overlay/Panel/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Blacksmith Upgrades"
+horizontal_alignment = 1
+
+[node name="Summary" type="Label" parent="Overlay/Panel/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Gold / authored recipes"
+
+[node name="Options" type="ItemList" parent="Overlay/Panel/Layout"]
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 2
+size_flags_vertical = 3
+allow_reselect = true
+
+[node name="Detail" type="Label" parent="Overlay/Panel/Layout"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Select an upgrade option."
+autowrap_mode = 2
+
+[node name="Upgrade" type="Button" parent="Overlay/Panel/Layout"]
+layout_mode = 2
+disabled = true
+text = "Commit selected authored upgrade"
+
+[node name="Status" type="Label" parent="Overlay/Panel/Layout"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Blacksmith service."
+autowrap_mode = 2
+
+[node name="Back" type="Button" parent="Overlay/Panel/Layout"]
+layout_mode = 2
+text = "Close"

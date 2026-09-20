@@ -1,0 +1,95 @@
+{
+  "schema": "player-v03-nearest-integration/v1",
+  "date": "2026-09-19",
+  "method": "exact V03 crops; alpha crop; aspect-preserving NEAREST reduction to 32x32; bottom-center anchor",
+  "source_derivation_manifest": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/player_main_character_v03_derivation_manifest.json",
+  "source_zip_sha256": "ed4140616a6bfe1bbbc252eae7927ff124db55baee09a818ca11abddca8cd1b0",
+  "preserved_originals": [
+    {
+      "animation": "idle",
+      "target": "res://assets/art/player/animations/player_body_idle_sheet_v03.png",
+      "backup": "res://assets/art/generated_sources/replaced_source/backup/player_body_idle_sheet_v03.png",
+      "original_sha256": "afef13e374f484bebdcea056e606932a63016112e1f1dc91eee5575a6b678c3a",
+      "candidate_sha256": "75c3bf609ca213c4e7ecaf8a477fca0ea4c60f8c49a0677bd262ef468783ede8",
+      "backup_sha256": "afef13e374f484bebdcea056e606932a63016112e1f1dc91eee5575a6b678c3a",
+      "candidate_dimensions": [
+        128,
+        32
+      ]
+    },
+    {
+      "animation": "walk",
+      "target": "res://assets/art/player/animations/player_body_walk_sheet_v03.png",
+      "backup": "res://assets/art/generated_sources/replaced_source/backup/player_body_walk_sheet_v03.png",
+      "original_sha256": "48965f63398d6cc167f45127fff61d168e8d396145fde1d11f604fff50a99dbe",
+      "candidate_sha256": "7b6a4991decb845487ca4edb3beee330d60b5f004770ce930d8f9132b47d1963",
+      "backup_sha256": "48965f63398d6cc167f45127fff61d168e8d396145fde1d11f604fff50a99dbe",
+      "candidate_dimensions": [
+        192,
+        32
+      ]
+    },
+    {
+      "animation": "run",
+      "target": "res://assets/art/player/animations/player_body_run_sheet_v03.png",
+      "backup": "res://assets/art/generated_sources/replaced_source/backup/player_body_run_sheet_v03.png",
+      "original_sha256": "4e97306e00fd71d792e733511db1713fdd3d73fec5d39d2f8afdc9d65cd61230",
+      "candidate_sha256": "9acfeacd0eb2bd2a030c1e59d8dc4ce101e00b1b3dca7b8ad0993ac586bed331",
+      "backup_sha256": "4e97306e00fd71d792e733511db1713fdd3d73fec5d39d2f8afdc9d65cd61230",
+      "candidate_dimensions": [
+        192,
+        32
+      ]
+    },
+    {
+      "animation": "dash",
+      "target": "res://assets/art/player/animations/player_body_dash_sheet_v03.png",
+      "backup": "res://assets/art/generated_sources/replaced_source/backup/player_body_dash_sheet_v03.png",
+      "original_sha256": "ac8eede2d6fdc84987a035573e8c4d891dbbfe686d83619a3ab17d004f1330d8",
+      "candidate_sha256": "537e4f4481e507fcd579e3f3f7e836ae2b96315898e3a6a209e2634f1ec6fedf",
+      "backup_sha256": "ac8eede2d6fdc84987a035573e8c4d891dbbfe686d83619a3ab17d004f1330d8",
+      "candidate_dimensions": [
+        128,
+        32
+      ]
+    },
+    {
+      "animation": "climb",
+      "target": "res://assets/art/player/animations/player_body_climb_sheet_v03.png",
+      "backup": "res://assets/art/generated_sources/replaced_source/backup/player_body_climb_sheet_v03.png",
+      "original_sha256": "5028aae84d4e733617e39832bca324fc0ed3751cd158b3af7973b72c22705593",
+      "candidate_sha256": "70071b911ab0245d406e56f2acb2657a1d3b8e9994743470707f2e356877bba9",
+      "backup_sha256": "5028aae84d4e733617e39832bca324fc0ed3751cd158b3af7973b72c22705593",
+      "candidate_dimensions": [
+        192,
+        32
+      ]
+    },
+    {
+      "animation": "pickup",
+      "target": "res://assets/art/player/animations/player_body_pickup_sheet_v03.png",
+      "backup": "res://assets/art/generated_sources/replaced_source/backup/player_body_pickup_sheet_v03.png",
+      "original_sha256": "bb0d643cbc3e1bec9c8d6014867620ebde40bef9ddb660cc6e7c5205f33eb7e7",
+      "candidate_sha256": "e6950ce6c20893983a2df5fceffbf76a99a6061a49b9af336af656d857479c8e",
+      "backup_sha256": "bb0d643cbc3e1bec9c8d6014867620ebde40bef9ddb660cc6e7c5205f33eb7e7",
+      "candidate_dimensions": [
+        160,
+        32
+      ]
+    },
+    {
+      "animation": "sleep",
+      "target": "res://assets/art/player/animations/player_body_sleep_sheet_v03.png",
+      "backup": "res://assets/art/generated_sources/replaced_source/backup/player_body_sleep_sheet_v03.png",
+      "original_sha256": "b814da9a3f7c5a94e427abc904c794a1541cb83d828ec8603bf5420317dea5e4",
+      "candidate_sha256": "d16478ec9eb198c6fddb8bd28223def6c325b51cfdd61630ea9d6dbd32c5854a",
+      "backup_sha256": "b814da9a3f7c5a94e427abc904c794a1541cb83d828ec8603bf5420317dea5e4",
+      "candidate_dimensions": [
+        128,
+        32
+      ]
+    }
+  ],
+  "scope": "Seven clean states only; contaminated and count-conflict states untouched",
+  "acceptance": "candidate visual review passed; real Godot renderer validation pending"
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "nice-journey-imagegen-source-intake/v1",
+  "date": "2026-09-20",
+  "generator": "built-in imagegen; model version not exposed",
+  "status": "source_visually_reviewed_derivatives_pending",
+  "sources": [
+    {
+      "file": "player_attack_body_only_source.png",
+      "sha256": "07da238fa35537841cfc7f6ae2b014b90261329e8f605a2b1de92e3648564fb7",
+      "source_identity": "exec-c1feb7d2-9448-4453-bace-d26074b87683.png",
+      "dimensions": [
+        2171,
+        724
+      ],
+      "reference": "../main_character_batches_v03/exact_sources/05_climb_sleep_death.png",
+      "reference_region": [
+        0,
+        300,
+        1448,
+        535
+      ],
+      "prompt": "Edit the referenced six-frame pixel-art character attack strip. Remove only every sword blade, hilt and blue-white slash trail; reconstruct empty brown-gloved hands where hilts were held. Keep the exact same six body poses, brown spiky hair, face, blue scarf, cream sleeves, brown leather vest and gloves, blue trousers, brown boots, proportions and palette. All six face right. Preserve the attack progression, with distinct preparation, extension and recovery. Six evenly spaced full-body frames in one horizontal row, aligned feet baseline, no cropping, generous transparent margins. Real transparent background instead of grey. Crisp 16-bit-inspired pixel art. No weapons, shields, magic, particles, glow, text, labels, borders, dashboard or UI. Body-only sprite animation strip."
+    },
+    {
+      "file": "player_heavy_attack_body_only_source.png",
+      "sha256": "af670f93bfc622ed45d76e96227b8710662a17380ed69346171151f5e5abe3df",
+      "source_identity": "exec-302ff3ff-952c-46b2-bc10-53f319ab29a3.png",
+      "dimensions": [
+        2171,
+        724
+      ],
+      "reference": "../main_character_batches_v03/exact_sources/05_climb_sleep_death.png",
+      "reference_region": [
+        0,
+        545,
+        1448,
+        815
+      ],
+      "prompt": "Edit this six-frame pixel-art heavy-attack character strip: erase every sword blade, hilt, blue-white slash arc, ground impact and spark. Reconstruct empty brown-gloved hands only where weapons were held. Preserve the same six full-body poses and their motion: raised-hand preparation, overhead windup, downward swing, low follow-through, recovery, idle. Preserve brown spiky hair, face, blue scarf, cream sleeves, brown leather vest/gloves, blue trousers/boots, palette, proportions and head size. Six evenly spaced right-facing sprites in one horizontal row, same ground baseline, fully uncropped with transparent margins. Transparent background, crisp pixel art, body only. No weapons, effects, glow, text, labels, borders, dashboards or UI."
+    },
+    {
+      "file": "player_parry_cast_hit_body_only_source.png",
+      "sha256": "514c5fb3427bce3a84641f7687c595e950a43afe94fdc0bfce9819750fbd43ef",
+      "source_identity": "exec-1baccda5-161d-42c4-a822-33e5a277d374.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "reference": "../main_character_batches_v03/exact_sources/03_parry_cast_hit.png",
+      "prompt": "Edit this pixel-art sprite sheet by removing ONLY the visual effects: all blue-white shields, arcs, magic orbs, projectiles, particles and yellow hit stars. Preserve ALL body poses exactly and reconstruct any obscured glove/cloth behind effects. Same brown-haired traveler, blue scarf, cream sleeves, leather vest, gloves, trousers, boots, palette and proportions. Keep three horizontal rows: top six parry poses, middle seven casting poses, bottom six hit-reaction poses. Preserve original pose count and motion order, even spacing and ground baseline in each row. Real transparent background instead of grey. Full characters uncropped, crisp pixel edges. No weapons, glow, effects, particles, text, labels, borders, dashboards or UI."
+    },
+    {
+      "file": "player_block_body_only_source.png",
+      "sha256": "6aa6886811226d155c1a088f328ee2b07ceb9f551f95b9b546865189974887bf",
+      "source_identity": "exec-f1524c55-bbe9-43fc-8d15-7c9190c57952.png",
+      "dimensions": [
+        2171,
+        724
+      ],
+      "reference": "../main_character_batches_v03/exact_sources/05_climb_sleep_death.png",
+      "reference_region": [
+        0,
+        840,
+        1448,
+        1070
+      ],
+      "prompt": "Edit this seven-frame pixel-art blocking character strip. Remove ONLY every blue translucent shield arc and glow. Preserve all seven body poses, gloved hands, face, brown spiky hair, blue scarf, cream sleeves, brown leather vest, blue trousers and brown boots exactly. Same right-facing traveler and same proportions, colors and motion sequence. Seven evenly spaced full-body sprites in one horizontal row with consistent baseline and transparent margins, no cropping. True transparent background instead of grey. Crisp pixel art. No shield, weapons, effects, magic, particles, text, labels, borders, dashboard or UI."
+    }
+  ],
+  "reference_preparation": "Deterministic PNG crop where specified, alpha composited on neutral grey for JPEG inline inspection/reference; original exact PNG reference preserved unmodified. Generated PNG source bytes transferred with SHA-256 verification."
+}

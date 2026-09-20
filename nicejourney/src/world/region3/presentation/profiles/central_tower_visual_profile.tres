@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Region3FunctionalBuildingVisualProfile" format=3 uid="uid://bmog1q3ka2l20"]
+
+[ext_resource type="Script" uid="uid://b23qwks8bnqyg" path="res://src/world/region3/presentation/region3_functional_building_visual_profile.gd" id="1_profile"]
+[ext_resource type="Texture2D" uid="uid://b2tn0hdeqaygo" path="res://assets/art/environments/region3/functional_buildings/region3_central_tower_exterior_v02.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1_profile")
+role_id = &"central_tower"
+texture = ExtResource("2_texture")
+sprite_offset = Vector2(0, 96)

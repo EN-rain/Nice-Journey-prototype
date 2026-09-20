@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EffectVisualProfile" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/presentation/effects/effect_visual_profile.gd" id="1_profile"]
+[ext_resource type="Texture2D" path="res://assets/art/player/vfx/ranged_release_flash_v02.png" id="2_texture"]
+[ext_resource type="AnimationLibrary" path="res://src/presentation/effects/libraries/vfx_burst_animation.tres" id="3_library"]
+
+[resource]
+script = ExtResource("1_profile")
+effect_id = &"vfx_ranged_release_flash"
+texture = ExtResource("2_texture")
+sprite_offset = Vector2(0, 0)
+sprite_scale = Vector2(1, 1)
+rotation_degrees = 0.0
+z_index = 0
+modulate = Color(1, 1, 1, 1)
+animation_library = ExtResource("3_library")
+default_animation = &"default"

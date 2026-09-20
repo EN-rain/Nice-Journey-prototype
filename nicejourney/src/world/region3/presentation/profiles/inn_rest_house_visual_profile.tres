@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Region3FunctionalBuildingVisualProfile" format=3 uid="uid://dvedx05lxa58t"]
+
+[ext_resource type="Script" uid="uid://b23qwks8bnqyg" path="res://src/world/region3/presentation/region3_functional_building_visual_profile.gd" id="1_profile"]
+[ext_resource type="Texture2D" uid="uid://dh0521dapdb3x" path="res://assets/art/environments/region3/functional_buildings/region3_inn_exterior_v02.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1_profile")
+role_id = &"inn_rest_house"
+texture = ExtResource("2_texture")
+sprite_offset = Vector2(0, 64)

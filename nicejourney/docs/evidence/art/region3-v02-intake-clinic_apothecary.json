@@ -1,0 +1,35 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "clinic_apothecary",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\functional_buildings_v02\\pixel_art_fantasy_apothecary_clinic.png",
+  "accepted_mechanically": false,
+  "errors": [
+    "visible subject touches source boundary; regenerate/crop with safe margin"
+  ],
+  "warnings": [
+    "source margin is under 8 px; deterministic cleanup/crop may be fragile"
+  ],
+  "sha256": "69ecbf50536c8c6b38a2aaf34a39691182f16a0a9a2105fe00beb1b53731fe92",
+  "source_mode": "RGBA",
+  "width": 1254,
+  "height": 1254,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.5646524423280908,
+    "partial_fraction": 0.43505503282637503,
+    "opaque_fraction": 0.0002925248455341631
+  },
+  "opaque_bbox": [
+    0,
+    17,
+    1208,
+    1214
+  ],
+  "touches_source_edge": {
+    "left": true,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 0
+}

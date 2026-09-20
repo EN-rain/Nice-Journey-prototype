@@ -1,0 +1,31 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "general_merchant",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\buildings\\region3_general_merchant_source_v02.png",
+  "accepted_mechanically": true,
+  "errors": [],
+  "warnings": [],
+  "sha256": "75f9adb837d389b5735397979873dce3b04f9e14b625aa5230182170feeef827",
+  "source_mode": "RGBA",
+  "width": 1318,
+  "height": 1318,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.5804916632318706,
+    "partial_fraction": 0.41914048738029064,
+    "opaque_fraction": 0.00036784938783874957
+  },
+  "opaque_bbox": [
+    32,
+    46,
+    1268,
+    1263
+  ],
+  "touches_source_edge": {
+    "left": false,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 32
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "quest_hall",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\functional_buildings_v02\\pixel_art_adventurers_guild_hall.png",
+  "accepted_mechanically": false,
+  "errors": [
+    "visible subject touches source boundary; regenerate/crop with safe margin"
+  ],
+  "warnings": [
+    "source margin is under 8 px; deterministic cleanup/crop may be fragile"
+  ],
+  "sha256": "6197332d5daacc0cb3aa3d14a3fef12273df66bc9a2d4bf2afc6921ede2723fb",
+  "source_mode": "RGBA",
+  "width": 1254,
+  "height": 1254,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.5220150383207548,
+    "partial_fraction": 0.4775302763215128,
+    "opaque_fraction": 0.00045468535773244916
+  },
+  "opaque_bbox": [
+    0,
+    21,
+    1240,
+    1220
+  ],
+  "touches_source_edge": {
+    "left": true,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 0
+}

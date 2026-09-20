@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Region3FunctionalBuildingVisualProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/world/region3/presentation/region3_functional_building_visual_profile.gd" id="1_profile"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/functional_buildings/region3_training_exterior_v02.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1_profile")
+role_id = &"training_hall"
+texture = ExtResource("2_texture")
+sprite_offset = Vector2(0, 64)
+sprite_scale = Vector2(1, 1)
+z_index = 0
+modulate = Color(1, 1, 1, 1)

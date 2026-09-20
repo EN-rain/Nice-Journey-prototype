@@ -1,0 +1,31 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "storage_house",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\buildings\\region3_storage_house_source_v02.png",
+  "accepted_mechanically": true,
+  "errors": [],
+  "warnings": [],
+  "sha256": "584a53d65377faba05d1351540aefa4e09af4ca51c9608216540f64557af3de6",
+  "source_mode": "RGBA",
+  "width": 1318,
+  "height": 1318,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.5981587958027176,
+    "partial_fraction": 0.40135591932412423,
+    "opaque_fraction": 0.0004852848731581626
+  },
+  "opaque_bbox": [
+    32,
+    79,
+    1242,
+    1246
+  ],
+  "touches_source_edge": {
+    "left": false,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 32
+}

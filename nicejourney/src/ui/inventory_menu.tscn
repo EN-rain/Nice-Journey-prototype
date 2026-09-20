@@ -1,0 +1,228 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/ui/inventory_menu.gd" id="1_menu"]
+[ext_resource type="PackedScene" path="res://src/ui/inventory_slot_button.tscn" id="2_slot"]
+
+[node name="InventoryMenu" type="CanvasLayer"]
+layer = 88
+process_mode = 3
+script = ExtResource("1_menu")
+slot_button_scene = ExtResource("2_slot")
+
+[node name="Overlay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+process_mode = 3
+
+[node name="Dim" type="ColorRect" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.02, 0.03, 0.84)
+mouse_filter = 1
+
+[node name="Panel" type="Panel" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -160.0
+offset_right = 280.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+clip_contents = true
+
+[node name="Scroller" type="ScrollContainer" parent="Overlay/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="Layout" type="VBoxContainer" parent="Overlay/Panel/Scroller"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Overlay/Panel/Scroller/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Inventory & Equipment"
+horizontal_alignment = 1
+
+[node name="SearchRow" type="HBoxContainer" parent="Overlay/Panel/Scroller/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Search" type="LineEdit" parent="Overlay/Panel/Scroller/Layout/SearchRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Search IDs / rarity / affixes"
+
+[node name="Sort" type="OptionButton" parent="Overlay/Panel/Scroller/Layout/SearchRow"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+
+[node name="Summary" type="Label" parent="Overlay/Panel/Scroller/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Gold / capacity"
+
+[node name="Body" type="HBoxContainer" parent="Overlay/Panel/Scroller/Layout"]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Left" type="VBoxContainer" parent="Overlay/Panel/Scroller/Layout/Body"]
+custom_minimum_size = Vector2(214, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GridTitle" type="Label" parent="Overlay/Panel/Scroller/Layout/Body/Left"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Normal Inventory — 16 slots"
+
+[node name="Grid" type="GridContainer" parent="Overlay/Panel/Scroller/Layout/Body/Left"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 4
+theme_override_constants/h_separation = 3
+theme_override_constants/v_separation = 3
+
+[node name="Right" type="VBoxContainer" parent="Overlay/Panel/Scroller/Layout/Body"]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 3
+
+[node name="EquipmentTitle" type="Label" parent="Overlay/Panel/Scroller/Layout/Body/Right"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Equipment — 5 fixed slots"
+
+[node name="Equipment" type="ItemList" parent="Overlay/Panel/Scroller/Layout/Body/Right"]
+custom_minimum_size = Vector2(0, 76)
+layout_mode = 2
+allow_reselect = true
+
+[node name="Protected" type="Label" parent="Overlay/Panel/Scroller/Layout/Body/Right"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Protected quest/key items: none"
+autowrap_mode = 2
+
+[node name="Quick" type="Label" parent="Overlay/Panel/Scroller/Layout/Body/Right"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Consumable quick references"
+autowrap_mode = 2
+
+[node name="Detail" type="Label" parent="Overlay/Panel/Scroller/Layout"]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Select an item for metadata."
+autowrap_mode = 2
+
+[node name="ActionRow" type="HBoxContainer" parent="Overlay/Panel/Scroller/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Drop" type="Button" parent="Overlay/Panel/Scroller/Layout/ActionRow"]
+layout_mode = 2
+disabled = true
+text = "Drop full stack (Tower only)"
+
+[node name="Destroy" type="Button" parent="Overlay/Panel/Scroller/Layout/ActionRow"]
+layout_mode = 2
+disabled = true
+text = "Destroy selected normal stack"
+
+[node name="EquipRow" type="HBoxContainer" parent="Overlay/Panel/Scroller/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Target" type="OptionButton" parent="Overlay/Panel/Scroller/Layout/EquipRow"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+
+[node name="Equip" type="Button" parent="Overlay/Panel/Scroller/Layout/EquipRow"]
+layout_mode = 2
+disabled = true
+text = "Equip selected"
+
+[node name="Unequip" type="Button" parent="Overlay/Panel/Scroller/Layout/EquipRow"]
+layout_mode = 2
+disabled = true
+text = "Unequip selected slot"
+
+[node name="QuickRow" type="HBoxContainer" parent="Overlay/Panel/Scroller/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Target" type="OptionButton" parent="Overlay/Panel/Scroller/Layout/QuickRow"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Bind" type="Button" parent="Overlay/Panel/Scroller/Layout/QuickRow"]
+layout_mode = 2
+disabled = true
+text = "Assign quick reference"
+
+[node name="Clear" type="Button" parent="Overlay/Panel/Scroller/Layout/QuickRow"]
+layout_mode = 2
+disabled = true
+text = "Clear quick reference"
+
+[node name="DestroyConfirmRow" type="HBoxContainer" parent="Overlay/Panel/Scroller/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 6
+visible = false
+
+[node name="Consequence" type="Label" parent="Overlay/Panel/Scroller/Layout/DestroyConfirmRow"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 9
+text = "Destroy selected item?"
+autowrap_mode = 2
+
+[node name="Confirm" type="Button" parent="Overlay/Panel/Scroller/Layout/DestroyConfirmRow"]
+layout_mode = 2
+text = "Confirm Destroy"
+
+[node name="Cancel" type="Button" parent="Overlay/Panel/Scroller/Layout/DestroyConfirmRow"]
+layout_mode = 2
+text = "Cancel"
+
+[node name="Status" type="Label" parent="Overlay/Panel/Scroller/Layout"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "Inventory/equipment view."
+autowrap_mode = 2
+
+[node name="Back" type="Button" parent="Overlay/Panel/Scroller/Layout"]
+layout_mode = 2
+text = "Close"

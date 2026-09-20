@@ -1,0 +1,224 @@
+{
+  "schema": "region3-support-derivation/v02",
+  "source": "nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\decorative_support_v02\\region3_outskirts_support_source_v02.png",
+  "source_sha256": "a15113a146175dd2a3402426ff0609adc98b50a60da7cd2fb21044398d510e23",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "alpha_threshold": 24,
+  "kind": "support",
+  "grid": [
+    3,
+    2
+  ],
+  "output_cell_size": 64,
+  "atlas": "region3_outskirts_support_sheet_v02.png",
+  "atlas_sha256": "dc5a6360cf3853d0ad80b8544588ed901f985d7b1c6a3b3aacc78536e0101e60",
+  "cells": [
+    {
+      "index": 0,
+      "row": 0,
+      "col": 0,
+      "nominal_rect": [
+        64,
+        148,
+        475,
+        454
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            63,
+            220,
+            446,
+            459
+          ],
+          "centroid": [
+            254.5069446936798,
+            355.4687578509134
+          ],
+          "pixels": 55726
+        }
+      ],
+      "bbox": [
+        63,
+        220,
+        446,
+        459
+      ],
+      "output": "region3_outskirts_support_sheet_v02_00.png",
+      "sha256": "0f37dfaec9fa0b558b3737b74ef9de655d6d5f1c6ebcccd3a889c2008555af44"
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "col": 1,
+      "nominal_rect": [
+        560,
+        148,
+        971,
+        454
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            547,
+            112,
+            985,
+            471
+          ],
+          "centroid": [
+            771.6246372329797,
+            302.33204481659453
+          ],
+          "pixels": 84076
+        }
+      ],
+      "bbox": [
+        547,
+        112,
+        985,
+        471
+      ],
+      "output": "region3_outskirts_support_sheet_v02_01.png",
+      "sha256": "f710ec2d4eb46e58bc96cc4f61b8ffaf0f226a0f33bcc315ffa5ca896d96be46"
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "col": 2,
+      "nominal_rect": [
+        1052,
+        148,
+        1463,
+        454
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            1101,
+            240,
+            1488,
+            460
+          ],
+          "centroid": [
+            1294.7888268568165,
+            361.8322001731985
+          ],
+          "pixels": 54273
+        }
+      ],
+      "bbox": [
+        1101,
+        240,
+        1488,
+        460
+      ],
+      "output": "region3_outskirts_support_sheet_v02_02.png",
+      "sha256": "b5cc6dcffc41d488f1d514c56858565f8951e9a185d2cd0e8b31f616eae4b059"
+    },
+    {
+      "index": 3,
+      "row": 1,
+      "col": 0,
+      "nominal_rect": [
+        64,
+        570,
+        475,
+        880
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            152,
+            555,
+            406,
+            928
+          ],
+          "centroid": [
+            266.40722981171956,
+            743.7651779073864
+          ],
+          "pixels": 51094
+        }
+      ],
+      "bbox": [
+        152,
+        555,
+        406,
+        928
+      ],
+      "output": "region3_outskirts_support_sheet_v02_03.png",
+      "sha256": "153c33bb49d5347e018523bc960f8ba0a2bccd15fd60dc8fd2c00077e1cc1254"
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "col": 1,
+      "nominal_rect": [
+        560,
+        570,
+        971,
+        880
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            560,
+            588,
+            984,
+            936
+          ],
+          "centroid": [
+            781.5872303355153,
+            774.3749470653003
+          ],
+          "pixels": 82649
+        }
+      ],
+      "bbox": [
+        560,
+        588,
+        984,
+        936
+      ],
+      "output": "region3_outskirts_support_sheet_v02_04.png",
+      "sha256": "bac4867a6cb2942e67a92c5c569a920a9a800ab349ce89122d2b86770fd4149d"
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "col": 2,
+      "nominal_rect": [
+        1052,
+        570,
+        1463,
+        880
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            1100,
+            677,
+            1480,
+            941
+          ],
+          "centroid": [
+            1297.9847004703572,
+            820.6868592891232
+          ],
+          "pixels": 58041
+        }
+      ],
+      "bbox": [
+        1100,
+        677,
+        1480,
+        941
+      ],
+      "output": "region3_outskirts_support_sheet_v02_05.png",
+      "sha256": "02d8060e1b62e091899b29c46111558ba040c13ebca0dcd1b2b023605cd40ce0"
+    }
+  ]
+}

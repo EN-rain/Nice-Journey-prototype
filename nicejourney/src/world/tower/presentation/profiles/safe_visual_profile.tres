@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TowerRoomVisualProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/world/tower/presentation/tower_room_visual_profile.gd" id="1_profile"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/tower/rooms/tower_room_safe_v01.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1_profile")
+room_type = &"safe"
+texture = ExtResource("2_texture")
+sprite_offset = Vector2(0, 0)
+sprite_scale = Vector2(1, 1)
+z_index = 0
+modulate = Color(1, 1, 1, 1)

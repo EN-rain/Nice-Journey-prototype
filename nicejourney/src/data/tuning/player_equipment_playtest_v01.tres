@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlayerEquipmentPlaytestTuning" format=3]
+
+[ext_resource type="Script" path="res://src/data/tuning/player_equipment_playtest_tuning.gd" id="1_equipment_playtest"]
+
+[resource]
+resource_name = "PLAYTEST starter weapon rank damage v01 — provisional attack_power"
+script = ExtResource("1_equipment_playtest")
+playtest_placeholder = true
+attack_power_per_upgrade_rank = {
+"starter_bow": 1.0,
+"starter_staff": 1.0,
+"starter_sword": 1.0
+}

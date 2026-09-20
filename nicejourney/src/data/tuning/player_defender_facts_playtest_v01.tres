@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerDefenderFactsTuning" format=3]
+
+[ext_resource type="Script" path="res://src/data/tuning/player_defender_facts_tuning.gd" id="1_hnke6"]
+
+[resource]
+resource_name = "PLAYTEST Defender Facts v01 — provisional balance, not final"
+script = ExtResource("1_hnke6")
+authored = true
+playtest_placeholder = true
+dodge_invulnerability_start_seconds = 0.015
+dodge_invulnerability_duration_seconds = 0.09
+frontal_coverage_degrees = 120.0

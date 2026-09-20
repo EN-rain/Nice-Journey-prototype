@@ -1,0 +1,31 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "training_hall",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\buildings\\region3_training_hall_source_v02.png",
+  "accepted_mechanically": true,
+  "errors": [],
+  "warnings": [],
+  "sha256": "f2f05585e51acc6cf388da58aaecdc955ca6882f318b3a5a7cb815ddc9d69247",
+  "source_mode": "RGBA",
+  "width": 1318,
+  "height": 1318,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.6236797142863721,
+    "partial_fraction": 0.3760220916871795,
+    "opaque_fraction": 0.0002981940264483134
+  },
+  "opaque_bbox": [
+    32,
+    32,
+    1255,
+    1250
+  ],
+  "touches_source_edge": {
+    "left": false,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 32
+}

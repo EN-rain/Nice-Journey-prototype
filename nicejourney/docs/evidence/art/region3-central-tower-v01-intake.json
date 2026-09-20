@@ -1,0 +1,33 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "central_tower",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\environments\\region3\\functional_buildings\\region3_central_tower_exterior_v01.png",
+  "accepted_mechanically": true,
+  "errors": [],
+  "warnings": [
+    "source margin is under 8 px; deterministic cleanup/crop may be fragile"
+  ],
+  "sha256": "772f96ca0c350a95ce7431415cdaee1dab74327f40f0546f284c0f964eab3701",
+  "source_mode": "RGBA",
+  "width": 96,
+  "height": 96,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.6966145833333334,
+    "partial_fraction": 0.050238715277777776,
+    "opaque_fraction": 0.2531467013888889
+  },
+  "opaque_bbox": [
+    18,
+    4,
+    79,
+    90
+  ],
+  "touches_source_edge": {
+    "left": false,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 4
+}

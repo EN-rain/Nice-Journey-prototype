@@ -1,0 +1,217 @@
+[gd_resource type="Resource" script_class="ActiveSkillsPlaytest" format=3]
+
+[ext_resource type="Script" path="res://src/combat/actions/action_definition.gd" id="1_p8qnb"]
+[ext_resource type="Script" path="res://src/data/tuning/active_skills_playtest.gd" id="2_ki5gp"]
+
+[sub_resource type="Resource" id="Resource_ppv5o"]
+script = ExtResource("1_p8qnb")
+action_id = &"action:playtest:arc_cleave"
+startup_ticks = 9
+active_ticks = 5
+recovery_ticks = 17
+cooldown_ticks = 24
+cost_resource = &"stamina"
+cost_amount = 12.0
+uses_aim = true
+
+[sub_resource type="Resource" id="Resource_6kyuy"]
+script = ExtResource("1_p8qnb")
+action_id = &"action:playtest:driving_thrust"
+startup_ticks = 10
+active_ticks = 5
+recovery_ticks = 18
+cooldown_ticks = 24
+cost_resource = &"stamina"
+cost_amount = 16.0
+uses_aim = true
+
+[sub_resource type="Resource" id="Resource_viai2"]
+script = ExtResource("1_p8qnb")
+action_id = &"action:playtest:riposte"
+startup_ticks = 11
+active_ticks = 5
+recovery_ticks = 19
+cooldown_ticks = 24
+cost_resource = &"stamina"
+cost_amount = 20.0
+uses_aim = true
+
+[sub_resource type="Resource" id="Resource_1gg4e"]
+script = ExtResource("1_p8qnb")
+action_id = &"action:playtest:piercing_shot"
+startup_ticks = 12
+active_ticks = 5
+recovery_ticks = 17
+cooldown_ticks = 24
+cost_resource = &"stamina"
+cost_amount = 12.0
+uses_aim = true
+
+[sub_resource type="Resource" id="Resource_k1cau"]
+script = ExtResource("1_p8qnb")
+action_id = &"action:playtest:fan_shot"
+startup_ticks = 9
+active_ticks = 5
+recovery_ticks = 18
+cooldown_ticks = 24
+cost_resource = &"stamina"
+cost_amount = 16.0
+uses_aim = true
+
+[sub_resource type="Resource" id="Resource_nofej"]
+script = ExtResource("1_p8qnb")
+action_id = &"action:playtest:backstep_shot"
+startup_ticks = 10
+active_ticks = 5
+recovery_ticks = 19
+cooldown_ticks = 24
+cost_resource = &"stamina"
+cost_amount = 20.0
+uses_aim = true
+
+[sub_resource type="Resource" id="Resource_2h13y"]
+script = ExtResource("1_p8qnb")
+action_id = &"action:playtest:arcane_lance"
+startup_ticks = 11
+active_ticks = 5
+recovery_ticks = 17
+cooldown_ticks = 24
+cost_resource = &"mana"
+cost_amount = 12.0
+uses_aim = true
+
+[sub_resource type="Resource" id="Resource_4glfc"]
+script = ExtResource("1_p8qnb")
+action_id = &"action:playtest:delayed_pulse"
+startup_ticks = 12
+active_ticks = 5
+recovery_ticks = 18
+cooldown_ticks = 24
+cost_resource = &"mana"
+cost_amount = 16.0
+uses_aim = true
+
+[sub_resource type="Resource" id="Resource_o76kj"]
+script = ExtResource("1_p8qnb")
+action_id = &"action:playtest:aegis_ward"
+startup_ticks = 9
+active_ticks = 12
+recovery_ticks = 19
+cooldown_ticks = 24
+cost_resource = &"mana"
+cost_amount = 20.0
+
+[resource]
+resource_name = "PLAYTEST nine active skill action clocks with effects and rank scaling"
+script = ExtResource("2_ki5gp")
+actions = Array[ExtResource("1_p8qnb")]([SubResource("Resource_ppv5o"), SubResource("Resource_6kyuy"), SubResource("Resource_viai2"), SubResource("Resource_1gg4e"), SubResource("Resource_k1cau"), SubResource("Resource_nofej"), SubResource("Resource_2h13y"), SubResource("Resource_4glfc"), SubResource("Resource_o76kj")])
+rank_adjustments = {
+"aegis_ward": {
+"rank_2": {
+"cost_multiplier": 0.95,
+"magnitude_multiplier": 1.1,
+"recovery_ticks_delta": -1
+},
+"rank_3": {
+"cost_multiplier": 0.9,
+"magnitude_multiplier": 1.2,
+"recovery_ticks_delta": -2
+}
+},
+"arc_cleave": {
+"rank_2": {
+"cost_multiplier": 0.95,
+"magnitude_multiplier": 1.1,
+"recovery_ticks_delta": -1
+},
+"rank_3": {
+"cost_multiplier": 0.9,
+"magnitude_multiplier": 1.2,
+"recovery_ticks_delta": -2
+}
+},
+"arcane_lance": {
+"rank_2": {
+"cost_multiplier": 0.95,
+"magnitude_multiplier": 1.1,
+"recovery_ticks_delta": -1
+},
+"rank_3": {
+"cost_multiplier": 0.9,
+"magnitude_multiplier": 1.2,
+"recovery_ticks_delta": -2
+}
+},
+"backstep_shot": {
+"rank_2": {
+"cost_multiplier": 0.95,
+"magnitude_multiplier": 1.1,
+"recovery_ticks_delta": -1
+},
+"rank_3": {
+"cost_multiplier": 0.9,
+"magnitude_multiplier": 1.2,
+"recovery_ticks_delta": -2
+}
+},
+"delayed_pulse": {
+"rank_2": {
+"cost_multiplier": 0.95,
+"magnitude_multiplier": 1.1,
+"recovery_ticks_delta": -1
+},
+"rank_3": {
+"cost_multiplier": 0.9,
+"magnitude_multiplier": 1.2,
+"recovery_ticks_delta": -2
+}
+},
+"driving_thrust": {
+"rank_2": {
+"cost_multiplier": 0.95,
+"magnitude_multiplier": 1.1,
+"recovery_ticks_delta": -1
+},
+"rank_3": {
+"cost_multiplier": 0.9,
+"magnitude_multiplier": 1.2,
+"recovery_ticks_delta": -2
+}
+},
+"fan_shot": {
+"rank_2": {
+"cost_multiplier": 0.95,
+"magnitude_multiplier": 1.1,
+"recovery_ticks_delta": -1
+},
+"rank_3": {
+"cost_multiplier": 0.9,
+"magnitude_multiplier": 1.2,
+"recovery_ticks_delta": -2
+}
+},
+"piercing_shot": {
+"rank_2": {
+"cost_multiplier": 0.95,
+"magnitude_multiplier": 1.1,
+"recovery_ticks_delta": -1
+},
+"rank_3": {
+"cost_multiplier": 0.9,
+"magnitude_multiplier": 1.2,
+"recovery_ticks_delta": -2
+}
+},
+"riposte": {
+"rank_2": {
+"cost_multiplier": 0.95,
+"magnitude_multiplier": 1.1,
+"recovery_ticks_delta": -1
+},
+"rank_3": {
+"cost_multiplier": 0.9,
+"magnitude_multiplier": 1.2,
+"recovery_ticks_delta": -2
+}
+}
+}

@@ -1,0 +1,243 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/ui/combat_hud.gd" id="1_hud"]
+[ext_resource type="Script" path="res://src/ui/map_room_canvas.gd" id="2_map_room_canvas"]
+
+[node name="CombatHUD" type="CanvasLayer"]
+layer = 20
+script = ExtResource("1_hud")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="Root"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 348.0
+offset_bottom = 244.0
+mouse_filter = 2
+
+[node name="Layout" type="VBoxContainer" parent="Root/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Context" type="Label" parent="Root/Panel/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Exploration"
+
+[node name="HPRow" type="HBoxContainer" parent="Root/Panel/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Name" type="Label" parent="Root/Panel/Layout/HPRow"]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "HP"
+
+[node name="Bar" type="ProgressBar" parent="Root/Panel/Layout/HPRow"]
+custom_minimum_size = Vector2(142, 14)
+layout_mode = 2
+size_flags_horizontal = 3
+show_percentage = false
+
+[node name="Value" type="Label" parent="Root/Panel/Layout/HPRow"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "0/0"
+horizontal_alignment = 2
+
+[node name="StaminaRow" type="HBoxContainer" parent="Root/Panel/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Name" type="Label" parent="Root/Panel/Layout/StaminaRow"]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Stamina"
+
+[node name="Bar" type="ProgressBar" parent="Root/Panel/Layout/StaminaRow"]
+custom_minimum_size = Vector2(142, 14)
+layout_mode = 2
+size_flags_horizontal = 3
+show_percentage = false
+
+[node name="Value" type="Label" parent="Root/Panel/Layout/StaminaRow"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "0/0"
+horizontal_alignment = 2
+
+[node name="ManaRow" type="HBoxContainer" parent="Root/Panel/Layout"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Name" type="Label" parent="Root/Panel/Layout/ManaRow"]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Mana"
+
+[node name="Bar" type="ProgressBar" parent="Root/Panel/Layout/ManaRow"]
+custom_minimum_size = Vector2(142, 14)
+layout_mode = 2
+size_flags_horizontal = 3
+show_percentage = false
+
+[node name="Value" type="Label" parent="Root/Panel/Layout/ManaRow"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "0/0"
+horizontal_alignment = 2
+
+[node name="State" type="Label" parent="Root/Panel/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Defense: NONE"
+
+[node name="Cooldowns" type="Label" parent="Root/Panel/Layout"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Cooldowns: Ready"
+autowrap_mode = 2
+
+[node name="BurnStatus" type="HBoxContainer" parent="Root/Panel/Layout"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="TextureRect" parent="Root/Panel/Layout/BurnStatus"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture_filter = 1
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Root/Panel/Layout/BurnStatus"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 2
+
+[node name="SlowStatus" type="HBoxContainer" parent="Root/Panel/Layout"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="TextureRect" parent="Root/Panel/Layout/SlowStatus"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture_filter = 1
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Root/Panel/Layout/SlowStatus"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 2
+
+[node name="Quest" type="Label" parent="Root/Panel/Layout"]
+custom_minimum_size = Vector2(1, 1)
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = ""
+autowrap_mode = 2
+
+[node name="SkillsHeader" type="Label" parent="Root/Panel/Layout"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Active Skills — Loadout only"
+
+[node name="ActiveSkill1" type="HBoxContainer" parent="Root/Panel/Layout"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Icon" type="TextureRect" parent="Root/Panel/Layout/ActiveSkill1"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture_filter = 1
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Root/Panel/Layout/ActiveSkill1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+text = "Active 1"
+
+[node name="ActiveSkill2" type="HBoxContainer" parent="Root/Panel/Layout"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Icon" type="TextureRect" parent="Root/Panel/Layout/ActiveSkill2"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture_filter = 1
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Root/Panel/Layout/ActiveSkill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+text = "Active 2"
+
+[node name="MinimapPanel" type="PanelContainer" parent="Root"]
+visible = false
+layout_mode = 0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -136.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 154.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="Layout" type="VBoxContainer" parent="Root/MinimapPanel"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Title" type="Label" parent="Root/MinimapPanel/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "TOWER MINIMAP"
+horizontal_alignment = 1
+
+[node name="Canvas" type="Control" parent="Root/MinimapPanel/Layout"]
+custom_minimum_size = Vector2(112, 112)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("2_map_room_canvas")
+padding_px = 6.0
+outline_width_px = 1.0
+connection_width_px = 1.0
+risk_marker_radius_px = 3.0
+risk_marker_width_px = 1.0
+checkpoint_radius_px = 2.0
+player_marker_radius_px = 3.0
+player_marker_width_px = 1.0

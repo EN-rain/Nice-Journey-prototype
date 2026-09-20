@@ -1,0 +1,141 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/skirmisher_visual.tscn" id="1_skirmisher"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/assassin_visual.tscn" id="2_assassin"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/mobile_ranged_visual.tscn" id="3_mobile"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/caster_visual.tscn" id="4_caster"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/support_visual.tscn" id="5_support"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/summoner_visual.tscn" id="6_summoner"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/flying_harrier_visual.tscn" id="7_harrier"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/controller_disruptor_visual.tscn" id="8_controller"]
+
+[node name="RemainingEnemyVisualShowcase" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.045, 0.05, 0.065, 1)
+mouse_filter = 2
+show_behind_parent = true
+
+[node name="Title" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 12.0
+offset_right = 616.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 16
+text = "Remaining Enemy Visual Profiles — Generated V02"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 38.0
+offset_right = 616.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 9
+text = "Accepted generated sources are live through inspector-owned Sprite2D + AnimationPlayer profiles."
+horizontal_alignment = 1
+
+[node name="Skirmisher" parent="." instance=ExtResource("1_skirmisher")]
+position = Vector2(80, 132)
+scale = Vector2(1.5, 1.5)
+
+[node name="SkirmisherLabel" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 173.0
+offset_right = 121.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 9
+text = "Skirmisher"
+horizontal_alignment = 1
+
+[node name="Assassin" parent="." instance=ExtResource("2_assassin")]
+position = Vector2(240, 132)
+scale = Vector2(1.5, 1.5)
+
+[node name="AssassinLabel" type="Label" parent="."]
+offset_left = 199.0
+offset_top = 173.0
+offset_right = 281.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 9
+text = "Assassin"
+horizontal_alignment = 1
+
+[node name="MobileRanged" parent="." instance=ExtResource("3_mobile")]
+position = Vector2(400, 132)
+scale = Vector2(1.5, 1.5)
+
+[node name="MobileRangedLabel" type="Label" parent="."]
+offset_left = 352.0
+offset_top = 173.0
+offset_right = 448.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 9
+text = "Mobile Ranged"
+horizontal_alignment = 1
+
+[node name="Caster" parent="." instance=ExtResource("4_caster")]
+position = Vector2(560, 132)
+scale = Vector2(1.5, 1.5)
+
+[node name="CasterLabel" type="Label" parent="."]
+offset_left = 519.0
+offset_top = 173.0
+offset_right = 601.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 9
+text = "Caster"
+horizontal_alignment = 1
+
+[node name="Support" parent="." instance=ExtResource("5_support")]
+position = Vector2(80, 280)
+scale = Vector2(1.5, 1.5)
+
+[node name="SupportLabel" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 321.0
+offset_right = 121.0
+offset_bottom = 339.0
+theme_override_font_sizes/font_size = 9
+text = "Support"
+horizontal_alignment = 1
+
+[node name="Summoner" parent="." instance=ExtResource("6_summoner")]
+position = Vector2(240, 280)
+scale = Vector2(1.5, 1.5)
+
+[node name="SummonerLabel" type="Label" parent="."]
+offset_left = 199.0
+offset_top = 321.0
+offset_right = 281.0
+offset_bottom = 339.0
+theme_override_font_sizes/font_size = 9
+text = "Summoner"
+horizontal_alignment = 1
+
+[node name="FlyingHarrier" parent="." instance=ExtResource("7_harrier")]
+position = Vector2(400, 280)
+scale = Vector2(1.5, 1.5)
+
+[node name="FlyingHarrierLabel" type="Label" parent="."]
+offset_left = 352.0
+offset_top = 321.0
+offset_right = 448.0
+offset_bottom = 339.0
+theme_override_font_sizes/font_size = 9
+text = "Flying Harrier"
+horizontal_alignment = 1
+
+[node name="ControllerDisruptor" parent="." instance=ExtResource("8_controller")]
+position = Vector2(560, 280)
+scale = Vector2(1.5, 1.5)
+
+[node name="ControllerDisruptorLabel" type="Label" parent="."]
+offset_left = 506.0
+offset_top = 321.0
+offset_right = 614.0
+offset_bottom = 339.0
+theme_override_font_sizes/font_size = 8
+text = "Controller / Disruptor"
+horizontal_alignment = 1

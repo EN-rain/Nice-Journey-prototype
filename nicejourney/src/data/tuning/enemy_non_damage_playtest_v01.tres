@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EnemyNonDamagePlaytestTuning" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://src/data/tuning/enemy_non_damage_playtest_tuning.gd" id="1_tuning"]
+[ext_resource type="PackedScene" path="res://src/enemies/runtime/support_ward_placeholder.tscn" id="2_ward"]
+[ext_resource type="PackedScene" path="res://src/enemies/runtime/controller_field_placeholder.tscn" id="3_field"]
+[ext_resource type="Resource" path="res://src/data/tuning/summoner_reinforcement_playtest_v01.tres" id="4_summoner"]
+
+[resource]
+resource_name = "PLAYTEST Support ward and Controller field v01 — non-damaging placeholders"
+script = ExtResource("1_tuning")
+ward_range_px = 144.0
+ward_defense_bonus = 4.0
+ward_duration_ticks = 90
+control_cast_range_px = 180.0
+control_field_radius_px = 65.0
+control_field_duration_ticks = 120
+control_slow_refresh_ticks = 6
+control_slow_apply_interval_ticks = 5
+ward_marker_scene = ExtResource("2_ward")
+control_field_marker_scene = ExtResource("3_field")
+reinforcement_tuning = ExtResource("4_summoner")

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Region3EnvironmentSupportVisualProfile" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://src/world/region3/presentation/region3_environment_support_visual_profile.gd" id="1_profile"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/props/region3_prop_sheet_v02.png" id="2_props"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/roads/region3_ground_road_tileset_v02.png" id="3_ground"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/ruins/region3_ruins_module_sheet_v02.png" id="4_ruins"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/outskirts/region3_outskirts_support_sheet_v02.png" id="5_outskirts"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/risk_zone/region3_risk_zone_support_sheet_v02.png" id="6_risk"]
+
+[resource]
+script = ExtResource("1_profile")
+profile_id = &"region3:environment_support:v02"
+town_props = ExtResource("2_props")
+ground_road = ExtResource("3_ground")
+ruins_modules = ExtResource("4_ruins")
+south_outskirts_support = ExtResource("5_outskirts")
+east_risk_zone_support = ExtResource("6_risk")

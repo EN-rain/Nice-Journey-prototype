@@ -1,0 +1,679 @@
+{
+  "sources": {
+    "movement": {
+      "file": "q_a_clean_transparent_background_pixel_art_sprite_sh_2_batch_1.png",
+      "sha256": "6470bd20f95270c010ba198e5e6f055dd3cf02df748679c91ed570a0b88dedb9"
+    },
+    "weapons": {
+      "file": "q_a_clean_transparent_background_sprite_sheet_gam_4_batch_3.png",
+      "sha256": "53168a6b9bf9b89a9cfe64e068730d56754a9a2a09838776bbe66c5cf70b14f4"
+    },
+    "telegraphs": {
+      "file": "q_a_transparent_background_pixel_art_sprite_sheet_5_batch_4.png",
+      "sha256": "cf22d1bbb51ddb275028b6e94240d88e7b9d6dfd9902e69b026b6058c77048d8"
+    },
+    "combat_utility": {
+      "file": "q_a_clean_sprite_sheet_image_on_a_transparent_backgr_3_batch_2.png",
+      "sha256": "9b8e985744eda689315f17517bd9f912988af9cd6787af8122416551efd22744"
+    }
+  },
+  "outputs": {
+    "player_body_idle_sheet_v02.png": {
+      "source": "movement",
+      "crops": [
+        [
+          251,
+          13,
+          400,
+          246
+        ],
+        [
+          446,
+          13,
+          600,
+          247
+        ],
+        [
+          640,
+          12,
+          795,
+          246
+        ],
+        [
+          823,
+          13,
+          980,
+          246
+        ]
+      ],
+      "size": [
+        128,
+        32
+      ],
+      "sha256": "fd5b7e12a7472036c53dae44d001865e0807d7956104cd6734701ce924e54dc4",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_walk_sheet_v02.png": {
+      "source": "movement",
+      "crops": [
+        [
+          240,
+          265,
+          390,
+          488
+        ],
+        [
+          418,
+          265,
+          589,
+          489
+        ],
+        [
+          609,
+          261,
+          771,
+          488
+        ],
+        [
+          809,
+          265,
+          979,
+          489
+        ],
+        [
+          1019,
+          262,
+          1176,
+          488
+        ],
+        [
+          1220,
+          268,
+          1377,
+          487
+        ]
+      ],
+      "size": [
+        192,
+        32
+      ],
+      "sha256": "8bc68a1ef5b51bb64c761096091b9db1c546f17c5bd891457178b2eee7dbd8ee",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_run_sheet_v02.png": {
+      "source": "movement",
+      "crops": [
+        [
+          234,
+          505,
+          416,
+          717
+        ],
+        [
+          440,
+          505,
+          626,
+          706
+        ],
+        [
+          638,
+          505,
+          820,
+          716
+        ],
+        [
+          820,
+          504,
+          1019,
+          713
+        ],
+        [
+          1030,
+          506,
+          1210,
+          717
+        ],
+        [
+          1226,
+          504,
+          1401,
+          713
+        ]
+      ],
+      "size": [
+        192,
+        32
+      ],
+      "sha256": "c816b533afa360113cef714c17839221a974d0149314341df028938234d9dab7",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_dash_sheet_v02.png": {
+      "source": "movement",
+      "crops": [
+        [
+          282,
+          731,
+          508,
+          904
+        ],
+        [
+          574,
+          734,
+          804,
+          904
+        ],
+        [
+          862,
+          737,
+          1085,
+          906
+        ],
+        [
+          1181,
+          727,
+          1391,
+          906
+        ]
+      ],
+      "size": [
+        128,
+        32
+      ],
+      "sha256": "d53d86c9e7c15d0ae8e76e5212824108ebeea66d9a3246aaa2bb29a133719cc9",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_dodge_sheet_v02.png": {
+      "source": "movement",
+      "crops": [
+        [
+          273,
+          927,
+          486,
+          1075
+        ],
+        [
+          565,
+          948,
+          779,
+          1075
+        ],
+        [
+          845,
+          940,
+          1051,
+          1075
+        ],
+        [
+          1138,
+          930,
+          1284,
+          1075
+        ]
+      ],
+      "size": [
+        128,
+        32
+      ],
+      "sha256": "8b4436dcb5d3dc53dbfc65745e7f6ebf04958f43d5076131c8e81d2582c8a463",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "starter_sword_v02.png": {
+      "source": "weapons",
+      "crop": [
+        45,
+        70,
+        215,
+        420
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "3a07e1d48073b665923953aa14bb8d0bed80bc16bca9613f126dc2da390d3e57"
+    },
+    "starter_shield_v02.png": {
+      "source": "weapons",
+      "crop": [
+        410,
+        150,
+        600,
+        420
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "50c7faceb01f8d04508ff0615bcbdf960e45ba285dd4c96a5277a6ce2b325b69"
+    },
+    "starter_bow_v02.png": {
+      "source": "weapons",
+      "crop": [
+        790,
+        70,
+        935,
+        425
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "fa68aa546304a6a25193fa4ec6d369a26255682292287859cc0a8ebe8bc945cc"
+    },
+    "starter_staff_v02.png": {
+      "source": "weapons",
+      "crop": [
+        1120,
+        60,
+        1255,
+        425
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "27c4c7472516cdf3c6cc5b48fba053ac5ed52975d928fab7eb1c3ce247538fda"
+    },
+    "arrow_projectile_v02.png": {
+      "source": "weapons",
+      "crop": [
+        150,
+        490,
+        590,
+        650
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "sha256": "c860c37bb98562a6080e81a172d63e1880486d99dc9f011693093d64c097d25a"
+    },
+    "arcane_projectile_v02.png": {
+      "source": "weapons",
+      "crop": [
+        770,
+        485,
+        1175,
+        655
+      ],
+      "size": [
+        32,
+        16
+      ],
+      "sha256": "5ef936c9b85ccfc190a72fabd55e8d1a78683bf7c2cd696433888e28f48cef30"
+    },
+    "light_slash_trail_v02.png": {
+      "source": "weapons",
+      "crop": [
+        35,
+        700,
+        250,
+        975
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "f1a6111f456eece96bb888f72d7253cd247f1de0082de42ac81f55de9fc39d57"
+    },
+    "heavy_slash_trail_v02.png": {
+      "source": "weapons",
+      "crop": [
+        250,
+        700,
+        540,
+        975
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "e3e2c49ced640e86b6cb948ba5487ecaa30977083503e8f13f25d3fc501de777"
+    },
+    "block_spark_v02.png": {
+      "source": "weapons",
+      "crop": [
+        535,
+        710,
+        750,
+        980
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "9b8bb9c2cc78d4610516a4271d46032fdb4a1cb274ebf2d18384a610a6505b9e"
+    },
+    "parry_spark_v02.png": {
+      "source": "weapons",
+      "crop": [
+        740,
+        720,
+        940,
+        980
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "16e063c72c056fecd3cc2f974113ad139f9423d3aaa421cffd0d4ace9c237e21"
+    },
+    "ranged_release_flash_v02.png": {
+      "source": "weapons",
+      "crop": [
+        925,
+        700,
+        1160,
+        980
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "bffd1e809828284bf57686571bbb2467d08e32592ed9d0ba58e54743c73cba87"
+    },
+    "arcane_cast_burst_v02.png": {
+      "source": "weapons",
+      "crop": [
+        1145,
+        685,
+        1420,
+        985
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "99b6087c7889adbf8c5d83a921c4821b1aea25ab6373177aa1a33d617ca804d5"
+    },
+    "telegraph_narrow_line_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        40,
+        0,
+        215,
+        335
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "4ec99836500577cd6f456de0fddd8c85e5693bde28381fc0cb51ed82af76a32c"
+    },
+    "telegraph_wide_line_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        210,
+        0,
+        445,
+        335
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "f7260a4c877bb4149714db32a34fa0df0f0baa5f5669cd3090b738fdf94ef3fa"
+    },
+    "telegraph_cone_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        445,
+        0,
+        790,
+        335
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "fa5405813dcaf904d975d3669394067a2c6b0365625454d46a5254a939dd9ac2"
+    },
+    "telegraph_short_arc_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        760,
+        130,
+        1000,
+        335
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "36ce06bcde3e5aca6ed0867c44d9779bf8ff9999747cb712e835df6d22bfe54f"
+    },
+    "telegraph_wide_sweep_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        970,
+        20,
+        1420,
+        335
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "063243436290e00193ce234ce148e53f52dac3f0838a7d11a70f3dfd7ac19bdb"
+    },
+    "telegraph_circle_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        15,
+        360,
+        310,
+        675
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "05379773732b9a4999e6f204f17cf25256d2efdc5cc1ccbeffbce18fba1cfb9c"
+    },
+    "telegraph_delayed_circle_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        300,
+        360,
+        640,
+        675
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "db68e672af9a023bd46fd1c521d90a6038a10694faabc6d076b563db3867245a"
+    },
+    "telegraph_projectile_lane_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        640,
+        350,
+        820,
+        675
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "9c9210fd4106aad9ff370ce9756e58ec4586198a9b47d5d33f7ce2739ad8cc85"
+    },
+    "telegraph_lunge_path_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        820,
+        345,
+        1050,
+        675
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "a18c17f55b5b1b420ef8fe5ed637a14cd14a5bc9486f03219a6b21e1eccfde94"
+    },
+    "telegraph_boss_warning_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        1040,
+        330,
+        1430,
+        680
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "467b78b51baecefd16dd1abeea35b5b3670fb74d54fa614cd8e31c78495e54b7"
+    },
+    "telegraph_block_cue_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        70,
+        690,
+        410,
+        1020
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "063e196bebc0cb6063050ee13d5a3bcb5d275ec6ae74c1dc4149ff872ff6aba2"
+    },
+    "telegraph_parry_cue_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        465,
+        690,
+        930,
+        1020
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "45436f3c8a1af26c9cc698e1c2503f2f7186def30237a8f098654d17411deed1"
+    },
+    "telegraph_guard_break_v02.png": {
+      "source": "telegraphs",
+      "crop": [
+        950,
+        680,
+        1300,
+        1025
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "sha256": "30029c6225f450615646669efab10f825dfad5cec7a675bc8c1565d950eb2ff0"
+    },
+    "player_body_attack_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        192,
+        32
+      ],
+      "sha256": "861c56da988b3f0767cea9101289fbd3034103ae3fe4ce8669c9038039bfbb50",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_block_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        96,
+        32
+      ],
+      "sha256": "ede62d13bbf094d3f7a5a173568d08b7c2e3bca38592765b9f97baf9692800cc",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_cast_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        256,
+        32
+      ],
+      "sha256": "433c0a6ab1ee184cc968035db50831f4493af9b1952f26c71a7202cd1fc853ab",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_climb_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        224,
+        32
+      ],
+      "sha256": "1d3876fcd9bd86529debdbaead6de67a7bd131cd2b452e5f66d960aaed9b5c37",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_death_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        320,
+        32
+      ],
+      "sha256": "5ff957c1ed097fa6226e81f63eff87b97a33d89a000b728e20467c4b6590b6cf",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_heavy_attack_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        256,
+        32
+      ],
+      "sha256": "f7b97c06e70eb2d4901c1c8cd2f841cac1e6bf789313f2cab8348ce7c1e29522",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_hit_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        128,
+        32
+      ],
+      "sha256": "e3d95e64c44c857c796a8195d7ea13f2871dcbe97e7410519f691eed0c2a89fd",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_interact_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        160,
+        32
+      ],
+      "sha256": "0601ae73cf0d20a29698d67f69d9a52ea5501247b2bf1591017d742ec5b213b9",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_parry_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        160,
+        32
+      ],
+      "sha256": "cf7dcb9f3e250bf4bab436b4101425aa70076a2bae5b8a13cc91185ec6047546",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_pickup_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        160,
+        32
+      ],
+      "sha256": "7ab171cdafcbab0dfffd12f0d7ae1cd1d95955de086ea60d8682821dc9faaea8",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_sleep_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        160,
+        32
+      ],
+      "sha256": "7e67f819b35337b71cb5063e7f35b70224257667a536ded47b5028b357c5b46e",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    },
+    "player_body_use_item_sheet_v02.png": {
+      "source": "combat_utility",
+      "size": [
+        160,
+        32
+      ],
+      "sha256": "2fc5c18d80ceb06b039a3516bb8c50042843aa42aafa50ecefd80664162cfceb",
+      "derivation_note": "Exact earlier generated source crop/alpha cleanup and nearest-neighbor scaling to 32x32 production cells."
+    }
+  }
+}

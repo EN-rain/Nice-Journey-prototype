@@ -1,0 +1,173 @@
+[gd_resource type="Resource" script_class="Region3PlaytestContent" format=3]
+
+[ext_resource type="Script" path="res://src/items/upgrade_recipe_definition.gd" id="1_usu4o"]
+[ext_resource type="Script" path="res://src/items/upgrade_recipe_catalog.gd" id="2_7jl5h"]
+[ext_resource type="Script" path="res://src/items/item_category_catalog.gd" id="3_fhvyo"]
+[ext_resource type="Script" path="res://src/items/vendor_stock_definition.gd" id="4_ci5mg"]
+[ext_resource type="Script" path="res://src/items/vendor_stock_catalog.gd" id="5_2rkea"]
+[ext_resource type="Script" path="res://src/data/tuning/region3_playtest_content.gd" id="6_tf4yp"]
+
+[sub_resource type="Resource" id="Resource_q8ay0"]
+script = ExtResource("1_usu4o")
+recipe_id = &"upgrade:playtest:starter_sword:0_to_1"
+compatible_definition_ids = Array[StringName]([&"starter_sword"])
+compatible_rarities = Array[StringName]([&"common"])
+source_rank_declared = true
+result_rank_declared = true
+maximum_rank_declared = true
+gold_cost = 22
+gold_cost_declared = true
+material_costs = {
+"itemdef:region3_playtest_ore": 2
+}
+stat_changes = {
+"attack_power": 1
+}
+prerequisites_declared = true
+
+[sub_resource type="Resource" id="Resource_rcab5"]
+script = ExtResource("1_usu4o")
+recipe_id = &"upgrade:playtest:starter_bow:0_to_1"
+compatible_definition_ids = Array[StringName]([&"starter_bow"])
+compatible_rarities = Array[StringName]([&"common"])
+source_rank_declared = true
+result_rank_declared = true
+maximum_rank_declared = true
+gold_cost = 22
+gold_cost_declared = true
+material_costs = {
+"itemdef:region3_playtest_ore": 2
+}
+stat_changes = {
+"attack_power": 1
+}
+prerequisites_declared = true
+
+[sub_resource type="Resource" id="Resource_yu6bx"]
+script = ExtResource("1_usu4o")
+recipe_id = &"upgrade:playtest:starter_staff:0_to_1"
+compatible_definition_ids = Array[StringName]([&"starter_staff"])
+compatible_rarities = Array[StringName]([&"common"])
+source_rank_declared = true
+result_rank_declared = true
+maximum_rank_declared = true
+gold_cost = 22
+gold_cost_declared = true
+material_costs = {
+"itemdef:region3_playtest_ore": 2
+}
+stat_changes = {
+"attack_power": 1
+}
+prerequisites_declared = true
+
+[sub_resource type="Resource" id="Resource_k3ubo"]
+script = ExtResource("2_7jl5h")
+recipes = Array[ExtResource("1_usu4o")]([SubResource("Resource_q8ay0"), SubResource("Resource_rcab5"), SubResource("Resource_yu6bx")])
+
+[sub_resource type="Resource" id="Resource_rhpkv"]
+script = ExtResource("3_fhvyo")
+definition_categories = {
+"itemdef:region3_playtest_ore": &"material",
+"itemdef:region3_playtest_tonic": &"consumable",
+"starter_bow": &"weapon",
+"starter_staff": &"weapon",
+"starter_sword": &"weapon"
+}
+
+[sub_resource type="Resource" id="Resource_e0p40"]
+script = ExtResource("4_ci5mg")
+vendor_id = &"vendor:general_merchant"
+restock_rule_id = &"restock:region3_playtest_fixed"
+restock_policy = &"fixed_no_restock"
+availability_conditions_declared = true
+stock = {
+"itemdef:region3_playtest_ore": {
+"buy_price": 8,
+"quantity": 12,
+"sell_price": 2,
+"stackable": true
+},
+"itemdef:region3_playtest_tonic": {
+"buy_price": 12,
+"quantity": 12,
+"sell_price": 4,
+"stackable": true
+},
+"starter_bow": {
+"buy_price": 38,
+"quantity": 2,
+"sell_price": 12,
+"stackable": false
+},
+"starter_staff": {
+"buy_price": 38,
+"quantity": 2,
+"sell_price": 12,
+"stackable": false
+},
+"starter_sword": {
+"buy_price": 38,
+"quantity": 2,
+"sell_price": 12,
+"stackable": false
+}
+}
+
+[sub_resource type="Resource" id="Resource_i84bg"]
+script = ExtResource("4_ci5mg")
+vendor_id = &"vendor:clinic_apothecary"
+restock_rule_id = &"restock:region3_playtest_clinic_fixed"
+restock_policy = &"fixed_no_restock"
+availability_conditions_declared = true
+stock = {
+"itemdef:region3_playtest_tonic": {
+"buy_price": 12,
+"quantity": 8,
+"sell_price": 4,
+"stackable": true
+}
+}
+
+[sub_resource type="Resource" id="Resource_y5pi0"]
+script = ExtResource("5_2rkea")
+definitions = Array[ExtResource("4_ci5mg")]([SubResource("Resource_e0p40"), SubResource("Resource_i84bg")])
+
+[resource]
+resource_name = "PLAYTEST Region 3 services v01 — provisional costs and inventory"
+script = ExtResource("6_tf4yp")
+merchant_stock = SubResource("Resource_y5pi0")
+blacksmith_recipes = SubResource("Resource_k3ubo")
+item_categories = SubResource("Resource_rhpkv")
+inn_recovery = {
+"available": true,
+"combat_restricted": true,
+"price_gold": 8,
+"recovery_amounts": {
+"resource:region3_playtest_hp": 35,
+"resource:region3_playtest_stamina": 20.0
+},
+"role_id": &"inn_rest_house",
+"save_event_id": &"save_event:region3_inn_rest",
+"service_id": &"service:region3_inn_rest",
+"stock_reference_id": null,
+"structure_id": &"r3:functional:05"
+}
+clinic_recovery = {
+"available": true,
+"combat_restricted": true,
+"price_gold": 15,
+"recovery_amounts": {
+"resource:region3_playtest_hp": 60,
+"resource:region3_playtest_stamina": 30.0
+},
+"role_id": &"clinic_apothecary",
+"save_event_id": null,
+"service_id": &"service:region3_clinic",
+"stock_reference_id": &"vendor:clinic_apothecary",
+"structure_id": &"r3:functional:08"
+}
+recovery_mapping = {
+"resource:region3_playtest_hp": &"runtime:player_health",
+"resource:region3_playtest_stamina": &"runtime:player_stamina"
+}

@@ -1,0 +1,353 @@
+{
+  "schema": "nice-journey-region3-decorative-support-v02-intake/v1",
+  "status": "mechanical_intake_pass",
+  "visual_acceptance": "NOT_PERFORMED_BY_THIS_TOOL",
+  "integration_performed": false,
+  "input_zip": "D:\\nicejourney\\Nice_Journey_Region3_Decorative_V02_Batch1.zip",
+  "preserved_zip": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/raw_batch/Nice_Journey_Region3_Decorative_V02_Batch1.zip",
+  "zip_sha256": "ec1ff43c98b74e4d87c4b9782b043947d18e8375868140267db3fa9ab512580b",
+  "subset": "decorative_batch1",
+  "required_source_count": 10,
+  "sources": [
+    {
+      "path": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_01_source_v02.png",
+      "sha256": "9ad69a1efd6cbcdc37e2c06d0aeb310999eec4bb398ded4c46b39289a443041e",
+      "warnings": [
+        "visible subject touches source boundary; preserve exact source and normalize with transparent padding before derivation"
+      ],
+      "errors": [],
+      "source_mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "has_alpha_channel": true,
+        "zero_fraction": 0.6898600713760623,
+        "partial_fraction": 0.3097043209735227,
+        "opaque_fraction": 0.0004356076504150037
+      },
+      "visible_bbox": [
+        33,
+        52,
+        1234,
+        1254
+      ],
+      "touches_source_edge": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": true
+      },
+      "minimum_transparent_margin_px": 0,
+      "kind": "decorative_structure",
+      "stable_id": "r3:decorative:01",
+      "master_id": "R3-B09",
+      "filename": "region3_decorative_01_source_v02.png"
+    },
+    {
+      "path": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_02_source_v02.png",
+      "sha256": "d02d43a1b5c403ab55748c1f85785fe1718a1f7356c4de964dac767542527b72",
+      "warnings": [
+        "visible subject touches source boundary; preserve exact source and normalize with transparent padding before derivation"
+      ],
+      "errors": [],
+      "source_mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "has_alpha_channel": true,
+        "zero_fraction": 0.6601967801917437,
+        "partial_fraction": 0.3394916172554047,
+        "opaque_fraction": 0.00031160255285160853
+      },
+      "visible_bbox": [
+        0,
+        40,
+        1238,
+        1254
+      ],
+      "touches_source_edge": {
+        "left": true,
+        "top": false,
+        "right": false,
+        "bottom": true
+      },
+      "minimum_transparent_margin_px": 0,
+      "kind": "decorative_structure",
+      "stable_id": "r3:decorative:02",
+      "master_id": "R3-B10",
+      "filename": "region3_decorative_02_source_v02.png"
+    },
+    {
+      "path": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_03_source_v02.png",
+      "sha256": "10249f6c32ae4753bb4a7742df0c9e6f4a52a5fb1953c66360bca074bbe53962",
+      "warnings": [],
+      "errors": [],
+      "source_mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "has_alpha_channel": true,
+        "zero_fraction": 0.647137453609375,
+        "partial_fraction": 0.35259673033533523,
+        "opaque_fraction": 0.0002658160552897395
+      },
+      "visible_bbox": [
+        55,
+        57,
+        1222,
+        1240
+      ],
+      "touches_source_edge": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": false
+      },
+      "minimum_transparent_margin_px": 14,
+      "kind": "decorative_structure",
+      "stable_id": "r3:decorative:03",
+      "master_id": "R3-B11",
+      "filename": "region3_decorative_03_source_v02.png"
+    },
+    {
+      "path": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_04_source_v02.png",
+      "sha256": "bf940a38c76b3c3bd02eb6ebac52b1a2e1846d19d798547c97e96290b129b934",
+      "warnings": [
+        "visible subject touches source boundary; preserve exact source and normalize with transparent padding before derivation"
+      ],
+      "errors": [],
+      "source_mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "has_alpha_channel": true,
+        "zero_fraction": 0.6319922976936324,
+        "partial_fraction": 0.3677666872705906,
+        "opaque_fraction": 0.00024101503577706045
+      },
+      "visible_bbox": [
+        21,
+        53,
+        1242,
+        1254
+      ],
+      "touches_source_edge": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": true
+      },
+      "minimum_transparent_margin_px": 0,
+      "kind": "decorative_structure",
+      "stable_id": "r3:decorative:04",
+      "master_id": "R3-B12",
+      "filename": "region3_decorative_04_source_v02.png"
+    },
+    {
+      "path": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_05_source_v02.png",
+      "sha256": "0cac7e66753cc3ff6693eb0a8d84b7cd01af32a75893a0c33114aaf130893f39",
+      "warnings": [
+        "visible subject touches source boundary; preserve exact source and normalize with transparent padding before derivation"
+      ],
+      "errors": [],
+      "source_mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "has_alpha_channel": true,
+        "zero_fraction": 0.6790550938750385,
+        "partial_fraction": 0.3207547649753643,
+        "opaque_fraction": 0.000190141149597206
+      },
+      "visible_bbox": [
+        0,
+        25,
+        1235,
+        1254
+      ],
+      "touches_source_edge": {
+        "left": true,
+        "top": false,
+        "right": false,
+        "bottom": true
+      },
+      "minimum_transparent_margin_px": 0,
+      "kind": "decorative_structure",
+      "stable_id": "r3:decorative:05",
+      "master_id": "R3-B13",
+      "filename": "region3_decorative_05_source_v02.png"
+    },
+    {
+      "path": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_06_source_v02.png",
+      "sha256": "6172462564d60088d6aa2fcedec99dbb08d94e9e7e3e926456a7bea589b85ba1",
+      "warnings": [
+        "visible subject touches source boundary; preserve exact source and normalize with transparent padding before derivation"
+      ],
+      "errors": [],
+      "source_mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "has_alpha_channel": true,
+        "zero_fraction": 0.650926922206197,
+        "partial_fraction": 0.34883715014664396,
+        "opaque_fraction": 0.000235927647159075
+      },
+      "visible_bbox": [
+        19,
+        51,
+        1238,
+        1254
+      ],
+      "touches_source_edge": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": true
+      },
+      "minimum_transparent_margin_px": 0,
+      "kind": "decorative_structure",
+      "stable_id": "r3:decorative:06",
+      "master_id": "R3-B14",
+      "filename": "region3_decorative_06_source_v02.png"
+    },
+    {
+      "path": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_07_source_v02.png",
+      "sha256": "a4de40b0f5322a18a6ca25f75f762358a093f7f8e8144e07eb3f626100a880b1",
+      "warnings": [
+        "visible subject touches source boundary; preserve exact source and normalize with transparent padding before derivation"
+      ],
+      "errors": [],
+      "source_mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "has_alpha_channel": true,
+        "zero_fraction": 0.6432487809345024,
+        "partial_fraction": 0.3564230824996375,
+        "opaque_fraction": 0.0003281365658600612
+      },
+      "visible_bbox": [
+        0,
+        21,
+        1222,
+        1254
+      ],
+      "touches_source_edge": {
+        "left": true,
+        "top": false,
+        "right": false,
+        "bottom": true
+      },
+      "minimum_transparent_margin_px": 0,
+      "kind": "decorative_structure",
+      "stable_id": "r3:decorative:07",
+      "master_id": "R3-B15",
+      "filename": "region3_decorative_07_source_v02.png"
+    },
+    {
+      "path": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_08_source_v02.png",
+      "sha256": "e4309c59f5a61b7b781adb84ff574d0fa453af3965e71b413f40893e40743b46",
+      "warnings": [
+        "visible subject touches source boundary; preserve exact source and normalize with transparent padding before derivation"
+      ],
+      "errors": [],
+      "source_mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "has_alpha_channel": true,
+        "zero_fraction": 0.6290530589195913,
+        "partial_fraction": 0.37067540171292374,
+        "opaque_fraction": 0.0002715393674849731
+      },
+      "visible_bbox": [
+        31,
+        21,
+        1238,
+        1254
+      ],
+      "touches_source_edge": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": true
+      },
+      "minimum_transparent_margin_px": 0,
+      "kind": "decorative_structure",
+      "stable_id": "r3:decorative:08",
+      "master_id": "R3-B16",
+      "filename": "region3_decorative_08_source_v02.png"
+    },
+    {
+      "path": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_09_source_v02.png",
+      "sha256": "08725d8a0384ea841dc5e52d075f141b6d10c36db91ca31ba81c59d988ea8e0f",
+      "warnings": [
+        "visible subject touches source boundary; preserve exact source and normalize with transparent padding before derivation"
+      ],
+      "errors": [],
+      "source_mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "has_alpha_channel": true,
+        "zero_fraction": 0.610275507530607,
+        "partial_fraction": 0.38935056940597107,
+        "opaque_fraction": 0.0003739230634219302
+      },
+      "visible_bbox": [
+        0,
+        53,
+        1240,
+        1254
+      ],
+      "touches_source_edge": {
+        "left": true,
+        "top": false,
+        "right": false,
+        "bottom": true
+      },
+      "minimum_transparent_margin_px": 0,
+      "kind": "decorative_structure",
+      "stable_id": "r3:decorative:09",
+      "master_id": "R3-B17",
+      "filename": "region3_decorative_09_source_v02.png"
+    },
+    {
+      "path": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_10_source_v02.png",
+      "sha256": "a766705bbdbca6cc53b7e528525742d2443ba3284e7d63b9e77c69ad6347d0f1",
+      "warnings": [
+        "visible subject touches source boundary; preserve exact source and normalize with transparent padding before derivation"
+      ],
+      "errors": [],
+      "source_mode": "RGBA",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "has_alpha_channel": true,
+        "zero_fraction": 0.6392577245636928,
+        "partial_fraction": 0.3604707360688222,
+        "opaque_fraction": 0.0002715393674849731
+      },
+      "visible_bbox": [
+        33,
+        21,
+        1230,
+        1254
+      ],
+      "touches_source_edge": {
+        "left": false,
+        "top": false,
+        "right": false,
+        "bottom": true
+      },
+      "minimum_transparent_margin_px": 0,
+      "kind": "decorative_structure",
+      "stable_id": "r3:decorative:10",
+      "master_id": "R3-B18",
+      "filename": "region3_decorative_10_source_v02.png"
+    }
+  ],
+  "errors": [],
+  "note": "PASS means only that the selected staged filename contract is mechanically intact. Visual subject/style/service-readability acceptance is still mandatory before derivation or Godot integration."
+}

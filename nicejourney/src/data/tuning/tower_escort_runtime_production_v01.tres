@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TowerEscortRuntimeTuning" format=3 uid="uid://dh82m8gfnn3ox"]
+
+[ext_resource type="Script" uid="uid://c4udwvp0c51oe" path="res://src/data/tuning/tower_escort_runtime_tuning.gd" id="1_tuning"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_escort_v01"]
+size = Vector2(12, 10)
+
+[resource]
+script = ExtResource("1_tuning")
+authored = true
+speed_px_per_second = 80.0
+arrival_tolerance_px = 2.0
+collision_shape = SubResource("RectangleShape2D_escort_v01")
+collision_layer = 1
+collision_mask = 1
+max_hp = 100
+health_policy_id = &"health:escort_runtime_hp_v01"
+failure_policy_id = &"failure:escort_actor_defeat_v01"
+separation_policy_id = &"separation:nonterminal_route_owned_v01"
+repath_policy_id = &"repath:collision_retry_same_route_v01"
+save_policy_id = &"save:escort_exact_safe_state_v01"

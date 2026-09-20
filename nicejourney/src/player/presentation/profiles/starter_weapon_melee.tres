@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="StarterWeaponVisualProfile" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/player/presentation/starter_weapon_visual_profile.gd" id="1_profile"]
+[ext_resource type="Texture2D" path="res://assets/art/player/weapons/starter_sword_v02.png" id="2_sword"]
+[ext_resource type="Texture2D" path="res://assets/art/player/weapons/starter_shield_v02.png" id="3_shield"]
+
+[resource]
+script = ExtResource("1_profile")
+class_id = &"melee"
+main_hand_texture = ExtResource("2_sword")
+main_hand_position = Vector2(9, -1)
+main_hand_rotation_degrees = 0.0
+main_hand_scale = Vector2(1, 1)
+shield_texture = ExtResource("3_shield")
+shield_position = Vector2(-5, -13)
+shield_rotation_degrees = 0.0
+shield_scale = Vector2(1, 1)
+shield_visible = true

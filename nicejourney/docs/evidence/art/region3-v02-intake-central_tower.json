@@ -1,0 +1,35 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "central_tower",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\functional_buildings_v02\\isometric_fantasy_tower_keep.png",
+  "accepted_mechanically": false,
+  "errors": [
+    "visible subject touches source boundary; regenerate/crop with safe margin"
+  ],
+  "warnings": [
+    "source margin is under 8 px; deterministic cleanup/crop may be fragile"
+  ],
+  "sha256": "9509fbdccc81f8d63b30fbf9441eb3b73e8bc9bd0e51652d1d2cda7e01c32f33",
+  "source_mode": "RGBA",
+  "width": 1254,
+  "height": 1254,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.6437517964841057,
+    "partial_fraction": 0.35592706210938396,
+    "opaque_fraction": 0.0003211414065103312
+  },
+  "opaque_bbox": [
+    23,
+    0,
+    1236,
+    1214
+  ],
+  "touches_source_edge": {
+    "left": false,
+    "top": true,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 0
+}

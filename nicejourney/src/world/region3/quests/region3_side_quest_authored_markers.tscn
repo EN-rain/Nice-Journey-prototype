@@ -1,0 +1,80 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/world/region3/quests/region3_side_quest_playtest_anchor_layer.gd" id="1_markers"]
+
+[node name="Region3SideQuestMarkers" type="Node2D"]
+script = ExtResource("1_markers")
+escort_start_path = NodePath("EscortStart")
+escort_goal_path = NodePath("EscortGoal")
+escort_route_paths = Array[NodePath]([NodePath("EscortRoute1"), NodePath("EscortRoute2"), NodePath("EscortRoute3"), NodePath("EscortRoute4")])
+escort_hostile_spawn_paths = Array[NodePath]([NodePath("EscortHostile1"), NodePath("EscortHostile2"), NodePath("EscortHostile3")])
+west_hostile_spawn_paths = Array[NodePath]([NodePath("WestHostile1"), NodePath("WestHostile2"), NodePath("WestHostile3"), NodePath("WestHostile4"), NodePath("WestHostile5")])
+west_return_landmark_path = NodePath("WestReturn")
+north_defense_objective_path = NodePath("DefenseObjective")
+north_hostile_spawn_paths = Array[NodePath]([NodePath("NorthHostile1"), NodePath("NorthHostile2"), NodePath("NorthHostile3"), NodePath("NorthHostile4"), NodePath("NorthHostile5"), NodePath("NorthHostile6")])
+
+[node name="EscortStart" type="Marker2D" parent="."]
+position = Vector2(2912, 4256)
+
+[node name="EscortGoal" type="Marker2D" parent="."]
+position = Vector2(2912, 3456)
+
+[node name="EscortRoute1" type="Marker2D" parent="."]
+position = Vector2(2912, 3968)
+
+[node name="EscortRoute2" type="Marker2D" parent="."]
+position = Vector2(2912, 3744)
+
+[node name="EscortRoute3" type="Marker2D" parent="."]
+position = Vector2(2912, 3552)
+
+[node name="EscortRoute4" type="Marker2D" parent="."]
+position = Vector2(2912, 3488)
+
+[node name="EscortHostile1" type="Marker2D" parent="."]
+position = Vector2(2784, 3680)
+
+[node name="EscortHostile2" type="Marker2D" parent="."]
+position = Vector2(3040, 3776)
+
+[node name="EscortHostile3" type="Marker2D" parent="."]
+position = Vector2(2944, 3584)
+
+[node name="WestHostile1" type="Marker2D" parent="."]
+position = Vector2(640, 2528)
+
+[node name="WestHostile2" type="Marker2D" parent="."]
+position = Vector2(864, 2880)
+
+[node name="WestHostile3" type="Marker2D" parent="."]
+position = Vector2(1088, 3072)
+
+[node name="WestHostile4" type="Marker2D" parent="."]
+position = Vector2(1312, 3328)
+
+[node name="WestHostile5" type="Marker2D" parent="."]
+position = Vector2(1472, 2720)
+
+[node name="WestReturn" type="Marker2D" parent="."]
+position = Vector2(1600, 2656)
+
+[node name="DefenseObjective" type="Marker2D" parent="."]
+position = Vector2(2080, 1088)
+
+[node name="NorthHostile1" type="Marker2D" parent="."]
+position = Vector2(1728, 768)
+
+[node name="NorthHostile2" type="Marker2D" parent="."]
+position = Vector2(2368, 832)
+
+[node name="NorthHostile3" type="Marker2D" parent="."]
+position = Vector2(1600, 1088)
+
+[node name="NorthHostile4" type="Marker2D" parent="."]
+position = Vector2(2560, 992)
+
+[node name="NorthHostile5" type="Marker2D" parent="."]
+position = Vector2(1856, 1344)
+
+[node name="NorthHostile6" type="Marker2D" parent="."]
+position = Vector2(2368, 1344)

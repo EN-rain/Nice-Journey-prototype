@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ConsumablePlaytestTuning" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/items/consumable_playtest_tuning.gd" id="1_consume"]
+
+[resource]
+resource_name = "PLAYTEST Region 3 tonic healing v01 — provisional"
+script = ExtResource("1_consume")
+playtest_placeholder = true
+health_recovery_by_definition = {
+"itemdef:region3_playtest_tonic": 25
+}

@@ -1,0 +1,325 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/props/region3_prop_sheet_v02.png" id="1_props"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/roads/region3_ground_road_tileset_v02.png" id="2_ground"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/ruins/region3_ruins_module_sheet_v02.png" id="3_ruins"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/outskirts/region3_outskirts_support_sheet_v02.png" id="4_outskirts"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/risk_zone/region3_risk_zone_support_sheet_v02.png" id="5_risk"]
+
+[node name="Region3EnvironmentDressing" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Ground" type="Node2D" parent="."]
+z_index = -20
+
+[node name="TownPlaza01" type="Sprite2D" parent="Ground"]
+position = Vector2(2464, 2784)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="TownPlaza02" type="Sprite2D" parent="Ground"]
+position = Vector2(2656, 2784)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="TownMossStone01" type="Sprite2D" parent="Ground"]
+position = Vector2(2304, 3104)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="TownMossStone02" type="Sprite2D" parent="Ground"]
+position = Vector2(2816, 3104)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="WestRoad01" type="Sprite2D" parent="Ground"]
+position = Vector2(1376, 2496)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="WestRoad02" type="Sprite2D" parent="Ground"]
+position = Vector2(1184, 2624)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="WestRoad03" type="Sprite2D" parent="Ground"]
+position = Vector2(992, 2816)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="NorthTransition01" type="Sprite2D" parent="Ground"]
+position = Vector2(1888, 1376)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="NorthTransition02" type="Sprite2D" parent="Ground"]
+position = Vector2(2304, 1248)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="SouthRoad01" type="Sprite2D" parent="Ground"]
+position = Vector2(2400, 3744)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="SouthRoad02" type="Sprite2D" parent="Ground"]
+position = Vector2(2656, 3968)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="RiskGround01" type="Sprite2D" parent="Ground"]
+position = Vector2(3744, 2080)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="RiskGround02" type="Sprite2D" parent="Ground"]
+position = Vector2(4000, 2880)
+texture_filter = 1
+texture = ExtResource("2_ground")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+scale = Vector2(2, 2)
+
+[node name="TownProps" type="Node2D" parent="."]
+y_sort_enabled = true
+z_index = 5
+
+[node name="QuestBoard" type="Sprite2D" parent="TownProps"]
+position = Vector2(2048, 2464)
+texture_filter = 1
+texture = ExtResource("1_props")
+region_enabled = true
+region_rect = Rect2(0, 192, 64, 64)
+
+[node name="PlazaLamp" type="Sprite2D" parent="TownProps"]
+position = Vector2(2368, 2752)
+texture_filter = 1
+texture = ExtResource("1_props")
+region_enabled = true
+region_rect = Rect2(64, 64, 64, 64)
+
+[node name="PlazaBench" type="Sprite2D" parent="TownProps"]
+position = Vector2(2784, 2848)
+texture_filter = 1
+texture = ExtResource("1_props")
+region_enabled = true
+region_rect = Rect2(192, 0, 64, 64)
+
+[node name="PlazaPlanter" type="Sprite2D" parent="TownProps"]
+position = Vector2(2304, 2912)
+texture_filter = 1
+texture = ExtResource("1_props")
+region_enabled = true
+region_rect = Rect2(128, 64, 64, 64)
+
+[node name="WestCart" type="Sprite2D" parent="TownProps"]
+position = Vector2(1600, 2816)
+texture_filter = 1
+texture = ExtResource("1_props")
+region_enabled = true
+region_rect = Rect2(128, 0, 64, 64)
+
+[node name="EastWell" type="Sprite2D" parent="TownProps"]
+position = Vector2(3376, 2720)
+texture_filter = 1
+texture = ExtResource("1_props")
+region_enabled = true
+region_rect = Rect2(64, 192, 64, 64)
+
+[node name="NorthFence" type="Sprite2D" parent="TownProps"]
+position = Vector2(2464, 1696)
+texture_filter = 1
+texture = ExtResource("1_props")
+region_enabled = true
+region_rect = Rect2(192, 64, 64, 64)
+
+[node name="SouthPottedShrub" type="Sprite2D" parent="TownProps"]
+position = Vector2(2720, 3424)
+texture_filter = 1
+texture = ExtResource("1_props")
+region_enabled = true
+region_rect = Rect2(128, 192, 64, 64)
+
+[node name="Ruins" type="Node2D" parent="."]
+y_sort_enabled = true
+z_index = 5
+
+[node name="NorthBrokenWall" type="Sprite2D" parent="Ruins"]
+position = Vector2(1536, 960)
+texture_filter = 1
+texture = ExtResource("3_ruins")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 64)
+scale = Vector2(1.5, 1.5)
+
+[node name="NorthCollapsedArch" type="Sprite2D" parent="Ruins"]
+position = Vector2(1984, 832)
+texture_filter = 1
+texture = ExtResource("3_ruins")
+region_enabled = true
+region_rect = Rect2(192, 0, 64, 64)
+scale = Vector2(1.5, 1.5)
+
+[node name="NorthArch" type="Sprite2D" parent="Ruins"]
+position = Vector2(2496, 1024)
+texture_filter = 1
+texture = ExtResource("3_ruins")
+region_enabled = true
+region_rect = Rect2(64, 0, 64, 64)
+scale = Vector2(1.5, 1.5)
+
+[node name="NorthPillar" type="Sprite2D" parent="Ruins"]
+position = Vector2(2944, 928)
+texture_filter = 1
+texture = ExtResource("3_ruins")
+region_enabled = true
+region_rect = Rect2(128, 0, 64, 64)
+scale = Vector2(1.5, 1.5)
+
+[node name="NorthRubble" type="Sprite2D" parent="Ruins"]
+position = Vector2(3264, 1216)
+texture_filter = 1
+texture = ExtResource("3_ruins")
+region_enabled = true
+region_rect = Rect2(64, 64, 64, 64)
+scale = Vector2(1.5, 1.5)
+
+[node name="SouthOutskirts" type="Node2D" parent="."]
+y_sort_enabled = true
+z_index = 5
+
+[node name="OutskirtsTree01" type="Sprite2D" parent="SouthOutskirts"]
+position = Vector2(1760, 3872)
+texture_filter = 1
+texture = ExtResource("4_outskirts")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
+scale = Vector2(1.5, 1.5)
+
+[node name="OutskirtsTree02" type="Sprite2D" parent="SouthOutskirts"]
+position = Vector2(3264, 3968)
+texture_filter = 1
+texture = ExtResource("4_outskirts")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
+scale = Vector2(1.5, 1.5)
+
+[node name="OutskirtsSign" type="Sprite2D" parent="SouthOutskirts"]
+position = Vector2(2272, 3712)
+texture_filter = 1
+texture = ExtResource("4_outskirts")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 64)
+scale = Vector2(1.5, 1.5)
+
+[node name="OutskirtsFence" type="Sprite2D" parent="SouthOutskirts"]
+position = Vector2(2944, 3744)
+texture_filter = 1
+texture = ExtResource("4_outskirts")
+region_enabled = true
+region_rect = Rect2(64, 0, 64, 64)
+scale = Vector2(1.5, 1.5)
+
+[node name="OutskirtsRock" type="Sprite2D" parent="SouthOutskirts"]
+position = Vector2(1984, 4288)
+texture_filter = 1
+texture = ExtResource("4_outskirts")
+region_enabled = true
+region_rect = Rect2(128, 0, 64, 64)
+scale = Vector2(1.5, 1.5)
+
+[node name="OutskirtsLog" type="Sprite2D" parent="SouthOutskirts"]
+position = Vector2(3104, 4320)
+texture_filter = 1
+texture = ExtResource("4_outskirts")
+region_enabled = true
+region_rect = Rect2(64, 64, 64, 64)
+scale = Vector2(1.5, 1.5)
+
+[node name="EastRiskZone" type="Node2D" parent="."]
+y_sort_enabled = true
+z_index = 5
+
+[node name="RiskDeadTree01" type="Sprite2D" parent="EastRiskZone"]
+position = Vector2(3840, 1600)
+texture_filter = 1
+texture = ExtResource("5_risk")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
+scale = Vector2(1.25, 1.25)
+
+[node name="RiskRock01" type="Sprite2D" parent="EastRiskZone"]
+position = Vector2(4256, 1856)
+texture_filter = 1
+texture = ExtResource("5_risk")
+region_enabled = true
+region_rect = Rect2(64, 0, 64, 64)
+scale = Vector2(1.25, 1.25)
+
+[node name="RiskRock02" type="Sprite2D" parent="EastRiskZone"]
+position = Vector2(4000, 2336)
+texture_filter = 1
+texture = ExtResource("5_risk")
+region_enabled = true
+region_rect = Rect2(128, 0, 64, 64)
+scale = Vector2(1.25, 1.25)
+
+[node name="RiskDeadTree02" type="Sprite2D" parent="EastRiskZone"]
+position = Vector2(4448, 2528)
+texture_filter = 1
+texture = ExtResource("5_risk")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 64)
+scale = Vector2(1.25, 1.25)
+
+[node name="RiskCrackedGround" type="Sprite2D" parent="EastRiskZone"]
+position = Vector2(3840, 3040)
+texture_filter = 1
+texture = ExtResource("5_risk")
+region_enabled = true
+region_rect = Rect2(64, 64, 64, 64)
+scale = Vector2(1.25, 1.25)
+
+[node name="RiskCrystalAccent" type="Sprite2D" parent="EastRiskZone"]
+position = Vector2(4320, 3232)
+texture_filter = 1
+texture = ExtResource("5_risk")
+region_enabled = true
+region_rect = Rect2(128, 64, 64, 64)
+scale = Vector2(1.25, 1.25)

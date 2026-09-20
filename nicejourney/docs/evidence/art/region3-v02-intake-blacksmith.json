@@ -1,0 +1,31 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "blacksmith",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\functional_buildings_v02\\isometric_pixel_art_blacksmith_forge.png",
+  "accepted_mechanically": true,
+  "errors": [],
+  "warnings": [],
+  "sha256": "bc60c515486bdf4c77288df87482a43dac8b206fdfda998b3ab624381585a006",
+  "source_mode": "RGBA",
+  "width": 1254,
+  "height": 1254,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.4970512223723002,
+    "partial_fraction": 0.5024018833512663,
+    "opaque_fraction": 0.0005468942764334353
+  },
+  "opaque_bbox": [
+    105,
+    9,
+    1236,
+    1230
+  ],
+  "touches_source_edge": {
+    "left": false,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 9
+}

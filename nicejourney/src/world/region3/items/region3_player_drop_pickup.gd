@@ -1,0 +1,2 @@
+class_name Region3PlayerDropPickup
+extends PlayerDropPickup

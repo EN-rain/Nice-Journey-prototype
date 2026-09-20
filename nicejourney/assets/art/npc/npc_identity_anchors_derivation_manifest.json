@@ -1,0 +1,177 @@
+{
+  "schema": "nicejourney.npc_derivation.v1",
+  "source": {
+    "path": "res://assets/art/generated_sources/imagegen/npc/npc_identity_anchors_source_v01.png",
+    "sha256": "81f13fa706293b678f64d2f4bb163324b02c7b036eadf59dd3b80b6af551e23b",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "exact_bytes_preserved": true
+  },
+  "derivation_notice": "The current checkout does not contain the original crop script. Existing 32x32 review derivatives were preserved byte-for-byte into production paths; no new resampling or crop was performed in this step.",
+  "outputs": [
+    {
+      "role": "coordinator",
+      "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_coordinator_anchor_v01.png",
+      "production_path": "res://assets/art/npc/coordinator_anchor_v01.png",
+      "operation": "byte_preserving_copy",
+      "crop_rect_px": null,
+      "dimensions": [
+        32,
+        32
+      ],
+      "alpha_bbox_xyxy": [
+        6,
+        5,
+        26,
+        31
+      ],
+      "review_sha256": "0eb90067315b125bb74e9a2c87466d99a1f41cd2a39374b956fb17c9a205f83b",
+      "production_sha256": "0eb90067315b125bb74e9a2c87466d99a1f41cd2a39374b956fb17c9a205f83b",
+      "same_bytes_as_review": true,
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
+      "last_opaque_pixel_index": 30,
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+    },
+    {
+      "role": "merchant",
+      "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_merchant_anchor_v01.png",
+      "production_path": "res://assets/art/npc/merchant_anchor_v01.png",
+      "operation": "byte_preserving_copy",
+      "crop_rect_px": null,
+      "dimensions": [
+        32,
+        32
+      ],
+      "alpha_bbox_xyxy": [
+        9,
+        5,
+        23,
+        31
+      ],
+      "review_sha256": "a669f3d415361dc446468c872dcb2010708e2e66a0df9f44e713cf4ad71b4583",
+      "production_sha256": "a669f3d415361dc446468c872dcb2010708e2e66a0df9f44e713cf4ad71b4583",
+      "same_bytes_as_review": true,
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
+      "last_opaque_pixel_index": 30,
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+    },
+    {
+      "role": "blacksmith",
+      "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_blacksmith_anchor_v01.png",
+      "production_path": "res://assets/art/npc/blacksmith_anchor_v01.png",
+      "operation": "byte_preserving_copy",
+      "crop_rect_px": null,
+      "dimensions": [
+        32,
+        32
+      ],
+      "alpha_bbox_xyxy": [
+        5,
+        5,
+        28,
+        31
+      ],
+      "review_sha256": "e02ebf564d0b44a5a07a2920f21055f45f14c8ec4acaa6d149713bad950fb9fa",
+      "production_sha256": "e02ebf564d0b44a5a07a2920f21055f45f14c8ec4acaa6d149713bad950fb9fa",
+      "same_bytes_as_review": true,
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
+      "last_opaque_pixel_index": 30,
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+    },
+    {
+      "role": "lore_elder",
+      "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_lore_elder_anchor_v01.png",
+      "production_path": "res://assets/art/npc/lore_elder_anchor_v01.png",
+      "operation": "byte_preserving_copy",
+      "crop_rect_px": null,
+      "dimensions": [
+        32,
+        32
+      ],
+      "alpha_bbox_xyxy": [
+        10,
+        5,
+        23,
+        31
+      ],
+      "review_sha256": "a3910dcf1e8284b9ec2062d6092f837e0c2a886605e2fb3534c6b066e3535de9",
+      "production_sha256": "a3910dcf1e8284b9ec2062d6092f837e0c2a886605e2fb3534c6b066e3535de9",
+      "same_bytes_as_review": true,
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
+      "last_opaque_pixel_index": 30,
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+    },
+    {
+      "role": "variable_quest",
+      "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_variable_quest_anchor_v01.png",
+      "production_path": "res://assets/art/npc/variable_quest_anchor_v01.png",
+      "operation": "byte_preserving_copy",
+      "crop_rect_px": null,
+      "dimensions": [
+        32,
+        32
+      ],
+      "alpha_bbox_xyxy": [
+        8,
+        5,
+        26,
+        31
+      ],
+      "review_sha256": "6dc9da24b3508ea440d221bdcac865060a7c1ab5d358aa4f053738f8e9ffd1bb",
+      "production_sha256": "6dc9da24b3508ea440d221bdcac865060a7c1ab5d358aa4f053738f8e9ffd1bb",
+      "same_bytes_as_review": true,
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
+      "last_opaque_pixel_index": 30,
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+    },
+    {
+      "role": "escort",
+      "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_escort_anchor_v01.png",
+      "production_path": "res://assets/art/npc/escort_anchor_v01.png",
+      "operation": "byte_preserving_copy",
+      "crop_rect_px": null,
+      "dimensions": [
+        32,
+        32
+      ],
+      "alpha_bbox_xyxy": [
+        7,
+        4,
+        27,
+        31
+      ],
+      "review_sha256": "2cfa01c99e1716c168a69aff61cda8593c9ebac7e06e4ba39aa23d764aafd84e",
+      "production_sha256": "2cfa01c99e1716c168a69aff61cda8593c9ebac7e06e4ba39aa23d764aafd84e",
+      "same_bytes_as_review": true,
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
+      "last_opaque_pixel_index": 30,
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+    }
+  ]
+}

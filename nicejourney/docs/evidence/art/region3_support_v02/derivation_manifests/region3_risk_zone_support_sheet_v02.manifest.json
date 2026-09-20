@@ -1,0 +1,224 @@
+{
+  "schema": "region3-support-derivation/v02",
+  "source": "nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\decorative_support_v02\\region3_risk_zone_support_source_v02.png",
+  "source_sha256": "aa015bd738d5f6396a107b8bce8a9fdfc1ec3237c8a7e5b34d8f5755ef8afe88",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "alpha_threshold": 24,
+  "kind": "support",
+  "grid": [
+    3,
+    2
+  ],
+  "output_cell_size": 64,
+  "atlas": "region3_risk_zone_support_sheet_v02.png",
+  "atlas_sha256": "3970b501faecdd966cd82cc18273a27788a60e8fd7ef34ff68b81c98ff23b733",
+  "cells": [
+    {
+      "index": 0,
+      "row": 0,
+      "col": 0,
+      "nominal_rect": [
+        64,
+        148,
+        475,
+        454
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            43,
+            216,
+            495,
+            521
+          ],
+          "centroid": [
+            275.6624626659639,
+            398.7606982405943
+          ],
+          "pixels": 79686
+        }
+      ],
+      "bbox": [
+        43,
+        216,
+        495,
+        521
+      ],
+      "output": "region3_risk_zone_support_sheet_v02_00.png",
+      "sha256": "d84c473f8e294e9bac28c0f285838fe30a6346a0912292a84540750214a2014e"
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "col": 1,
+      "nominal_rect": [
+        560,
+        148,
+        971,
+        454
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            615,
+            99,
+            880,
+            526
+          ],
+          "centroid": [
+            752.8920884617916,
+            342.25686171263084
+          ],
+          "pixels": 60772
+        }
+      ],
+      "bbox": [
+        615,
+        99,
+        880,
+        526
+      ],
+      "output": "region3_risk_zone_support_sheet_v02_01.png",
+      "sha256": "01a777d46137d7d54a8a68bc444c1c9d946469629667ccf02bf620d5986d5612"
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "col": 2,
+      "nominal_rect": [
+        1052,
+        148,
+        1463,
+        454
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            1045,
+            210,
+            1500,
+            531
+          ],
+          "centroid": [
+            1269.1766937862785,
+            393.0377414597012
+          ],
+          "pixels": 84072
+        }
+      ],
+      "bbox": [
+        1045,
+        210,
+        1500,
+        531
+      ],
+      "output": "region3_risk_zone_support_sheet_v02_02.png",
+      "sha256": "8e87c2850478be0e9d67c5412ca1a5bd662fb7f7b182768f5698f897411f9a00"
+    },
+    {
+      "index": 3,
+      "row": 1,
+      "col": 0,
+      "nominal_rect": [
+        64,
+        570,
+        475,
+        880
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            52,
+            724,
+            471,
+            958
+          ],
+          "centroid": [
+            256.2203236583198,
+            842.9766144604163
+          ],
+          "pixels": 65254
+        }
+      ],
+      "bbox": [
+        52,
+        724,
+        471,
+        958
+      ],
+      "output": "region3_risk_zone_support_sheet_v02_03.png",
+      "sha256": "3dc7604c3e7c998cea082ab704b681eb993135ffa0ebb1b7e9d46189cbff0028"
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "col": 1,
+      "nominal_rect": [
+        560,
+        570,
+        971,
+        880
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            581,
+            622,
+            942,
+            958
+          ],
+          "centroid": [
+            762.1474764390443,
+            835.3271632431276
+          ],
+          "pixels": 56131
+        }
+      ],
+      "bbox": [
+        581,
+        622,
+        942,
+        958
+      ],
+      "output": "region3_risk_zone_support_sheet_v02_04.png",
+      "sha256": "4e656f23e4f7d1d8739946f774fbac34869ef4d77a88cbb231bd3b535c4f73a3"
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "col": 2,
+      "nominal_rect": [
+        1052,
+        570,
+        1463,
+        880
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            1057,
+            697,
+            1490,
+            953
+          ],
+          "centroid": [
+            1270.188725490196,
+            840.7794263538749
+          ],
+          "pixels": 68544
+        }
+      ],
+      "bbox": [
+        1057,
+        697,
+        1490,
+        953
+      ],
+      "output": "region3_risk_zone_support_sheet_v02_05.png",
+      "sha256": "0c115c9aa82533499e92438a2ecf9ebe797b6838a0be6df2a540f7fa0f5c930b"
+    }
+  ]
+}

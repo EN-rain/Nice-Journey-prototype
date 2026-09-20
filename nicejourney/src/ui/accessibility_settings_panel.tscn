@@ -1,0 +1,264 @@
+[gd_scene format=3 uid="uid://dqov07d56f350"]
+
+[node name="SettingsPanel" type="PanelContainer" unique_id=522827738]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -170.0
+offset_right = 300.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scroller" type="ScrollContainer" parent="." unique_id=1134417147]
+layout_mode = 2
+follow_focus = true
+
+[node name="Layout" type="VBoxContainer" parent="Scroller" unique_id=538355611]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 3
+
+[node name="Title" type="Label" parent="Scroller/Layout" unique_id=503266477]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "ACCESSIBILITY & CONTROLS"
+horizontal_alignment = 1
+
+[node name="KeyboardHint" type="Label" parent="Scroller/Layout" unique_id=1193801829]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Tab / arrows navigate • Enter / Space activate • Esc goes back"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="RunRow" type="HBoxContainer" parent="Scroller/Layout" unique_id=701337611]
+layout_mode = 2
+
+[node name="RunModeLabel" type="Label" parent="Scroller/Layout/RunRow" unique_id=1508487648]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Run input"
+
+[node name="RunMode" type="OptionButton" parent="Scroller/Layout/RunRow" unique_id=77752674]
+process_mode = 3
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+
+[node name="ReducedMotion" type="CheckBox" parent="Scroller/Layout" unique_id=1185046265]
+process_mode = 3
+layout_mode = 2
+text = "Reduced motion (disables look-ahead and screen shake)"
+
+[node name="ShakeRow" type="HBoxContainer" parent="Scroller/Layout" unique_id=1546179197]
+layout_mode = 2
+
+[node name="ShakeLabel" type="Label" parent="Scroller/Layout/ShakeRow" unique_id=891100386]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Screen shake intensity (0% disables)"
+
+[node name="ShakeIntensity" type="HSlider" parent="Scroller/Layout/ShakeRow" unique_id=1456500605]
+process_mode = 3
+custom_minimum_size = Vector2(160, 18)
+layout_mode = 2
+step = 10.0
+value = 100.0
+
+[node name="UIScaleRow" type="HBoxContainer" parent="Scroller/Layout" unique_id=1276749077]
+layout_mode = 2
+
+[node name="UIScaleLabel" type="Label" parent="Scroller/Layout/UIScaleRow" unique_id=267215156]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "UI scale (implementation/test: 100–125%)"
+
+[node name="UIScale" type="OptionButton" parent="Scroller/Layout/UIScaleRow" unique_id=1079252940]
+process_mode = 3
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+
+[node name="TextScaleRow" type="HBoxContainer" parent="Scroller/Layout" unique_id=347871333]
+layout_mode = 2
+
+[node name="TextScaleLabel" type="Label" parent="Scroller/Layout/TextScaleRow" unique_id=1990520292]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Text size (implementation/test: 100–125%)"
+
+[node name="TextScale" type="OptionButton" parent="Scroller/Layout/TextScaleRow" unique_id=1552392077]
+process_mode = 3
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+
+[node name="AudioSection" type="VBoxContainer" parent="Scroller/Layout" unique_id=1804872369]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="AudioLabel" type="Label" parent="Scroller/Layout/AudioSection" unique_id=1233138149]
+layout_mode = 2
+text = "Audio"
+
+[node name="MasterRow" type="HBoxContainer" parent="Scroller/Layout/AudioSection" unique_id=1940264373]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Scroller/Layout/AudioSection/MasterRow" unique_id=1535106163]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Master"
+
+[node name="Volume" type="HSlider" parent="Scroller/Layout/AudioSection/MasterRow" unique_id=1116489241]
+process_mode = 3
+custom_minimum_size = Vector2(120, 18)
+layout_mode = 2
+step = 5.0
+value = 100.0
+
+[node name="Mute" type="CheckBox" parent="Scroller/Layout/AudioSection/MasterRow" unique_id=1421331117]
+process_mode = 3
+layout_mode = 2
+text = "Mute"
+
+[node name="MusicRow" type="HBoxContainer" parent="Scroller/Layout/AudioSection" unique_id=1104399379]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Scroller/Layout/AudioSection/MusicRow" unique_id=1961814162]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Music"
+
+[node name="Volume" type="HSlider" parent="Scroller/Layout/AudioSection/MusicRow" unique_id=1827438976]
+process_mode = 3
+custom_minimum_size = Vector2(120, 18)
+layout_mode = 2
+step = 5.0
+value = 100.0
+
+[node name="Mute" type="CheckBox" parent="Scroller/Layout/AudioSection/MusicRow" unique_id=1277772151]
+process_mode = 3
+layout_mode = 2
+text = "Mute"
+
+[node name="GameplaySfxRow" type="HBoxContainer" parent="Scroller/Layout/AudioSection" unique_id=2072289000]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Scroller/Layout/AudioSection/GameplaySfxRow" unique_id=1887329985]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Gameplay SFX"
+
+[node name="Volume" type="HSlider" parent="Scroller/Layout/AudioSection/GameplaySfxRow" unique_id=1859073190]
+process_mode = 3
+custom_minimum_size = Vector2(120, 18)
+layout_mode = 2
+step = 5.0
+value = 100.0
+
+[node name="Mute" type="CheckBox" parent="Scroller/Layout/AudioSection/GameplaySfxRow" unique_id=515201976]
+process_mode = 3
+layout_mode = 2
+text = "Mute"
+
+[node name="UiRow" type="HBoxContainer" parent="Scroller/Layout/AudioSection" unique_id=1683120486]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Scroller/Layout/AudioSection/UiRow" unique_id=562359292]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "UI"
+
+[node name="Volume" type="HSlider" parent="Scroller/Layout/AudioSection/UiRow" unique_id=624711173]
+process_mode = 3
+custom_minimum_size = Vector2(120, 18)
+layout_mode = 2
+step = 5.0
+value = 100.0
+
+[node name="Mute" type="CheckBox" parent="Scroller/Layout/AudioSection/UiRow" unique_id=464122842]
+process_mode = 3
+layout_mode = 2
+text = "Mute"
+
+[node name="AmbienceRow" type="HBoxContainer" parent="Scroller/Layout/AudioSection" unique_id=1404265990]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Scroller/Layout/AudioSection/AmbienceRow" unique_id=887765059]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ambience"
+
+[node name="Volume" type="HSlider" parent="Scroller/Layout/AudioSection/AmbienceRow" unique_id=1749409431]
+process_mode = 3
+custom_minimum_size = Vector2(120, 18)
+layout_mode = 2
+step = 5.0
+value = 100.0
+
+[node name="Mute" type="CheckBox" parent="Scroller/Layout/AudioSection/AmbienceRow" unique_id=296938334]
+process_mode = 3
+layout_mode = 2
+text = "Mute"
+
+[node name="ResetAudioButton" type="Button" parent="Scroller/Layout/AudioSection" unique_id=1365727642]
+process_mode = 3
+layout_mode = 2
+text = "Reset Audio Defaults"
+
+[node name="ControlsLabel" type="Label" parent="Scroller/Layout" unique_id=871335511]
+layout_mode = 2
+text = "Control binding"
+
+[node name="BindingRow" type="HBoxContainer" parent="Scroller/Layout" unique_id=605191278]
+layout_mode = 2
+
+[node name="ControlAction" type="OptionButton" parent="Scroller/Layout/BindingRow" unique_id=1095362651]
+process_mode = 3
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+
+[node name="CurrentBinding" type="Label" parent="Scroller/Layout/BindingRow" unique_id=729928952]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Current: —"
+
+[node name="BindingButtons" type="HBoxContainer" parent="Scroller/Layout" unique_id=538086601]
+layout_mode = 2
+
+[node name="RebindButton" type="Button" parent="Scroller/Layout/BindingButtons" unique_id=1308671696]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rebind Selected Control"
+
+[node name="ResetControlsButton" type="Button" parent="Scroller/Layout/BindingButtons" unique_id=790467428]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reset Control Defaults"
+
+[node name="BindingStatus" type="Label" parent="Scroller/Layout" unique_id=1276524715]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Choose a control, then activate Rebind and press a key or mouse button."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Status" type="Label" parent="Scroller/Layout" unique_id=385806366]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Run: Hold | Motion: Off | Shake: 100% | UI: 100% | Text: 100%"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BackButton" type="Button" parent="Scroller/Layout" unique_id=1474854540]
+process_mode = 3
+layout_mode = 2
+text = "Back"

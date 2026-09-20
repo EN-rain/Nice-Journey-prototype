@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="NpcVisualProfile" format=3]
+
+[ext_resource type="Script" path="res://src/world/npc/presentation/npc_visual_profile.gd" id="1_profile"]
+[ext_resource type="Texture2D" path="res://assets/art/npc/escort_anchor_v01.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1_profile")
+texture = ExtResource("2_texture")
+frame_size = Vector2i(32, 32)
+ground_anchor = Vector2(16, 29)
+mirror_left = true
+role_id = &"npc:temporary_escort"

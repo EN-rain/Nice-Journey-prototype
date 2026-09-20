@@ -1,0 +1,108 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://cemkc043f3ryn"]
+
+[ext_resource type="Texture2D" uid="uid://bgfcanlpj3jgg" path="res://assets/art/enemies/mobile_ranged/enemy_mobile_ranged_idle_v02.png" id="1_idle"]
+[ext_resource type="Texture2D" uid="uid://ct3dsh7fkv64f" path="res://assets/art/enemies/mobile_ranged/enemy_mobile_ranged_move_v02.png" id="2_move"]
+[ext_resource type="Texture2D" uid="uid://cmffq17uab6yb" path="res://assets/art/enemies/mobile_ranged/enemy_mobile_ranged_windup_v02.png" id="3_windup"]
+[ext_resource type="Texture2D" uid="uid://fd7qyj6ieser" path="res://assets/art/enemies/mobile_ranged/enemy_mobile_ranged_release_v02.png" id="4_release"]
+[ext_resource type="Texture2D" uid="uid://dpncajjx2r132" path="res://assets/art/enemies/mobile_ranged/enemy_mobile_ranged_hit_v02.png" id="5_hit"]
+[ext_resource type="Texture2D" uid="uid://dxnmpvwwoex4x" path="res://assets/art/enemies/mobile_ranged/enemy_mobile_ranged_death_v02.png" id="6_death"]
+
+[sub_resource type="Animation" id="Animation_mobile_ranged_death"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_death")]
+}
+
+[sub_resource type="Animation" id="Animation_mobile_ranged_hit"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_hit")]
+}
+
+[sub_resource type="Animation" id="Animation_mobile_ranged_idle"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_idle")]
+}
+
+[sub_resource type="Animation" id="Animation_mobile_ranged_move"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_move")]
+}
+
+[sub_resource type="Animation" id="Animation_mobile_ranged_release"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_release")]
+}
+
+[sub_resource type="Animation" id="Animation_mobile_ranged_windup"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_windup")]
+}
+
+[resource]
+_data = {
+&"death": SubResource("Animation_mobile_ranged_death"),
+&"hit": SubResource("Animation_mobile_ranged_hit"),
+&"idle": SubResource("Animation_mobile_ranged_idle"),
+&"move": SubResource("Animation_mobile_ranged_move"),
+&"release": SubResource("Animation_mobile_ranged_release"),
+&"windup": SubResource("Animation_mobile_ranged_windup")
+}

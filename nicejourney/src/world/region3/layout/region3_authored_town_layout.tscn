@@ -1,0 +1,503 @@
+[gd_scene load_steps=32 format=3]
+
+[ext_resource type="Script" path="res://src/world/region3/layout/region3_authored_town_layout.gd" id="1_layout"]
+[ext_resource type="Script" path="res://src/world/region3/layout/region3_town_structure_anchor.gd" id="2_anchor"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/central_tower_visual_profile.tres" id="3_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/quest_hall_visual_profile.tres" id="4_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/blacksmith_visual_profile.tres" id="5_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/general_merchant_visual_profile.tres" id="6_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/inn_rest_house_visual_profile.tres" id="7_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/storage_house_visual_profile.tres" id="8_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/training_hall_visual_profile.tres" id="9_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/clinic_apothecary_visual_profile.tres" id="10_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_01_visual_profile.tres" id="11_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_02_visual_profile.tres" id="12_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_03_visual_profile.tres" id="13_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_04_visual_profile.tres" id="14_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_05_visual_profile.tres" id="15_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_06_visual_profile.tres" id="16_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_07_visual_profile.tres" id="17_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_08_visual_profile.tres" id="18_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_09_visual_profile.tres" id="19_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_10_visual_profile.tres" id="20_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_11_visual_profile.tres" id="21_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_12_visual_profile.tres" id="22_decorative"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/region3_environment_support_visual_profile.tres" id="23_environment_support"]
+[ext_resource type="PackedScene" path="res://src/world/region3/presentation/region3_environment_dressing.tscn" id="24_environment_dressing"]
+[ext_resource type="PackedScene" path="res://src/world/region3/layout/region3_structure_collision_layer.tscn" id="25_collision_layer"]
+[ext_resource type="Script" path="res://src/world/region3/layout/region3_route_navigator.gd" id="26_route_navigator"]
+[ext_resource type="Script" path="res://src/world/region3/interactions/region3_storage_service_interaction.gd" id="27_storage_interaction"]
+[ext_resource type="Script" path="res://src/world/region3/interactions/region3_functional_service_interaction.gd" id="28_service_interaction"]
+[ext_resource type="Resource" path="res://src/world/region3/layout/region3_world_layout_definition.tres" id="29_world_layout"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/roads/derived/region3_ground_tile_v02_01.png" id="30_road_tile"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_storage_interaction"]
+radius = 24.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_service_interaction"]
+radius = 24.0
+
+[node name="Region3AuthoredTownLayout" type="Node2D"]
+script = ExtResource("1_layout")
+y_sort_enabled = true
+environment_support_profile = ExtResource("23_environment_support")
+world_layout_definition = ExtResource("29_world_layout")
+
+[node name="CentralTower" type="Node2D" parent="."]
+position = Vector2(2560, 2352)
+script = ExtResource("2_anchor")
+structure_id = &"r3:functional:01"
+category = &"functional"
+role_id = &"central_tower"
+lot_min = Vector2i(75, 67)
+lot_max = Vector2i(85, 80)
+door_facing = &"south"
+entrance_tile = Vector2i(80, 80)
+approach_tile = Vector2i(80, 81)
+functional_profile = ExtResource("3_profile")
+
+[node name="Sprite" type="Sprite2D" parent="CentralTower"]
+texture_filter = 1
+
+[node name="QuestHall" type="Node2D" parent="."]
+position = Vector2(1920, 2368)
+script = ExtResource("2_anchor")
+structure_id = &"r3:functional:02"
+category = &"functional"
+role_id = &"quest_hall"
+lot_min = Vector2i(55, 69)
+lot_max = Vector2i(65, 79)
+door_facing = &"south"
+entrance_tile = Vector2i(60, 79)
+approach_tile = Vector2i(60, 80)
+functional_profile = ExtResource("4_profile")
+
+[node name="Sprite" type="Sprite2D" parent="QuestHall"]
+texture_filter = 1
+
+[node name="ServiceInteraction" type="Area2D" parent="QuestHall"]
+script = ExtResource("28_service_interaction")
+expected_role_id = &"quest_hall"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuestHall/ServiceInteraction"]
+shape = SubResource("CircleShape2D_service_interaction")
+
+[node name="Blacksmith" type="Node2D" parent="."]
+position = Vector2(3168, 2368)
+script = ExtResource("2_anchor")
+structure_id = &"r3:functional:03"
+category = &"functional"
+role_id = &"blacksmith"
+lot_min = Vector2i(94, 69)
+lot_max = Vector2i(104, 79)
+door_facing = &"south"
+entrance_tile = Vector2i(99, 79)
+approach_tile = Vector2i(99, 80)
+functional_profile = ExtResource("5_profile")
+
+[node name="Sprite" type="Sprite2D" parent="Blacksmith"]
+texture_filter = 1
+
+[node name="ServiceInteraction" type="Area2D" parent="Blacksmith"]
+script = ExtResource("28_service_interaction")
+expected_role_id = &"blacksmith"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blacksmith/ServiceInteraction"]
+shape = SubResource("CircleShape2D_service_interaction")
+
+[node name="GeneralMerchant" type="Node2D" parent="."]
+position = Vector2(1920, 2944)
+script = ExtResource("2_anchor")
+structure_id = &"r3:functional:04"
+category = &"functional"
+role_id = &"general_merchant"
+lot_min = Vector2i(55, 87)
+lot_max = Vector2i(65, 97)
+door_facing = &"south"
+entrance_tile = Vector2i(60, 97)
+approach_tile = Vector2i(60, 98)
+functional_profile = ExtResource("6_profile")
+
+[node name="Sprite" type="Sprite2D" parent="GeneralMerchant"]
+texture_filter = 1
+
+[node name="ServiceInteraction" type="Area2D" parent="GeneralMerchant"]
+script = ExtResource("28_service_interaction")
+expected_role_id = &"general_merchant"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GeneralMerchant/ServiceInteraction"]
+shape = SubResource("CircleShape2D_service_interaction")
+
+[node name="InnRestHouse" type="Node2D" parent="."]
+position = Vector2(3168, 2944)
+script = ExtResource("2_anchor")
+structure_id = &"r3:functional:05"
+category = &"functional"
+role_id = &"inn_rest_house"
+lot_min = Vector2i(94, 87)
+lot_max = Vector2i(104, 97)
+door_facing = &"south"
+entrance_tile = Vector2i(99, 97)
+approach_tile = Vector2i(99, 98)
+functional_profile = ExtResource("7_profile")
+
+[node name="Sprite" type="Sprite2D" parent="InnRestHouse"]
+texture_filter = 1
+
+[node name="ServiceInteraction" type="Area2D" parent="InnRestHouse"]
+script = ExtResource("28_service_interaction")
+expected_role_id = &"inn_rest_house"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InnRestHouse/ServiceInteraction"]
+shape = SubResource("CircleShape2D_service_interaction")
+
+[node name="StorageHouse" type="Node2D" parent="."]
+position = Vector2(1920, 1856)
+script = ExtResource("2_anchor")
+structure_id = &"r3:functional:06"
+category = &"functional"
+role_id = &"storage_house"
+lot_min = Vector2i(55, 53)
+lot_max = Vector2i(65, 63)
+door_facing = &"south"
+entrance_tile = Vector2i(60, 63)
+approach_tile = Vector2i(60, 64)
+functional_profile = ExtResource("8_profile")
+
+[node name="Sprite" type="Sprite2D" parent="StorageHouse"]
+texture_filter = 1
+
+[node name="StorageServiceInteraction" type="Area2D" parent="StorageHouse"]
+script = ExtResource("27_storage_interaction")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StorageHouse/StorageServiceInteraction"]
+shape = SubResource("CircleShape2D_storage_interaction")
+
+[node name="TrainingHall" type="Node2D" parent="."]
+position = Vector2(3168, 1856)
+script = ExtResource("2_anchor")
+structure_id = &"r3:functional:07"
+category = &"functional"
+role_id = &"training_hall"
+lot_min = Vector2i(94, 53)
+lot_max = Vector2i(104, 63)
+door_facing = &"south"
+entrance_tile = Vector2i(99, 63)
+approach_tile = Vector2i(99, 64)
+functional_profile = ExtResource("9_profile")
+
+[node name="Sprite" type="Sprite2D" parent="TrainingHall"]
+texture_filter = 1
+
+[node name="ServiceInteraction" type="Area2D" parent="TrainingHall"]
+script = ExtResource("28_service_interaction")
+expected_role_id = &"training_hall"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrainingHall/ServiceInteraction"]
+shape = SubResource("CircleShape2D_service_interaction")
+
+[node name="ClinicApothecary" type="Node2D" parent="."]
+position = Vector2(2560, 3264)
+script = ExtResource("2_anchor")
+structure_id = &"r3:functional:08"
+category = &"functional"
+role_id = &"clinic_apothecary"
+lot_min = Vector2i(75, 97)
+lot_max = Vector2i(85, 107)
+door_facing = &"south"
+entrance_tile = Vector2i(80, 107)
+approach_tile = Vector2i(80, 108)
+functional_profile = ExtResource("10_profile")
+
+[node name="Sprite" type="Sprite2D" parent="ClinicApothecary"]
+texture_filter = 1
+
+[node name="ServiceInteraction" type="Area2D" parent="ClinicApothecary"]
+script = ExtResource("28_service_interaction")
+expected_role_id = &"clinic_apothecary"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClinicApothecary/ServiceInteraction"]
+shape = SubResource("CircleShape2D_service_interaction")
+
+[node name="DecorativeHome01" type="Node2D" parent="."]
+position = Vector2(1632, 1632)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:01"
+category = &"decorative"
+lot_min = Vector2i(49, 49)
+lot_max = Vector2i(53, 53)
+door_facing = &"south"
+decorative_profile = ExtResource("11_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeHome01"]
+texture_filter = 1
+
+[node name="DecorativeHome02" type="Node2D" parent="."]
+position = Vector2(2272, 1632)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:02"
+category = &"decorative"
+lot_min = Vector2i(69, 49)
+lot_max = Vector2i(73, 53)
+door_facing = &"south"
+decorative_profile = ExtResource("12_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeHome02"]
+texture_filter = 1
+
+[node name="DecorativeWorkshop01" type="Node2D" parent="."]
+position = Vector2(2592, 1632)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:03"
+category = &"decorative"
+lot_min = Vector2i(79, 49)
+lot_max = Vector2i(83, 53)
+door_facing = &"south"
+decorative_profile = ExtResource("13_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeWorkshop01"]
+texture_filter = 1
+
+[node name="DecorativeStorehouse01" type="Node2D" parent="."]
+position = Vector2(2848, 1632)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:04"
+category = &"decorative"
+lot_min = Vector2i(87, 49)
+lot_max = Vector2i(91, 53)
+door_facing = &"south"
+decorative_profile = ExtResource("14_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeStorehouse01"]
+texture_filter = 1
+
+[node name="DecorativeHome03" type="Node2D" parent="."]
+position = Vector2(3488, 1824)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:05"
+category = &"decorative"
+lot_min = Vector2i(107, 55)
+lot_max = Vector2i(111, 59)
+door_facing = &"west"
+decorative_profile = ExtResource("15_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeHome03"]
+texture_filter = 1
+
+[node name="DecorativeStall01" type="Node2D" parent="."]
+position = Vector2(3488, 2144)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:06"
+category = &"decorative"
+lot_min = Vector2i(107, 65)
+lot_max = Vector2i(111, 69)
+door_facing = &"west"
+decorative_profile = ExtResource("16_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeStall01"]
+texture_filter = 1
+
+[node name="DecorativeHome04" type="Node2D" parent="."]
+position = Vector2(3488, 2656)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:07"
+category = &"decorative"
+lot_min = Vector2i(107, 81)
+lot_max = Vector2i(111, 85)
+door_facing = &"west"
+decorative_profile = ExtResource("17_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeHome04"]
+texture_filter = 1
+
+[node name="DecorativeCivicFacade01" type="Node2D" parent="."]
+position = Vector2(3488, 3232)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:08"
+category = &"decorative"
+lot_min = Vector2i(107, 99)
+lot_max = Vector2i(111, 103)
+door_facing = &"west"
+decorative_profile = ExtResource("18_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeCivicFacade01"]
+texture_filter = 1
+
+[node name="DecorativeWorkshop02" type="Node2D" parent="."]
+position = Vector2(3104, 3488)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:09"
+category = &"decorative"
+lot_min = Vector2i(95, 107)
+lot_max = Vector2i(99, 111)
+door_facing = &"north"
+decorative_profile = ExtResource("19_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeWorkshop02"]
+texture_filter = 1
+
+[node name="DecorativeHome05" type="Node2D" parent="."]
+position = Vector2(2016, 3488)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:10"
+category = &"decorative"
+lot_min = Vector2i(61, 107)
+lot_max = Vector2i(65, 111)
+door_facing = &"north"
+decorative_profile = ExtResource("20_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeHome05"]
+texture_filter = 1
+
+[node name="DecorativeStall02" type="Node2D" parent="."]
+position = Vector2(1632, 3168)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:11"
+category = &"decorative"
+lot_min = Vector2i(49, 97)
+lot_max = Vector2i(53, 101)
+door_facing = &"east"
+decorative_profile = ExtResource("21_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeStall02"]
+texture_filter = 1
+
+[node name="DecorativeHome06" type="Node2D" parent="."]
+position = Vector2(1632, 2016)
+script = ExtResource("2_anchor")
+structure_id = &"r3:decorative:12"
+category = &"decorative"
+lot_min = Vector2i(49, 61)
+lot_max = Vector2i(53, 65)
+door_facing = &"east"
+decorative_profile = ExtResource("22_decorative")
+
+[node name="Sprite" type="Sprite2D" parent="DecorativeHome06"]
+texture_filter = 1
+
+[node name="EnvironmentDressing" parent="." instance=ExtResource("24_environment_dressing")]
+
+[node name="StructureCollisionLayer" parent="." instance=ExtResource("25_collision_layer")]
+
+[node name="RouteNavigator" type="Node" parent="."]
+script = ExtResource("26_route_navigator")
+
+[node name="Routes" type="Node2D" parent="."]
+z_index = -10
+
+[node name="CirculationLoop" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(2176, 2080, 2944, 2080, 2944, 3040, 2176, 3040, 2176, 2080)
+width = 96.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="NorthApproach" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(2080, 1088, 2112, 1536, 2112, 2080, 2176, 2080)
+width = 128.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="SouthApproach" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(2912, 3584, 2912, 3040, 2944, 3040)
+width = 128.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="WestApproach" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(640, 2528, 1536, 2624, 2176, 2624)
+width = 128.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="EastApproach" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(3584, 2368, 3392, 2368, 3392, 2560, 2944, 2560)
+width = 128.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="TowerPlazaSpine" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(2560, 2592, 2560, 3040)
+width = 96.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="StorageConnector" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(1920, 2048, 1920, 2080, 2176, 2080)
+width = 96.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="TrainingConnector" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(3168, 2048, 3168, 2080, 2944, 2080)
+width = 96.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="QuestConnector" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(1920, 2560, 2176, 2560)
+width = 96.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="BlacksmithConnector" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(3168, 2560, 2944, 2560)
+width = 96.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="MerchantConnector" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(1920, 3136, 2176, 3136, 2176, 3040)
+width = 96.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="InnConnector" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(3168, 3136, 2944, 3136, 2944, 3040)
+width = 96.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false
+
+[node name="ClinicConnector" type="Line2D" parent="Routes"]
+texture = ExtResource("30_road_tile")
+texture_mode = 1
+texture_repeat = 2
+points = PackedVector2Array(2560, 3456, 2912, 3456)
+width = 96.0
+default_color = Color(1, 1, 1, 1)
+antialiased = false

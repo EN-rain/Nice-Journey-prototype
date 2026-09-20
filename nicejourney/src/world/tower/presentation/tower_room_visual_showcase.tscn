@@ -1,0 +1,142 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="PackedScene" path="res://src/world/tower/presentation/tower_room_visual.tscn" id="1_visual"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/combat_visual_profile.tres" id="2_combat"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/safe_visual_profile.tres" id="3_safe"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/reward_visual_profile.tres" id="4_reward"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/vendor_visual_profile.tres" id="5_vendor"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/secret_visual_profile.tres" id="6_secret"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/elite_visual_profile.tres" id="7_elite"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/objective_visual_profile.tres" id="8_objective"]
+[ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/boss_visual_profile.tres" id="9_boss"]
+
+[node name="TowerRoomVisualShowcase" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.045, 0.05, 0.065, 1)
+mouse_filter = 2
+show_behind_parent = true
+
+[node name="Title" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 12.0
+offset_right = 616.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 16
+text = "Tower Room Visual Profiles — Provisional V01"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 38.0
+offset_right = 616.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 9
+text = "Inspector-owned Sprite2D profiles; replace textures only after generated art is approved."
+horizontal_alignment = 1
+
+[node name="Combat" parent="." instance=ExtResource("1_visual")]
+position = Vector2(80, 120)
+profile = ExtResource("2_combat")
+
+[node name="CombatLabel" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 171.0
+offset_right = 112.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 10
+text = "Combat"
+horizontal_alignment = 1
+
+[node name="Safe" parent="." instance=ExtResource("1_visual")]
+position = Vector2(240, 120)
+profile = ExtResource("3_safe")
+
+[node name="SafeLabel" type="Label" parent="."]
+offset_left = 208.0
+offset_top = 171.0
+offset_right = 272.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 10
+text = "Safe"
+horizontal_alignment = 1
+
+[node name="Reward" parent="." instance=ExtResource("1_visual")]
+position = Vector2(400, 120)
+profile = ExtResource("4_reward")
+
+[node name="RewardLabel" type="Label" parent="."]
+offset_left = 366.0
+offset_top = 171.0
+offset_right = 434.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 10
+text = "Reward"
+horizontal_alignment = 1
+
+[node name="Vendor" parent="." instance=ExtResource("1_visual")]
+position = Vector2(560, 120)
+profile = ExtResource("5_vendor")
+
+[node name="VendorLabel" type="Label" parent="."]
+offset_left = 526.0
+offset_top = 171.0
+offset_right = 594.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 10
+text = "Vendor"
+horizontal_alignment = 1
+
+[node name="Secret" parent="." instance=ExtResource("1_visual")]
+position = Vector2(80, 266)
+profile = ExtResource("6_secret")
+
+[node name="SecretLabel" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 317.0
+offset_right = 112.0
+offset_bottom = 335.0
+theme_override_font_sizes/font_size = 10
+text = "Secret"
+horizontal_alignment = 1
+
+[node name="Elite" parent="." instance=ExtResource("1_visual")]
+position = Vector2(240, 266)
+profile = ExtResource("7_elite")
+
+[node name="EliteLabel" type="Label" parent="."]
+offset_left = 208.0
+offset_top = 317.0
+offset_right = 272.0
+offset_bottom = 335.0
+theme_override_font_sizes/font_size = 10
+text = "Elite"
+horizontal_alignment = 1
+
+[node name="Objective" parent="." instance=ExtResource("1_visual")]
+position = Vector2(400, 266)
+profile = ExtResource("8_objective")
+
+[node name="ObjectiveLabel" type="Label" parent="."]
+offset_left = 362.0
+offset_top = 317.0
+offset_right = 438.0
+offset_bottom = 335.0
+theme_override_font_sizes/font_size = 10
+text = "Objective"
+horizontal_alignment = 1
+
+[node name="Boss" parent="." instance=ExtResource("1_visual")]
+position = Vector2(560, 266)
+profile = ExtResource("9_boss")
+
+[node name="BossLabel" type="Label" parent="."]
+offset_left = 528.0
+offset_top = 317.0
+offset_right = 592.0
+offset_bottom = 335.0
+theme_override_font_sizes/font_size = 10
+text = "Boss"
+horizontal_alignment = 1

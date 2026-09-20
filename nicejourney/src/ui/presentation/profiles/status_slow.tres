@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UiIconProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/ui/presentation/ui_icon_profile.gd" id="1_profile"]
+[ext_resource type="Texture2D" path="res://assets/art/ui/status/status_slow_v01.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1_profile")
+icon_id = &"status_slow"
+texture = ExtResource("2_texture")
+minimum_size = Vector2(32, 32)
+expand_mode = 1
+stretch_mode = 5

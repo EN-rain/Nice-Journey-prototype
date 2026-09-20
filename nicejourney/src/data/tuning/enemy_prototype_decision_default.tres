@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="EnemyPrototypeDecisionTuning" format=3 uid="uid://blgro057bqbu"]
+
+[ext_resource type="Script" uid="uid://boa8qnluu2n13" path="res://src/data/tuning/enemy_prototype_decision_tuning.gd" id="1"]
+
+[resource]
+script = ExtResource("1")

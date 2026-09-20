@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/ui/tower_access_menu.gd" id="1_menu"]
+[ext_resource type="PackedScene" path="res://src/ui/tower_floor_button.tscn" id="2_button"]
+
+[node name="TowerAccessMenu" type="CanvasLayer"]
+layer = 90
+process_mode = 3
+script = ExtResource("1_menu")
+floor_button_scene = ExtResource("2_button")
+
+[node name="Overlay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+process_mode = 3
+
+[node name="Dim" type="ColorRect" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.02, 0.03, 0.84)
+mouse_filter = 1
+
+[node name="Panel" type="PanelContainer" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -160.0
+offset_right = 280.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="Overlay/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="Overlay/Panel/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Tower Access"
+horizontal_alignment = 1
+
+[node name="Status" type="Label" parent="Overlay/Panel/Layout"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+text = "Select a floor."
+autowrap_mode = 2
+
+[node name="Scroll" type="ScrollContainer" parent="Overlay/Panel/Layout"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FloorList" type="VBoxContainer" parent="Overlay/Panel/Layout/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Confirmation" type="VBoxContainer" parent="Overlay/Panel/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Message" type="Label" parent="Overlay/Panel/Layout/Confirmation"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+autowrap_mode = 2
+text = "Confirm entry?"
+
+[node name="Buttons" type="HBoxContainer" parent="Overlay/Panel/Layout/Confirmation"]
+layout_mode = 2
+alignment = 2
+
+[node name="Confirm" type="Button" parent="Overlay/Panel/Layout/Confirmation/Buttons"]
+layout_mode = 2
+text = "Continue"
+
+[node name="Cancel" type="Button" parent="Overlay/Panel/Layout/Confirmation/Buttons"]
+layout_mode = 2
+text = "Cancel"
+
+[node name="Back" type="Button" parent="Overlay/Panel/Layout"]
+layout_mode = 2
+text = "Close"

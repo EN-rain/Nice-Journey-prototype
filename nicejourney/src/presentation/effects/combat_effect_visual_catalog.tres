@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="EffectVisualCatalog" load_steps=21 format=3]
+
+[ext_resource type="Script" path="res://src/presentation/effects/effect_visual_catalog.gd" id="1_catalog"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/vfx_light_slash_trail.tres" id="2_vfx_light_slash_trail"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/vfx_heavy_slash_trail.tres" id="3_vfx_heavy_slash_trail"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/vfx_block_spark.tres" id="4_vfx_block_spark"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/vfx_parry_spark.tres" id="5_vfx_parry_spark"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/vfx_ranged_release_flash.tres" id="6_vfx_ranged_release_flash"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/vfx_arcane_cast_burst.tres" id="7_vfx_arcane_cast_burst"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_narrow_line.tres" id="8_telegraph_narrow_line"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_wide_line.tres" id="9_telegraph_wide_line"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_cone.tres" id="10_telegraph_cone"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_short_arc.tres" id="11_telegraph_short_arc"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_wide_sweep.tres" id="12_telegraph_wide_sweep"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_circle.tres" id="13_telegraph_circle"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_delayed_circle.tres" id="14_telegraph_delayed_circle"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_projectile_lane.tres" id="15_telegraph_projectile_lane"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_lunge_path.tres" id="16_telegraph_lunge_path"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_boss_warning.tres" id="17_telegraph_boss_warning"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_block_cue.tres" id="18_telegraph_block_cue"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_parry_cue.tres" id="19_telegraph_parry_cue"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_guard_break.tres" id="20_telegraph_guard_break"]
+
+[resource]
+script = ExtResource("1_catalog")
+profiles = [
+ExtResource("2_vfx_light_slash_trail"),
+ExtResource("3_vfx_heavy_slash_trail"),
+ExtResource("4_vfx_block_spark"),
+ExtResource("5_vfx_parry_spark"),
+ExtResource("6_vfx_ranged_release_flash"),
+ExtResource("7_vfx_arcane_cast_burst"),
+ExtResource("8_telegraph_narrow_line"),
+ExtResource("9_telegraph_wide_line"),
+ExtResource("10_telegraph_cone"),
+ExtResource("11_telegraph_short_arc"),
+ExtResource("12_telegraph_wide_sweep"),
+ExtResource("13_telegraph_circle"),
+ExtResource("14_telegraph_delayed_circle"),
+ExtResource("15_telegraph_projectile_lane"),
+ExtResource("16_telegraph_lunge_path"),
+ExtResource("17_telegraph_boss_warning"),
+ExtResource("18_telegraph_block_cue"),
+ExtResource("19_telegraph_parry_cue"),
+ExtResource("20_telegraph_guard_break")
+]

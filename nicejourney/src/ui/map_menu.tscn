@@ -1,0 +1,106 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/ui/map_menu.gd" id="1_menu"]
+[ext_resource type="Script" path="res://src/ui/map_room_canvas.gd" id="2_canvas"]
+[ext_resource type="Script" path="res://src/ui/map_region_canvas.gd" id="3_region_canvas"]
+
+[node name="MapMenu" type="CanvasLayer"]
+layer = 89
+process_mode = 3
+script = ExtResource("1_menu")
+
+[node name="Overlay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+process_mode = 3
+
+[node name="Dim" type="ColorRect" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.02, 0.03, 0.84)
+mouse_filter = 1
+
+[node name="Panel" type="PanelContainer" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -170.0
+offset_right = 280.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="Overlay/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="Overlay/Panel/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "World Map"
+horizontal_alignment = 1
+
+[node name="Layers" type="HBoxContainer" parent="Overlay/Panel/Layout"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 6
+
+[node name="World" type="Button" parent="Overlay/Panel/Layout/Layers"]
+layout_mode = 2
+text = "World"
+
+[node name="Region" type="Button" parent="Overlay/Panel/Layout/Layers"]
+layout_mode = 2
+text = "Region"
+
+[node name="TowerFloor" type="Button" parent="Overlay/Panel/Layout/Layers"]
+layout_mode = 2
+text = "Tower Floor"
+
+[node name="Status" type="Label" parent="Overlay/Panel/Layout"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+text = "Map information only."
+autowrap_mode = 2
+
+[node name="RegionCanvas" type="Control" parent="Overlay/Panel/Layout"]
+visible = false
+custom_minimum_size = Vector2(0, 84)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("3_region_canvas")
+
+[node name="RoomCanvas" type="Control" parent="Overlay/Panel/Layout"]
+visible = false
+custom_minimum_size = Vector2(0, 84)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("2_canvas")
+
+[node name="Scroll" type="ScrollContainer" parent="Overlay/Panel/Layout"]
+custom_minimum_size = Vector2(0, 104)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Content" type="Label" parent="Overlay/Panel/Layout/Scroll"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Map content"
+autowrap_mode = 2
+
+[node name="Back" type="Button" parent="Overlay/Panel/Layout"]
+layout_mode = 2
+text = "Close"

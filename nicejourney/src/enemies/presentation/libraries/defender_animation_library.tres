@@ -1,0 +1,127 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://ckwogj76bt5c4"]
+
+[ext_resource type="Texture2D" uid="uid://58d1ehi8jj6a" path="res://assets/art/enemies/defender/enemy_defender_idle_v02.png" id="1_idle"]
+[ext_resource type="Texture2D" uid="uid://oo8lsrnk2o0k" path="res://assets/art/enemies/defender/enemy_defender_move_v02.png" id="2_move"]
+[ext_resource type="Texture2D" uid="uid://2xnabvervsxw" path="res://assets/art/enemies/defender/enemy_defender_windup_v02.png" id="3_windup"]
+[ext_resource type="Texture2D" uid="uid://dbev4xxlbwhad" path="res://assets/art/enemies/defender/enemy_defender_release_v02.png" id="4_release"]
+[ext_resource type="Texture2D" uid="uid://bm5kdt15108c1" path="res://assets/art/enemies/defender/enemy_defender_hit_v02.png" id="5_hit"]
+[ext_resource type="Texture2D" uid="uid://dhui1n663l8im" path="res://assets/art/enemies/defender/enemy_defender_death_v02.png" id="6_death"]
+[ext_resource type="Texture2D" uid="uid://oulejxue3lh2" path="res://assets/art/enemies/defender/enemy_defender_block_v02.png" id="7_block"]
+
+[sub_resource type="Animation" id="Animation_defender_block"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_block")]
+}
+
+[sub_resource type="Animation" id="Animation_defender_death"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_death")]
+}
+
+[sub_resource type="Animation" id="Animation_defender_hit"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_hit")]
+}
+
+[sub_resource type="Animation" id="Animation_defender_idle"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_idle")]
+}
+
+[sub_resource type="Animation" id="Animation_defender_move"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_move")]
+}
+
+[sub_resource type="Animation" id="Animation_defender_release"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_release")]
+}
+
+[sub_resource type="Animation" id="Animation_defender_windup"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_windup")]
+}
+
+[resource]
+_data = {
+&"block": SubResource("Animation_defender_block"),
+&"death": SubResource("Animation_defender_death"),
+&"hit": SubResource("Animation_defender_hit"),
+&"idle": SubResource("Animation_defender_idle"),
+&"move": SubResource("Animation_defender_move"),
+&"release": SubResource("Animation_defender_release"),
+&"windup": SubResource("Animation_defender_windup")
+}

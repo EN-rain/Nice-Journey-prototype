@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[node name="PlaytestAttackMarker" type="Node2D"]
+z_index = 26
+
+[node name="ColorShape" type="Polygon2D" parent="."]
+color = Color(0.95, 0.78, 0.16, 0.9)
+polygon = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)

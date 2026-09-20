@@ -1,0 +1,199 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/world/region3/layout/region3_structure_collider.gd" id="1_collider"]
+
+[sub_resource type="RectangleShape2D" id="BoundaryHorizontal"]
+size = Vector2(5184, 32)
+
+[sub_resource type="RectangleShape2D" id="BoundaryVertical"]
+size = Vector2(32, 5184)
+
+[node name="Region3StructureCollisionLayer" type="Node2D"]
+
+[node name="StructureColliders" type="Node2D" parent="."]
+
+[node name="Functional01" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:functional:01"
+collision_tile_min = Vector2i(75, 67)
+collision_tile_max = Vector2i(85, 79)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Functional01"]
+
+[node name="Functional02" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:functional:02"
+collision_tile_min = Vector2i(55, 69)
+collision_tile_max = Vector2i(65, 78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Functional02"]
+
+[node name="Functional03" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:functional:03"
+collision_tile_min = Vector2i(94, 69)
+collision_tile_max = Vector2i(104, 78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Functional03"]
+
+[node name="Functional04" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:functional:04"
+collision_tile_min = Vector2i(55, 87)
+collision_tile_max = Vector2i(65, 96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Functional04"]
+
+[node name="Functional05" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:functional:05"
+collision_tile_min = Vector2i(94, 87)
+collision_tile_max = Vector2i(104, 96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Functional05"]
+
+[node name="Functional06" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:functional:06"
+collision_tile_min = Vector2i(55, 53)
+collision_tile_max = Vector2i(65, 62)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Functional06"]
+
+[node name="Functional07" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:functional:07"
+collision_tile_min = Vector2i(94, 53)
+collision_tile_max = Vector2i(104, 62)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Functional07"]
+
+[node name="Functional08" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:functional:08"
+collision_tile_min = Vector2i(75, 97)
+collision_tile_max = Vector2i(85, 106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Functional08"]
+
+[node name="Decorative01" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:01"
+collision_tile_min = Vector2i(49, 49)
+collision_tile_max = Vector2i(53, 53)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative01"]
+
+[node name="Decorative02" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:02"
+collision_tile_min = Vector2i(69, 49)
+collision_tile_max = Vector2i(73, 53)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative02"]
+
+[node name="Decorative03" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:03"
+collision_tile_min = Vector2i(79, 49)
+collision_tile_max = Vector2i(83, 53)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative03"]
+
+[node name="Decorative04" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:04"
+collision_tile_min = Vector2i(87, 49)
+collision_tile_max = Vector2i(91, 53)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative04"]
+
+[node name="Decorative05" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:05"
+collision_tile_min = Vector2i(107, 55)
+collision_tile_max = Vector2i(111, 59)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative05"]
+
+[node name="Decorative06" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:06"
+collision_tile_min = Vector2i(107, 65)
+collision_tile_max = Vector2i(111, 69)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative06"]
+
+[node name="Decorative07" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:07"
+collision_tile_min = Vector2i(107, 81)
+collision_tile_max = Vector2i(111, 85)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative07"]
+
+[node name="Decorative08" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:08"
+collision_tile_min = Vector2i(107, 99)
+collision_tile_max = Vector2i(111, 103)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative08"]
+
+[node name="Decorative09" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:09"
+collision_tile_min = Vector2i(95, 107)
+collision_tile_max = Vector2i(99, 111)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative09"]
+
+[node name="Decorative10" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:10"
+collision_tile_min = Vector2i(61, 107)
+collision_tile_max = Vector2i(65, 111)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative10"]
+
+[node name="Decorative11" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:11"
+collision_tile_min = Vector2i(49, 97)
+collision_tile_max = Vector2i(53, 101)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative11"]
+
+[node name="Decorative12" type="StaticBody2D" parent="StructureColliders"]
+script = ExtResource("1_collider")
+structure_id = &"r3:decorative:12"
+collision_tile_min = Vector2i(49, 61)
+collision_tile_max = Vector2i(53, 65)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StructureColliders/Decorative12"]
+
+[node name="WorldBounds" type="Node2D" parent="."]
+
+[node name="Top" type="StaticBody2D" parent="WorldBounds"]
+position = Vector2(2544, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBounds/Top"]
+shape = SubResource("BoundaryHorizontal")
+
+[node name="Bottom" type="StaticBody2D" parent="WorldBounds"]
+position = Vector2(2544, 5104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBounds/Bottom"]
+shape = SubResource("BoundaryHorizontal")
+
+[node name="Left" type="StaticBody2D" parent="WorldBounds"]
+position = Vector2(-16, 2544)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBounds/Left"]
+shape = SubResource("BoundaryVertical")
+
+[node name="Right" type="StaticBody2D" parent="WorldBounds"]
+position = Vector2(5104, 2544)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBounds/Right"]
+shape = SubResource("BoundaryVertical")

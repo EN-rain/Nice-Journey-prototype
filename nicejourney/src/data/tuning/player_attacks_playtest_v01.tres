@@ -1,0 +1,197 @@
+[gd_resource type="Resource" script_class="PlayerPlaytestAttackContent" format=3]
+
+[ext_resource type="PackedScene" path="res://src/combat/skills/player_projectile_placeholder.tscn" id="1_d211d"]
+[ext_resource type="Script" path="res://src/combat/skills/player_playtest_attack_content.gd" id="2_hnkkx"]
+
+[resource]
+resource_name = "PLAYTEST player basic and nine active skill effects — editable hit envelopes"
+script = ExtResource("2_hnkkx")
+basic_by_class = {
+"mage": {
+"delay_ticks": 0,
+"domain": &"arcane",
+"guard_pressure": 1.0,
+"half_angle_degrees": 8.0,
+"max_targets": 1,
+"mode": &"projectile",
+"poise_damage": 5.0,
+"projectile_count": 1,
+"projectile_hit_radius_px": 16.0,
+"projectile_speed_px_per_second": 240.0,
+"range_px": 300.0,
+"raw_damage": 0.0,
+"ward_ticks": 0
+},
+"melee": {
+"delay_ticks": 0,
+"domain": &"physical",
+"guard_pressure": 2.0,
+"half_angle_degrees": 64.0,
+"max_targets": 1,
+"mode": &"melee",
+"poise_damage": 10.0,
+"projectile_count": 1,
+"projectile_hit_radius_px": 0.0,
+"projectile_speed_px_per_second": 0.0,
+"range_px": 76.0,
+"raw_damage": 0.0,
+"ward_ticks": 0
+},
+"ranged": {
+"delay_ticks": 0,
+"domain": &"physical",
+"guard_pressure": 1.0,
+"half_angle_degrees": 8.0,
+"max_targets": 1,
+"mode": &"projectile",
+"poise_damage": 6.0,
+"projectile_count": 1,
+"projectile_hit_radius_px": 15.0,
+"projectile_speed_px_per_second": 280.0,
+"range_px": 320.0,
+"raw_damage": 0.0,
+"ward_ticks": 0
+}
+}
+active_skill_effects = {
+"aegis_ward": {
+"delay_ticks": 0,
+"domain": &"arcane",
+"guard_pressure": 0.0,
+"half_angle_degrees": 180.0,
+"max_targets": 1,
+"mode": &"ward",
+"poise_damage": 0.0,
+"projectile_count": 1,
+"projectile_hit_radius_px": 0.0,
+"projectile_speed_px_per_second": 0.0,
+"range_px": 78.0,
+"raw_damage": 0.0,
+"ward_ticks": 90
+},
+"arc_cleave": {
+"delay_ticks": 0,
+"domain": &"physical",
+"guard_pressure": 3.0,
+"half_angle_degrees": 85.0,
+"max_targets": 4,
+"mode": &"melee",
+"poise_damage": 3.0,
+"projectile_count": 1,
+"projectile_hit_radius_px": 0.0,
+"projectile_speed_px_per_second": 0.0,
+"range_px": 104.0,
+"raw_damage": 12.0,
+"ward_ticks": 0
+},
+"arcane_lance": {
+"delay_ticks": 0,
+"domain": &"arcane",
+"guard_pressure": 2.0,
+"half_angle_degrees": 8.0,
+"max_targets": 1,
+"mode": &"projectile",
+"poise_damage": 0.0,
+"projectile_count": 1,
+"projectile_hit_radius_px": 16.0,
+"projectile_speed_px_per_second": 350.0,
+"range_px": 355.0,
+"raw_damage": 15.0,
+"ward_ticks": 0
+},
+"backstep_shot": {
+"delay_ticks": 0,
+"domain": &"physical",
+"evade_window_ticks": 4,
+"guard_pressure": 2.0,
+"half_angle_degrees": 8.0,
+"max_targets": 1,
+"mode": &"projectile",
+"movement_distance_px": 64.0,
+"poise_damage": 0.0,
+"projectile_count": 1,
+"projectile_hit_radius_px": 15.0,
+"projectile_speed_px_per_second": 325.0,
+"range_px": 285.0,
+"raw_damage": 12.0,
+"ward_ticks": 0
+},
+"delayed_pulse": {
+"delay_ticks": 24,
+"domain": &"arcane",
+"guard_pressure": 3.0,
+"half_angle_degrees": 180.0,
+"max_targets": 5,
+"mode": &"pulse",
+"poise_damage": 0.0,
+"projectile_count": 1,
+"projectile_hit_radius_px": 0.0,
+"projectile_speed_px_per_second": 0.0,
+"range_px": 108.0,
+"raw_damage": 17.0,
+"ward_ticks": 0
+},
+"driving_thrust": {
+"delay_ticks": 0,
+"domain": &"physical",
+"guard_pressure": 4.0,
+"half_angle_degrees": 20.0,
+"max_targets": 1,
+"mode": &"melee",
+"movement_distance_px": 36.0,
+"poise_damage": 4.0,
+"projectile_count": 1,
+"projectile_hit_radius_px": 0.0,
+"projectile_speed_px_per_second": 0.0,
+"range_px": 116.0,
+"raw_damage": 18.0,
+"ward_ticks": 0
+},
+"fan_shot": {
+"delay_ticks": 0,
+"domain": &"physical",
+"guard_pressure": 1.0,
+"half_angle_degrees": 30.0,
+"max_targets": 3,
+"mode": &"projectile",
+"poise_damage": 0.0,
+"projectile_count": 3,
+"projectile_hit_radius_px": 15.0,
+"projectile_speed_px_per_second": 285.0,
+"range_px": 230.0,
+"raw_damage": 8.0,
+"sequence_interval_ticks": 2,
+"ward_ticks": 0
+},
+"piercing_shot": {
+"delay_ticks": 0,
+"domain": &"physical",
+"guard_pressure": 2.0,
+"half_angle_degrees": 8.0,
+"max_targets": 3,
+"mode": &"projectile",
+"poise_damage": 0.0,
+"projectile_count": 1,
+"projectile_hit_radius_px": 17.0,
+"projectile_speed_px_per_second": 380.0,
+"range_px": 370.0,
+"raw_damage": 13.0,
+"ward_ticks": 0
+},
+"riposte": {
+"delay_ticks": 0,
+"domain": &"physical",
+"guard_pressure": 4.0,
+"half_angle_degrees": 40.0,
+"max_targets": 1,
+"mode": &"melee",
+"poise_damage": 4.0,
+"projectile_count": 1,
+"projectile_hit_radius_px": 0.0,
+"projectile_speed_px_per_second": 0.0,
+"range_px": 88.0,
+"raw_damage": 21.0,
+"ward_ticks": 0
+}
+}
+projectile_placeholder_scene = ExtResource("1_d211d")

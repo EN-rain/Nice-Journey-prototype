@@ -1,0 +1,40 @@
+{
+  "schema": "nice-journey-region3-decorative-support-v02-visual-acceptance/v1",
+  "batch": "decorative_batch1",
+  "date": "2026-09-15",
+  "input_zip": "D:/nicejourney/Nice_Journey_Region3_Decorative_V02_Batch1.zip",
+  "zip_sha256": "ec1ff43c98b74e4d87c4b9782b043947d18e8375868140267db3fa9ab512580b",
+  "accepted": [
+    "r3:decorative:01",
+    "r3:decorative:02",
+    "r3:decorative:03",
+    "r3:decorative:04",
+    "r3:decorative:05",
+    "r3:decorative:06",
+    "r3:decorative:07",
+    "r3:decorative:08",
+    "r3:decorative:09",
+    "r3:decorative:10"
+  ],
+  "rejected": [],
+  "review_findings": {
+    "shared_style": "PASS — consistent 3/4 top-down stone/timber/red-roof architectural family and coherent pixel density across all ten sources",
+    "role_readability": "PASS — homes remain residential; decorative workshop/storehouse/stall/civic variants read from silhouette/props without functional-service UI or readable signs",
+    "central_tower_hierarchy": "PASS — 160x160 decorative derivatives remain visibly subordinate to 192/224px functional landmarks in the authored-town renderer capture",
+    "text_ui_contamination": "PASS — no dashboard, editor chrome, readable labels or project-status content is present in the accepted sources",
+    "edge_contact": "ACCEPTED WITH NORMALIZATION — nine sources touch at least one exact-source edge; exact PNGs are preserved and normalized copies add transparent padding only before deterministic derivation",
+    "civic_facade": "PASS — decorative 08 uses a more civic/ornamental façade but contains no faction/religious emblem, readable institution sign or gameplay-service cue",
+    "workshop_variant_02": "PASS — decorative 09 retains a residential-scale shell but its side work/storage bay provides sufficient non-service workshop identity"
+  },
+  "derivative_contract": {
+    "canvas_px": 160,
+    "transparent_padding_px": 32,
+    "alpha_threshold": 24,
+    "resample": "nearest",
+    "repainting": false
+  },
+  "renderer_evidence": "res://docs/evidence/renderer/region3-authored-town-layout-v02-decorative-batch1.png",
+  "validation_evidence": "res://docs/evidence/reference-validation-latest.json",
+  "result": "ACCEPTED_AND_INTEGRATED",
+  "remaining": "r3:decorative:11, r3:decorative:12, town props, ground/road, ruins modules, south-outskirts support, east-risk-zone support"
+}

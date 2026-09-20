@@ -1,0 +1,31 @@
+# Workspace-local support repositories and source-asset archives are preserved
+# on disk, but are not part of the Nice Journey Godot game repository.
+/agency-agents/
+/tools/
+/*.zip
+/NUL
+
+# Godot generated state, transient test and review output, and build exports.
+**/.godot/
+**/.serena/
+**/.tmp/
+**/__pycache__/
+**/*.pyc
+/nicejourney/build/
+/nicejourney/tmp/
+/nicejourney/artifacts/
+/nicejourney/NUL
+/nicejourney/review_*
+/nicejourney/tmp_ui_*
+**/*.avi
+**/*.log
+**/*.pid
+**/*.exit
+
+# Do not publish local service credentials or machine configuration.
+**/.env
+**/.env.*
+**/*.pem
+**/*.p12
+**/*.pfx
+**/credentials.json

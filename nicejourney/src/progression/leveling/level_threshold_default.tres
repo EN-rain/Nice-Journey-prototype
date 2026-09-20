@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="LevelThresholdTuning" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/progression/leveling/level_threshold_tuning.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+xp_to_next_by_level = PackedInt32Array(100, 200, 300, 400, 500, 600, 700, 800, 900)

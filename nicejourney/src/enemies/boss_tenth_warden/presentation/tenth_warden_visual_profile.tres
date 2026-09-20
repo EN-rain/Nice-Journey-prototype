@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="TenthWardenVisualProfile" load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://src/enemies/boss_tenth_warden/presentation/tenth_warden_visual_profile.gd" id="1_profile"]
+[ext_resource type="AnimationLibrary" path="res://src/enemies/boss_tenth_warden/presentation/tenth_warden_animation_library.tres" id="2_library"]
+[ext_resource type="Resource" path="res://src/enemies/boss_tenth_warden/presentation/twin_cut_visual_binding.tres" id="3_twin_cut"]
+[ext_resource type="Resource" path="res://src/enemies/boss_tenth_warden/presentation/warden_lunge_visual_binding.tres" id="4_warden_lunge"]
+[ext_resource type="Resource" path="res://src/enemies/boss_tenth_warden/presentation/arc_volley_visual_binding.tres" id="5_arc_volley"]
+[ext_resource type="Resource" path="res://src/enemies/boss_tenth_warden/presentation/crescent_sweep_visual_binding.tres" id="6_crescent_sweep"]
+[ext_resource type="Resource" path="res://src/enemies/boss_tenth_warden/presentation/punishing_step_visual_binding.tres" id="7_punishing_step"]
+
+[resource]
+script = ExtResource("1_profile")
+boss_id = &"tenth_warden"
+animation_library = ExtResource("2_library")
+body_offset = Vector2(0, -48)
+body_scale = Vector2(1, 1)
+body_z_index = 0
+idle_animation = &"idle"
+phase_two_animation = &"phase_two"
+hit_animation = &"hit"
+death_animation = &"death"
+move_visuals = Array[Resource]([ExtResource("3_twin_cut"), ExtResource("4_warden_lunge"), ExtResource("5_arc_volley"), ExtResource("6_crescent_sweep"), ExtResource("7_punishing_step")])

@@ -1,0 +1,354 @@
+{
+  "schema": "nice-journey-region3-decorative-support-v02-manifest/v1",
+  "status": "decorative_structures_01_to_12_integrated_and_validated_support_assets_pending",
+  "authority": [
+    "Nice_Journey_Master_Game_Specification_V2_1.md \u00c2\u00a724.4/\u00c2\u00a724.12",
+    "src/world/region3/layout/region3_authored_town_layout.tscn",
+    "docs/art/REGION3_VISUAL_BIBLE.md",
+    "docs/art/SPRITE_GEN_BUILDING_ASSET_GUIDE.md",
+    "docs/art/IMAGE_GENERATION_FAILURE_RECOVERY_AND_ASSET_ACCEPTANCE_PROTOCOL.md"
+  ],
+  "style_anchor": {
+    "primary": "res://assets/art/environments/region3/functional_buildings/region3_central_tower_exterior_v02.png",
+    "renderer_reference": "res://docs/evidence/renderer/region3-authored-town-layout-v02-functional-buildings.png",
+    "rule": "match the accepted Region 3 V02 functional-building architectural language; decorative structures must remain visually subordinate to the Central Tower and must not imply unavailable services"
+  },
+  "batch1_acceptance": {
+    "input_zip": "D:/nicejourney/Nice_Journey_Region3_Decorative_V02_Batch1.zip",
+    "zip_sha256": "ec1ff43c98b74e4d87c4b9782b043947d18e8375868140267db3fa9ab512580b",
+    "accepted_structure_ids": [
+      "r3:decorative:01",
+      "r3:decorative:02",
+      "r3:decorative:03",
+      "r3:decorative:04",
+      "r3:decorative:05",
+      "r3:decorative:06",
+      "r3:decorative:07",
+      "r3:decorative:08",
+      "r3:decorative:09",
+      "r3:decorative:10"
+    ],
+    "derivative_canvas_px": 160,
+    "mechanical_intake": "res://docs/evidence/art/region3-decorative-support-v02-batch1-intake.json",
+    "derivation_manifest": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_building_v02_derivation_manifest.json",
+    "renderer_evidence": "res://docs/evidence/renderer/region3-authored-town-layout-v02-decorative-batch1.png",
+    "validation": "73 dynamically discovered tests, 0 failures; editor parse/main-scene/renderer smoke PASS on 2026-09-15",
+    "pending": "props, ground/road, ruins, outskirts and risk-zone support"
+  },
+  "batch2_decorative_acceptance": {
+    "accepted_structure_ids": [
+      "r3:decorative:11",
+      "r3:decorative:12"
+    ],
+    "source_sha256": {
+      "r3:decorative:11": "aabb161d761c8c5ab1cb6900f1833313ec3fecebddcfffb38d70a0aec87495ae",
+      "r3:decorative:12": "b0cab34d330b0a4b9b9bcf1eb4b638d39ac5d68efb4e0f47b213f9a0f9ed641d"
+    },
+    "derivative_sha256": {
+      "r3:decorative:11": "7ba9c2406ab49b0f2c501e78acd07d71e5ac5c22567a6aee9e65d0e015404b42",
+      "r3:decorative:12": "58fc5f99ff7069136f618a91efda1be5a420d75476468e8b54fe2b4be7f7cc02"
+    },
+    "renderer_evidence": [
+      "res://docs/evidence/renderer/region3-decorative-11-gameplay-review.png",
+      "res://docs/evidence/renderer/region3-decorative-12-gameplay-review.png"
+    ],
+    "validation": "Region 3 decorative building visual test PASS; asset provenance manifest test PASS on 2026-09-19",
+    "source_note": "Exact generated V02 sources preserved and registered individually; no Batch2 ZIP attribution used."
+  },
+  "decorative_structures": [
+    {
+      "structure_id": "r3:decorative:01",
+      "master_id": "R3-B09",
+      "scene_node": "DecorativeHome01",
+      "kind": "home",
+      "lot_min": [
+        49,
+        49
+      ],
+      "lot_max": [
+        53,
+        53
+      ],
+      "authored_frontage": "south",
+      "behavior": "non_enterable_facade",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_01_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_01_v02.png"
+    },
+    {
+      "structure_id": "r3:decorative:02",
+      "master_id": "R3-B10",
+      "scene_node": "DecorativeHome02",
+      "kind": "home",
+      "lot_min": [
+        69,
+        49
+      ],
+      "lot_max": [
+        73,
+        53
+      ],
+      "authored_frontage": "south",
+      "behavior": "non_enterable_facade",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_02_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_02_v02.png"
+    },
+    {
+      "structure_id": "r3:decorative:03",
+      "master_id": "R3-B11",
+      "scene_node": "DecorativeWorkshop01",
+      "kind": "workshop",
+      "lot_min": [
+        79,
+        49
+      ],
+      "lot_max": [
+        83,
+        53
+      ],
+      "authored_frontage": "south",
+      "behavior": "non_enterable_no_crafting_service",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_03_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_03_v02.png"
+    },
+    {
+      "structure_id": "r3:decorative:04",
+      "master_id": "R3-B12",
+      "scene_node": "DecorativeStorehouse01",
+      "kind": "storehouse",
+      "lot_min": [
+        87,
+        49
+      ],
+      "lot_max": [
+        91,
+        53
+      ],
+      "authored_frontage": "south",
+      "behavior": "non_enterable_no_player_storage_interaction",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_04_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_04_v02.png"
+    },
+    {
+      "structure_id": "r3:decorative:05",
+      "master_id": "R3-B13",
+      "scene_node": "DecorativeHome03",
+      "kind": "home",
+      "lot_min": [
+        107,
+        55
+      ],
+      "lot_max": [
+        111,
+        59
+      ],
+      "authored_frontage": "west",
+      "behavior": "non_enterable_facade",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_05_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_05_v02.png"
+    },
+    {
+      "structure_id": "r3:decorative:06",
+      "master_id": "R3-B14",
+      "scene_node": "DecorativeStall01",
+      "kind": "stall_structure",
+      "lot_min": [
+        107,
+        65
+      ],
+      "lot_max": [
+        111,
+        69
+      ],
+      "authored_frontage": "west",
+      "behavior": "non_enterable_no_separate_shop_inventory",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_06_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_06_v02.png"
+    },
+    {
+      "structure_id": "r3:decorative:07",
+      "master_id": "R3-B15",
+      "scene_node": "DecorativeHome04",
+      "kind": "home",
+      "lot_min": [
+        107,
+        81
+      ],
+      "lot_max": [
+        111,
+        85
+      ],
+      "authored_frontage": "west",
+      "behavior": "non_enterable_facade",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_07_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_07_v02.png"
+    },
+    {
+      "structure_id": "r3:decorative:08",
+      "master_id": "R3-B16",
+      "scene_node": "DecorativeCivicFacade01",
+      "kind": "civic_facade",
+      "lot_min": [
+        107,
+        99
+      ],
+      "lot_max": [
+        111,
+        103
+      ],
+      "authored_frontage": "west",
+      "behavior": "non_enterable_no_unapproved_faction_identity",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_08_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_08_v02.png"
+    },
+    {
+      "structure_id": "r3:decorative:09",
+      "master_id": "R3-B17",
+      "scene_node": "DecorativeWorkshop02",
+      "kind": "workshop",
+      "lot_min": [
+        95,
+        107
+      ],
+      "lot_max": [
+        99,
+        111
+      ],
+      "authored_frontage": "north",
+      "behavior": "non_enterable_facade",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_09_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_09_v02.png"
+    },
+    {
+      "structure_id": "r3:decorative:10",
+      "master_id": "R3-B18",
+      "scene_node": "DecorativeHome05",
+      "kind": "home",
+      "lot_min": [
+        61,
+        107
+      ],
+      "lot_max": [
+        65,
+        111
+      ],
+      "authored_frontage": "north",
+      "behavior": "non_enterable_facade",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_10_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_10_v02.png"
+    },
+    {
+      "structure_id": "r3:decorative:11",
+      "master_id": "R3-B19",
+      "scene_node": "DecorativeStall02",
+      "kind": "stall_structure",
+      "lot_min": [
+        49,
+        97
+      ],
+      "lot_max": [
+        53,
+        101
+      ],
+      "authored_frontage": "east",
+      "behavior": "non_enterable_no_extra_service_or_blocking_frontage",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_11_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_11_v02.png"
+    },
+    {
+      "structure_id": "r3:decorative:12",
+      "master_id": "R3-B20",
+      "scene_node": "DecorativeHome06",
+      "kind": "home",
+      "lot_min": [
+        49,
+        61
+      ],
+      "lot_max": [
+        53,
+        65
+      ],
+      "authored_frontage": "east",
+      "behavior": "non_enterable_facade",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_12_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_12_v02.png"
+    }
+  ],
+  "support_assets": [
+    {
+      "asset_id": "region3_town_props",
+      "purpose": "town and route readability props",
+      "replaces": "res://assets/art/environments/region3/props/region3_prop_sheet_v01.png",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_town_props_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/props/region3_prop_sheet_v02.png",
+      "source_sha256": "81dbc0dbc6d55550e902a1ade7eb7981de77853fbbab2e661200ef90042880e4",
+      "derivative_sha256": "a5e8ddd8d5094bc7a704dd9b1ba73a49dbc1fda7c66dafcdb544c1dee7fb35e8",
+      "derivation_manifest": "res://docs/art/REGION3_DECORATIVE_SUPPORT_V02_MANIFEST.json"
+    },
+    {
+      "asset_id": "region3_ground_road",
+      "purpose": "town grass, roads/dirt, plaza stone and route-material language",
+      "replaces": "res://assets/art/environments/region3/roads/region3_ground_road_tileset_v01.png",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_ground_road_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/roads/region3_ground_road_tileset_v02.png",
+      "source_sha256": "fc91162145aa62a96bfb27feb492ed633a5f8406626b932cdc1d99b0c5a179c6",
+      "derivative_sha256": "b03fa58ba34e3673fee1e5ba003b66bbeab3fd645e0ced9b484996ae263cbb0d",
+      "derivation_manifest": "res://assets/art/environments/region3/roads/derived/region3_ground_tile_v02.manifest.json",
+      "derived_tile_set": {
+        "path": "res://assets/art/environments/region3/roads/derived",
+        "count": 7,
+        "tile_size_px": 32,
+        "tile_sha256": [
+          "a32461e1ed0ec242371006c811f0edcde93b0f99d6348be2d244931cb4a16b85",
+          "e55a920c62305e735b78c1716c1e125ed6b5de682ec322a77c2cc4dbdc38a5f5",
+          "70715de622baf3ccc4087b92225b9c0197379428140a8706d9b2a393211a4a22",
+          "566d027bbfc97b390679b843efa291db3f351e7ff5729a06ffa4a94a001e4407",
+          "657f73d1cdb7668291f02807ac4eceab1dd959b0bd5610aaa105f9d1d4a16a28",
+          "ced230d11353dde9f5f2be87bc848aec2562aef45fd368b4b7e55345d41f95a3",
+          "a954d029334c8fe011ec7857c2086d00d29a85dc532edb19627bf33c70d01b72"
+        ]
+      },
+      "renderer_evidence": "res://docs/evidence/renderer/region3-v02-ground-integrated-capture.log"
+    },
+    {
+      "asset_id": "region3_ruins_modules",
+      "purpose": "north-zone broken-stone vocabulary without invented historical lore",
+      "replaces": "res://assets/art/environments/region3/ruins/region3_ruins_module_sheet_v01.png",
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_ruins_modules_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/ruins/region3_ruins_module_sheet_v02.png",
+      "source_sha256": "22c4ef9a95c2606a69673b19fa951f10adf2a88d7324b5c7d04b7ebc4a59b715",
+      "derivative_sha256": "f38c64b0009b53c2e8c437053663d9479db2354d107961d6bca248654bbf919a",
+      "derivation_manifest": "res://docs/art/REGION3_DECORATIVE_SUPPORT_V02_MANIFEST.json"
+    },
+    {
+      "asset_id": "region3_outskirts_support",
+      "purpose": "south-outskirts lighter-complexity route support and visible return-to-town language",
+      "replaces": null,
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_outskirts_support_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/outskirts/region3_outskirts_support_sheet_v02.png",
+      "source_sha256": "a15113a146175dd2a3402426ff0609adc98b50a60da7cd2fb21044398d510e23",
+      "derivative_sha256": "dc5a6360cf3853d0ad80b8544588ed901f985d7b1c6a3b3aacc78536e0101e60",
+      "derivation_manifest": "res://docs/art/REGION3_DECORATIVE_SUPPORT_V02_MANIFEST.json"
+    },
+    {
+      "asset_id": "region3_risk_zone_support",
+      "purpose": "east-pocket high-risk visual warning that preserves combat telegraph contrast",
+      "replaces": null,
+      "source_v02": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_risk_zone_support_source_v02.png",
+      "derivative_v02": "res://assets/art/environments/region3/risk_zone/region3_risk_zone_support_sheet_v02.png",
+      "source_sha256": "aa015bd738d5f6396a107b8bce8a9fdfc1ec3237c8a7e5b34d8f5755ef8afe88",
+      "derivative_sha256": "3970b501faecdd966cd82cc18273a27788a60e8fd7ef34ff68b81c98ff23b733",
+      "derivation_manifest": "res://docs/art/REGION3_DECORATIVE_SUPPORT_V02_MANIFEST.json"
+    }
+  ],
+  "acceptance_rules": [
+    "all twelve decorative structures remain non-enterable and do not imply unavailable services",
+    "all outputs share the accepted Region 3 V02 perspective, material family, pixel density and lighting direction",
+    "Central Tower remains the strongest town landmark",
+    "no people, readable text, UI, dashboards, editor chrome, status panels or project-progress content",
+    "whole source subjects are visible with safe margin and no accidental edge crop",
+    "support assets preserve combat and quest-marker readability",
+    "exact generated sources must be preserved and hashed before derivative work",
+    "V01 replacements are deleted only after V02 is live, visually checked and broad validation is green"
+  ],
+  "surface_coverage_note": "Route Line2D surfaces use the standalone dirt tile derivative with texture_repeat enabled and preserve authored route geometry. The authored town scene has no separate ground Polygon2D/TileMap surface owner; non-route plaza/grass background remains outside this support slice until a scene-owned surface resource is authored."
+}

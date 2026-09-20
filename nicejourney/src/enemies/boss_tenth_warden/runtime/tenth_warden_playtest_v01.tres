@@ -1,0 +1,286 @@
+[gd_resource type="Resource" script_class="TenthWardenProductionAuthoring" format=3]
+
+[ext_resource type="Script" path="res://src/combat/actions/action_definition.gd" id="1_re3ir"]
+[ext_resource type="Script" path="res://src/ai/archetypes/enemy_signature_attack_authoring.gd" id="2_cdo4h"]
+[ext_resource type="Script" path="res://src/ai/archetypes/enemy_attack_geometry_authoring.gd" id="3_6lkag"]
+[ext_resource type="Script" path="res://src/ai/archetypes/enemy_attack_payload_authoring.gd" id="4_dmh5g"]
+[ext_resource type="Script" path="res://src/enemies/boss_tenth_warden/runtime/tenth_warden_production_authoring.gd" id="5_ut1mn"]
+
+[sub_resource type="Resource" id="Resource_whid3"]
+script = ExtResource("1_re3ir")
+action_id = &"twin_cut"
+startup_ticks = 16
+active_ticks = 8
+recovery_ticks = 25
+cost_resource = &"stamina"
+cost_amount = 8.0
+
+[sub_resource type="Resource" id="Resource_o0so4"]
+script = ExtResource("1_re3ir")
+action_id = &"warden_lunge"
+startup_ticks = 24
+active_ticks = 7
+recovery_ticks = 33
+cost_resource = &"stamina"
+cost_amount = 12.0
+
+[sub_resource type="Resource" id="Resource_rlyda"]
+script = ExtResource("1_re3ir")
+action_id = &"arc_volley"
+startup_ticks = 27
+active_ticks = 10
+recovery_ticks = 28
+cost_resource = &"stamina"
+cost_amount = 14.0
+
+[sub_resource type="Resource" id="Resource_l4drw"]
+script = ExtResource("1_re3ir")
+action_id = &"crescent_sweep"
+startup_ticks = 28
+active_ticks = 8
+recovery_ticks = 36
+cost_resource = &"stamina"
+cost_amount = 16.0
+
+[sub_resource type="Resource" id="Resource_skgvo"]
+script = ExtResource("1_re3ir")
+action_id = &"punishing_step"
+startup_ticks = 18
+active_ticks = 6
+recovery_ticks = 25
+cost_resource = &"stamina"
+cost_amount = 10.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hgov"]
+size = Vector2(84, 72)
+
+[sub_resource type="Resource" id="Resource_2ed4q"]
+script = ExtResource("3_6lkag")
+authored = true
+geometry_id = &"geometry:playtest:tenth_warden:twin_cut"
+query_shape = SubResource("RectangleShape2D_5hgov")
+local_offset = Vector2(30, 0)
+max_reach_px = 72.0
+collision_mask = 1
+hit_interval_count = 2
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(1, 5)
+
+[sub_resource type="Resource" id="Resource_mb30y"]
+script = ExtResource("4_dmh5g")
+authored = true
+damage_domain = &"physical"
+delivery = &"contact"
+raw_damage = 7.0
+guard_pressure = 2.0
+dodgeable = true
+blockable = true
+parryable = true
+weak_point_multiplier = 1.5
+
+[sub_resource type="Resource" id="Resource_42ufx"]
+script = ExtResource("2_cdo4h")
+action_id = &"twin_cut"
+geometry = SubResource("Resource_2ed4q")
+payload = SubResource("Resource_mb30y")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2g216"]
+size = Vector2(144, 56)
+
+[sub_resource type="Resource" id="Resource_j58ag"]
+script = ExtResource("3_6lkag")
+authored = true
+geometry_id = &"geometry:playtest:tenth_warden:warden_lunge"
+query_shape = SubResource("RectangleShape2D_2g216")
+local_offset = Vector2(36, 0)
+max_reach_px = 108.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(3)
+
+[sub_resource type="Resource" id="Resource_v1170"]
+script = ExtResource("4_dmh5g")
+authored = true
+damage_domain = &"physical"
+delivery = &"contact"
+raw_damage = 13.0
+guard_pressure = 5.0
+dodgeable = true
+blockable = true
+parryable = true
+weak_point_multiplier = 1.5
+
+[sub_resource type="Resource" id="Resource_apgfj"]
+script = ExtResource("2_cdo4h")
+action_id = &"warden_lunge"
+geometry = SubResource("Resource_j58ag")
+payload = SubResource("Resource_v1170")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fsjo0"]
+size = Vector2(240, 148)
+
+[sub_resource type="Resource" id="Resource_123ni"]
+script = ExtResource("3_6lkag")
+authored = true
+geometry_id = &"geometry:playtest:tenth_warden:arc_volley"
+query_shape = SubResource("RectangleShape2D_fsjo0")
+max_reach_px = 164.0
+collision_mask = 1
+hit_interval_count = 3
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(1, 4, 7)
+
+[sub_resource type="Resource" id="Resource_ww2qf"]
+script = ExtResource("4_dmh5g")
+authored = true
+damage_domain = &"arcane"
+delivery = &"projectile"
+raw_damage = 5.0
+guard_pressure = 2.0
+dodgeable = true
+blockable = true
+weak_point_multiplier = 1.5
+
+[sub_resource type="Resource" id="Resource_g7m81"]
+script = ExtResource("2_cdo4h")
+action_id = &"arc_volley"
+geometry = SubResource("Resource_123ni")
+payload = SubResource("Resource_ww2qf")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p78k8"]
+size = Vector2(160, 120)
+
+[sub_resource type="Resource" id="Resource_vophy"]
+script = ExtResource("3_6lkag")
+authored = true
+geometry_id = &"geometry:playtest:tenth_warden:crescent_sweep"
+query_shape = SubResource("RectangleShape2D_p78k8")
+local_offset = Vector2(32, 0)
+max_reach_px = 112.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(4)
+
+[sub_resource type="Resource" id="Resource_koukb"]
+script = ExtResource("4_dmh5g")
+authored = true
+damage_domain = &"physical"
+delivery = &"contact"
+raw_damage = 14.0
+guard_pressure = 6.0
+dodgeable = true
+weak_point_multiplier = 1.5
+
+[sub_resource type="Resource" id="Resource_6qawg"]
+script = ExtResource("2_cdo4h")
+action_id = &"crescent_sweep"
+geometry = SubResource("Resource_vophy")
+payload = SubResource("Resource_koukb")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ex2md"]
+size = Vector2(100, 68)
+
+[sub_resource type="Resource" id="Resource_rile4"]
+script = ExtResource("3_6lkag")
+authored = true
+geometry_id = &"geometry:playtest:tenth_warden:punishing_step"
+query_shape = SubResource("RectangleShape2D_ex2md")
+local_offset = Vector2(30, 0)
+max_reach_px = 80.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(2)
+
+[sub_resource type="Resource" id="Resource_mcjwy"]
+script = ExtResource("4_dmh5g")
+authored = true
+damage_domain = &"physical"
+delivery = &"contact"
+raw_damage = 10.0
+guard_pressure = 3.0
+dodgeable = true
+blockable = true
+parryable = true
+weak_point_multiplier = 1.5
+
+[sub_resource type="Resource" id="Resource_llceg"]
+script = ExtResource("2_cdo4h")
+action_id = &"punishing_step"
+geometry = SubResource("Resource_rile4")
+payload = SubResource("Resource_mcjwy")
+
+[sub_resource type="Resource" id="Resource_fujud"]
+script = ExtResource("1_re3ir")
+action_id = &"phase_transition"
+startup_ticks = 20
+recovery_ticks = 25
+
+[sub_resource type="Resource" id="Resource_3joxk"]
+script = ExtResource("1_re3ir")
+action_id = &"twin_cut"
+startup_ticks = 11
+active_ticks = 8
+recovery_ticks = 16
+cost_resource = &"stamina"
+cost_amount = 8.0
+
+[sub_resource type="Resource" id="Resource_63j3r"]
+script = ExtResource("1_re3ir")
+action_id = &"warden_lunge"
+startup_ticks = 19
+active_ticks = 7
+recovery_ticks = 22
+cost_resource = &"stamina"
+cost_amount = 12.0
+
+[sub_resource type="Resource" id="Resource_1ahwg"]
+script = ExtResource("1_re3ir")
+action_id = &"arc_volley"
+startup_ticks = 22
+active_ticks = 10
+recovery_ticks = 18
+cost_resource = &"stamina"
+cost_amount = 14.0
+
+[sub_resource type="Resource" id="Resource_1b2ok"]
+script = ExtResource("1_re3ir")
+action_id = &"crescent_sweep"
+startup_ticks = 23
+active_ticks = 8
+recovery_ticks = 25
+cost_resource = &"stamina"
+cost_amount = 16.0
+
+[sub_resource type="Resource" id="Resource_6wqq0"]
+script = ExtResource("1_re3ir")
+action_id = &"punishing_step"
+startup_ticks = 13
+active_ticks = 6
+recovery_ticks = 16
+cost_resource = &"stamina"
+cost_amount = 10.0
+
+[resource]
+resource_name = "PLAYTEST Tenth Warden v01 — provisional balance, not final"
+script = ExtResource("5_ut1mn")
+authored = true
+playtest_placeholder = true
+max_hp = 320
+stamina = 60.0
+stamina_recovery_per_tick = 0.8
+physical_defense = 2.0
+arcane_defense = 2.0
+poise_threshold = 22.0
+interruptible_declared = true
+block_supported_declared = true
+parry_supported_declared = true
+move_actions = Array[ExtResource("1_re3ir")]([SubResource("Resource_whid3"), SubResource("Resource_o0so4"), SubResource("Resource_rlyda"), SubResource("Resource_l4drw"), SubResource("Resource_skgvo")])
+phase_two_move_actions = Array[ExtResource("1_re3ir")]([SubResource("Resource_3joxk"), SubResource("Resource_63j3r"), SubResource("Resource_1ahwg"), SubResource("Resource_1b2ok"), SubResource("Resource_6wqq0")])
+move_attacks = Array[ExtResource("2_cdo4h")]([SubResource("Resource_42ufx"), SubResource("Resource_apgfj"), SubResource("Resource_g7m81"), SubResource("Resource_6qawg"), SubResource("Resource_llceg")])
+phase_transition_action = SubResource("Resource_fujud")
+phase_one_move_order = Array[StringName]([&"twin_cut", &"warden_lunge", &"arc_volley", &"crescent_sweep", &"punishing_step"])
+phase_two_move_order = Array[StringName]([&"twin_cut", &"warden_lunge", &"arc_volley", &"crescent_sweep", &"warden_lunge", &"punishing_step"])
+phase_two_heavy_move_ids = Array[StringName]([&"warden_lunge", &"crescent_sweep"])

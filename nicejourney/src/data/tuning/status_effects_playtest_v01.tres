@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StatusPlaytestTuning" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/data/tuning/status_playtest_tuning.gd" id="1_status"]
+
+[resource]
+resource_name = "PLAYTEST Burn and Slow v01 — provisional timing, damage, speed"
+script = ExtResource("1_status")
+playtest_placeholder = true
+burn_duration_ticks = 180
+burn_tick_interval_ticks = 30
+burn_damage_per_tick = 2
+slow_duration_ticks = 150
+slow_reduction_fraction = 0.25
+slow_speed_floor_multiplier = 0.4

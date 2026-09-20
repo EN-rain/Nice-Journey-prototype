@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="StarterWeaponVisualProfile" format=3 uid="uid://ytnmrd8iuw13"]
+
+[ext_resource type="Script" uid="uid://6apgkw5uhxhs" path="res://src/player/presentation/starter_weapon_visual_profile.gd" id="1_profile"]
+[ext_resource type="Texture2D" uid="uid://bfs35d6cje4n3" path="res://assets/art/player/weapons/starter_staff_v02.png" id="2_staff"]
+
+[resource]
+script = ExtResource("1_profile")
+class_id = &"mage"
+main_hand_texture = ExtResource("2_staff")
+main_hand_position = Vector2(3, -10)

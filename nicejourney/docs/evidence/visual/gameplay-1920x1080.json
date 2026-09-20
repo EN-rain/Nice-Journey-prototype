@@ -1,0 +1,23 @@
+{
+	"actual_window_size": {
+		"height": 1080,
+		"width": 1920
+	},
+	"captured_image_size": {
+		"height": 1080,
+		"width": 1920
+	},
+	"fixture": {
+		"open_settings": false,
+		"text_scale": null,
+		"ui_scale": null
+	},
+	"renderer_method": "gl_compatibility",
+	"requested_window_size": {
+		"height": 1080,
+		"width": 1920
+	},
+	"scene": "res://src/app/gameplay.tscn",
+	"stretch_mode": "canvas_items",
+	"stretch_scale_mode": "integer"
+}

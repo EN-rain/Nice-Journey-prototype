@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[node name="ArcVolleyProjectile" type="Node2D"]
+
+[node name="Body" type="ColorRect" parent="."]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+mouse_filter = 2
+color = Color(1, 0.46, 0.24, 0.96)

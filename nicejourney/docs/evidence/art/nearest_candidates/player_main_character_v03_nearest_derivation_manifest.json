@@ -1,0 +1,1248 @@
+{
+  "version": 1,
+  "status": "derived_from_visually_classified_user_batch",
+  "source_zip": {
+    "path": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/raw_batch/nice_journey_main_character_sprite_batches_transparent.zip",
+    "sha256": "ed4140616a6bfe1bbbc252eae7927ff124db55baee09a818ca11abddca8cd1b0"
+  },
+  "classification_rule": "Animation identity is assigned from direct visual inspection of motion/poses; source ZIP filenames are retained only as provenance labels and are not semantic authority.",
+  "sources": {
+    "01_idle_walk_run_dash.png": {
+      "sha256": "1090071689bd5071522832b0e156ac5ecf7b290273c93d250fa0b2b62467a997",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "semantic_authority": "visual_inspection_not_filename"
+    },
+    "02_dodge_attack_heavy_block.png": {
+      "sha256": "04821bcbf1f6805ab1ca17f9f34a77e205f3cd4ae3371b1720c308ba631ccc51",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "semantic_authority": "visual_inspection_not_filename"
+    },
+    "03_parry_cast_hit.png": {
+      "sha256": "900014457b6334bc1536a74beffe17c9223abbd66d01075cd5079bdc4ca0573d",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "semantic_authority": "visual_inspection_not_filename"
+    },
+    "04_interact_pickup_use_item.png": {
+      "sha256": "ed20954b4a208024da52cfce195d0298558a4f7d26d985155bceaa134067368c",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "semantic_authority": "visual_inspection_not_filename"
+    },
+    "05_climb_sleep_death.png": {
+      "sha256": "020580789050e784d4dbe389d7bd93bb3041e7948cccef209a259b2f150410e7",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "semantic_authority": "visual_inspection_not_filename"
+    }
+  },
+  "animations": {
+    "idle": {
+      "visual_role": "standing breathing/weight-shift poses",
+      "frame_count": 4,
+      "source_row": [
+        45,
+        261
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            286,
+            45,
+            446,
+            261
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            511,
+            45,
+            670,
+            261
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            735,
+            45,
+            894,
+            261
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            958,
+            45,
+            1127,
+            261
+          ]
+        }
+      ],
+      "source_file": "01_idle_walk_run_dash.png",
+      "source_row_index": 0,
+      "output": "res://assets/art/player/animations/player_body_idle_sheet_v03.png",
+      "output_sha256": "75c3bf609ca213c4e7ecaf8a477fca0ea4c60f8c49a0677bd262ef468783ede8",
+      "output_dimensions": [
+        128,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "walk": {
+      "visual_role": "alternating ordinary walking gait",
+      "frame_count": 6,
+      "source_row": [
+        317,
+        535
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            57,
+            317,
+            222,
+            535
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            286,
+            317,
+            449,
+            535
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            512,
+            317,
+            678,
+            535
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            743,
+            317,
+            906,
+            535
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            972,
+            317,
+            1137,
+            535
+          ]
+        },
+        {
+          "frame": 5,
+          "source_crop": [
+            1203,
+            317,
+            1367,
+            535
+          ]
+        }
+      ],
+      "source_file": "01_idle_walk_run_dash.png",
+      "source_row_index": 1,
+      "output": "res://assets/art/player/animations/player_body_walk_sheet_v03.png",
+      "output_sha256": "7b6a4991decb845487ca4edb3beee330d60b5f004770ce930d8f9132b47d1963",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "run": {
+      "visual_role": "forward-leaning running gait with longer stride",
+      "frame_count": 6,
+      "source_row": [
+        590,
+        804
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            44,
+            590,
+            226,
+            804
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            274,
+            590,
+            461,
+            804
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            504,
+            590,
+            693,
+            804
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            737,
+            590,
+            920,
+            804
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            962,
+            590,
+            1149,
+            804
+          ]
+        },
+        {
+          "frame": 5,
+          "source_crop": [
+            1200,
+            590,
+            1393,
+            804
+          ]
+        }
+      ],
+      "source_file": "01_idle_walk_run_dash.png",
+      "source_row_index": 2,
+      "output": "res://assets/art/player/animations/player_body_run_sheet_v03.png",
+      "output_sha256": "9acfeacd0eb2bd2a030c1e59d8dc4ce101e00b1b3dca7b8ad0993ac586bed331",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "dash": {
+      "visual_role": "low fast forward burst with trailing scarf/body smear",
+      "frame_count": 4,
+      "source_row": [
+        863,
+        1053
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            143,
+            863,
+            360,
+            1053
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            438,
+            863,
+            664,
+            1053
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            743,
+            863,
+            952,
+            1053
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            1032,
+            863,
+            1249,
+            1053
+          ]
+        }
+      ],
+      "source_file": "01_idle_walk_run_dash.png",
+      "source_row_index": 3,
+      "output": "res://assets/art/player/animations/player_body_dash_sheet_v03.png",
+      "output_sha256": "537e4f4481e507fcd579e3f3f7e836ae2b96315898e3a6a209e2634f1ec6fedf",
+      "output_dimensions": [
+        128,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "interact": {
+      "visual_role": "standing reach/touch gesture with a small contact spark",
+      "frame_count": 5,
+      "source_row": [
+        119,
+        350
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            122,
+            119,
+            301,
+            350
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            368,
+            119,
+            574,
+            350
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            616,
+            119,
+            851,
+            350
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            877,
+            119,
+            1063,
+            350
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            1121,
+            119,
+            1300,
+            350
+          ]
+        }
+      ],
+      "source_file": "02_dodge_attack_heavy_block.png",
+      "source_row_index": 0,
+      "output": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+      "output_sha256": "bf986e02b6ca241f6493817f0466e02103c5cb40d7b9e2b043577a016d109928",
+      "output_dimensions": [
+        160,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "pickup": {
+      "visual_role": "standing-to-crouched ground reach and recovery",
+      "frame_count": 5,
+      "source_row": [
+        441,
+        670
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            120,
+            441,
+            301,
+            670
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            354,
+            441,
+            562,
+            670
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            611,
+            441,
+            810,
+            670
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            865,
+            441,
+            1052,
+            670
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            1114,
+            441,
+            1301,
+            670
+          ]
+        }
+      ],
+      "source_file": "02_dodge_attack_heavy_block.png",
+      "source_row_index": 1,
+      "output": "res://assets/art/player/animations/player_body_pickup_sheet_v03.png",
+      "output_sha256": "e6950ce6c20893983a2df5fceffbf76a99a6061a49b9af336af656d857479c8e",
+      "output_dimensions": [
+        160,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "use_item": {
+      "visual_role": "small blue item raised/used near the face, then recovery",
+      "frame_count": 7,
+      "source_row": [
+        764,
+        1001
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            19,
+            764,
+            195,
+            1001
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            213,
+            764,
+            389,
+            1001
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            409,
+            764,
+            595,
+            1001
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            619,
+            764,
+            798,
+            1001
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            823,
+            764,
+            1000,
+            1001
+          ]
+        },
+        {
+          "frame": 5,
+          "source_crop": [
+            1018,
+            764,
+            1226,
+            1001
+          ]
+        },
+        {
+          "frame": 6,
+          "source_crop": [
+            1228,
+            764,
+            1404,
+            1001
+          ]
+        }
+      ],
+      "source_file": "02_dodge_attack_heavy_block.png",
+      "source_row_index": 2,
+      "output": "res://assets/art/player/animations/player_body_use_item_sheet_v03.png",
+      "output_sha256": "b18d4e2ee08dd6613623d3188bd9e9cd016d47a1cb531f13de91747cdfcb39ad",
+      "output_dimensions": [
+        224,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "parry": {
+      "visual_role": "brief guarded deflection with a sharp blue impact arc",
+      "frame_count": 6,
+      "source_row": [
+        102,
+        316
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            34,
+            102,
+            215,
+            316
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            270,
+            102,
+            448,
+            316
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            496,
+            102,
+            724,
+            316
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            743,
+            102,
+            964,
+            316
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            979,
+            102,
+            1159,
+            316
+          ]
+        },
+        {
+          "frame": 5,
+          "source_crop": [
+            1199,
+            102,
+            1374,
+            316
+          ]
+        }
+      ],
+      "source_file": "03_parry_cast_hit.png",
+      "source_row_index": 0,
+      "output": "res://assets/art/player/animations/player_body_parry_sheet_v03.png",
+      "output_sha256": "f25d582ea2b1c63a8cbb3ddabcea887ca29149d8b6e47ef30697618918ea366a",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "cast": {
+      "visual_role": "blue orb charge, release/projectile, and recovery",
+      "frame_count": 7,
+      "source_row": [
+        437,
+        651
+      ],
+      "segmentation_mode": "low_occupancy_boundaries",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            23,
+            437,
+            201,
+            651
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            201,
+            437,
+            410,
+            651
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            410,
+            437,
+            616,
+            651
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            616,
+            437,
+            833,
+            651
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            833,
+            437,
+            1072,
+            651
+          ]
+        },
+        {
+          "frame": 5,
+          "source_crop": [
+            1072,
+            437,
+            1238,
+            651
+          ]
+        },
+        {
+          "frame": 6,
+          "source_crop": [
+            1238,
+            437,
+            1412,
+            651
+          ]
+        }
+      ],
+      "source_file": "03_parry_cast_hit.png",
+      "source_row_index": 1,
+      "output": "res://assets/art/player/animations/player_body_cast_sheet_v03.png",
+      "output_sha256": "2340ba8fcc0d92c2b61e27565183d02aba891b2a464bbde1eadc2183b870b8c2",
+      "output_dimensions": [
+        224,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "hit": {
+      "visual_role": "backward recoil, stagger/fall-to-knee, and recovery",
+      "frame_count": 6,
+      "source_row": [
+        761,
+        975
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            34,
+            761,
+            201,
+            975
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            257,
+            761,
+            460,
+            975
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            487,
+            761,
+            699,
+            975
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            746,
+            761,
+            942,
+            975
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            979,
+            761,
+            1162,
+            975
+          ]
+        },
+        {
+          "frame": 5,
+          "source_crop": [
+            1203,
+            761,
+            1377,
+            975
+          ]
+        }
+      ],
+      "source_file": "03_parry_cast_hit.png",
+      "source_row_index": 2,
+      "output": "res://assets/art/player/animations/player_body_hit_sheet_v03.png",
+      "output_sha256": "ff4a7aa1d8eb95a2463c79231df95eeb76d34fd19e2e614d5a1214a450254097",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "climb": {
+      "visual_role": "repeated upward hand/leg reaching poses",
+      "frame_count": 6,
+      "source_row": [
+        82,
+        360
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            59,
+            82,
+            242,
+            360
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            288,
+            82,
+            452,
+            360
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            510,
+            82,
+            675,
+            360
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            735,
+            82,
+            901,
+            360
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            968,
+            82,
+            1135,
+            360
+          ]
+        },
+        {
+          "frame": 5,
+          "source_crop": [
+            1209,
+            82,
+            1360,
+            360
+          ]
+        }
+      ],
+      "source_file": "04_interact_pickup_use_item.png",
+      "source_row_index": 0,
+      "output": "res://assets/art/player/animations/player_body_climb_sheet_v03.png",
+      "output_sha256": "70071b911ab0245d406e56f2acb2657a1d3b8e9994743470707f2e356877bba9",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "sleep": {
+      "visual_role": "seated/resting eyes-closed poses",
+      "frame_count": 4,
+      "source_row": [
+        485,
+        666
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            233,
+            485,
+            436,
+            666
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            485,
+            485,
+            681,
+            666
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            733,
+            485,
+            935,
+            666
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            998,
+            485,
+            1194,
+            666
+          ]
+        }
+      ],
+      "source_file": "04_interact_pickup_use_item.png",
+      "source_row_index": 1,
+      "output": "res://assets/art/player/animations/player_body_sleep_sheet_v03.png",
+      "output_sha256": "d16478ec9eb198c6fddb8bd28223def6c325b51cfdd61630ea9d6dbd32c5854a",
+      "output_dimensions": [
+        128,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "death": {
+      "visual_role": "standing recoil through fall to fully prone state",
+      "frame_count": 6,
+      "source_row": [
+        781,
+        999
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            30,
+            781,
+            216,
+            999
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            232,
+            781,
+            432,
+            999
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            441,
+            781,
+            647,
+            999
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            651,
+            781,
+            897,
+            999
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            904,
+            781,
+            1151,
+            999
+          ]
+        },
+        {
+          "frame": 5,
+          "source_crop": [
+            1174,
+            781,
+            1421,
+            999
+          ]
+        }
+      ],
+      "source_file": "04_interact_pickup_use_item.png",
+      "source_row_index": 2,
+      "output": "res://assets/art/player/animations/player_body_death_sheet_v03.png",
+      "output_sha256": "991e64fdd8f0dfdd22f353853c0c441739a0199a14736a6e71ee74b0b3d7ead2",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "dodge": {
+      "visual_role": "compressed evasive burst with a short motion trail",
+      "frame_count": 4,
+      "source_row": [
+        55,
+        253
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            257,
+            55,
+            434,
+            253
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            496,
+            55,
+            693,
+            253
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            719,
+            55,
+            944,
+            253
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            982,
+            55,
+            1156,
+            253
+          ]
+        }
+      ],
+      "source_file": "05_climb_sleep_death.png",
+      "source_row_index": 0,
+      "output": "res://assets/art/player/animations/player_body_dodge_sheet_v03.png",
+      "output_sha256": "e256331e5d70a99592eb4c635453bc55dc667b16addbef6bc89bd9de9b55bf53",
+      "output_dimensions": [
+        128,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "attack": {
+      "visual_role": "quick horizontal sword slash sequence",
+      "frame_count": 6,
+      "source_row": [
+        314,
+        518
+      ],
+      "segmentation_mode": "low_occupancy_boundaries",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            36,
+            314,
+            252,
+            518
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            252,
+            314,
+            482,
+            518
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            482,
+            314,
+            744,
+            518
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            744,
+            314,
+            931,
+            518
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            931,
+            314,
+            1197,
+            518
+          ]
+        },
+        {
+          "frame": 5,
+          "source_crop": [
+            1197,
+            314,
+            1403,
+            518
+          ]
+        }
+      ],
+      "source_file": "05_climb_sleep_death.png",
+      "source_row_index": 1,
+      "output": "res://assets/art/player/animations/player_body_attack_sheet_v03.png",
+      "output_sha256": "b3f183d8368740923c0c4d56f404bff799cc46db96867b712162d83418f1cb23",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "heavy_attack": {
+      "visual_role": "overhead wind-up into forceful downward sword strike",
+      "frame_count": 6,
+      "source_row": [
+        561,
+        798
+      ],
+      "segmentation_mode": "low_occupancy_boundaries",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            37,
+            561,
+            238,
+            798
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            238,
+            561,
+            460,
+            798
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            460,
+            561,
+            725,
+            798
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            725,
+            561,
+            958,
+            798
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            958,
+            561,
+            1205,
+            798
+          ]
+        },
+        {
+          "frame": 5,
+          "source_crop": [
+            1205,
+            561,
+            1374,
+            798
+          ]
+        }
+      ],
+      "source_file": "05_climb_sleep_death.png",
+      "source_row_index": 2,
+      "output": "res://assets/art/player/animations/player_body_heavy_attack_sheet_v03.png",
+      "output_sha256": "dc6a1b391caa7cec114067393ae6636c229732fb852531889a32d9c3badabe9e",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    },
+    "block": {
+      "visual_role": "sustained guarded stance with repeated blue guard arcs",
+      "frame_count": 7,
+      "source_row": [
+        856,
+        1050
+      ],
+      "segmentation_mode": "transparent_groups",
+      "source_cells": [
+        {
+          "frame": 0,
+          "source_crop": [
+            33,
+            856,
+            194,
+            1050
+          ]
+        },
+        {
+          "frame": 1,
+          "source_crop": [
+            229,
+            856,
+            406,
+            1050
+          ]
+        },
+        {
+          "frame": 2,
+          "source_crop": [
+            427,
+            856,
+            610,
+            1050
+          ]
+        },
+        {
+          "frame": 3,
+          "source_crop": [
+            625,
+            856,
+            806,
+            1050
+          ]
+        },
+        {
+          "frame": 4,
+          "source_crop": [
+            825,
+            856,
+            1003,
+            1050
+          ]
+        },
+        {
+          "frame": 5,
+          "source_crop": [
+            1026,
+            856,
+            1191,
+            1050
+          ]
+        },
+        {
+          "frame": 6,
+          "source_crop": [
+            1218,
+            856,
+            1382,
+            1050
+          ]
+        }
+      ],
+      "source_file": "05_climb_sleep_death.png",
+      "source_row_index": 3,
+      "output": "res://assets/art/player/animations/player_body_block_sheet_v03.png",
+      "output_sha256": "3bc9ddfdb4e897e047a4344b45aac025da6b49dfbab7c49b194bc21e057bf855",
+      "output_dimensions": [
+        224,
+        32
+      ],
+      "normalization": "alpha crop per frame, aspect-preserving NEAREST reduction into 32x32, bottom-center anchor"
+    }
+  }
+}

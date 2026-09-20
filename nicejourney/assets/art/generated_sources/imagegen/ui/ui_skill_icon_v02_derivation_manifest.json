@@ -1,0 +1,765 @@
+{
+  "schema": "nice_journey.ui_skill_icon_v02_derivation.v1",
+  "tool": "tools/art/derive_ui_skill_icons_v02.py",
+  "algorithm": "alpha threshold >8, 10% bbox padding with minimum 8 source pixels, nearest-neighbor thumbnail to max 28, centered on transparent 32x32 RGBA canvas",
+  "skill_source_batches": [
+    {
+      "asset_id": "ui_skill_arcane_lance_v02",
+      "class": "mage",
+      "skill_id": "arcane_lance",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_mage_skills_source_v02.png",
+      "source_sha256": "08d734d828d7830e3a2ee213be860ff3b05b0262ef72373236d354ee3c72ef48",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 0,
+      "cell_rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "alpha_bbox_in_cell": [
+        109,
+        202,
+        501,
+        426
+      ],
+      "alpha_threshold": 8,
+      "padding": 39,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_arcane_lance_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "50363626864dc2ef047a1a540ac853edb8f9b2091b75cd328787d4e715568095",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_delayed_pulse_v02",
+      "class": "mage",
+      "skill_id": "delayed_pulse",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_mage_skills_source_v02.png",
+      "source_sha256": "08d734d828d7830e3a2ee213be860ff3b05b0262ef72373236d354ee3c72ef48",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 1,
+      "cell_rect": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "alpha_bbox_in_cell": [
+        81,
+        88,
+        431,
+        461
+      ],
+      "alpha_threshold": 8,
+      "padding": 37,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_delayed_pulse_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "29bc45d233cdd6d6f92708ad0a6d85754e2b06d870d8563345fe0760a885a8a6",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_aegis_ward_v02",
+      "class": "mage",
+      "skill_id": "aegis_ward",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_mage_skills_source_v02.png",
+      "source_sha256": "08d734d828d7830e3a2ee213be860ff3b05b0262ef72373236d354ee3c72ef48",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 2,
+      "cell_rect": [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      "alpha_bbox_in_cell": [
+        93,
+        91,
+        403,
+        473
+      ],
+      "alpha_threshold": 8,
+      "padding": 38,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_aegis_ward_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "06a2d8e6ade57a0848fa745c64f5061b539923304614e60159e1077935b37e04",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_mana_weave_v02",
+      "class": "mage",
+      "skill_id": "mana_weave",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_mage_skills_source_v02.png",
+      "source_sha256": "08d734d828d7830e3a2ee213be860ff3b05b0262ef72373236d354ee3c72ef48",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 3,
+      "cell_rect": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "alpha_bbox_in_cell": [
+        118,
+        84,
+        460,
+        418
+      ],
+      "alpha_threshold": 8,
+      "padding": 34,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_mana_weave_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "d1d2f7fe6a116b051e28a87daac9563b61fdc01c8510f2fe976aeaf64696e6da",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_flow_recovery_v02",
+      "class": "mage",
+      "skill_id": "flow_recovery",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_mage_skills_source_v02.png",
+      "source_sha256": "08d734d828d7830e3a2ee213be860ff3b05b0262ef72373236d354ee3c72ef48",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 4,
+      "cell_rect": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "alpha_bbox_in_cell": [
+        74,
+        65,
+        428,
+        437
+      ],
+      "alpha_threshold": 8,
+      "padding": 37,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_flow_recovery_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "d46b202faec4b078e6195fdfb6771f8b1e5ac407042a89237478db573ae7ca3e",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_stable_casting_v02",
+      "class": "mage",
+      "skill_id": "stable_casting",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_mage_skills_source_v02.png",
+      "source_sha256": "08d734d828d7830e3a2ee213be860ff3b05b0262ef72373236d354ee3c72ef48",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 5,
+      "cell_rect": [
+        1024,
+        512,
+        1536,
+        1024
+      ],
+      "alpha_bbox_in_cell": [
+        67,
+        41,
+        427,
+        426
+      ],
+      "alpha_threshold": 8,
+      "padding": 38,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_stable_casting_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "2246f58899fe71161dde5443f0e7b86814092e27c56c0a8a2b85c1f350da8807",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_arc_cleave_v02",
+      "class": "melee",
+      "skill_id": "arc_cleave",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_melee_skills_source_v02.png",
+      "source_sha256": "8968ffc7e582a396feed57625d556dbc64f12a532757a3ed3ec9cf66b135cb34",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 0,
+      "cell_rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "alpha_bbox_in_cell": [
+        56,
+        69,
+        456,
+        501
+      ],
+      "alpha_threshold": 8,
+      "padding": 43,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_arc_cleave_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "08fa5fd7bf07ee0c49fcbbccf3a874d51f33af32b68d96a5990a72ad01bbf29e",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_driving_thrust_v02",
+      "class": "melee",
+      "skill_id": "driving_thrust",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_melee_skills_source_v02.png",
+      "source_sha256": "8968ffc7e582a396feed57625d556dbc64f12a532757a3ed3ec9cf66b135cb34",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 1,
+      "cell_rect": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "alpha_bbox_in_cell": [
+        12,
+        216,
+        484,
+        375
+      ],
+      "alpha_threshold": 8,
+      "padding": 47,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_driving_thrust_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "521dfc7322cbdf9b2ab14c405d40eaa62b6e12b521223da18bbf7169905b3e77",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_breaker_v02",
+      "class": "melee",
+      "skill_id": "breaker",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_melee_skills_source_v02.png",
+      "source_sha256": "8968ffc7e582a396feed57625d556dbc64f12a532757a3ed3ec9cf66b135cb34",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 2,
+      "cell_rect": [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      "alpha_bbox_in_cell": [
+        76,
+        61,
+        457,
+        483
+      ],
+      "alpha_threshold": 8,
+      "padding": 42,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_breaker_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "b22ee46948fef78b41b3b8c143c32cedd27a7388fdda4a5d586bd87e307a8c2c",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_efficient_footwork_v02",
+      "class": "melee",
+      "skill_id": "efficient_footwork",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_melee_skills_source_v02.png",
+      "source_sha256": "8968ffc7e582a396feed57625d556dbc64f12a532757a3ed3ec9cf66b135cb34",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 3,
+      "cell_rect": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "alpha_bbox_in_cell": [
+        69,
+        38,
+        450,
+        401
+      ],
+      "alpha_threshold": 8,
+      "padding": 38,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_efficient_footwork_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "09de44d8cfafd21f34ebf6fd56333e43f8556b9b9bf0ae7d84c911293cb0f1ef",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_parry_recovery_v02",
+      "class": "melee",
+      "skill_id": "parry_recovery",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_melee_skills_source_v02.png",
+      "source_sha256": "8968ffc7e582a396feed57625d556dbc64f12a532757a3ed3ec9cf66b135cb34",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 4,
+      "cell_rect": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "alpha_bbox_in_cell": [
+        94,
+        26,
+        418,
+        415
+      ],
+      "alpha_threshold": 8,
+      "padding": 39,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_parry_recovery_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "f41cc6a044ad3cba2b246c629c4214f94b7406666db6442670cbe0483ee03e05",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_riposte_v02",
+      "class": "melee",
+      "skill_id": "riposte",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_melee_skills_source_v02.png",
+      "source_sha256": "8968ffc7e582a396feed57625d556dbc64f12a532757a3ed3ec9cf66b135cb34",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "cell_index": 5,
+      "cell_rect": [
+        1024,
+        512,
+        1536,
+        1024
+      ],
+      "alpha_bbox_in_cell": [
+        95,
+        16,
+        413,
+        433
+      ],
+      "alpha_threshold": 8,
+      "padding": 42,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_riposte_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "ef188a4af055bfaaab325d9f5d58fbb01c8df4da19381b739983e5ad57070934",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_piercing_shot_v02",
+      "class": "ranged",
+      "skill_id": "piercing_shot",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_ranged_skills_source_v02.png",
+      "source_sha256": "683bdd6a113d9f052b10b4dd285f0e6ec3a4d68bb5f20fc4002a91aa22890467",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "cell_index": 0,
+      "cell_rect": [
+        0,
+        0,
+        418,
+        627
+      ],
+      "alpha_bbox_in_cell": [
+        28,
+        250,
+        404,
+        559
+      ],
+      "alpha_threshold": 8,
+      "padding": 38,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_piercing_shot_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "a7dac80364a86c124806d8a5a1b90ca815b1a27f5220c3d7da5677bc2c61b396",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_fan_shot_v02",
+      "class": "ranged",
+      "skill_id": "fan_shot",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_ranged_skills_source_v02.png",
+      "source_sha256": "683bdd6a113d9f052b10b4dd285f0e6ec3a4d68bb5f20fc4002a91aa22890467",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "cell_index": 1,
+      "cell_rect": [
+        418,
+        0,
+        836,
+        627
+      ],
+      "alpha_bbox_in_cell": [
+        43,
+        241,
+        391,
+        560
+      ],
+      "alpha_threshold": 8,
+      "padding": 35,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_fan_shot_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "e5625f435aefe1897fb8392af8565d49fe077a9332571946979fccb4c17f93c1",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_backstep_shot_v02",
+      "class": "ranged",
+      "skill_id": "backstep_shot",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_ranged_skills_source_v02.png",
+      "source_sha256": "683bdd6a113d9f052b10b4dd285f0e6ec3a4d68bb5f20fc4002a91aa22890467",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "cell_index": 2,
+      "cell_rect": [
+        836,
+        0,
+        1254,
+        627
+      ],
+      "alpha_bbox_in_cell": [
+        0,
+        207,
+        406,
+        596
+      ],
+      "alpha_threshold": 8,
+      "padding": 41,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_backstep_shot_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "fb6bd0d4ed46176a8bcac8bf21781dc2585258a4a343746eef0b4589aa4b9184",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_longshot_v02",
+      "class": "ranged",
+      "skill_id": "longshot",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_ranged_skills_source_v02.png",
+      "source_sha256": "683bdd6a113d9f052b10b4dd285f0e6ec3a4d68bb5f20fc4002a91aa22890467",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "cell_index": 3,
+      "cell_rect": [
+        0,
+        627,
+        418,
+        1254
+      ],
+      "alpha_bbox_in_cell": [
+        44,
+        55,
+        379,
+        421
+      ],
+      "alpha_threshold": 8,
+      "padding": 37,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_longshot_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "2543cb227f8547678f4c6efa93371706f97038e8d7ca908cae6fc728baa0a5f5",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_fleet_recovery_v02",
+      "class": "ranged",
+      "skill_id": "fleet_recovery",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_ranged_skills_source_v02.png",
+      "source_sha256": "683bdd6a113d9f052b10b4dd285f0e6ec3a4d68bb5f20fc4002a91aa22890467",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "cell_index": 4,
+      "cell_rect": [
+        418,
+        627,
+        836,
+        1254
+      ],
+      "alpha_bbox_in_cell": [
+        32,
+        56,
+        389,
+        428
+      ],
+      "alpha_threshold": 8,
+      "padding": 37,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_fleet_recovery_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "6ae6000dfea8368e035a9d7c90d1ad9ce8b8337afb95f4735cdf7099079c1b6d",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    },
+    {
+      "asset_id": "ui_skill_expose_v02",
+      "class": "ranged",
+      "skill_id": "expose",
+      "source": "res://assets/art/generated_sources/imagegen/ui/ui_ranged_skills_source_v02.png",
+      "source_sha256": "683bdd6a113d9f052b10b4dd285f0e6ec3a4d68bb5f20fc4002a91aa22890467",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "cell_index": 5,
+      "cell_rect": [
+        836,
+        627,
+        1254,
+        1254
+      ],
+      "alpha_bbox_in_cell": [
+        28,
+        86,
+        395,
+        423
+      ],
+      "alpha_threshold": 8,
+      "padding": 37,
+      "scale_filter": "nearest",
+      "output": "res://assets/art/ui/skills/skill_expose_v02.png",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "output_sha256": "05242d3ebdb4b55723110b333562737f88f25c347e378adf4d26599851fd9316",
+      "mapping_authority": "src/combat/skills/skill_catalog.gd"
+    }
+  ],
+  "core9_preserved": [
+    {
+      "asset_id": "ui_class_mage_v01",
+      "source": "res://assets/art/generated_sources/imagegen/ui/v01_backup_core9/class_mage_icon_v01.png",
+      "source_sha256": "d20392819069848194fbd0b60e3040a73460469bbfc454d1cbd327dd92974eb3",
+      "source_dimensions": [
+        32,
+        32
+      ],
+      "output": "res://assets/art/ui/classes/class_mage_icon_v01.png",
+      "output_sha256": "4792731d5cb615fcc77c59e8fb1ac06fc6fc4f8d5054f3f27fe911c6568c3349",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "status": "preserved_existing_core9"
+    },
+    {
+      "asset_id": "ui_class_melee_v01",
+      "source": "res://assets/art/generated_sources/imagegen/ui/v01_backup_core9/class_melee_icon_v01.png",
+      "source_sha256": "8ab161b8cba3ca73852ccc5794750b92e6589047f39806ad901d19a84e4dce56",
+      "source_dimensions": [
+        32,
+        32
+      ],
+      "output": "res://assets/art/ui/classes/class_melee_icon_v01.png",
+      "output_sha256": "91847cb8e61f08fb34152d80b49cb65cc50f399b4821760b5d809bf1102d2760",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "status": "preserved_existing_core9"
+    },
+    {
+      "asset_id": "ui_class_ranged_v01",
+      "source": "res://assets/art/generated_sources/imagegen/ui/v01_backup_core9/class_ranged_icon_v01.png",
+      "source_sha256": "a282e762fdcb0191395a8823c217abdd9de5990fa92dd6278c942485b9f983e1",
+      "source_dimensions": [
+        32,
+        32
+      ],
+      "output": "res://assets/art/ui/classes/class_ranged_icon_v01.png",
+      "output_sha256": "d28eff12bb99b6fda68d0704dcc7b98a1cdaa9499a053751da971f26f1d3170d",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "status": "preserved_existing_core9"
+    },
+    {
+      "asset_id": "ui_quest_family_annihilation_v01",
+      "source": "res://assets/art/generated_sources/imagegen/ui/v01_backup_core9/quest_family_annihilation_v01.png",
+      "source_sha256": "8edd30b5fe2002f336f910c7266f7777c9c5d371b853b241088b30e0c2c18018",
+      "source_dimensions": [
+        32,
+        32
+      ],
+      "output": "res://assets/art/ui/quests/quest_family_annihilation_v01.png",
+      "output_sha256": "97cd83a3419073bb78218c73dab814daba989915cc41d8a9b4e89b690b443a9c",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "status": "preserved_existing_core9"
+    },
+    {
+      "asset_id": "ui_quest_family_escort_v01",
+      "source": "res://assets/art/generated_sources/imagegen/ui/v01_backup_core9/quest_family_escort_v01.png",
+      "source_sha256": "0579bc3f0a4b87e0961b7e5ac86858dfe6480c565bbe0d98da3a981d7b18c4f8",
+      "source_dimensions": [
+        32,
+        32
+      ],
+      "output": "res://assets/art/ui/quests/quest_family_escort_v01.png",
+      "output_sha256": "61f1ba431b144619d1142ac6d2e7398c227573e4e1aad026ff7afd169db257b6",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "status": "preserved_existing_core9"
+    },
+    {
+      "asset_id": "ui_quest_family_tower_defense_v01",
+      "source": "res://assets/art/generated_sources/imagegen/ui/v01_backup_core9/quest_family_tower_defense_v01.png",
+      "source_sha256": "d6fcbbefd1e77989edde7e1b88c53e6685900fb7a84acd8efd485bb9a98fca5f",
+      "source_dimensions": [
+        32,
+        32
+      ],
+      "output": "res://assets/art/ui/quests/quest_family_tower_defense_v01.png",
+      "output_sha256": "c882411d7ed0aa998053009457423b34a795f962860de59f26d36a695631f78f",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "status": "preserved_existing_core9"
+    },
+    {
+      "asset_id": "ui_status_burn_v01",
+      "source": "res://assets/art/generated_sources/imagegen/ui/v01_backup_core9/status_burn_v01.png",
+      "source_sha256": "7cc37d2212eb6ad25e8e12cb08ef5afa6b26e1e4df6e5cf8dc44117f2f8f7477",
+      "source_dimensions": [
+        32,
+        32
+      ],
+      "output": "res://assets/art/ui/status/status_burn_v01.png",
+      "output_sha256": "2b5d35219f8a3349c2f25ab382e653bb4dad2e0c4c66ffbba923d0459807b35b",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "status": "preserved_existing_core9"
+    },
+    {
+      "asset_id": "ui_status_slow_v01",
+      "source": "res://assets/art/generated_sources/imagegen/ui/v01_backup_core9/status_slow_v01.png",
+      "source_sha256": "903a1cf89887ddf9569588b7484748296e5e299d17e2112d24ab27d3c770ea66",
+      "source_dimensions": [
+        32,
+        32
+      ],
+      "output": "res://assets/art/ui/status/status_slow_v01.png",
+      "output_sha256": "edeab20c13f0c382dd54a223ca5a5ae861be950176ffc69b193a01fe3aa87d88",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "status": "preserved_existing_core9"
+    },
+    {
+      "asset_id": "ui_tower_sigil_v01",
+      "source": "res://assets/art/generated_sources/imagegen/ui/v01_backup_core9/tower_sigil_icon_v01.png",
+      "source_sha256": "78d8c1059dbd772ce914a7945cb0b7f2ea2fe16c4ac773b4a5882774d494e4bf",
+      "source_dimensions": [
+        32,
+        32
+      ],
+      "output": "res://assets/art/ui/markers/tower_sigil_icon_v01.png",
+      "output_sha256": "1dfeea179a0df7320388fcfadba55e715d367656be4e6585a756b14b99a70b39",
+      "output_dimensions": [
+        32,
+        32
+      ],
+      "status": "preserved_existing_core9"
+    }
+  ]
+}

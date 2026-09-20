@@ -1,0 +1,180 @@
+{
+  "schema": "region3-support-derivation/v02",
+  "source": "nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\decorative_support_v02\\region3_ground_road_source_v02.png",
+  "source_sha256": "fc91162145aa62a96bfb27feb492ed633a5f8406626b932cdc1d99b0c5a179c6",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "alpha_threshold": 24,
+  "kind": "material",
+  "grid": [
+    4,
+    2
+  ],
+  "output_cell_size": 32,
+  "atlas": "region3_ground_road_tileset_v02.png",
+  "atlas_sha256": "b03fa58ba34e3673fee1e5ba003b66bbeab3fd645e0ced9b484996ae263cbb0d",
+  "cells": [
+    {
+      "index": 0,
+      "row": 0,
+      "col": 0,
+      "nominal_rect": [
+        64,
+        148,
+        375,
+        454
+      ],
+      "selected_components": [],
+      "bbox": [
+        64,
+        148,
+        375,
+        454
+      ],
+      "output": "region3_ground_road_tileset_v02_00.png",
+      "sha256": "a32461e1ed0ec242371006c811f0edcde93b0f99d6348be2d244931cb4a16b85"
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "col": 1,
+      "nominal_rect": [
+        430,
+        148,
+        741,
+        454
+      ],
+      "selected_components": [],
+      "bbox": [
+        430,
+        148,
+        741,
+        454
+      ],
+      "output": "region3_ground_road_tileset_v02_01.png",
+      "sha256": "e55a920c62305e735b78c1716c1e125ed6b5de682ec322a77c2cc4dbdc38a5f5"
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "col": 2,
+      "nominal_rect": [
+        795,
+        148,
+        1106,
+        454
+      ],
+      "selected_components": [],
+      "bbox": [
+        795,
+        148,
+        1106,
+        454
+      ],
+      "output": "region3_ground_road_tileset_v02_02.png",
+      "sha256": "70715de622baf3ccc4087b92225b9c0197379428140a8706d9b2a393211a4a22"
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "col": 3,
+      "nominal_rect": [
+        1162,
+        148,
+        1473,
+        454
+      ],
+      "selected_components": [],
+      "bbox": [
+        1162,
+        148,
+        1473,
+        454
+      ],
+      "output": "region3_ground_road_tileset_v02_03.png",
+      "sha256": "566d027bbfc97b390679b843efa291db3f351e7ff5729a06ffa4a94a001e4407"
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "col": 0,
+      "nominal_rect": [
+        64,
+        570,
+        375,
+        880
+      ],
+      "selected_components": [],
+      "bbox": [
+        64,
+        570,
+        375,
+        880
+      ],
+      "output": "region3_ground_road_tileset_v02_04.png",
+      "sha256": "657f73d1cdb7668291f02807ac4eceab1dd959b0bd5610aaa105f9d1d4a16a28"
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "col": 1,
+      "nominal_rect": [
+        430,
+        570,
+        741,
+        880
+      ],
+      "selected_components": [],
+      "bbox": [
+        430,
+        570,
+        741,
+        880
+      ],
+      "output": "region3_ground_road_tileset_v02_05.png",
+      "sha256": "ced230d11353dde9f5f2be87bc848aec2562aef45fd368b4b7e55345d41f95a3"
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "col": 2,
+      "nominal_rect": [
+        795,
+        570,
+        1106,
+        880
+      ],
+      "selected_components": [],
+      "bbox": [
+        795,
+        570,
+        1106,
+        880
+      ],
+      "output": "region3_ground_road_tileset_v02_06.png",
+      "sha256": "a954d029334c8fe011ec7857c2086d00d29a85dc532edb19627bf33c70d01b72"
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "col": 3,
+      "nominal_rect": [
+        1162,
+        570,
+        1473,
+        880
+      ],
+      "selected_components": [],
+      "bbox": [
+        1162,
+        570,
+        1473,
+        880
+      ],
+      "output": "region3_ground_road_tileset_v02_07.png",
+      "sha256": "a4ec7ac02541c3136a3cb544ab587f2eedfc9605120831a5ada1d2b3228c8995"
+    }
+  ]
+}

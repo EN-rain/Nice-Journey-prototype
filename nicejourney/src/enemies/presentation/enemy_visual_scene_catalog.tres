@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EnemyVisualSceneCatalog" load_steps=14 format=3]
+
+[ext_resource type="Script" path="res://src/enemies/presentation/enemy_visual_scene_catalog.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/duelist_visual.tscn" id="2_duelist"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/bruiser_visual.tscn" id="3_bruiser"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/defender_visual.tscn" id="4_defender"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/skirmisher_visual.tscn" id="5_skirmisher"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/assassin_visual.tscn" id="6_assassin"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/marksman_visual.tscn" id="7_marksman"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/mobile_ranged_visual.tscn" id="8_mobile_ranged"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/caster_visual.tscn" id="9_caster"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/support_visual.tscn" id="10_support"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/summoner_visual.tscn" id="11_summoner"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/flying_harrier_visual.tscn" id="12_flying_harrier"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/controller_disruptor_visual.tscn" id="13_controller_disruptor"]
+
+[resource]
+script = ExtResource("1_script")
+archetype_ids = Array[StringName]([&"duelist", &"bruiser", &"defender", &"skirmisher", &"assassin", &"marksman", &"mobile_ranged", &"caster", &"support", &"summoner", &"flying_harrier", &"controller_disruptor"])
+scenes = Array[PackedScene]([ExtResource("2_duelist"), ExtResource("3_bruiser"), ExtResource("4_defender"), ExtResource("5_skirmisher"), ExtResource("6_assassin"), ExtResource("7_marksman"), ExtResource("8_mobile_ranged"), ExtResource("9_caster"), ExtResource("10_support"), ExtResource("11_summoner"), ExtResource("12_flying_harrier"), ExtResource("13_controller_disruptor")])

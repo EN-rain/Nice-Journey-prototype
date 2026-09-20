@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Region3DecorativeBuildingVisualCatalog" load_steps=14 format=3]
+
+[ext_resource type="Script" path="res://src/world/region3/presentation/region3_decorative_building_visual_catalog.gd" id="1_catalog"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_01_visual_profile.tres" id="2_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_02_visual_profile.tres" id="3_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_03_visual_profile.tres" id="4_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_04_visual_profile.tres" id="5_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_05_visual_profile.tres" id="6_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_06_visual_profile.tres" id="7_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_07_visual_profile.tres" id="8_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_08_visual_profile.tres" id="9_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_09_visual_profile.tres" id="10_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_10_visual_profile.tres" id="11_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_11_visual_profile.tres" id="12_profile"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/decorative_12_visual_profile.tres" id="13_profile"]
+
+[resource]
+script = ExtResource("1_catalog")
+profiles = [ExtResource("2_profile"), ExtResource("3_profile"), ExtResource("4_profile"), ExtResource("5_profile"), ExtResource("6_profile"), ExtResource("7_profile"), ExtResource("8_profile"), ExtResource("9_profile"), ExtResource("10_profile"), ExtResource("11_profile"), ExtResource("12_profile"), ExtResource("13_profile")]

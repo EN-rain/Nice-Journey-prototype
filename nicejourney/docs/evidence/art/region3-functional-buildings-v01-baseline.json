@@ -1,0 +1,118 @@
+{
+  "schema": "region3-functional-buildings-v01-baseline/v1",
+  "generated_with": "sprite-gen venv Pillow 12.3.0",
+  "assets": [
+    {
+      "path": "res://assets/art/environments/region3/functional_buildings/region3_blacksmith_exterior_v01.png",
+      "sha256": "b6d98e4beaef4dc5b490b5496a24788f9811ce46eb5af3ade268e4ddaacdf2da",
+      "width": 96,
+      "height": 96,
+      "alpha_zero_fraction": 0.53418,
+      "alpha_partial_fraction": 0.067057,
+      "opaque_bbox": [
+        12,
+        14,
+        85,
+        89
+      ]
+    },
+    {
+      "path": "res://assets/art/environments/region3/functional_buildings/region3_central_tower_exterior_v01.png",
+      "sha256": "772f96ca0c350a95ce7431415cdaee1dab74327f40f0546f284c0f964eab3701",
+      "width": 96,
+      "height": 96,
+      "alpha_zero_fraction": 0.696615,
+      "alpha_partial_fraction": 0.050239,
+      "opaque_bbox": [
+        18,
+        4,
+        79,
+        90
+      ]
+    },
+    {
+      "path": "res://assets/art/environments/region3/functional_buildings/region3_clinic_exterior_v01.png",
+      "sha256": "3fa22e4345405e372d9621d7c361ba3222975ffd343dec6e5549355e4bfb3137",
+      "width": 96,
+      "height": 96,
+      "alpha_zero_fraction": 0.558702,
+      "alpha_partial_fraction": 0.067057,
+      "opaque_bbox": [
+        12,
+        18,
+        85,
+        89
+      ]
+    },
+    {
+      "path": "res://assets/art/environments/region3/functional_buildings/region3_inn_exterior_v01.png",
+      "sha256": "0efd6c0486fd2ff01b99952d41dd4471a1d8d35ec63627d4f0d59673de472939",
+      "width": 96,
+      "height": 96,
+      "alpha_zero_fraction": 0.545898,
+      "alpha_partial_fraction": 0.067057,
+      "opaque_bbox": [
+        12,
+        16,
+        85,
+        89
+      ]
+    },
+    {
+      "path": "res://assets/art/environments/region3/functional_buildings/region3_merchant_exterior_v01.png",
+      "sha256": "14f8ca2e96dabe16bb69775cc4cc96f3da7f9026338aa16b4a05df7ce05cf875",
+      "width": 96,
+      "height": 96,
+      "alpha_zero_fraction": 0.564887,
+      "alpha_partial_fraction": 0.067057,
+      "opaque_bbox": [
+        12,
+        20,
+        85,
+        89
+      ]
+    },
+    {
+      "path": "res://assets/art/environments/region3/functional_buildings/region3_quest_hall_exterior_v01.png",
+      "sha256": "f598db088d8aab00bae96080823bb59eb05f1e7eee64c2f27bf4a16b0efb143b",
+      "width": 96,
+      "height": 96,
+      "alpha_zero_fraction": 0.558702,
+      "alpha_partial_fraction": 0.067057,
+      "opaque_bbox": [
+        12,
+        18,
+        85,
+        89
+      ]
+    },
+    {
+      "path": "res://assets/art/environments/region3/functional_buildings/region3_storage_exterior_v01.png",
+      "sha256": "d4216500657730f5697d9f8a3c28fa122775ffc9f847fc7fa6aa924349c5ec05",
+      "width": 96,
+      "height": 96,
+      "alpha_zero_fraction": 0.547309,
+      "alpha_partial_fraction": 0.067057,
+      "opaque_bbox": [
+        12,
+        16,
+        85,
+        89
+      ]
+    },
+    {
+      "path": "res://assets/art/environments/region3/functional_buildings/region3_training_exterior_v01.png",
+      "sha256": "9eb437af67d1bac76c003d522b218581657538082b7f31b4efba9cbe27bd9d07",
+      "width": 96,
+      "height": 96,
+      "alpha_zero_fraction": 0.555339,
+      "alpha_partial_fraction": 0.067057,
+      "opaque_bbox": [
+        12,
+        18,
+        85,
+        89
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "inn_rest_house",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\buildings\\region3_inn_rest_house_source_v02.png",
+  "accepted_mechanically": true,
+  "errors": [],
+  "warnings": [],
+  "sha256": "8c32100608c210b2735d1e90b20d7d52ab1ced5bf19570df05940cf83e91b9ab",
+  "source_mode": "RGBA",
+  "width": 1318,
+  "height": 1318,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.6180347516930282,
+    "partial_fraction": 0.381717712725171,
+    "opaque_fraction": 0.0002475355818007235
+  },
+  "opaque_bbox": [
+    32,
+    47,
+    1260,
+    1214
+  ],
+  "touches_source_edge": {
+    "left": false,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 32
+}

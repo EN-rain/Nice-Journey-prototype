@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerCombatRuntimeTuning" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/data/tuning/player_combat_runtime_tuning.gd" id="1_tuning"]
+
+[resource]
+script = ExtResource("1_tuning")
+base_physical_defense = 0.0
+base_arcane_defense = 0.0
+poise_threshold = 50.0
+interruptible = true

@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[node name="SupportWardPlaceholder" type="Node2D"]
+
+[node name="WardBar" type="ColorRect" parent="."]
+offset_left = -18.0
+offset_top = -33.0
+offset_right = 18.0
+offset_bottom = -28.0
+mouse_filter = 2
+color = Color(0.35, 0.95, 0.72, 0.85)

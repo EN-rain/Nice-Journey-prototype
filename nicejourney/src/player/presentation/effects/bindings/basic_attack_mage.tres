@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ActionEffectBinding" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/player/presentation/effects/action_effect_binding.gd" id="1_binding"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/vfx_arcane_cast_burst.tres" id="2_effect"]
+
+[resource]
+script = ExtResource("1_binding")
+action_id = &"basic_attack_mage"
+effect_profile = ExtResource("2_effect")

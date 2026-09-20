@@ -1,0 +1,215 @@
+{
+  "schema": "region3-support-v02-acceptance/1",
+  "created_utc": "2026-09-20T00:59:18.073043+00:00",
+  "scope": "Five reviewed Region 3 support sources and their existing production derivatives; no image generation performed.",
+  "records": [
+    {
+      "id": "region3.support.props.v02",
+      "category": "environment_support",
+      "source": "assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_town_props_source_v02.png",
+      "source_sha256": "81dbc0dbc6d55550e902a1ade7eb7981de77853fbbab2e661200ef90042880e4",
+      "production_asset": "assets/art/environments/region3/props/region3_prop_sheet_v02.png",
+      "production_sha256": "a5e8ddd8d5094bc7a704dd9b1ba73a49dbc1fda7c66dafcdb544c1dee7fb35e8",
+      "production_dimensions": [
+        256,
+        256
+      ],
+      "production_has_alpha": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "derivation_manifest": "docs/evidence/art/region3_support_v02/derivation_manifests/region3_prop_sheet_v02.manifest.json",
+      "derivation_manifest_sha256": "5873c9bdb8499c99e4de8ac823a0ca83bbed5e0c4c7eaa42ef247f1c9033cbb3",
+      "derivation_manifest_atlas_sha256": "a5e8ddd8d5094bc7a704dd9b1ba73a49dbc1fda7c66dafcdb544c1dee7fb35e8",
+      "acceptance": "ACCEPTED_REVIEWED_EXISTING",
+      "source_bytes_preserved": true,
+      "production_bytes_preserved": true
+    },
+    {
+      "id": "region3.support.ground_roads.v02",
+      "category": "environment_support",
+      "source": "assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_ground_road_source_v02.png",
+      "source_sha256": "fc91162145aa62a96bfb27feb492ed633a5f8406626b932cdc1d99b0c5a179c6",
+      "production_asset": "assets/art/environments/region3/roads/region3_ground_road_tileset_v02.png",
+      "production_sha256": "b03fa58ba34e3673fee1e5ba003b66bbeab3fd645e0ced9b484996ae263cbb0d",
+      "production_dimensions": [
+        128,
+        64
+      ],
+      "production_has_alpha": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "derivation_manifest": "docs/evidence/art/region3_support_v02/derivation_manifests/region3_ground_road_tileset_v02.manifest.json",
+      "derivation_manifest_sha256": "ea0ae3755668719db30514a397cdb92ef1841cfd496d0e7b568803bbfcd8842c",
+      "derivation_manifest_atlas_sha256": "b03fa58ba34e3673fee1e5ba003b66bbeab3fd645e0ced9b484996ae263cbb0d",
+      "acceptance": "ACCEPTED_REVIEWED_EXISTING",
+      "source_bytes_preserved": true,
+      "production_bytes_preserved": true
+    },
+    {
+      "id": "region3.support.ruins.v02",
+      "category": "environment_support",
+      "source": "assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_ruins_modules_source_v02.png",
+      "source_sha256": "22c4ef9a95c2606a69673b19fa951f10adf2a88d7324b5c7d04b7ebc4a59b715",
+      "production_asset": "assets/art/environments/region3/ruins/region3_ruins_module_sheet_v02.png",
+      "production_sha256": "f38c64b0009b53c2e8c437053663d9479db2354d107961d6bca248654bbf919a",
+      "production_dimensions": [
+        256,
+        128
+      ],
+      "production_has_alpha": true,
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "derivation_manifest": "docs/evidence/art/region3_support_v02/derivation_manifests/region3_ruins_module_sheet_v02.manifest.json",
+      "derivation_manifest_sha256": "48a34b63bd33da6b5285bc3ede4dc223e22bfb08e60cfd92bbadb9c59ba08f0c",
+      "derivation_manifest_atlas_sha256": "f38c64b0009b53c2e8c437053663d9479db2354d107961d6bca248654bbf919a",
+      "acceptance": "ACCEPTED_REVIEWED_EXISTING",
+      "source_bytes_preserved": true,
+      "production_bytes_preserved": true
+    },
+    {
+      "id": "region3.support.outskirts.v02",
+      "category": "environment_support",
+      "source": "assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_outskirts_support_source_v02.png",
+      "source_sha256": "a15113a146175dd2a3402426ff0609adc98b50a60da7cd2fb21044398d510e23",
+      "production_asset": "assets/art/environments/region3/outskirts/region3_outskirts_support_sheet_v02.png",
+      "production_sha256": "dc5a6360cf3853d0ad80b8544588ed901f985d7b1c6a3b3aacc78536e0101e60",
+      "production_dimensions": [
+        192,
+        128
+      ],
+      "production_has_alpha": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "derivation_manifest": "docs/evidence/art/region3_support_v02/derivation_manifests/region3_outskirts_support_sheet_v02.manifest.json",
+      "derivation_manifest_sha256": "aefa0288897522df9588a7a171a89a1804d012230ccca345782f46774fa3389e",
+      "derivation_manifest_atlas_sha256": "dc5a6360cf3853d0ad80b8544588ed901f985d7b1c6a3b3aacc78536e0101e60",
+      "acceptance": "ACCEPTED_REVIEWED_EXISTING",
+      "source_bytes_preserved": true,
+      "production_bytes_preserved": true
+    },
+    {
+      "id": "region3.support.risk_zone.v02",
+      "category": "environment_support",
+      "source": "assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_risk_zone_support_source_v02.png",
+      "source_sha256": "aa015bd738d5f6396a107b8bce8a9fdfc1ec3237c8a7e5b34d8f5755ef8afe88",
+      "production_asset": "assets/art/environments/region3/risk_zone/region3_risk_zone_support_sheet_v02.png",
+      "production_sha256": "3970b501faecdd966cd82cc18273a27788a60e8fd7ef34ff68b81c98ff23b733",
+      "production_dimensions": [
+        192,
+        128
+      ],
+      "production_has_alpha": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "derivation_manifest": "docs/evidence/art/region3_support_v02/derivation_manifests/region3_risk_zone_support_sheet_v02.manifest.json",
+      "derivation_manifest_sha256": "03e5ef8b0a016d445838eec854bc5df5e032bcdc8f00867f943ee192a95d79b5",
+      "derivation_manifest_atlas_sha256": "3970b501faecdd966cd82cc18273a27788a60e8fd7ef34ff68b81c98ff23b733",
+      "acceptance": "ACCEPTED_REVIEWED_EXISTING",
+      "source_bytes_preserved": true,
+      "production_bytes_preserved": true
+    }
+  ],
+  "renderer_captures": [
+    {
+      "path": "docs/evidence/art/region3_support_v02/renderer/town_1x.png",
+      "sha256": "78ce0c5ed498e3a713d9ce2267fc1ade99873af70e98fb10db1b6f840474bfd8",
+      "dimensions": [
+        640,
+        360
+      ],
+      "capture_origin": "reused_reviewed_existing",
+      "promoted_exact_bytes": true,
+      "visual_review": "passed"
+    },
+    {
+      "path": "docs/evidence/art/region3_support_v02/renderer/town_roads_1x.png",
+      "sha256": "825caa498b938302abd28df8905c6f6e35c9f728980468b8245f1141bc59ad2e",
+      "dimensions": [
+        640,
+        360
+      ],
+      "capture_origin": "reused_reviewed_existing",
+      "promoted_exact_bytes": true,
+      "visual_review": "passed"
+    },
+    {
+      "path": "docs/evidence/art/region3_support_v02/renderer/outskirts_1x.png",
+      "sha256": "b36dc82005feccdd73aa9746404c0e120272b9b472e3ee259662f326e9b84b44",
+      "dimensions": [
+        640,
+        360
+      ],
+      "capture_origin": "reused_reviewed_existing",
+      "promoted_exact_bytes": true,
+      "visual_review": "passed"
+    },
+    {
+      "path": "docs/evidence/art/region3_support_v02/renderer/risk_1x.png",
+      "sha256": "ad311d23aab79a3e6feb9939936f0df3ed3c60786e76e515c6ea629a3a8db068",
+      "dimensions": [
+        640,
+        360
+      ],
+      "capture_origin": "reused_reviewed_existing",
+      "promoted_exact_bytes": true,
+      "visual_review": "passed"
+    },
+    {
+      "path": "docs/evidence/art/region3_support_v02/renderer/ground_7tile_repeat2x2.png",
+      "sha256": "f91b7263e3178cf4a2cf43c21afd3f6e265e0de808f693ef7fe32b9ad3a13bad",
+      "dimensions": [
+        640,
+        360
+      ],
+      "capture_origin": "reused_reviewed_existing",
+      "promoted_exact_bytes": true,
+      "visual_review": "passed"
+    }
+  ],
+  "focused_gates": [
+    {
+      "test": "res://tests/test_region3_environment_dressing.gd",
+      "command_binary": "/c/Users/LENOVO/Desktop/GodotC#/Godot_v4.6.2-stable_mono_win64_console.exe",
+      "exit_code": 0,
+      "result_marker": "REGION 3 ENVIRONMENT DRESSING TEST PASS",
+      "marker_present": true,
+      "log_path": "docs/evidence/art/region3_support_v02/gates/test_region3_environment_dressing.log"
+    },
+    {
+      "test": "res://tests/test_region3_authored_town_layout.gd",
+      "command_binary": "/c/Users/LENOVO/Desktop/GodotC#/Godot_v4.6.2-stable_mono_win64_console.exe",
+      "exit_code": 0,
+      "result_marker": "REGION 3 AUTHORED TOWN LAYOUT TEST PASS",
+      "marker_present": true,
+      "log_path": "docs/evidence/art/region3_support_v02/gates/test_region3_authored_town_layout.log"
+    },
+    {
+      "test": "res://tests/test_project_resource_paths.gd",
+      "command_binary": "/c/Users/LENOVO/Desktop/GodotC#/Godot_v4.6.2-stable_mono_win64_console.exe",
+      "exit_code": 0,
+      "result_marker": "PROJECT RESOURCE PATH TEST PASS",
+      "marker_present": true,
+      "log_path": "docs/evidence/art/region3_support_v02/gates/test_project_resource_paths.log"
+    },
+    {
+      "test": "res://tests/test_visual_asset_inventory.gd",
+      "command_binary": "/c/Users/LENOVO/Desktop/GodotC#/Godot_v4.6.2-stable_mono_win64_console.exe",
+      "exit_code": 0,
+      "result_marker": "VISUAL ASSET INVENTORY TEST PASS",
+      "marker_present": true,
+      "log_path": "docs/evidence/art/region3_support_v02/gates/test_visual_asset_inventory.log"
+    }
+  ],
+  "all_source_and_derivative_hashes_match_recorded_values": true,
+  "all_focused_gates_passed": true
+}

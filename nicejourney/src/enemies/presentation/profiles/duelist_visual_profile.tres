@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyVisualProfile" format=3 uid="uid://d3s4gfrhuulo0"]
+
+[ext_resource type="Script" uid="uid://b78aqpwxfj81g" path="res://src/enemies/presentation/enemy_visual_profile.gd" id="1_profile"]
+[ext_resource type="AnimationLibrary" uid="uid://kwol3wdj43ju" path="res://src/enemies/presentation/libraries/duelist_animation_library.tres" id="2_library"]
+[ext_resource type="Resource" path="res://src/presentation/effects/profiles/telegraph_lunge_path.tres" id="3_telegraph"]
+
+[resource]
+script = ExtResource("1_profile")
+archetype_id = &"duelist"
+animation_library = ExtResource("2_library")
+body_offset = Vector2(0, -24)
+block_animation = &""
+telegraph_profile = ExtResource("3_telegraph")

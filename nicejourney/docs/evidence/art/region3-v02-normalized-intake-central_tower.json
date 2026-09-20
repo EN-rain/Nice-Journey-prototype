@@ -1,0 +1,31 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "central_tower",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\buildings\\region3_central_tower_source_v02.png",
+  "accepted_mechanically": true,
+  "errors": [],
+  "warnings": [],
+  "sha256": "3719548ce2a0b8b981c81eb0d23d24d8ce929e458d5d531a1743550d4aed866c",
+  "source_mode": "RGBA",
+  "width": 1318,
+  "height": 1318,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.67750949270173,
+    "partial_fraction": 0.3221997969056901,
+    "opaque_fraction": 0.00029071039257991943
+  },
+  "opaque_bbox": [
+    55,
+    32,
+    1268,
+    1246
+  ],
+  "touches_source_edge": {
+    "left": false,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 32
+}

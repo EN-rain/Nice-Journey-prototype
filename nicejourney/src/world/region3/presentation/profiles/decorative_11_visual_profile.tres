@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Region3DecorativeBuildingVisualProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/world/region3/presentation/region3_decorative_building_visual_profile.gd" id="1_profile"]
+[ext_resource type="Texture2D" path="res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_11_v02.png" id="2_texture"]
+
+[resource]
+script = ExtResource("1_profile")
+structure_id = &"r3:decorative:11"
+texture = ExtResource("2_texture")
+exact_source_evidence_accepted = true

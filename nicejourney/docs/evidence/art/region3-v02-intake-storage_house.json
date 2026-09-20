@@ -1,0 +1,35 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "storage_house",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\functional_buildings_v02\\isometric_fantasy_warehouse_sprite.png",
+  "accepted_mechanically": false,
+  "errors": [
+    "visible subject touches source boundary; regenerate/crop with safe margin"
+  ],
+  "warnings": [
+    "source margin is under 8 px; deterministic cleanup/crop may be fragile"
+  ],
+  "sha256": "8fdeee3d722d55ec9df2b75bbc04c7b990ecaa017552041696154e0c2e35fcfc",
+  "source_mode": "RGBA",
+  "width": 1254,
+  "height": 1254,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.556094818749062,
+    "partial_fraction": 0.4433690976753178,
+    "opaque_fraction": 0.0005360835756202162
+  },
+  "opaque_bbox": [
+    0,
+    47,
+    1210,
+    1214
+  ],
+  "touches_source_edge": {
+    "left": true,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 0
+}

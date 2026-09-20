@@ -1,0 +1,35 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "inn_rest_house",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\functional_buildings_v02\\cozy_fantasy_inn_pixel_art_asset.png",
+  "accepted_mechanically": false,
+  "errors": [
+    "visible subject touches source boundary; regenerate/crop with safe margin"
+  ],
+  "warnings": [
+    "source margin is under 8 px; deterministic cleanup/crop may be fragile"
+  ],
+  "sha256": "d7754b0cfcb369745fa02d99ad52135a417c0a04c4e568e410b12ad84d641e52",
+  "source_mode": "RGBA",
+  "width": 1254,
+  "height": 1254,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.5780513521007099,
+    "partial_fraction": 0.42167520076107334,
+    "opaque_fraction": 0.00027344713821671765
+  },
+  "opaque_bbox": [
+    0,
+    15,
+    1228,
+    1182
+  ],
+  "touches_source_edge": {
+    "left": true,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 0
+}

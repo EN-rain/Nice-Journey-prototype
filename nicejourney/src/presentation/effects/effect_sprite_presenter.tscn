@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/presentation/effects/effect_sprite_presenter.gd" id="1"]
+
+[node name="EffectSpritePresenter" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

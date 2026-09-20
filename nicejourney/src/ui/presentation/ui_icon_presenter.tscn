@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/ui/presentation/ui_icon_presenter.gd" id="1_presenter"]
+
+[node name="UiIconPresenter" type="TextureRect"]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("1_presenter")

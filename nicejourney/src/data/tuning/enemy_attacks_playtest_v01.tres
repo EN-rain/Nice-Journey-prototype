@@ -1,0 +1,298 @@
+[gd_resource type="Resource" script_class="EnemyPlaytestAttackCatalog" format=3]
+
+[ext_resource type="Script" path="res://src/ai/archetypes/enemy_attack_geometry_authoring.gd" id="1_c838x"]
+[ext_resource type="Script" path="res://src/ai/archetypes/enemy_attack_payload_authoring.gd" id="2_8n57x"]
+[ext_resource type="Script" path="res://src/ai/archetypes/enemy_signature_attack_authoring.gd" id="3_mafgb"]
+[ext_resource type="Script" path="res://src/data/tuning/enemy_playtest_attack_catalog.gd" id="4_rak8r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c838x"]
+size = Vector2(74, 58)
+
+[sub_resource type="Resource" id="Resource_8n57x"]
+script = ExtResource("1_c838x")
+authored = true
+geometry_id = &"geometry:playtest:duelist"
+query_shape = SubResource("RectangleShape2D_c838x")
+max_reach_px = 76.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(0)
+
+[sub_resource type="Resource" id="Resource_mafgb"]
+script = ExtResource("2_8n57x")
+authored = true
+damage_domain = &"physical"
+delivery = &"contact"
+raw_damage = 5.0
+guard_pressure = 3.0
+dodgeable = true
+blockable = true
+parryable = true
+
+[sub_resource type="Resource" id="Resource_rak8r"]
+script = ExtResource("3_mafgb")
+action_id = &"action:duelist_lunge"
+geometry = SubResource("Resource_8n57x")
+payload = SubResource("Resource_mafgb")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxwtw"]
+size = Vector2(100, 94)
+
+[sub_resource type="Resource" id="Resource_vq64b"]
+script = ExtResource("1_c838x")
+authored = true
+geometry_id = &"geometry:playtest:bruiser"
+query_shape = SubResource("RectangleShape2D_lxwtw")
+max_reach_px = 76.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(0)
+
+[sub_resource type="Resource" id="Resource_te0ya"]
+script = ExtResource("2_8n57x")
+authored = true
+damage_domain = &"physical"
+delivery = &"contact"
+raw_damage = 6.0
+guard_pressure = 3.0
+dodgeable = true
+blockable = true
+parryable = true
+
+[sub_resource type="Resource" id="Resource_yptlm"]
+script = ExtResource("3_mafgb")
+action_id = &"action:bruiser_slam"
+geometry = SubResource("Resource_vq64b")
+payload = SubResource("Resource_te0ya")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fr86"]
+size = Vector2(74, 58)
+
+[sub_resource type="Resource" id="Resource_uaf0r"]
+script = ExtResource("1_c838x")
+authored = true
+geometry_id = &"geometry:playtest:defender"
+query_shape = SubResource("RectangleShape2D_4fr86")
+max_reach_px = 76.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(0)
+
+[sub_resource type="Resource" id="Resource_xv2we"]
+script = ExtResource("2_8n57x")
+authored = true
+damage_domain = &"physical"
+delivery = &"contact"
+raw_damage = 7.0
+guard_pressure = 3.0
+dodgeable = true
+blockable = true
+parryable = true
+
+[sub_resource type="Resource" id="Resource_871de"]
+script = ExtResource("3_mafgb")
+action_id = &"action:defender_guard_counter"
+geometry = SubResource("Resource_uaf0r")
+payload = SubResource("Resource_xv2we")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuqoa"]
+size = Vector2(74, 58)
+
+[sub_resource type="Resource" id="Resource_icjgf"]
+script = ExtResource("1_c838x")
+authored = true
+geometry_id = &"geometry:playtest:skirmisher"
+query_shape = SubResource("RectangleShape2D_xuqoa")
+max_reach_px = 76.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(0)
+
+[sub_resource type="Resource" id="Resource_lvdmo"]
+script = ExtResource("2_8n57x")
+authored = true
+damage_domain = &"physical"
+delivery = &"contact"
+raw_damage = 8.0
+guard_pressure = 3.0
+dodgeable = true
+blockable = true
+parryable = true
+
+[sub_resource type="Resource" id="Resource_tu4ei"]
+script = ExtResource("3_mafgb")
+action_id = &"action:skirmisher_dash_cut"
+geometry = SubResource("Resource_icjgf")
+payload = SubResource("Resource_lvdmo")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5oa07"]
+size = Vector2(74, 58)
+
+[sub_resource type="Resource" id="Resource_uky0p"]
+script = ExtResource("1_c838x")
+authored = true
+geometry_id = &"geometry:playtest:assassin"
+query_shape = SubResource("RectangleShape2D_5oa07")
+max_reach_px = 76.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(0)
+
+[sub_resource type="Resource" id="Resource_35txk"]
+script = ExtResource("2_8n57x")
+authored = true
+damage_domain = &"physical"
+delivery = &"contact"
+raw_damage = 9.0
+guard_pressure = 3.0
+dodgeable = true
+blockable = true
+parryable = true
+
+[sub_resource type="Resource" id="Resource_sml6g"]
+script = ExtResource("3_mafgb")
+action_id = &"action:assassin_flank_strike"
+geometry = SubResource("Resource_uky0p")
+payload = SubResource("Resource_35txk")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xv04"]
+size = Vector2(126, 46)
+
+[sub_resource type="Resource" id="Resource_8ff2r"]
+script = ExtResource("1_c838x")
+authored = true
+geometry_id = &"geometry:playtest:marksman"
+query_shape = SubResource("RectangleShape2D_5xv04")
+max_reach_px = 120.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(0)
+
+[sub_resource type="Resource" id="Resource_srbii"]
+script = ExtResource("2_8n57x")
+authored = true
+damage_domain = &"physical"
+delivery = &"projectile"
+raw_damage = 10.0
+guard_pressure = 2.0
+dodgeable = true
+blockable = true
+
+[sub_resource type="Resource" id="Resource_77yct"]
+script = ExtResource("3_mafgb")
+action_id = &"action:marksman_aimed_shot"
+geometry = SubResource("Resource_8ff2r")
+payload = SubResource("Resource_srbii")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqdqm"]
+size = Vector2(126, 46)
+
+[sub_resource type="Resource" id="Resource_vjulh"]
+script = ExtResource("1_c838x")
+authored = true
+geometry_id = &"geometry:playtest:mobile_ranged"
+query_shape = SubResource("RectangleShape2D_dqdqm")
+max_reach_px = 120.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(0)
+
+[sub_resource type="Resource" id="Resource_ol5cr"]
+script = ExtResource("2_8n57x")
+authored = true
+damage_domain = &"physical"
+delivery = &"projectile"
+raw_damage = 11.0
+guard_pressure = 2.0
+dodgeable = true
+blockable = true
+
+[sub_resource type="Resource" id="Resource_rxsfw"]
+script = ExtResource("3_mafgb")
+action_id = &"action:mobile_ranged_strafe_shot"
+geometry = SubResource("Resource_vjulh")
+payload = SubResource("Resource_ol5cr")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrk7r"]
+size = Vector2(126, 46)
+
+[sub_resource type="Resource" id="Resource_8gjlf"]
+script = ExtResource("1_c838x")
+authored = true
+geometry_id = &"geometry:playtest:caster"
+query_shape = SubResource("RectangleShape2D_jrk7r")
+max_reach_px = 120.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(0)
+
+[sub_resource type="Resource" id="Resource_gns58"]
+script = ExtResource("2_8n57x")
+authored = true
+damage_domain = &"arcane"
+delivery = &"projectile"
+raw_damage = 12.0
+guard_pressure = 2.0
+dodgeable = true
+blockable = true
+
+[sub_resource type="Resource" id="Resource_mbids"]
+script = ExtResource("3_mafgb")
+action_id = &"action:caster_delayed_burst"
+geometry = SubResource("Resource_8gjlf")
+payload = SubResource("Resource_gns58")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6m17"]
+size = Vector2(74, 58)
+
+[sub_resource type="Resource" id="Resource_4mjxf"]
+script = ExtResource("1_c838x")
+authored = true
+geometry_id = &"geometry:playtest:flying_harrier"
+query_shape = SubResource("RectangleShape2D_q6m17")
+max_reach_px = 76.0
+collision_mask = 1
+hit_interval_count = 1
+live_placement_declared = true
+hit_active_ticks = PackedInt32Array(0)
+
+[sub_resource type="Resource" id="Resource_jm80e"]
+script = ExtResource("2_8n57x")
+authored = true
+damage_domain = &"physical"
+delivery = &"contact"
+raw_damage = 13.0
+guard_pressure = 3.0
+dodgeable = true
+blockable = true
+parryable = true
+
+[sub_resource type="Resource" id="Resource_qs7tf"]
+script = ExtResource("3_mafgb")
+action_id = &"action:flying_harrier_dive"
+geometry = SubResource("Resource_4mjxf")
+payload = SubResource("Resource_jm80e")
+
+[resource]
+resource_name = "PLAYTEST enemy signature contact v01 — temporary shapes/damage"
+script = ExtResource("4_rak8r")
+attack_by_archetype = {
+"assassin": SubResource("Resource_sml6g"),
+"bruiser": SubResource("Resource_yptlm"),
+"caster": SubResource("Resource_mbids"),
+"defender": SubResource("Resource_871de"),
+"duelist": SubResource("Resource_rak8r"),
+"flying_harrier": SubResource("Resource_qs7tf"),
+"marksman": SubResource("Resource_77yct"),
+"mobile_ranged": SubResource("Resource_rxsfw"),
+"skirmisher": SubResource("Resource_tu4ei")
+}
+deferred_non_damage_archetypes = Array[StringName]([&"support", &"summoner", &"controller_disruptor"])

@@ -1,0 +1,532 @@
+﻿{
+    "evidence_kind":  "DR-08-safe reference validation and performance smoke",
+    "generated_utc":  "2026-09-14T09:49:04.0885812Z",
+    "final_hardware_acceptance":  false,
+    "project_root":  "D:\\nicejourney\\nicejourney",
+    "engine":  {
+                   "version":  "4.6.2.stable.mono.official.71f334935",
+                   "renderer_method":  "gl_compatibility",
+                   "world_viewport":  "640x360",
+                   "window_override":  "1280x720"
+               },
+    "reference_machine":  {
+                              "manufacturer":  "LENOVO",
+                              "model":  "82H7",
+                              "cpu":  "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz",
+                              "cpu_cores":  4,
+                              "cpu_logical_processors":  8,
+                              "ram_bytes":  16952647680,
+                              "gpu":  "Intel(R) Iris(R) Xe Graphics",
+                              "gpu_driver":  "32.0.101.7088",
+                              "reported_display_mode":  "1920 x 1080 x 4294967296 colors",
+                              "os":  "Microsoft Windows 11 Pro",
+                              "os_version":  "10.0.26100",
+                              "os_build":  "26100",
+                              "os_architecture":  "64-bit",
+                              "project_volume":  {
+                                                     "DriveLetter":  "D",
+                                                     "FileSystem":  "NTFS",
+                                                     "Size":  256042332160,
+                                                     "SizeRemaining":  51393949696
+                                                 },
+                              "project_disk":  {
+                                                   "FriendlyName":  "Fanxiang MD87",
+                                                   "BusType":  "USB",
+                                                   "MediaType":  null,
+                                                   "Size":  256060514304
+                                               }
+                          },
+    "content_identity":  {
+                             "project_godot_sha256":  "d01d8f19f2e8eaf01d65ae0c84f5223900b3c5515bf2b20b7dbf4f8421850229",
+                             "implementation_state_sha256":  "4ccc60e2a0a12df1c864d8b3aa65f9e83446f940433c7131e5acb7e144bc8271",
+                             "master_spec_sha256":  "e8e446ca98bc2f41f1afb5986ef9af4b2fc15cde0eea9a048ceec3743144f9ce",
+                             "validation_script_sha256":  "81c02e44e08ca016b17d1ed5249914001731cc8f3f8b4547bd4222e72fe92641",
+                             "performance_smoke_script_sha256":  "33c36b6a7c75c1443fcda7fb01655d078845e4b0beeb0a2e39fb4f119a1edf29"
+                         },
+    "test_manifest_count":  42,
+    "test_manifest":  [
+                          {
+                              "name":  "test_accessibility_settings.gd",
+                              "resource_path":  "res://tests/test_accessibility_settings.gd",
+                              "sha256":  "f7847c1777c7149b58befdbd7271525120ab62f1c9743477a21cb1647f26edb3"
+                          },
+                          {
+                              "name":  "test_action_input_integration.gd",
+                              "resource_path":  "res://tests/test_action_input_integration.gd",
+                              "sha256":  "f98e08aab99baa35c15fb58495f1c9bc161069fb1e3193f44b78e1ca526fc6ee"
+                          },
+                          {
+                              "name":  "test_active_combat_registry.gd",
+                              "resource_path":  "res://tests/test_active_combat_registry.gd",
+                              "sha256":  "fd2ec46ec17b7d67beece6f0ccc755e6098f67836e79c66615d1116ef7c8271c"
+                          },
+                          {
+                              "name":  "test_ai_observation_admission.gd",
+                              "resource_path":  "res://tests/test_ai_observation_admission.gd",
+                              "sha256":  "edc96438b855b124c5af2a10064fa40713a4081e829fd041ac70a0ceb55a1dab"
+                          },
+                          {
+                              "name":  "test_ai_observation_contract.gd",
+                              "resource_path":  "res://tests/test_ai_observation_contract.gd",
+                              "sha256":  "8167bb4419bd3f3a43a2620a65bc9e27ddd44356e8d00663662f9c83a22b4171"
+                          },
+                          {
+                              "name":  "test_asset_provenance_manifest.gd",
+                              "resource_path":  "res://tests/test_asset_provenance_manifest.gd",
+                              "sha256":  "0536735afe71e519a5c4579edd1cc2cb9bf7cd0d7509e0b1a1f588809b680786"
+                          },
+                          {
+                              "name":  "test_attack_participation_admission.gd",
+                              "resource_path":  "res://tests/test_attack_participation_admission.gd",
+                              "sha256":  "267c6b53886d93213d389511c9c90090fb8e092ba389945ebb3ad88352812099"
+                          },
+                          {
+                              "name":  "test_attack_reservation_ledger.gd",
+                              "resource_path":  "res://tests/test_attack_reservation_ledger.gd",
+                              "sha256":  "a45ad82b1d093ae6e187d2952d66fdde0813757d64531e2ee6fd81dca434f307"
+                          },
+                          {
+                              "name":  "test_audio_foundation.gd",
+                              "resource_path":  "res://tests/test_audio_foundation.gd",
+                              "sha256":  "9b0b63c5d18a58e29dc569876836a665b140fdefbcf4cf62f0435c8dd679c17d"
+                          },
+                          {
+                              "name":  "test_audio_lifecycle.gd",
+                              "resource_path":  "res://tests/test_audio_lifecycle.gd",
+                              "sha256":  "73510b0c313d745f8e53139f08962588f83a78ecf32ea9e933bf48b6986507eb"
+                          },
+                          {
+                              "name":  "test_audio_settings.gd",
+                              "resource_path":  "res://tests/test_audio_settings.gd",
+                              "sha256":  "0f03f37ad874db86e36e58ee5d400bd7c858f367fcd0b55a10ba79dd18920277"
+                          },
+                          {
+                              "name":  "test_claim_ledger.gd",
+                              "resource_path":  "res://tests/test_claim_ledger.gd",
+                              "sha256":  "0ac9fc0ae35c1010a3f7d5f97cca9ec91a633e1bb262d6da6144299cdb0486f2"
+                          },
+                          {
+                              "name":  "test_combat_contact_ledger.gd",
+                              "resource_path":  "res://tests/test_combat_contact_ledger.gd",
+                              "sha256":  "fae9f5ca0aef3344e4b78f59e50d47420904142e9d368ec52306f10d94e9f156"
+                          },
+                          {
+                              "name":  "test_danger.gd",
+                              "resource_path":  "res://tests/test_danger.gd",
+                              "sha256":  "032c85e295f35ffebc5b90c4f80dc641a5e4f1ea15edb34e52520ff7a681b8f0"
+                          },
+                          {
+                              "name":  "test_development_observability.gd",
+                              "resource_path":  "res://tests/test_development_observability.gd",
+                              "sha256":  "9e351f0f5132c29ba81c786cc8fca5e0a13a07a9bbfb92b01fc9615ac3d15ec1"
+                          },
+                          {
+                              "name":  "test_direct_hit_resolver.gd",
+                              "resource_path":  "res://tests/test_direct_hit_resolver.gd",
+                              "sha256":  "296a5e1f25f4268ee5e0fea514fcb483333f672f0ea72a676df320771fdd11fe"
+                          },
+                          {
+                              "name":  "test_enemy_root_lifecycle.gd",
+                              "resource_path":  "res://tests/test_enemy_root_lifecycle.gd",
+                              "sha256":  "b250ed475121061020f97060ea85f37eccef5e0f60816b02556bd9f16acfd80e"
+                          },
+                          {
+                              "name":  "test_equipment_slot_identity.gd",
+                              "resource_path":  "res://tests/test_equipment_slot_identity.gd",
+                              "sha256":  "8224a4113ca2a60c716fb24c2ddf4c62b39c8f74be75646f6a56241fda75e05a"
+                          },
+                          {
+                              "name":  "test_full_ai_simulation_ledger.gd",
+                              "resource_path":  "res://tests/test_full_ai_simulation_ledger.gd",
+                              "sha256":  "4788f15fb897318bac255bbfb86d885ffe9ea61aad55ab7ebfd2e06f47bddf6a"
+                          },
+                          {
+                              "name":  "test_input_bindings.gd",
+                              "resource_path":  "res://tests/test_input_bindings.gd",
+                              "sha256":  "ef574172f88e13cd7236cfdc5a9a5c0aaea3687b150a59aad5e2ed9bba03ca2c"
+                          },
+                          {
+                              "name":  "test_input_ownership.gd",
+                              "resource_path":  "res://tests/test_input_ownership.gd",
+                              "sha256":  "41351a6996bf10b66265723aaa3aee6d9832ba9ef41b5f4d81583b0e6ed66354"
+                          },
+                          {
+                              "name":  "test_interaction_commit_admission.gd",
+                              "resource_path":  "res://tests/test_interaction_commit_admission.gd",
+                              "sha256":  "dc4263c9f7bd22edf652ad3cea8c41d3d413d39d0f31dc8b213707769a563cbb"
+                          },
+                          {
+                              "name":  "test_m0.gd",
+                              "resource_path":  "res://tests/test_m0.gd",
+                              "sha256":  "1dc54c75507d0e7e05fbda3f543be03a6ae73e08e5e2e7562aa0f646f4fc5e87"
+                          },
+                          {
+                              "name":  "test_m1.gd",
+                              "resource_path":  "res://tests/test_m1.gd",
+                              "sha256":  "b4cc63fc5d8a260dc4fd01619614b4e124f00e8ea14b2e5dd6427f07ed1f9dd0"
+                          },
+                          {
+                              "name":  "test_m2_foundation.gd",
+                              "resource_path":  "res://tests/test_m2_foundation.gd",
+                              "sha256":  "e8eea9db5a78e5f767e84985eab35a4d5743ed78e21e9b8fd1dc47d5bc98cd50"
+                          },
+                          {
+                              "name":  "test_main_profile_flow.gd",
+                              "resource_path":  "res://tests/test_main_profile_flow.gd",
+                              "sha256":  "4ebaeff079f1250de7fd7e3733b9abf16a3aca70f778f740e1ff3eeb9b76cfc3"
+                          },
+                          {
+                              "name":  "test_map_layer_identity.gd",
+                              "resource_path":  "res://tests/test_map_layer_identity.gd",
+                              "sha256":  "9bfe3c835a1baef29ae14e2ec667bf7c524f7bb3fba76cd40613c6237e037db8"
+                          },
+                          {
+                              "name":  "test_normal_inventory_capacity_policy.gd",
+                              "resource_path":  "res://tests/test_normal_inventory_capacity_policy.gd",
+                              "sha256":  "2673906c448273aab037865af25c24c2e5be64cfb6a8d10509f8dd94fc24212b"
+                          },
+                          {
+                              "name":  "test_normal_stack_quantity.gd",
+                              "resource_path":  "res://tests/test_normal_stack_quantity.gd",
+                              "sha256":  "f7a50bbc16f00c7f35ebfe40e1d70217419ec26c8b3e49af0113ebd17e5f4107"
+                          },
+                          {
+                              "name":  "test_operation_guard.gd",
+                              "resource_path":  "res://tests/test_operation_guard.gd",
+                              "sha256":  "6efc4feac14d674d7c1eaf20dcdc8134f60367c92f30b5f9daad94416646eea8"
+                          },
+                          {
+                              "name":  "test_pause_coordinator.gd",
+                              "resource_path":  "res://tests/test_pause_coordinator.gd",
+                              "sha256":  "8c4766cd2eb69d089c0a782ce3b3b49333f2b7521ad76845694719282e6962c1"
+                          },
+                          {
+                              "name":  "test_poise_resolver.gd",
+                              "resource_path":  "res://tests/test_poise_resolver.gd",
+                              "sha256":  "5efb636f79c6ca259cf4e8d6711710e3912201e44edde03d7ffc308e010290d0"
+                          },
+                          {
+                              "name":  "test_profile_creation.gd",
+                              "resource_path":  "res://tests/test_profile_creation.gd",
+                              "sha256":  "20821e7cc01a88e879fe44bcf57b231e5a27379477df1dd6f562021dc9103df1"
+                          },
+                          {
+                              "name":  "test_project_resource_paths.gd",
+                              "resource_path":  "res://tests/test_project_resource_paths.gd",
+                              "sha256":  "3de18049c1108cf24557e1136200b2d75d61efa0944a9efdf6182f7784694855"
+                          },
+                          {
+                              "name":  "test_protected_item_operation_policy.gd",
+                              "resource_path":  "res://tests/test_protected_item_operation_policy.gd",
+                              "sha256":  "868ba8cc0f5f430168bb31126911bfe25a08cef475c992c2b7c04d56f405808c"
+                          },
+                          {
+                              "name":  "test_prototype_status_resolver.gd",
+                              "resource_path":  "res://tests/test_prototype_status_resolver.gd",
+                              "sha256":  "a2f952691b47254892cb16ead5a9ab53487f05b859af65d6456f10268dfd4c98"
+                          },
+                          {
+                              "name":  "test_prototype_tower_floor_catalog.gd",
+                              "resource_path":  "res://tests/test_prototype_tower_floor_catalog.gd",
+                              "sha256":  "8936a0f666b0b6c84c483ef0f2fcbd4e2431b6bbff29d73201081dc0e20ec566"
+                          },
+                          {
+                              "name":  "test_region3_town_structure_manifest.gd",
+                              "resource_path":  "res://tests/test_region3_town_structure_manifest.gd",
+                              "sha256":  "4d135384b091f1f64f14822054e0aa2de11b571add613a15685be6d65ff80865"
+                          },
+                          {
+                              "name":  "test_save_compatibility.gd",
+                              "resource_path":  "res://tests/test_save_compatibility.gd",
+                              "sha256":  "b61c27b7d7ccb32150d88621458562cc76ac0808d69ba851054f1f9b1e42b9dd"
+                          },
+                          {
+                              "name":  "test_save_request_coordinator.gd",
+                              "resource_path":  "res://tests/test_save_request_coordinator.gd",
+                              "sha256":  "e6f3e8fd449cc79e9e33f937ef465d7465b20b9c20ab4a4f39f11aec52014742"
+                          },
+                          {
+                              "name":  "test_starter_class_combat.gd",
+                              "resource_path":  "res://tests/test_starter_class_combat.gd",
+                              "sha256":  "a4cf8ca38858ac705eea6622dd942dde39718a7c5b90c3e1d48cae38f3364828"
+                          },
+                          {
+                              "name":  "test_world_region_catalog.gd",
+                              "resource_path":  "res://tests/test_world_region_catalog.gd",
+                              "sha256":  "19a3dcee949d31d58104dfc0f8e8953ffdb52540b41d506e22a05c8d9cbaccfe"
+                          }
+                      ],
+    "validation_results":  [
+                               {
+                                   "kind":  "editor_parse",
+                                   "name":  "editor_parse",
+                                   "exit_code":  0,
+                                   "duration_ms":  6850.957
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_accessibility_settings.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  972.483
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_action_input_integration.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  693.189
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_active_combat_registry.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  499.293
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_ai_observation_admission.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  502.57
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_ai_observation_contract.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  509.165
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_asset_provenance_manifest.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  524.469
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_attack_participation_admission.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  498.375
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_attack_reservation_ledger.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  503.977
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_audio_foundation.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  510.093
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_audio_lifecycle.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  503.657
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_audio_settings.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  987.692
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_claim_ledger.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  502.86
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_combat_contact_ledger.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  508.025
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_danger.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  502.81
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_development_observability.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  784.741
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_direct_hit_resolver.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  506.338
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_enemy_root_lifecycle.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  529.381
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_equipment_slot_identity.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  518.558
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_full_ai_simulation_ledger.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  507.644
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_input_bindings.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  515.578
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_input_ownership.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  783.77
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_interaction_commit_admission.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  513.98
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_m0.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  643.138
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_m1.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  2486.184
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_m2_foundation.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  592.138
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_main_profile_flow.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  878.096
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_map_layer_identity.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  504.538
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_normal_inventory_capacity_policy.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  502.606
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_normal_stack_quantity.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  512.823
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_operation_guard.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  607.347
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_pause_coordinator.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  1058.021
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_poise_resolver.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  629.574
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_profile_creation.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  625.916
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_project_resource_paths.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  623.44
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_protected_item_operation_policy.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  607.231
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_prototype_status_resolver.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  511.034
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_prototype_tower_floor_catalog.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  598.277
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_region3_town_structure_manifest.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  517.152
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_save_compatibility.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  601.937
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_save_request_coordinator.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  603.774
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_starter_class_combat.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  608.827
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_world_region_catalog.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  501.622
+                               },
+                               {
+                                   "kind":  "main_scene_headless_smoke",
+                                   "name":  "main_scene",
+                                   "exit_code":  0,
+                                   "duration_ms":  786.1
+                               }
+                           ],
+    "renderer_active_smoke":  null,
+    "limitations":  [
+                        "Current gameplay greybox is not the authored section 41.1 worst-case scene.",
+                        "Final DR-08 acceptance has not been run on the approved minimum hardware class; this reference-machine run cannot substitute for it.",
+                        "Headless validation does not prove rendering quality, pixel readability, letterboxing, or other visual acceptance.",
+                        "Renderer-active smoke is a reference-machine baseline only and must not be called final performance acceptance."
+                    ]
+}

@@ -1,0 +1,31 @@
+{
+    "evidence_kind":  "final OS-window ultrawide composition capture",
+    "captured_utc":  "2026-09-14T06:34:18.0756521Z",
+    "scene":  "res://src/app/gameplay.tscn",
+    "requested_client_physical_px":  {
+                                         "width":  1920,
+                                         "height":  800
+                                     },
+    "capture_method":  "Auvrynt capture_window targeting Nice Journey (DEBUG)",
+    "captured_top_level_window_physical_px":  {
+                                                  "width":  1942,
+                                                  "height":  856
+                                              },
+    "windows_logical_client_px":  {
+                                      "width":  1280,
+                                      "height":  533
+                                  },
+    "dpi_scale_observed":  1.5,
+    "detected_rendered_content_bounds_physical_px":  {
+                                                         "left":  331,
+                                                         "top":  85,
+                                                         "right":  1610,
+                                                         "bottom":  804,
+                                                         "width":  1280,
+                                                         "height":  720
+                                                     },
+    "stretch_mode":  "canvas_items",
+    "scale_mode":  "integer",
+    "observation":  "The rendered game content remains exactly 1280x720 inside the 1920x800 client, with black letterbox/pillarbox space rather than a widened greybox world view. No additional greybox world area is exposed merely by widening this window.",
+    "limitation":  "The OS focus-loss policy opened the pause overlay before capture, so this proves final-window composition/letterboxing and current greybox world-view extent, not unpaused combat readability, final art, or undiscovered-room/objective leak behavior that the current greybox does not implement."
+}

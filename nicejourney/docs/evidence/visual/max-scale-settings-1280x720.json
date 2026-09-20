@@ -1,0 +1,23 @@
+{
+	"actual_window_size": {
+		"height": 720,
+		"width": 1280
+	},
+	"captured_image_size": {
+		"height": 720,
+		"width": 1280
+	},
+	"fixture": {
+		"open_settings": true,
+		"text_scale": 1.25,
+		"ui_scale": 1.25
+	},
+	"renderer_method": "gl_compatibility",
+	"requested_window_size": {
+		"height": 720,
+		"width": 1280
+	},
+	"scene": "res://src/app/main.tscn",
+	"stretch_mode": "canvas_items",
+	"stretch_scale_mode": "integer"
+}

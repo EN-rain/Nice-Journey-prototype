@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://src/world/tower/boss/tenth_warden_sanctum.gd" id="1_sanctum"]
+[ext_resource type="Resource" path="res://src/enemies/boss_tenth_warden/runtime/tenth_warden_encounter_default.tres" id="2_tuning"]
+[ext_resource type="PackedScene" path="res://src/enemies/boss_tenth_warden/presentation/tenth_warden_visual.tscn" id="3_boss"]
+[ext_resource type="PackedScene" path="res://src/enemies/boss_tenth_warden/presentation/tenth_warden_arc_volley_projectile.tscn" id="4_arc_projectile"]
+
+[sub_resource type="RectangleShape2D" id="TopShape"]
+size = Vector2(16, 16)
+[sub_resource type="RectangleShape2D" id="BottomShape"]
+size = Vector2(16, 16)
+[sub_resource type="RectangleShape2D" id="LeftShape"]
+size = Vector2(16, 16)
+[sub_resource type="RectangleShape2D" id="RightShape"]
+size = Vector2(16, 16)
+
+[node name="TenthWardenSanctum" type="Node2D"]
+script = ExtResource("1_sanctum")
+encounter_id = &"encounter:tenth_warden_floor_10"
+arena_size = Vector2(448, 256)
+boundary_thickness = 16.0
+player_spawn_position = Vector2(-128, 0)
+boss_spawn_position = Vector2(128, 0)
+floor_color = Color(0.09, 0.09, 0.12, 1)
+boundary_color = Color(0.26, 0.27, 0.32, 1)
+encounter_tuning = ExtResource("2_tuning")
+arc_volley_projectile_scene = ExtResource("4_arc_projectile")
+arc_volley_projectile_speed_px_s = 540.0
+arc_volley_projectile_radius_px = 7.0
+arc_volley_projectile_lifetime_ticks = 90
+arc_volley_spread_degrees = 8.0
+approach_speed_px_s = 150.0
+lunge_speed_px_s = 420.0
+punishing_step_speed_px_s = 250.0
+minimum_player_separation_px = 28.0
+boss_boundary_margin_px = 20.0
+punishing_step_trigger_radius_px = 112.0
+punishing_step_behind_dot_threshold = -0.35
+weak_point_local_offset = Vector2(0, -66)
+weak_point_damage_multiplier = 1.5
+player_spawn_path = NodePath("PlayerSpawn")
+boss_spawn_path = NodePath("BossSpawn")
+boss_visual_path = NodePath("TenthWardenVisual")
+
+[node name="TopBoundary" type="StaticBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopBoundary"]
+shape = SubResource("TopShape")
+[node name="BottomBoundary" type="StaticBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBoundary"]
+shape = SubResource("BottomShape")
+[node name="LeftBoundary" type="StaticBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBoundary"]
+shape = SubResource("LeftShape")
+[node name="RightBoundary" type="StaticBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightBoundary"]
+shape = SubResource("RightShape")
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+[node name="BossSpawn" type="Marker2D" parent="."]
+[node name="TenthWardenVisual" parent="." instance=ExtResource("3_boss")]

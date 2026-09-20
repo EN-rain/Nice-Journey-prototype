@@ -1,0 +1,144 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/app/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://src/ui/accessibility_settings_panel.tscn" id="2_settings_panel"]
+[ext_resource type="Script" path="res://src/ui/accessibility_settings_menu.gd" id="3_settings_menu"]
+[ext_resource type="Script" path="res://src/ui/presentation/class_selection_visual.gd" id="4_class_visual"]
+[ext_resource type="Resource" path="res://src/ui/presentation/ui_icon_catalog.tres" id="5_ui_icons"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_main")
+
+[node name="GameplayHost" type="Node" parent="."]
+
+[node name="FrontEnd" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="FrontEnd"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.035, 0.04, 0.055, 1)
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="FrontEnd"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -165.0
+offset_right = 180.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scroller" type="ScrollContainer" parent="FrontEnd/Panel"]
+layout_mode = 2
+follow_focus = true
+
+[node name="Layout" type="VBoxContainer" parent="FrontEnd/Panel/Scroller"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="FrontEnd/Panel/Scroller/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "NICE JOURNEY"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="FrontEnd/Panel/Scroller/Layout"]
+layout_mode = 2
+text = "Prototype Profile Selection"
+horizontal_alignment = 1
+
+[node name="Slot1" type="Button" parent="FrontEnd/Panel/Scroller/Layout"]
+layout_mode = 2
+text = "Slot 1"
+
+[node name="Slot2" type="Button" parent="FrontEnd/Panel/Scroller/Layout"]
+layout_mode = 2
+text = "Slot 2"
+
+[node name="Slot3" type="Button" parent="FrontEnd/Panel/Scroller/Layout"]
+layout_mode = 2
+text = "Slot 3"
+
+[node name="SettingsButton" type="Button" parent="FrontEnd/Panel/Scroller/Layout"]
+layout_mode = 2
+text = "Accessibility & Controls"
+
+[node name="CreationPanel" type="VBoxContainer" parent="FrontEnd/Panel/Scroller/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Prompt" type="Label" parent="FrontEnd/Panel/Scroller/Layout/CreationPanel"]
+layout_mode = 2
+text = "Create new profile"
+
+[node name="NameEdit" type="LineEdit" parent="FrontEnd/Panel/Scroller/Layout/CreationPanel"]
+layout_mode = 2
+placeholder_text = "Protagonist name"
+max_length = 40
+
+[node name="ClassOption" type="OptionButton" parent="FrontEnd/Panel/Scroller/Layout/CreationPanel"]
+layout_mode = 2
+
+[node name="ClassIcon" type="TextureRect" parent="FrontEnd/Panel/Scroller/Layout/CreationPanel"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture_filter = 1
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ClassNote" type="Label" parent="FrontEnd/Panel/Scroller/Layout/CreationPanel"]
+layout_mode = 2
+text = "Class choice is permanent for this save."
+
+[node name="CreateButton" type="Button" parent="FrontEnd/Panel/Scroller/Layout/CreationPanel"]
+layout_mode = 2
+text = "Create & Enter Greybox"
+
+[node name="Feedback" type="Label" parent="FrontEnd/Panel/Scroller/Layout"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="SettingsPanel" parent="FrontEnd" instance=ExtResource("2_settings_panel")]
+
+[node name="ClassSelectionVisual" type="Node" parent="."]
+script = ExtResource("4_class_visual")
+icon_catalog = ExtResource("5_ui_icons")
+class_option_path = NodePath("../FrontEnd/Panel/Scroller/Layout/CreationPanel/ClassOption")
+class_icon_path = NodePath("../FrontEnd/Panel/Scroller/Layout/CreationPanel/ClassIcon")
+class_icon_ids = Array[StringName]([&"class_melee", &"class_ranged", &"class_mage"])
+
+[node name="AccessibilitySettingsMenu" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("3_settings_menu")
+pause_menu_path = NodePath("../FrontEnd/Panel")
+settings_panel_path = NodePath("../FrontEnd/SettingsPanel")
+settings_button_path = NodePath("../FrontEnd/Panel/Scroller/Layout/SettingsButton")
+back_button_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/BackButton")
+run_mode_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/RunRow/RunMode")
+reduced_motion_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/ReducedMotion")
+shake_intensity_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/ShakeRow/ShakeIntensity")
+ui_scale_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/UIScaleRow/UIScale")
+text_scale_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/TextScaleRow/TextScale")
+control_action_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/BindingRow/ControlAction")
+current_binding_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/BindingRow/CurrentBinding")
+rebind_button_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/BindingButtons/RebindButton")
+reset_controls_button_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/BindingButtons/ResetControlsButton")
+binding_status_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/BindingStatus")
+status_path = NodePath("../FrontEnd/SettingsPanel/Scroller/Layout/Status")

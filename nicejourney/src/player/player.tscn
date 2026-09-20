@@ -1,0 +1,139 @@
+[gd_scene load_steps=27 format=3]
+
+[ext_resource type="Script" path="res://src/player/player.gd" id="1_player"]
+[ext_resource type="Script" path="res://src/player/components/stamina_component.gd" id="2_stamina"]
+[ext_resource type="Script" path="res://src/player/components/health_component.gd" id="24_health"]
+[ext_resource type="Resource" path="res://src/data/tuning/health_default.tres" id="25_health_tuning"]
+[ext_resource type="Script" path="res://src/player/components/movement_component.gd" id="3_movement"]
+[ext_resource type="Script" path="res://src/player/components/pixel_camera.gd" id="4_camera"]
+[ext_resource type="Resource" path="res://src/data/tuning/stamina_default.tres" id="5_stamina_tuning"]
+[ext_resource type="Resource" path="res://src/data/tuning/movement_default.tres" id="6_movement_tuning"]
+[ext_resource type="Texture2D" path="res://assets/art/player/animations/player_body_idle_sheet_v03.png" id="7_player_body"]
+[ext_resource type="Script" path="res://src/player/presentation/player_body_animator.gd" id="8_player_animator"]
+[ext_resource type="Script" path="res://src/player/presentation/starter_weapon_visual.gd" id="9_weapon_visual"]
+[ext_resource type="AnimationLibrary" path="res://src/player/presentation/player_body_animation_library.tres" id="10_animation_library"]
+[ext_resource type="Resource" path="res://src/player/presentation/profiles/starter_weapon_melee.tres" id="11_melee_profile"]
+[ext_resource type="Resource" path="res://src/player/presentation/profiles/starter_weapon_ranged.tres" id="12_ranged_profile"]
+[ext_resource type="Resource" path="res://src/player/presentation/profiles/starter_weapon_mage.tres" id="13_mage_profile"]
+[ext_resource type="PackedScene" path="res://src/presentation/effects/effect_sprite_presenter.tscn" id="14_effect_presenter"]
+[ext_resource type="Script" path="res://src/player/presentation/effects/player_combat_effect_controller.gd" id="15_effect_controller"]
+[ext_resource type="Resource" path="res://src/player/presentation/effects/bindings/basic_attack_melee.tres" id="16_melee_effect"]
+[ext_resource type="Resource" path="res://src/player/presentation/effects/bindings/basic_attack_ranged.tres" id="17_ranged_effect"]
+[ext_resource type="Resource" path="res://src/player/presentation/effects/bindings/basic_attack_mage.tres" id="18_mage_effect"]
+[ext_resource type="Script" path="res://src/player/presentation/effects/combat_outcome_effect_controller.gd" id="19_outcome_effect_controller"]
+[ext_resource type="Resource" path="res://src/player/presentation/effects/bindings/outcome_blocked.tres" id="20_outcome_blocked"]
+[ext_resource type="Resource" path="res://src/player/presentation/effects/bindings/outcome_parried.tres" id="21_outcome_parried"]
+[ext_resource type="Resource" path="res://src/player/presentation/effects/bindings/outcome_guard_broken.tres" id="22_outcome_guard_broken"]
+[ext_resource type="Script" path="res://src/player/presentation/player_runtime_presentation_binder.gd" id="23_runtime_presentation_binder"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(12, 10)
+
+[node name="Player" type="CharacterBody2D"]
+texture_filter = 1
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1_player")
+vertical_facing_dead_zone = 0.15
+climb_transition_seconds = 0.15
+weapon_behind_aim_y_threshold = -0.2
+weapon_base_z_index = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_player")
+
+[node name="StaminaComponent" type="Node" parent="."]
+script = ExtResource("2_stamina")
+tuning = ExtResource("5_stamina_tuning")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("24_health")
+tuning = ExtResource("25_health_tuning")
+
+[node name="MovementComponent" type="Node" parent="."]
+script = ExtResource("3_movement")
+tuning = ExtResource("6_movement_tuning")
+
+[node name="GroundAnchor" type="Marker2D" parent="."]
+
+[node name="BodyVisual" type="Node2D" parent="."]
+
+[node name="ShieldVisual" type="Sprite2D" parent="BodyVisual"]
+position = Vector2(-5, -13)
+visible = false
+texture_filter = 1
+
+[node name="Body" type="Sprite2D" parent="BodyVisual"]
+position = Vector2(0, -13)
+texture = ExtResource("7_player_body")
+texture_filter = 1
+hframes = 4
+
+[node name="DefenseEffect" parent="BodyVisual" instance=ExtResource("14_effect_presenter")]
+position = Vector2(0, -13)
+
+[node name="BodyAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": ExtResource("10_animation_library")
+}
+
+[node name="PlayerBodyAnimator" type="Node" parent="."]
+script = ExtResource("8_player_animator")
+body_path = NodePath("../BodyVisual/Body")
+animation_player_path = NodePath("../BodyAnimationPlayer")
+idle_animation = &"idle"
+walk_animation = &"walk"
+run_animation = &"run"
+dash_animation = &"dash"
+dodge_animation = &"dodge"
+climb_animation = &"climb"
+basic_attack_animation = &"attack"
+heavy_attack_animation = &"heavy_attack"
+basic_cast_animation = &"cast"
+block_animation = &"block"
+parry_animation = &"parry"
+hit_animation = &"hit"
+death_animation = &"death"
+interact_animation = &"interact"
+pickup_animation = &"pickup"
+use_item_animation = &"use_item"
+sleep_animation = &"sleep"
+stationary_speed_epsilon = 0.01
+run_threshold_ratio = 0.5
+
+[node name="GripAnchor" type="Marker2D" parent="."]
+position = Vector2(7, -12)
+
+[node name="WeaponPivot" type="Node2D" parent="."]
+position = Vector2(7, -12)
+
+[node name="MainHand" type="Sprite2D" parent="WeaponPivot"]
+texture_filter = 1
+
+[node name="ActionEffect" parent="WeaponPivot" instance=ExtResource("14_effect_presenter")]
+
+[node name="StarterWeaponVisual" type="Node2D" parent="."]
+script = ExtResource("9_weapon_visual")
+main_hand_path = NodePath("../WeaponPivot/MainHand")
+shield_visual_path = NodePath("../BodyVisual/ShieldVisual")
+class_profiles = [ExtResource("11_melee_profile"), ExtResource("12_ranged_profile"), ExtResource("13_mage_profile")]
+force_nearest_filtering = true
+
+[node name="PlayerCombatEffectController" type="Node" parent="."]
+script = ExtResource("15_effect_controller")
+presenter_path = NodePath("../WeaponPivot/ActionEffect")
+action_effect_bindings = [ExtResource("16_melee_effect"), ExtResource("17_ranged_effect"), ExtResource("18_mage_effect")]
+
+[node name="CombatOutcomeEffectController" type="Node" parent="."]
+script = ExtResource("19_outcome_effect_controller")
+presenter_path = NodePath("../BodyVisual/DefenseEffect")
+outcome_effect_bindings = [ExtResource("20_outcome_blocked"), ExtResource("21_outcome_parried"), ExtResource("22_outcome_guard_broken")]
+
+[node name="PlayerRuntimePresentationBinder" type="Node" parent="."]
+script = ExtResource("23_runtime_presentation_binder")
+animator_path = NodePath("../PlayerBodyAnimator")
+
+[node name="PixelCamera" type="Camera2D" parent="."]
+enabled = true
+script = ExtResource("4_camera")

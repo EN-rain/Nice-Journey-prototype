@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="Region3WorldLayoutDefinition" format=3 uid="uid://bon6j852y48co"]
+
+[ext_resource type="Script" uid="uid://dv1xceghwskh0" path="res://src/world/region3/layout/region3_world_layout_definition.gd" id="1_world"]
+[ext_resource type="Script" path="res://src/world/region3/layout/region3_world_zone_definition.gd" id="2_zone"]
+[ext_resource type="Script" path="res://src/world/region3/layout/region3_quest_marker_anchor_definition.gd" id="3_quest"]
+
+[sub_resource type="Resource" id="QuestMainStart"]
+script = ExtResource("3_quest")
+anchor_id = &"R3-MAIN-START"
+zone_id = &"R3-TOWN"
+structure_id = &"r3:functional:02"
+
+[sub_resource type="Resource" id="QuestSideA"]
+script = ExtResource("3_quest")
+anchor_id = &"R3-SIDE-A"
+zone_id = &"R3-OUTSKIRTS"
+
+[sub_resource type="Resource" id="QuestSideB"]
+script = ExtResource("3_quest")
+anchor_id = &"R3-SIDE-B"
+zone_id = &"R3-ROADS"
+
+[sub_resource type="Resource" id="QuestSideC"]
+script = ExtResource("3_quest")
+anchor_id = &"R3-SIDE-C"
+zone_id = &"R3-RUINS"
+
+[sub_resource type="Resource" id="QuestRiskOptional"]
+script = ExtResource("3_quest")
+anchor_id = &"R3-RISK-OPTIONAL"
+zone_id = &"R3-RISK"
+
+[sub_resource type="Resource" id="ZoneTown"]
+script = ExtResource("2_zone")
+zone_id = &"R3-TOWN"
+tile_rect = Rect2i(48, 48, 64, 64)
+safe_zone = true
+
+[sub_resource type="Resource" id="ZoneOutskirts"]
+script = ExtResource("2_zone")
+zone_id = &"R3-OUTSKIRTS"
+tile_rect = Rect2i(48, 112, 64, 32)
+recommended_level_min = 1
+recommended_level_max = 2
+
+[sub_resource type="Resource" id="ZoneRoads"]
+script = ExtResource("2_zone")
+zone_id = &"R3-ROADS"
+tile_rect = Rect2i(16, 64, 32, 64)
+recommended_level_min = 2
+recommended_level_max = 4
+
+[sub_resource type="Resource" id="ZoneRuins"]
+script = ExtResource("2_zone")
+zone_id = &"R3-RUINS"
+tile_rect = Rect2i(40, 16, 72, 32)
+recommended_level_min = 4
+recommended_level_max = 7
+
+[sub_resource type="Resource" id="ZoneRisk"]
+script = ExtResource("2_zone")
+zone_id = &"R3-RISK"
+tile_rect = Rect2i(112, 40, 32, 72)
+recommended_level_min = 8
+recommended_level_max = 10
+
+[resource]
+script = ExtResource("1_world")
+map_revision_id = &"region3_town_layout_v01"
+map_size_tiles = Vector2i(160, 160)
+zones = Array[Resource]([SubResource("ZoneTown"), SubResource("ZoneOutskirts"), SubResource("ZoneRoads"), SubResource("ZoneRuins"), SubResource("ZoneRisk")])
+quest_marker_anchors = Array[Resource]([SubResource("QuestMainStart"), SubResource("QuestSideA"), SubResource("QuestSideB"), SubResource("QuestSideC"), SubResource("QuestRiskOptional")])

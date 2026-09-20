@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://src/world/region3/layout/region3_authored_town_layout.tscn" id="1_town"]
+
+[node name="Region3AuthoredTownPreview" type="Node2D"]
+texture_filter = 1
+
+[node name="RegionGround" type="Polygon2D" parent="."]
+z_index = -100
+polygon = PackedVector2Array(0, 0, 5120, 0, 5120, 5120, 0, 5120)
+color = Color(0.10, 0.15, 0.10, 1)
+
+[node name="TownGround" type="Polygon2D" parent="."]
+z_index = -90
+polygon = PackedVector2Array(1536, 1536, 3584, 1536, 3584, 3584, 1536, 3584)
+color = Color(0.16, 0.18, 0.14, 1)
+
+[node name="Town" parent="." instance=ExtResource("1_town")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2560, 2560)
+zoom = Vector2(0.165, 0.165)
+position_smoothing_enabled = false

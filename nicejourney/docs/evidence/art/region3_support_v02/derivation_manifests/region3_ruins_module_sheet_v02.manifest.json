@@ -1,0 +1,278 @@
+{
+  "schema": "region3-support-derivation/v02",
+  "source": "nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\decorative_support_v02\\region3_ruins_modules_source_v02.png",
+  "source_sha256": "22c4ef9a95c2606a69673b19fa951f10adf2a88d7324b5c7d04b7ebc4a59b715",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "alpha_threshold": 24,
+  "kind": "support",
+  "grid": [
+    4,
+    2
+  ],
+  "output_cell_size": 64,
+  "atlas": "region3_ruins_module_sheet_v02.png",
+  "atlas_sha256": "f38c64b0009b53c2e8c437053663d9479db2354d107961d6bca248654bbf919a",
+  "cells": [
+    {
+      "index": 0,
+      "row": 0,
+      "col": 0,
+      "nominal_rect": [
+        64,
+        148,
+        375,
+        454
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            30,
+            314,
+            366,
+            532
+          ],
+          "centroid": [
+            192.97836479116637,
+            425.15669816190496
+          ],
+          "pixels": 44557
+        }
+      ],
+      "bbox": [
+        30,
+        314,
+        366,
+        532
+      ],
+      "output": "region3_ruins_module_sheet_v02_00.png",
+      "sha256": "626646cb1a141dedde2ec5981815c179f406b077cee251c0fba92135c6259048"
+    },
+    {
+      "index": 1,
+      "row": 0,
+      "col": 1,
+      "nominal_rect": [
+        430,
+        148,
+        741,
+        454
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            400,
+            220,
+            777,
+            528
+          ],
+          "centroid": [
+            581.7026402124668,
+            394.68843930635836
+          ],
+          "pixels": 64010
+        }
+      ],
+      "bbox": [
+        400,
+        220,
+        777,
+        528
+      ],
+      "output": "region3_ruins_module_sheet_v02_01.png",
+      "sha256": "6fc6049c7f25dd59ccf60085b8816258f4bf1bc3b0beab979b2c97cef3f055be"
+    },
+    {
+      "index": 2,
+      "row": 0,
+      "col": 2,
+      "nominal_rect": [
+        795,
+        148,
+        1106,
+        454
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            831,
+            238,
+            1095,
+            526
+          ],
+          "centroid": [
+            964.1216737807647,
+            403.7085187539733
+          ],
+          "pixels": 44044
+        }
+      ],
+      "bbox": [
+        831,
+        238,
+        1095,
+        526
+      ],
+      "output": "region3_ruins_module_sheet_v02_02.png",
+      "sha256": "7d51e276e3170712d7e776e5db09fea187c8a2d11e04acda291b8b33f0ce4ba5"
+    },
+    {
+      "index": 3,
+      "row": 0,
+      "col": 3,
+      "nominal_rect": [
+        1162,
+        148,
+        1473,
+        454
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            1178,
+            230,
+            1521,
+            532
+          ],
+          "centroid": [
+            1352.7795769588,
+            392.69512643919876
+          ],
+          "pixels": 57063
+        }
+      ],
+      "bbox": [
+        1178,
+        230,
+        1521,
+        532
+      ],
+      "output": "region3_ruins_module_sheet_v02_03.png",
+      "sha256": "b3e5aabfc116d709adfdd2730227735c5665964f52442ed234e95ada042a393a"
+    },
+    {
+      "index": 4,
+      "row": 1,
+      "col": 0,
+      "nominal_rect": [
+        64,
+        570,
+        375,
+        880
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            9,
+            699,
+            381,
+            948
+          ],
+          "centroid": [
+            196.9323644879124,
+            828.9745333700669
+          ],
+          "pixels": 58076
+        }
+      ],
+      "bbox": [
+        9,
+        699,
+        381,
+        948
+      ],
+      "output": "region3_ruins_module_sheet_v02_04.png",
+      "sha256": "9c475e5b61927f5b9aad20afe2711dddc722ed3ad26bd34f108e7620d5d8d450"
+    },
+    {
+      "index": 5,
+      "row": 1,
+      "col": 1,
+      "nominal_rect": [
+        430,
+        570,
+        741,
+        880
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            438,
+            732,
+            748,
+            944
+          ],
+          "centroid": [
+            596.2341536566424,
+            850.3994322898535
+          ],
+          "pixels": 37343
+        }
+      ],
+      "bbox": [
+        438,
+        732,
+        748,
+        944
+      ],
+      "output": "region3_ruins_module_sheet_v02_05.png",
+      "sha256": "0ce83394f0445a4dee8e6babcd822af570129fc3e75add4e07ee310504f5bcea"
+    },
+    {
+      "index": 6,
+      "row": 1,
+      "col": 2,
+      "nominal_rect": [
+        795,
+        570,
+        1106,
+        880
+      ],
+      "selected_components": [
+        {
+          "bbox": [
+            841,
+            689,
+            1100,
+            944
+          ],
+          "centroid": [
+            967.0135519183201,
+            834.4439766328088
+          ],
+          "pixels": 38002
+        }
+      ],
+      "bbox": [
+        841,
+        689,
+        1100,
+        944
+      ],
+      "output": "region3_ruins_module_sheet_v02_06.png",
+      "sha256": "a5e65d35e75ed9ca259b0b5879964862c1bc6f7cb937cd7b8ffe33120275d682"
+    },
+    {
+      "index": 7,
+      "row": 1,
+      "col": 3,
+      "nominal_rect": [
+        1162,
+        570,
+        1473,
+        880
+      ],
+      "selected_components": [],
+      "bbox": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "output": "region3_ruins_module_sheet_v02_07.png",
+      "sha256": "052c48aa8b5e4f2c40bcd0d1bb7a4b93276276285dfa3e8a971b435dc88fdfee"
+    }
+  ]
+}

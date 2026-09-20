@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Region3FunctionalBuildingVisualCatalog" load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://src/world/region3/presentation/region3_functional_building_visual_catalog.gd" id="1_catalog"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/central_tower_visual_profile.tres" id="2_central_tower"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/quest_hall_visual_profile.tres" id="3_quest_hall"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/blacksmith_visual_profile.tres" id="4_blacksmith"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/general_merchant_visual_profile.tres" id="5_general_merchant"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/inn_rest_house_visual_profile.tres" id="6_inn_rest_house"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/storage_house_visual_profile.tres" id="7_storage_house"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/training_hall_visual_profile.tres" id="8_training_hall"]
+[ext_resource type="Resource" path="res://src/world/region3/presentation/profiles/clinic_apothecary_visual_profile.tres" id="9_clinic_apothecary"]
+
+[resource]
+script = ExtResource("1_catalog")
+profiles = [
+ExtResource("2_central_tower"),
+ExtResource("3_quest_hall"),
+ExtResource("4_blacksmith"),
+ExtResource("5_general_merchant"),
+ExtResource("6_inn_rest_house"),
+ExtResource("7_storage_house"),
+ExtResource("8_training_hall"),
+ExtResource("9_clinic_apothecary")
+]

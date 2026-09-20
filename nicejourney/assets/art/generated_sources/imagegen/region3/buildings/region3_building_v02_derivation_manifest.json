@@ -1,0 +1,269 @@
+{
+  "schema": "nice-journey-region3-building-v02-derivation/v1",
+  "normalization": {
+    "raw_exact_preserved": true,
+    "transparent_padding_px": 32,
+    "resample": "nearest",
+    "alpha_threshold": 24,
+    "final_margin_px": 6,
+    "note": "Generated sources that touched an image edge are preserved byte-for-byte. Canonical source_v02 files add transparent padding only; gameplay derivatives are cropped from visible alpha, nearest-reduced, alpha-binarized and bottom-centered. No source pixels are repainted."
+  },
+  "buildings": {
+    "central_tower": {
+      "raw_exact_source": "res://assets/art/generated_sources/imagegen/region3/functional_buildings_v02/isometric_fantasy_tower_keep.png",
+      "raw_exact_sha256": "9509fbdccc81f8d63b30fbf9441eb3b73e8bc9bd0e51652d1d2cda7e01c32f33",
+      "raw_exact_size": [
+        1254,
+        1254
+      ],
+      "raw_visible_bbox": [
+        23,
+        0,
+        1236,
+        1214
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/buildings/region3_central_tower_source_v02.png",
+      "normalized_sha256": "3719548ce2a0b8b981c81eb0d23d24d8ce929e458d5d531a1743550d4aed866c",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        55,
+        32,
+        1268,
+        1246
+      ],
+      "derivative": "res://assets/art/environments/region3/functional_buildings/region3_central_tower_exterior_v02.png",
+      "derivative_sha256": "3f77b84bad24542f5948bec6f80e737c6f074d47830a76dc7056022aecb61d4f",
+      "derivative_size": [
+        224,
+        224
+      ]
+    },
+    "quest_hall": {
+      "raw_exact_source": "res://assets/art/generated_sources/imagegen/region3/functional_buildings_v02/pixel_art_adventurers_guild_hall.png",
+      "raw_exact_sha256": "6197332d5daacc0cb3aa3d14a3fef12273df66bc9a2d4bf2afc6921ede2723fb",
+      "raw_exact_size": [
+        1254,
+        1254
+      ],
+      "raw_visible_bbox": [
+        0,
+        21,
+        1240,
+        1220
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/buildings/region3_quest_hall_source_v02.png",
+      "normalized_sha256": "8c3c22286ac929253412e6d0fad0a0c11737bd203c1bf08781735b2e3de071bc",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        32,
+        53,
+        1272,
+        1252
+      ],
+      "derivative": "res://assets/art/environments/region3/functional_buildings/region3_quest_hall_exterior_v02.png",
+      "derivative_sha256": "81856279e1a548fc3fc10886144ffad0521c08e87adc996dae3814a9d029f4a2",
+      "derivative_size": [
+        192,
+        192
+      ]
+    },
+    "blacksmith": {
+      "raw_exact_source": "res://assets/art/generated_sources/imagegen/region3/functional_buildings_v02/isometric_pixel_art_blacksmith_forge.png",
+      "raw_exact_sha256": "bc60c515486bdf4c77288df87482a43dac8b206fdfda998b3ab624381585a006",
+      "raw_exact_size": [
+        1254,
+        1254
+      ],
+      "raw_visible_bbox": [
+        105,
+        9,
+        1236,
+        1230
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/buildings/region3_blacksmith_source_v02.png",
+      "normalized_sha256": "213b94e946b9100fcc42468fa99aff8510054c8f741dc0915fd863324eb262f8",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        137,
+        41,
+        1268,
+        1262
+      ],
+      "derivative": "res://assets/art/environments/region3/functional_buildings/region3_blacksmith_exterior_v02.png",
+      "derivative_sha256": "af0e7b72d00909e2f6b56697166c75270b2ff2247cace154992497f91fbd9f88",
+      "derivative_size": [
+        192,
+        192
+      ]
+    },
+    "general_merchant": {
+      "raw_exact_source": "res://assets/art/generated_sources/imagegen/region3/functional_buildings_v02/pixel_merchant_shop_sprite.png",
+      "raw_exact_sha256": "a82c6bd38becb20635b78ae2add3bbdcef74e701280f047879f0eb246c68b0ab",
+      "raw_exact_size": [
+        1254,
+        1254
+      ],
+      "raw_visible_bbox": [
+        0,
+        14,
+        1236,
+        1231
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/buildings/region3_general_merchant_source_v02.png",
+      "normalized_sha256": "75f9adb837d389b5735397979873dce3b04f9e14b625aa5230182170feeef827",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        32,
+        46,
+        1268,
+        1263
+      ],
+      "derivative": "res://assets/art/environments/region3/functional_buildings/region3_merchant_exterior_v02.png",
+      "derivative_sha256": "f3affe2eb495c849c346b36aadb730cf0e95b67b21288d18d5d6e45d17d13fa9",
+      "derivative_size": [
+        192,
+        192
+      ]
+    },
+    "inn_rest_house": {
+      "raw_exact_source": "res://assets/art/generated_sources/imagegen/region3/functional_buildings_v02/cozy_fantasy_inn_pixel_art_asset.png",
+      "raw_exact_sha256": "d7754b0cfcb369745fa02d99ad52135a417c0a04c4e568e410b12ad84d641e52",
+      "raw_exact_size": [
+        1254,
+        1254
+      ],
+      "raw_visible_bbox": [
+        0,
+        15,
+        1228,
+        1182
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/buildings/region3_inn_rest_house_source_v02.png",
+      "normalized_sha256": "8c32100608c210b2735d1e90b20d7d52ab1ced5bf19570df05940cf83e91b9ab",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        32,
+        47,
+        1260,
+        1214
+      ],
+      "derivative": "res://assets/art/environments/region3/functional_buildings/region3_inn_exterior_v02.png",
+      "derivative_sha256": "8fd1b63c615e71da031f5de90f67394e61967d6dbb32c91d03c0bb0902b3097c",
+      "derivative_size": [
+        192,
+        192
+      ]
+    },
+    "storage_house": {
+      "raw_exact_source": "res://assets/art/generated_sources/imagegen/region3/functional_buildings_v02/isometric_fantasy_warehouse_sprite.png",
+      "raw_exact_sha256": "8fdeee3d722d55ec9df2b75bbc04c7b990ecaa017552041696154e0c2e35fcfc",
+      "raw_exact_size": [
+        1254,
+        1254
+      ],
+      "raw_visible_bbox": [
+        0,
+        47,
+        1210,
+        1214
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/buildings/region3_storage_house_source_v02.png",
+      "normalized_sha256": "584a53d65377faba05d1351540aefa4e09af4ca51c9608216540f64557af3de6",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        32,
+        79,
+        1242,
+        1246
+      ],
+      "derivative": "res://assets/art/environments/region3/functional_buildings/region3_storage_exterior_v02.png",
+      "derivative_sha256": "2df33a4587073349c8f0357dc260f7c6d226b908c03a80e368d75d1cb574decb",
+      "derivative_size": [
+        192,
+        192
+      ]
+    },
+    "training_hall": {
+      "raw_exact_source": "res://assets/art/generated_sources/imagegen/region3/functional_buildings_v02/pixel_art_fantasy_training_hall.png",
+      "raw_exact_sha256": "aef2c05e262968c7a57a135de91aa056f2a94315e508587e5683f92819b2be59",
+      "raw_exact_size": [
+        1254,
+        1254
+      ],
+      "raw_visible_bbox": [
+        0,
+        0,
+        1223,
+        1218
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/buildings/region3_training_hall_source_v02.png",
+      "normalized_sha256": "f2f05585e51acc6cf388da58aaecdc955ca6882f318b3a5a7cb815ddc9d69247",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        32,
+        32,
+        1255,
+        1250
+      ],
+      "derivative": "res://assets/art/environments/region3/functional_buildings/region3_training_exterior_v02.png",
+      "derivative_sha256": "6a16278a77eeb2c30d2c78ac7520876696e28436e24e7cc8f0da26a0bc743db9",
+      "derivative_size": [
+        192,
+        192
+      ]
+    },
+    "clinic_apothecary": {
+      "raw_exact_source": "res://assets/art/generated_sources/imagegen/region3/functional_buildings_v02/pixel_art_fantasy_apothecary_clinic.png",
+      "raw_exact_sha256": "69ecbf50536c8c6b38a2aaf34a39691182f16a0a9a2105fe00beb1b53731fe92",
+      "raw_exact_size": [
+        1254,
+        1254
+      ],
+      "raw_visible_bbox": [
+        0,
+        17,
+        1208,
+        1214
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/buildings/region3_clinic_apothecary_source_v02.png",
+      "normalized_sha256": "d7c99bf575c01f9e7b5753d0f4974436e74714365736703582c84689e56df1d2",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        32,
+        49,
+        1240,
+        1246
+      ],
+      "derivative": "res://assets/art/environments/region3/functional_buildings/region3_clinic_exterior_v02.png",
+      "derivative_sha256": "4b523dd4a07f800fc4f849bbf692291081f472159bc776571e7051575d701a34",
+      "derivative_size": [
+        192,
+        192
+      ]
+    }
+  }
+}

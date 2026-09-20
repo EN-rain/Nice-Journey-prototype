@@ -1,0 +1,1124 @@
+{
+  "duelist": {
+    "source": "duelist_pixel_art_reference_sheet.png",
+    "source_sha256": "12f57864b099fdbf4a4cc480dfa12ad88a3b665cfa71c39b458fa3faeb255176",
+    "outputs": {
+      "enemy_duelist_idle_v02.png": {
+        "source_rect": [
+          40,
+          705,
+          220,
+          835
+        ],
+        "sha256": "93e765426a3903380a4e36bf05aa4b8f30838e8e6bf95fd884e50c1375f073a0",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_duelist_move_v02.png": {
+        "source_rect": [
+          255,
+          705,
+          455,
+          835
+        ],
+        "sha256": "fe81a6711fddc861df3c850fe8e7fa941d04e0284e0d798ccb946dfbca09d10f",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_duelist_windup_v02.png": {
+        "source_rect": [
+          500,
+          705,
+          675,
+          835
+        ],
+        "sha256": "8f43d4dd1381288c3f7e81ec7b93191c629eeb0e6c2757b94fda6086bc58b616",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_duelist_release_v02.png": {
+        "source_rect": [
+          715,
+          705,
+          930,
+          835
+        ],
+        "sha256": "9ec6a94645addb233833e22c5f3628d06f3bd03db52bddf3fb29b959df77c734",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_duelist_hit_v02.png": {
+        "source_rect": [
+          970,
+          705,
+          1175,
+          835
+        ],
+        "sha256": "c7e31965d46ee99dd9f97a026c4b29982518bc6531d9ce6841f21d2496cfa2f1",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_duelist_death_v02.png": {
+        "source_rect": [
+          1205,
+          705,
+          1420,
+          835
+        ],
+        "sha256": "fd591d3d8bcabda9617c69366820a64ba79134de973adf7a04c8d28d50683f78",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_duelist_core_sheet_v02.png": {
+        "sha256": "42fb1f638a3af0d2fc6805682f3beeb441214535c7f8573170dbfad0a0d4dfa0",
+        "size": [
+          288,
+          48
+        ]
+      }
+    },
+    "derivation_note": "Re-cropped on 2026-09-15 from the exact stored generated reference to exclude concept-sheet headers/captions; connected neutral background removed, nearest-neighbor fit into 48x48 bottom-centered cells. No redrawn substitute art."
+  },
+  "bruiser": {
+    "source": "bruiser_enemy_pixel_art_sprite_sheet.png",
+    "source_sha256": "beee795c56e75e6a31829770ad67354b8bdc13e70328c6e82c82ca6f14a20aa1",
+    "outputs": {
+      "enemy_bruiser_idle_v02.png": {
+        "source_rect": [
+          32,
+          525,
+          229,
+          726
+        ],
+        "sha256": "23210b9f06e00b00fb15b4d09722f3d0dd35516a0a5522dd277aaeeaf4fb2f12",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_bruiser_move_v02.png": {
+        "source_rect": [
+          256,
+          525,
+          455,
+          726
+        ],
+        "sha256": "008c35ea0944f0a02a4a32b879ad3efed9d14ec86a6c7c7401d73c3c5f9e3f9f",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_bruiser_windup_v02.png": {
+        "source_rect": [
+          484,
+          511,
+          690,
+          726
+        ],
+        "sha256": "c1a773a99ae3bf1e1d84ed35f0d3e6ecb940e0ef1885117d6d6d14c4859accd0",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_bruiser_release_v02.png": {
+        "source_rect": [
+          722,
+          525,
+          923,
+          726
+        ],
+        "sha256": "cdbcbd41d893f8bc2714f07314b5fa5947e06c0f09dc79a8e3b1f2a3fc7d6954",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_bruiser_hit_v02.png": {
+        "source_rect": [
+          964,
+          529,
+          1161,
+          726
+        ],
+        "sha256": "a651f5b8a5bbb1be957736ac0c9ca3077e3ce504d40b86f370054aa9a25dcad2",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_bruiser_death_v02.png": {
+        "source_rect": [
+          1190,
+          602,
+          1423,
+          726
+        ],
+        "sha256": "ad16d37779e94113f92c5011c44211ac8c9e0fbd6317668688a55e33bbccd51e",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_bruiser_core_sheet_v02.png": {
+        "sha256": "7d8da87418e7c4afcb2b2d6fbc14a4dda80f1d0393c83942edea4f71e6deca7a",
+        "size": [
+          288,
+          48
+        ]
+      }
+    }
+  },
+  "defender": {
+    "source": "defender_enemy_pixel_art_reference_sheet.png",
+    "source_sha256": "ba01b2ff770328a70643aeddae4fcbbebe379337fedbbf22080c543654cf6be5",
+    "outputs": {
+      "enemy_defender_idle_v02.png": {
+        "source_rect": [
+          45,
+          557,
+          229,
+          796
+        ],
+        "sha256": "f710aa3505d177f7d22a828bd14b37adb175e17a6aa6d6aece557f99cfa0a629",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_defender_move_v02.png": {
+        "source_rect": [
+          276,
+          557,
+          459,
+          796
+        ],
+        "sha256": "777205284bd72a57402b5a83f8494dcd2d47f333215545b0e10fc50b5099fcd8",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_defender_windup_v02.png": {
+        "source_rect": [
+          507,
+          557,
+          692,
+          796
+        ],
+        "sha256": "9a9014b65ae2fccf60dc9448e8f22f9afe8f2438414ec5a2bd405797685d9d2c",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_defender_release_v02.png": {
+        "source_rect": [
+          735,
+          557,
+          943,
+          796
+        ],
+        "sha256": "ed73f2f43140dfe66c54c1b817bd0e6d9668ae1a140ad979d80bd4d2bc6116b2",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_defender_hit_v02.png": {
+        "source_rect": [
+          986,
+          557,
+          1167,
+          796
+        ],
+        "sha256": "9b4c9859790a293a44c1a2f136cfcb544a7feb5542c2eaeb363e5d367ee1e354",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_defender_death_v02.png": {
+        "source_rect": [
+          1210,
+          647,
+          1416,
+          796
+        ],
+        "sha256": "5e7cb168fc8161dff2c71a61ec0a33c5bc46677bce725d1741d0e777f77e60d8",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_defender_core_sheet_v02.png": {
+        "sha256": "decdaf8f0dafd3fff799a27070fe14362a423e277b660f83ac63d02bd42e7f33",
+        "size": [
+          288,
+          48
+        ]
+      },
+      "enemy_defender_block_v02.png": {
+        "source_rect": [
+          507,
+          557,
+          692,
+          796
+        ],
+        "sha256": "9a9014b65ae2fccf60dc9448e8f22f9afe8f2438414ec5a2bd405797685d9d2c",
+        "size": [
+          48,
+          48
+        ]
+      }
+    }
+  },
+  "marksman": {
+    "source": "16_bit_marksman_enemy_reference_sheet.png",
+    "source_sha256": "d1a04a7d3bafaac2ce903ab9ff2395ceac5b9e41c376068ec32fb2a0d92f9d27",
+    "outputs": {
+      "enemy_marksman_idle_v02.png": {
+        "source_rect": [
+          50,
+          656,
+          217,
+          873
+        ],
+        "sha256": "a6d950e3e6648f2a3d301bf98194b59f7eba0562618b18ed646daaafec2c4074",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_marksman_move_v02.png": {
+        "source_rect": [
+          256,
+          661,
+          443,
+          873
+        ],
+        "sha256": "5304d08180192339b6cf02316bcc99d7932a24deaffaa901c616cf98611bddd6",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_marksman_windup_v02.png": {
+        "source_rect": [
+          484,
+          656,
+          688,
+          873
+        ],
+        "sha256": "a0d2d94aadf42f994902e1d7fab75b22169dd6c08258fc59f6971835c83a22e5",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_marksman_release_v02.png": {
+        "source_rect": [
+          729,
+          652,
+          923,
+          873
+        ],
+        "sha256": "d1d6638653cce402861bfdebe30ce1dfa465b3c50d71ee9e06b0215ac2948428",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_marksman_hit_v02.png": {
+        "source_rect": [
+          964,
+          656,
+          1163,
+          873
+        ],
+        "sha256": "a38b28b1d07c35cdc9891cc22ea1e3055a3afd97045a11232084b5401fd771c8",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_marksman_death_v02.png": {
+        "source_rect": [
+          1197,
+          738,
+          1414,
+          873
+        ],
+        "sha256": "ba3e5736d492e25f57199ec1077f2a7a0123cb8c5276db7cd4a7f79808d129d8",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_marksman_core_sheet_v02.png": {
+        "sha256": "2ffa9882170eaa9a466caa51890a780ef522064c3864fb823f2c663095ce0d5a",
+        "size": [
+          288,
+          48
+        ]
+      }
+    }
+  },
+  "skirmisher": {
+    "source": "skirmisher_pixel_art_sprite_sheet.png",
+    "source_project_path": "res://assets/art/generated_sources/imagegen/enemy_refs/remaining8/skirmisher_pixel_art_sprite_sheet.png",
+    "source_sha256": "0710294750946b7bfb07a6e5ed33278afaaead4f483b66d09dc2c785f7663fe5",
+    "outputs": {
+      "enemy_skirmisher_idle_v02.png": {
+        "source_rect": [
+          53,
+          202,
+          285,
+          495
+        ],
+        "sha256": "bc81986bfda17340796f0abaddd89bb094525b5ed52dd4c0adc7b603bb366b15",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_skirmisher_move_v02.png": {
+        "source_rect": [
+          343,
+          222,
+          617,
+          494
+        ],
+        "sha256": "2e99e892d680050c50a448275ec05c3aaa0221e5dff662f501a46f1e685d7c34",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_skirmisher_windup_v02.png": {
+        "source_rect": [
+          702,
+          155,
+          936,
+          496
+        ],
+        "sha256": "d831bf01825ad1f3e67094a3a2d7e69d74289c907e97152f8c6ce535d851af83",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_skirmisher_release_v02.png": {
+        "source_rect": [
+          1064,
+          208,
+          1463,
+          494
+        ],
+        "sha256": "804e8c0406c3b93d5c5a1df66c52fc5c323d4b309493f023e9c01438faca84db",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_skirmisher_hit_v02.png": {
+        "source_rect": [
+          1509,
+          233,
+          1739,
+          495
+        ],
+        "sha256": "61f1efaac54e4e3c58632300171c4d46d3b61f8e368d47db65df97546054327b",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_skirmisher_death_v02.png": {
+        "source_rect": [
+          1788,
+          386,
+          2144,
+          499
+        ],
+        "sha256": "87326c26472350bf098fc9dbd79825e4043774e8172f7a7e5de8c2f53196d792",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_skirmisher_core_sheet_v02.png": {
+        "sha256": "0e202650fe256472af47234a8c271f1bec0198fb1ea4f2c2c47b9d5b5f0eed15",
+        "size": [
+          288,
+          48
+        ]
+      }
+    },
+    "derivation_note": "Accepted generated six-pose source. Deterministic per-pose connected-component extraction removes the neutral gray background and generated labels, then nearest-neighbor fits the selected subject into a 48x48 gameplay cell; ground enemies are bottom-centered and Flying Harrier is centered. No procedural redraw or substitute art."
+  },
+  "assassin": {
+    "source": "assassin_pixel_art_sprite_sheet.png",
+    "source_project_path": "res://assets/art/generated_sources/imagegen/enemy_refs/remaining8/assassin_pixel_art_sprite_sheet.png",
+    "source_sha256": "685a14d0087d5119acb3426c607a0b6c8fc8e681cd8d133cfd4389413c067509",
+    "outputs": {
+      "enemy_assassin_idle_v02.png": {
+        "source_rect": [
+          34,
+          333,
+          244,
+          570
+        ],
+        "sha256": "a198a4454335229e4389813d08bb0275f5b91524b61b9db129389d8858d9a60a",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_assassin_move_v02.png": {
+        "source_rect": [
+          266,
+          343,
+          511,
+          570
+        ],
+        "sha256": "c4a8a940e7c698b3af47ee673cc2759a25ee358380b6d79ab6a5a410d3456576",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_assassin_windup_v02.png": {
+        "source_rect": [
+          539,
+          294,
+          854,
+          570
+        ],
+        "sha256": "71bae06fb689a0fdc7caa179d036796b277449447211ea75ccad537c9ddd111c",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_assassin_release_v02.png": {
+        "source_rect": [
+          818,
+          343,
+          1133,
+          570
+        ],
+        "sha256": "75124a2705037a21a662d9b9d36929591296ff538da051a9a0e7f66840b0561c",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_assassin_hit_v02.png": {
+        "source_rect": [
+          1155,
+          350,
+          1352,
+          570
+        ],
+        "sha256": "a6043bccc3fea343889265a11df7e976f59ba5b4f9ea93287be3847ad903b224",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_assassin_death_v02.png": {
+        "source_rect": [
+          1375,
+          478,
+          1657,
+          575
+        ],
+        "sha256": "8b9fb806e546db82c95bc897f38c2bb2bfb6f61f88d4ae043bea0a85e34fdeac",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_assassin_core_sheet_v02.png": {
+        "sha256": "3a9e6dcb69422745392c3212f62d5dc2a35cadd50043a8357605fb64a29f386c",
+        "size": [
+          288,
+          48
+        ]
+      }
+    },
+    "derivation_note": "Accepted generated six-pose source. Deterministic per-pose connected-component extraction removes the neutral gray background and generated labels, then nearest-neighbor fits the selected subject into a 48x48 gameplay cell; ground enemies are bottom-centered and Flying Harrier is centered. No procedural redraw or substitute art."
+  },
+  "mobile_ranged": {
+    "source": "mobile_ranged_pixel_art_sprite_sheet.png",
+    "source_project_path": "res://assets/art/generated_sources/imagegen/enemy_refs/remaining8/mobile_ranged_pixel_art_sprite_sheet.png",
+    "source_sha256": "d02850f41a2730ca01b75a95e238d7f7a05abe15be34ad477b2a0cc584e9df3e",
+    "outputs": {
+      "enemy_mobile_ranged_idle_v02.png": {
+        "source_rect": [
+          34,
+          330,
+          230,
+          554
+        ],
+        "sha256": "5fc51cc4b5987302b0e497139b6fcd112a5a183ea441dd45c7a3b94df0628cd2",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_mobile_ranged_move_v02.png": {
+        "source_rect": [
+          261,
+          330,
+          490,
+          554
+        ],
+        "sha256": "8983a705d5da9f44b5ccd09b8a20612ce095f3d3fd036e9659a82f065a74dc84",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_mobile_ranged_windup_v02.png": {
+        "source_rect": [
+          539,
+          312,
+          854,
+          555
+        ],
+        "sha256": "bce6fce8caa7426f8a3ab07f6ce2ea5ba6d3ff6721824641b163ed129f0ee8ae",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_mobile_ranged_release_v02.png": {
+        "source_rect": [
+          818,
+          337,
+          1127,
+          554
+        ],
+        "sha256": "a1d43e8f2579357efc38c6b5d79ea814df9f1f2b413d757a01ebe01ad11e6b67",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_mobile_ranged_hit_v02.png": {
+        "source_rect": [
+          1140,
+          340,
+          1345,
+          554
+        ],
+        "sha256": "85521311dc28da1459160a24fb9bf8605ecee52339a6a908c68e9c84a9982b0a",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_mobile_ranged_death_v02.png": {
+        "source_rect": [
+          1375,
+          464,
+          1653,
+          563
+        ],
+        "sha256": "6bdda5b6fb4753df1965c779630c7711c492b6f108cc51736ca0ad8629973459",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_mobile_ranged_core_sheet_v02.png": {
+        "sha256": "8ddc2f71043a6e2c3b797162f5ed277e496b4fc45aab3a8dc165a82e1bb59542",
+        "size": [
+          288,
+          48
+        ]
+      }
+    },
+    "derivation_note": "Accepted generated six-pose source. Deterministic per-pose connected-component extraction removes the neutral gray background and generated labels, then nearest-neighbor fits the selected subject into a 48x48 gameplay cell; ground enemies are bottom-centered and Flying Harrier is centered. No procedural redraw or substitute art."
+  },
+  "caster": {
+    "source": "caster_pixel_art_sprite_sheet.png",
+    "source_project_path": "res://assets/art/generated_sources/imagegen/enemy_refs/remaining8/caster_pixel_art_sprite_sheet.png",
+    "source_sha256": "f468eca15a8a6e3c7e548c2629cccffa7ced72be24bc9e5560c00c0385d6d843",
+    "outputs": {
+      "enemy_caster_idle_v02.png": {
+        "source_rect": [
+          27,
+          343,
+          237,
+          596
+        ],
+        "sha256": "18f0a8bd6fa29657a41298e71f15cb16c9aef032971647bc6ccbc81ff4592efc",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_caster_move_v02.png": {
+        "source_rect": [
+          261,
+          370,
+          463,
+          596
+        ],
+        "sha256": "5bc32532fe50c051494bc627355ace3f93cd9e5bc078251e8cceceb2737dd075",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_caster_windup_v02.png": {
+        "source_rect": [
+          539,
+          239,
+          854,
+          596
+        ],
+        "sha256": "7a0c2ec87f4f73c4821d3631d55617bf3e55918b5d2216fd411bbc5a7184121d",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_caster_release_v02.png": {
+        "source_rect": [
+          818,
+          381,
+          1133,
+          596
+        ],
+        "sha256": "f2ac93f688c43c935b126c692869b1dad4258f24aeadf9a5e7a6b658013e6987",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_caster_hit_v02.png": {
+        "source_rect": [
+          1155,
+          382,
+          1342,
+          596
+        ],
+        "sha256": "fe5714deb4687fb98b57ea5e03040d7b08de72f26ca6c06b4cdd15ea249c8a29",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_caster_death_v02.png": {
+        "source_rect": [
+          1375,
+          499,
+          1667,
+          649
+        ],
+        "sha256": "5399f0498cbd9d2118e538bde896ca6189bec3ce211f5154337725d6ac861c40",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_caster_core_sheet_v02.png": {
+        "sha256": "f6f46764b376e37162d8d0a118a091bbe8efaa589f53cd006e80565631e8353c",
+        "size": [
+          288,
+          48
+        ]
+      }
+    },
+    "derivation_note": "Accepted generated six-pose source. Deterministic per-pose connected-component extraction removes the neutral gray background and generated labels, then nearest-neighbor fits the selected subject into a 48x48 gameplay cell; ground enemies are bottom-centered and Flying Harrier is centered. No procedural redraw or substitute art."
+  },
+  "support": {
+    "source": "support_pixel_art_sprite_sheet.png",
+    "source_project_path": "res://assets/art/generated_sources/imagegen/enemy_refs/remaining8/support_pixel_art_sprite_sheet.png",
+    "source_sha256": "903ac291b0ffaddcbda4d236d9a91a8c64af14ffa15fa7c653964ce6d889a05c",
+    "outputs": {
+      "enemy_support_idle_v02.png": {
+        "source_rect": [
+          43,
+          308,
+          251,
+          624
+        ],
+        "sha256": "a56db61dfa08450ef43d5f0654437b82bc031337eaceb556bd44e1841c93c9e2",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_support_move_v02.png": {
+        "source_rect": [
+          291,
+          338,
+          533,
+          623
+        ],
+        "sha256": "ab4d295124eada28176f75cf90d7cd56485a7a98af259f52e38c4166eb3b1921",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_support_windup_v02.png": {
+        "source_rect": [
+          565,
+          245,
+          764,
+          623
+        ],
+        "sha256": "58573a796cb584177e6db181fcfb0b06ad86ce889934cdf811177323d1d16ed8",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_support_release_v02.png": {
+        "source_rect": [
+          818,
+          288,
+          1091,
+          624
+        ],
+        "sha256": "a7c1c2d76b40d8116d08a98d0a74a9bddc08684d496c5d7352b06d511cd5baf4",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_support_hit_v02.png": {
+        "source_rect": [
+          1114,
+          319,
+          1351,
+          624
+        ],
+        "sha256": "f54b5f296a01f65fabcf7d0ec707b46cc38515b2db0829356e7efb97ffd70b16",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_support_death_v02.png": {
+        "source_rect": [
+          1375,
+          535,
+          1650,
+          682
+        ],
+        "sha256": "ada83ff9d5e469090b68186077d2ff3e5cad9a4558bbe45fb02590317319acac",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_support_core_sheet_v02.png": {
+        "sha256": "6eb96c42450e7dee29ee78cde63379b223918af8a83da913539c09e2f0c5eaf4",
+        "size": [
+          288,
+          48
+        ]
+      }
+    },
+    "derivation_note": "Accepted generated six-pose source. Deterministic per-pose connected-component extraction removes the neutral gray background and generated labels, then nearest-neighbor fits the selected subject into a 48x48 gameplay cell; ground enemies are bottom-centered and Flying Harrier is centered. No procedural redraw or substitute art."
+  },
+  "summoner": {
+    "source": "summoner_pixel_art_sprite_sheet.png",
+    "source_project_path": "res://assets/art/generated_sources/imagegen/enemy_refs/remaining8/summoner_pixel_art_sprite_sheet.png",
+    "source_sha256": "35f8115f71555a21c27e2bb0b21c429f72c5a6b77004884a30557e2fc2cb1fe0",
+    "outputs": {
+      "enemy_summoner_idle_v02.png": {
+        "source_rect": [
+          41,
+          306,
+          256,
+          612
+        ],
+        "sha256": "35f5d5838cae92d292e8f7ce1bad9d7a26fa36a55cd426ca895abd755882150f",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_summoner_move_v02.png": {
+        "source_rect": [
+          267,
+          361,
+          501,
+          613
+        ],
+        "sha256": "368a5642cc8b76a61081dbe06744f81ec318d448329f2c40cc277c83ec8095d9",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_summoner_windup_v02.png": {
+        "source_rect": [
+          539,
+          225,
+          854,
+          612
+        ],
+        "sha256": "f3a432ac32f7734068fa5024066dcf042262b85e0398a47e94d57991b20ace98",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_summoner_release_v02.png": {
+        "source_rect": [
+          818,
+          317,
+          1131,
+          612
+        ],
+        "sha256": "d6a6019fc9ff0debfb801ae580102362462a8862ad299188c1dee80de99424b7",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_summoner_hit_v02.png": {
+        "source_rect": [
+          1111,
+          382,
+          1411,
+          619
+        ],
+        "sha256": "2f84a1109a1c252257e0801a9536573ccf8f6606292376691a198d7c1acd52f5",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_summoner_death_v02.png": {
+        "source_rect": [
+          1375,
+          518,
+          1670,
+          670
+        ],
+        "sha256": "67edfa1f18e28acb31555733bd69fbb001f56d3b5f25af7bb26b7d4e1cf4bf2d",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_summoner_core_sheet_v02.png": {
+        "sha256": "e28456c170ff3c7b5c4259bb755b850109c4a9acb875b354b2655d5535b00be7",
+        "size": [
+          288,
+          48
+        ]
+      }
+    },
+    "derivation_note": "Accepted generated six-pose source. Deterministic per-pose connected-component extraction removes the neutral gray background and generated labels, then nearest-neighbor fits the selected subject into a 48x48 gameplay cell; ground enemies are bottom-centered and Flying Harrier is centered. No procedural redraw or substitute art."
+  },
+  "flying_harrier": {
+    "source": "flying_harrier_pixel_art_sprite_sheet.png",
+    "source_project_path": "res://assets/art/generated_sources/imagegen/enemy_refs/remaining8/flying_harrier_pixel_art_sprite_sheet.png",
+    "source_sha256": "75a84c5eb2b240735eca219dcfe42bec5da919ba397b504aa32befec0e58f803",
+    "outputs": {
+      "enemy_flying_harrier_idle_v02.png": {
+        "source_rect": [
+          25,
+          311,
+          259,
+          581
+        ],
+        "sha256": "0370bec56241da57ffefbc284f148b5b381c8822089ab711edb3d530348cbd0d",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_flying_harrier_move_v02.png": {
+        "source_rect": [
+          294,
+          338,
+          575,
+          568
+        ],
+        "sha256": "e006d0c1cfda551bb49294e87fd6c1903632503dd5c0d9e09f31f1f1e8c99af4",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_flying_harrier_windup_v02.png": {
+        "source_rect": [
+          623,
+          292,
+          799,
+          593
+        ],
+        "sha256": "af41e02b7d7e8009e2f392bbc085d344f33bcc283872874690ee19b72bcfde8e",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_flying_harrier_release_v02.png": {
+        "source_rect": [
+          879,
+          342,
+          1114,
+          582
+        ],
+        "sha256": "f77e3d4136e0b3bb6bf7f03f257d1e8cbad30360b5f3d28893a4d7af342f6ce4",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_flying_harrier_hit_v02.png": {
+        "source_rect": [
+          1158,
+          351,
+          1392,
+          592
+        ],
+        "sha256": "2d617fbfd3c94f9ee66e606be0dc8fa396510d26265419e7e26b902041573259",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_flying_harrier_death_v02.png": {
+        "source_rect": [
+          1450,
+          404,
+          1651,
+          646
+        ],
+        "sha256": "ce0364840b896677ecd94cd66b7249cccc7d47f23f67f96d7ed43df9bd8849e7",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_flying_harrier_core_sheet_v02.png": {
+        "sha256": "133cca449061b42226433e0ce631c64335c9253b7041e6546d43af63c1083f21",
+        "size": [
+          288,
+          48
+        ]
+      }
+    },
+    "derivation_note": "Accepted generated six-pose source. Deterministic per-pose connected-component extraction removes the neutral gray background and generated labels, then nearest-neighbor fits the selected subject into a 48x48 gameplay cell; ground enemies are bottom-centered and Flying Harrier is centered. No procedural redraw or substitute art."
+  },
+  "controller_disruptor": {
+    "source": "controller_disruptor_pixel_art_sprite_sheet.png",
+    "source_project_path": "res://assets/art/generated_sources/imagegen/enemy_refs/remaining8/controller_disruptor_pixel_art_sprite_sheet.png",
+    "source_sha256": "7c98a953287fa8ed7119fb8ee9076a24b6a94d60c540054856eb6057842d8741",
+    "outputs": {
+      "enemy_controller_disruptor_idle_v02.png": {
+        "source_rect": [
+          39,
+          325,
+          259,
+          619
+        ],
+        "sha256": "c24b146891c1c0523976297ecfb8ba469e9525d629bee15c4e66e89d658c2c3e",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_controller_disruptor_move_v02.png": {
+        "source_rect": [
+          261,
+          375,
+          503,
+          619
+        ],
+        "sha256": "018c1a52a743790ac5dce0e1f18c8448aca48110ff50c507025ecc771e416e33",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_controller_disruptor_windup_v02.png": {
+        "source_rect": [
+          539,
+          255,
+          854,
+          619
+        ],
+        "sha256": "451f9f84aaba504f7ba95f2a2d1ee1dcc06ff6edba9cfad0d749e9a34eea8e3e",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_controller_disruptor_release_v02.png": {
+        "source_rect": [
+          818,
+          377,
+          1133,
+          619
+        ],
+        "sha256": "f1ca7d746e5f3375a36be5295d19c9dec08c30379aee27555e52e110ae18b96b",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_controller_disruptor_hit_v02.png": {
+        "source_rect": [
+          1158,
+          374,
+          1378,
+          619
+        ],
+        "sha256": "a3da9ae10aecdbd741e894d1475244d5b3a5ca741d25e9154ca0d2d511d6af0f",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_controller_disruptor_death_v02.png": {
+        "source_rect": [
+          1375,
+          501,
+          1646,
+          622
+        ],
+        "sha256": "6b7ee2fdb46128b45f62042ce56f83ac9871b549356b046cbae1a60e84f55ea7",
+        "size": [
+          48,
+          48
+        ]
+      },
+      "enemy_controller_disruptor_core_sheet_v02.png": {
+        "sha256": "78de8a6955f7f1f56563e4a3c41a17d41b4bf76f9fdf7f85c00004e027fae1e0",
+        "size": [
+          288,
+          48
+        ]
+      }
+    },
+    "derivation_note": "Accepted generated six-pose source. Deterministic per-pose connected-component extraction removes the neutral gray background and generated labels, then nearest-neighbor fits the selected subject into a 48x48 gameplay cell; ground enemies are bottom-centered and Flying Harrier is centered. No procedural redraw or substitute art."
+  }
+}

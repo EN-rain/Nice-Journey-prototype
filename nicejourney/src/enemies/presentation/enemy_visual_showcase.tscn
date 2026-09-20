@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/enemies/presentation/enemy_visual_showcase.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/duelist_visual.tscn" id="2_duelist"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/bruiser_visual.tscn" id="3_bruiser"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/defender_visual.tscn" id="4_defender"]
+[ext_resource type="PackedScene" path="res://src/enemies/presentation/scenes/marksman_visual.tscn" id="5_marksman"]
+
+[node name="EnemyVisualShowcase" type="Node2D"]
+script = ExtResource("1_script")
+texture_filter = 1
+
+[node name="Background" type="Polygon2D" parent="."]
+z_index = -100
+polygon = PackedVector2Array(0, 0, 640, 0, 640, 360, 0, 360)
+color = Color(0.055, 0.06, 0.075, 1)
+
+[node name="EnemyRow" type="Node2D" parent="."]
+
+[node name="Duelist" parent="EnemyRow" instance=ExtResource("2_duelist")]
+position = Vector2(110, 190)
+
+[node name="Bruiser" parent="EnemyRow" instance=ExtResource("3_bruiser")]
+position = Vector2(250, 190)
+
+[node name="Defender" parent="EnemyRow" instance=ExtResource("4_defender")]
+position = Vector2(390, 190)
+
+[node name="Marksman" parent="EnemyRow" instance=ExtResource("5_marksman")]
+position = Vector2(530, 190)
+
+[node name="Title" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 624.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 18
+text = "Generated V02 Enemy Presentation — Windup / Telegraph Preview"
+horizontal_alignment = 1
+
+[node name="DuelistLabel" type="Label" parent="."]
+offset_left = 65.0
+offset_top = 255.0
+offset_right = 155.0
+offset_bottom = 278.0
+text = "Duelist"
+horizontal_alignment = 1
+
+[node name="BruiserLabel" type="Label" parent="."]
+offset_left = 205.0
+offset_top = 255.0
+offset_right = 295.0
+offset_bottom = 278.0
+text = "Bruiser"
+horizontal_alignment = 1
+
+[node name="DefenderLabel" type="Label" parent="."]
+offset_left = 345.0
+offset_top = 255.0
+offset_right = 435.0
+offset_bottom = 278.0
+text = "Defender"
+horizontal_alignment = 1
+
+[node name="MarksmanLabel" type="Label" parent="."]
+offset_left = 485.0
+offset_top = 255.0
+offset_right = 575.0
+offset_bottom = 278.0
+text = "Marksman"
+horizontal_alignment = 1

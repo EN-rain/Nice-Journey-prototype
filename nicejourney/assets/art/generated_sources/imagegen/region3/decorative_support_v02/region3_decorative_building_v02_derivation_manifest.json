@@ -1,0 +1,444 @@
+{
+  "schema": "nice-journey-region3-decorative-building-v02-derivation/v1",
+  "normalization": {
+    "exact_source_preserved": true,
+    "transparent_padding_px": 32,
+    "resample": "nearest",
+    "alpha_threshold": 24,
+    "final_margin_px": 6,
+    "decorative_canvas_px": 160,
+    "note": "Exact accepted generated sources remain untouched. Normalized copies add transparent padding only. Gameplay derivatives crop visible alpha, reduce with nearest-neighbor sampling, binarize low alpha and bottom-center on the documented decorative canvas; no source artwork is repainted."
+  },
+  "buildings": {
+    "r3:decorative:01": {
+      "index": 1,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_01_source_v02.png",
+      "exact_source_sha256": "9ad69a1efd6cbcdc37e2c06d0aeb310999eec4bb398ded4c46b39289a443041e",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        33,
+        52,
+        1234,
+        1254
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_01_source_v02.png",
+      "normalized_sha256": "e23e13dd73c7ef802df8d679fa5ecef275ec2c8d29071a09ce398593b84fcafe",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        65,
+        84,
+        1266,
+        1286
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_01_v02.png",
+      "derivative_sha256": "787327da18265677910be24fc6e08cf886a83ae3d57d3dce52cb0da4d46074d1",
+      "derivative_size": [
+        160,
+        160
+      ]
+    },
+    "r3:decorative:02": {
+      "index": 2,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_02_source_v02.png",
+      "exact_source_sha256": "d02d43a1b5c403ab55748c1f85785fe1718a1f7356c4de964dac767542527b72",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        0,
+        40,
+        1238,
+        1254
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_02_source_v02.png",
+      "normalized_sha256": "ad7d53e86ddc1fb472dd87443a4ab6c26336d3f8dc2a6ff81c56c12ddb219456",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        32,
+        72,
+        1270,
+        1286
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_02_v02.png",
+      "derivative_sha256": "5f5197e0d82d00c4db4377d2911901acee488239d859498948fd857c2134c94e",
+      "derivative_size": [
+        160,
+        160
+      ]
+    },
+    "r3:decorative:03": {
+      "index": 3,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_03_source_v02.png",
+      "exact_source_sha256": "10249f6c32ae4753bb4a7742df0c9e6f4a52a5fb1953c66360bca074bbe53962",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        55,
+        57,
+        1222,
+        1240
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_03_source_v02.png",
+      "normalized_sha256": "31799f400fa7ab2db8830093a904412f990c1c7e33d235a663ac48107f49e640",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        87,
+        89,
+        1254,
+        1272
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_03_v02.png",
+      "derivative_sha256": "b254d3a2b38272a45e6cf879f41b06841d8afbec79a201b61d5bd63fee0575c0",
+      "derivative_size": [
+        160,
+        160
+      ]
+    },
+    "r3:decorative:04": {
+      "index": 4,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_04_source_v02.png",
+      "exact_source_sha256": "bf940a38c76b3c3bd02eb6ebac52b1a2e1846d19d798547c97e96290b129b934",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        21,
+        53,
+        1242,
+        1254
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_04_source_v02.png",
+      "normalized_sha256": "2484c1e1d952e3f54bbeb95f27da5051cb26f9144098de1426c833d9da1c580f",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        53,
+        85,
+        1274,
+        1286
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_04_v02.png",
+      "derivative_sha256": "c525d58c2b381aeec795f9766deaf2936145f8e49e4bec74e7141e863e6fa3fb",
+      "derivative_size": [
+        160,
+        160
+      ]
+    },
+    "r3:decorative:05": {
+      "index": 5,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_05_source_v02.png",
+      "exact_source_sha256": "0cac7e66753cc3ff6693eb0a8d84b7cd01af32a75893a0c33114aaf130893f39",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        0,
+        25,
+        1235,
+        1254
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_05_source_v02.png",
+      "normalized_sha256": "b45b7a295c5b218c90d5d2f474624367aac33d1049debceb8acf41cc88b69ca2",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        32,
+        57,
+        1267,
+        1286
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_05_v02.png",
+      "derivative_sha256": "9825eca365d6f9ed0affe0d2f604fe3eb27687af028b4ae9e76e03d3399a2a0c",
+      "derivative_size": [
+        160,
+        160
+      ]
+    },
+    "r3:decorative:06": {
+      "index": 6,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_06_source_v02.png",
+      "exact_source_sha256": "6172462564d60088d6aa2fcedec99dbb08d94e9e7e3e926456a7bea589b85ba1",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        19,
+        51,
+        1238,
+        1254
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_06_source_v02.png",
+      "normalized_sha256": "d1bad149a03e30e3adcce21bdd4611038b7361ada16d7fd3fe1247e73fc98a8f",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        51,
+        83,
+        1270,
+        1286
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_06_v02.png",
+      "derivative_sha256": "ff2f3fbec117d9df91745b505985652ed473ec73670cb1e5ad98419749f6aa6c",
+      "derivative_size": [
+        160,
+        160
+      ]
+    },
+    "r3:decorative:07": {
+      "index": 7,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_07_source_v02.png",
+      "exact_source_sha256": "a4de40b0f5322a18a6ca25f75f762358a093f7f8e8144e07eb3f626100a880b1",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        0,
+        21,
+        1222,
+        1254
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_07_source_v02.png",
+      "normalized_sha256": "82edbc0fd59d12fd71b34c641c058193b9ba3bb23ff0414a6547e43b18aee5e3",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        32,
+        53,
+        1254,
+        1286
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_07_v02.png",
+      "derivative_sha256": "3295636b2eede0cf677a2021a231edab14f4b5f9b1bb9abfb3d5907cf7b63b98",
+      "derivative_size": [
+        160,
+        160
+      ]
+    },
+    "r3:decorative:08": {
+      "index": 8,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_08_source_v02.png",
+      "exact_source_sha256": "e4309c59f5a61b7b781adb84ff574d0fa453af3965e71b413f40893e40743b46",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        31,
+        21,
+        1238,
+        1254
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_08_source_v02.png",
+      "normalized_sha256": "8e11e4b960dde2def4f51c32c001afadffd5a847f05ff19c2402f1e725e82f86",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        63,
+        53,
+        1270,
+        1286
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_08_v02.png",
+      "derivative_sha256": "347bc9efe8c43ef3700bc619a5579a7b75dcc9035ac72b5c2a7d2e1161745b39",
+      "derivative_size": [
+        160,
+        160
+      ]
+    },
+    "r3:decorative:09": {
+      "index": 9,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_09_source_v02.png",
+      "exact_source_sha256": "08725d8a0384ea841dc5e52d075f141b6d10c36db91ca31ba81c59d988ea8e0f",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        0,
+        53,
+        1240,
+        1254
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_09_source_v02.png",
+      "normalized_sha256": "329d3cb1850030cc4ecb754a00e865ba899517cf811ac5bccde14d8986f047c5",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        32,
+        85,
+        1272,
+        1286
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_09_v02.png",
+      "derivative_sha256": "da8970e42066a861751f7ae2b256b34383c26ba852174a2f18d9b09dabfddfa7",
+      "derivative_size": [
+        160,
+        160
+      ]
+    },
+    "r3:decorative:10": {
+      "index": 10,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_10_source_v02.png",
+      "exact_source_sha256": "a766705bbdbca6cc53b7e528525742d2443ba3284e7d63b9e77c69ad6347d0f1",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        33,
+        21,
+        1230,
+        1254
+      ],
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_10_source_v02.png",
+      "normalized_sha256": "7c3f5c9e554977b713c46c7db46c1378b586ced86b73aa3564836d573f979dd5",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        65,
+        53,
+        1262,
+        1286
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_10_v02.png",
+      "derivative_sha256": "366bd736cdec79e0c7fabe1f20a68715414c451d94763f5ae7af2547c3d666b9",
+      "derivative_size": [
+        160,
+        160
+      ]
+    },
+    "r3:decorative:11": {
+      "index": 11,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_11_source_v02.png",
+      "exact_source_sha256": "aabb161d761c8c5ab1cb6900f1833313ec3fecebddcfffb38d70a0aec87495ae",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        0,
+        49,
+        1210,
+        1214
+      ],
+      "alpha_bounds_cleanup": {
+        "enabled": true,
+        "threshold": 24,
+        "raw_visible_bbox": [
+          0,
+          49,
+          1210,
+          1214
+        ],
+        "cleaned_visible_bbox": [
+          269,
+          265,
+          1036,
+          1008
+        ],
+        "pixels_cleared": 19595
+      },
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_11_source_v02.png",
+      "normalized_sha256": "21cecdd8a11a544c8e850d016f24707bfe94e049aa456b0ef53b4797ae563b0a",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        301,
+        297,
+        1068,
+        1040
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_11_v02.png",
+      "derivative_sha256": "7ba9c2406ab49b0f2c501e78acd07d71e5ac5c22567a6aee9e65d0e015404b42",
+      "derivative_size": [
+        160,
+        160
+      ]
+    },
+    "r3:decorative:12": {
+      "index": 12,
+      "exact_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/region3_decorative_12_source_v02.png",
+      "exact_source_sha256": "b0cab34d330b0a4b9b9bcf1eb4b638d39ac5d68efb4e0f47b213f9a0f9ed641d",
+      "exact_source_size": [
+        1254,
+        1254
+      ],
+      "exact_visible_bbox": [
+        91,
+        53,
+        1208,
+        1188
+      ],
+      "alpha_bounds_cleanup": {
+        "enabled": true,
+        "threshold": 24,
+        "raw_visible_bbox": [
+          91,
+          53,
+          1208,
+          1188
+        ],
+        "cleaned_visible_bbox": [
+          262,
+          221,
+          992,
+          1028
+        ],
+        "pixels_cleared": 14177
+      },
+      "normalized_source": "res://assets/art/generated_sources/imagegen/region3/decorative_support_v02/normalized/region3_decorative_12_source_v02.png",
+      "normalized_sha256": "90c5e60ce63efc4a4c4b28d3e810c8360ec6d1c44d9f3826bc3a04c1844e9dfe",
+      "normalized_size": [
+        1318,
+        1318
+      ],
+      "normalized_visible_bbox": [
+        294,
+        253,
+        1024,
+        1060
+      ],
+      "derivative": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_12_v02.png",
+      "derivative_sha256": "58fc5f99ff7069136f618a91efda1be5a420d75476468e8b54fe2b4be7f7cc02",
+      "derivative_size": [
+        160,
+        160
+      ]
+    }
+  }
+}

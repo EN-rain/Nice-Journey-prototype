@@ -1,0 +1,35 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "general_merchant",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\functional_buildings_v02\\pixel_merchant_shop_sprite.png",
+  "accepted_mechanically": false,
+  "errors": [
+    "visible subject touches source boundary; regenerate/crop with safe margin"
+  ],
+  "warnings": [
+    "source margin is under 8 px; deterministic cleanup/crop may be fragile"
+  ],
+  "sha256": "a82c6bd38becb20635b78ae2add3bbdcef74e701280f047879f0eb246c68b0ab",
+  "source_mode": "RGBA",
+  "width": 1254,
+  "height": 1254,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.5365783241633153,
+    "partial_fraction": 0.46301532067082307,
+    "opaque_fraction": 0.00040635516586158744
+  },
+  "opaque_bbox": [
+    0,
+    14,
+    1236,
+    1231
+  ],
+  "touches_source_edge": {
+    "left": true,
+    "top": false,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 0
+}

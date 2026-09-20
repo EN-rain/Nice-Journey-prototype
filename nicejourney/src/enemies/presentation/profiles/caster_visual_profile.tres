@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EnemyVisualProfile" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/enemies/presentation/enemy_visual_profile.gd" id="1_profile"]
+[ext_resource type="AnimationLibrary" path="res://src/enemies/presentation/libraries/caster_animation_library.tres" id="2_library"]
+
+[resource]
+script = ExtResource("1_profile")
+archetype_id = &"caster"
+animation_library = ExtResource("2_library")
+body_offset = Vector2(0, -24)
+body_scale = Vector2(1, 1)
+body_z_index = 0
+default_facing_left = false
+idle_animation = &"idle"
+move_animation = &"move"
+windup_animation = &"windup"
+release_animation = &"release"
+hit_animation = &"hit"
+death_animation = &"death"
+block_animation = &""
+telegraph_profile = null
+telegraph_offset = Vector2(0, 0)
+telegraph_scale = Vector2(1, 1)
+telegraph_rotation_degrees = 0.0

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TowerPrototypeEnemyRuntimeTuning" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/data/tuning/tower_prototype_enemy_runtime_tuning.gd" id="1_tuning"]
+[ext_resource type="Resource" path="res://src/data/tuning/enemy_archetype_stats_playtest_v01.tres" id="2_role_stats"]
+
+[resource]
+script = ExtResource("1_tuning")
+base_hp = 40
+hp_per_floor = 8
+base_stamina = 0.0
+defender_stamina = 60.0
+base_physical_defense = 0.0
+base_arcane_defense = 0.0
+base_poise_threshold = 20.0
+poise_per_floor = 2.0
+elite_hp_multiplier = 1.5
+elite_defense_bonus = 5.0
+elite_poise_multiplier = 1.5
+archetype_stats = ExtResource("2_role_stats")

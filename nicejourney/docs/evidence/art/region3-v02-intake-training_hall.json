@@ -1,0 +1,35 @@
+{
+  "schema": "nice-journey-region3-building-source-intake/v1",
+  "role_id": "training_hall",
+  "source": "D:\\nicejourney\\nicejourney\\assets\\art\\generated_sources\\imagegen\\region3\\functional_buildings_v02\\pixel_art_fantasy_training_hall.png",
+  "accepted_mechanically": false,
+  "errors": [
+    "visible subject touches source boundary; regenerate/crop with safe margin"
+  ],
+  "warnings": [
+    "source margin is under 8 px; deterministic cleanup/crop may be fragile"
+  ],
+  "sha256": "aef2c05e262968c7a57a135de91aa056f2a94315e508587e5683f92819b2be59",
+  "source_mode": "RGBA",
+  "width": 1254,
+  "height": 1254,
+  "alpha": {
+    "has_alpha_channel": true,
+    "zero_fraction": 0.5842872186992056,
+    "partial_fraction": 0.4153833728877798,
+    "opaque_fraction": 0.00032940841301455756
+  },
+  "opaque_bbox": [
+    0,
+    0,
+    1223,
+    1218
+  ],
+  "touches_source_edge": {
+    "left": true,
+    "top": true,
+    "right": false,
+    "bottom": false
+  },
+  "minimum_transparent_margin_px": 0
+}

@@ -1,0 +1,191 @@
+[gd_resource type="Resource" script_class="ProgressionPlaytestContent" format=3]
+
+[ext_resource type="Script" path="res://src/progression/leveling/level_progression_policy.gd" id="1_mj7k7"]
+[ext_resource type="Script" path="res://src/progression/leveling/level_threshold_tuning.gd" id="2_op64x"]
+[ext_resource type="Script" path="res://src/data/tuning/progression_playtest_content.gd" id="3_xlsca"]
+[ext_resource type="Script" path="res://src/progression/leveling/level_xp_reward_definition.gd" id="4_8h5xg"]
+
+[sub_resource type="Resource" id="Resource_gsfil"]
+script = ExtResource("2_op64x")
+xp_to_next_by_level = PackedInt32Array(100, 200, 300, 400, 500, 600, 700, 800, 900)
+
+[sub_resource type="Resource" id="Resource_1p0n5"]
+script = ExtResource("1_mj7k7")
+threshold_tuning = SubResource("Resource_gsfil")
+xp_storage_semantics = &"cumulative_total"
+cap_overflow_behavior = &"discard"
+skill_points_granted_by_transition = PackedInt32Array(1, 1, 1, 1, 1, 1, 1, 1, 1)
+stat_growth_by_transition = Array[Dictionary]([{
+"hp": 8.0,
+"stamina": 2.0
+}, {
+"hp": 8.0,
+"stamina": 2.0
+}, {
+"hp": 8.0,
+"stamina": 2.0
+}, {
+"hp": 8.0,
+"stamina": 2.0
+}, {
+"hp": 8.0,
+"stamina": 2.0
+}, {
+"hp": 8.0,
+"stamina": 2.0
+}, {
+"hp": 8.0,
+"stamina": 2.0
+}, {
+"hp": 8.0,
+"stamina": 2.0
+}, {
+"hp": 8.0,
+"stamina": 2.0
+}])
+
+[sub_resource type="Resource" id="Resource_y7ra6"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:primary_floor_1"
+source_id = &"quest:primary_floor_1"
+claim_id = &"xp_claim:playtest:primary_floor_1"
+source_family = &"main_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 80
+
+[sub_resource type="Resource" id="Resource_ysgir"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:primary_floor_2"
+source_id = &"quest:primary_floor_2"
+claim_id = &"xp_claim:playtest:primary_floor_2"
+source_family = &"main_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 160
+
+[sub_resource type="Resource" id="Resource_b5p6f"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:primary_floor_3"
+source_id = &"quest:primary_floor_3"
+claim_id = &"xp_claim:playtest:primary_floor_3"
+source_family = &"main_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 240
+
+[sub_resource type="Resource" id="Resource_jynsc"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:primary_floor_4"
+source_id = &"quest:primary_floor_4"
+claim_id = &"xp_claim:playtest:primary_floor_4"
+source_family = &"main_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 320
+
+[sub_resource type="Resource" id="Resource_givpi"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:primary_floor_5"
+source_id = &"quest:primary_floor_5"
+claim_id = &"xp_claim:playtest:primary_floor_5"
+source_family = &"main_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 400
+
+[sub_resource type="Resource" id="Resource_038yv"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:primary_floor_6"
+source_id = &"quest:primary_floor_6"
+claim_id = &"xp_claim:playtest:primary_floor_6"
+source_family = &"main_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 480
+
+[sub_resource type="Resource" id="Resource_aea3x"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:primary_floor_7"
+source_id = &"quest:primary_floor_7"
+claim_id = &"xp_claim:playtest:primary_floor_7"
+source_family = &"main_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 560
+
+[sub_resource type="Resource" id="Resource_kpds8"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:primary_floor_8"
+source_id = &"quest:primary_floor_8"
+claim_id = &"xp_claim:playtest:primary_floor_8"
+source_family = &"main_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 640
+
+[sub_resource type="Resource" id="Resource_pomod"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:primary_floor_9"
+source_id = &"quest:primary_floor_9"
+claim_id = &"xp_claim:playtest:primary_floor_9"
+source_family = &"main_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 720
+
+[sub_resource type="Resource" id="Resource_cdwon"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:primary_floor_10"
+source_id = &"quest:primary_floor_10"
+claim_id = &"xp_claim:playtest:primary_floor_10"
+source_family = &"main_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 800
+
+[sub_resource type="Resource" id="Resource_hej82"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:side_region3_escort"
+source_id = &"quest:side_region3_escort"
+claim_id = &"xp_claim:playtest:side_region3_escort"
+source_family = &"side_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 40
+
+[sub_resource type="Resource" id="Resource_gb0wg"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:side_region3_annihilation"
+source_id = &"quest:side_region3_annihilation"
+claim_id = &"xp_claim:playtest:side_region3_annihilation"
+source_family = &"side_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 60
+
+[sub_resource type="Resource" id="Resource_74wf2"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:side_region3_defense"
+source_id = &"quest:side_region3_defense"
+claim_id = &"xp_claim:playtest:side_region3_defense"
+source_family = &"side_quest"
+delivery_kind = &"raw_xp"
+xp_amount = 80
+
+[sub_resource type="Resource" id="Resource_c2ugp"]
+script = ExtResource("4_8h5xg")
+definition_id = &"xp_def:playtest:tenth_warden_boss"
+source_id = &"boss:tenth_warden_floor_10"
+claim_id = &"xp_claim:playtest:tenth_warden_boss"
+source_family = &"boss_completion"
+delivery_kind = &"raw_xp"
+xp_amount = 160
+
+[resource]
+resource_name = "PLAYTEST level 1-10 and finite quest XP v01"
+script = ExtResource("3_xlsca")
+policy = SubResource("Resource_1p0n5")
+automatic_stat_base_by_class = {
+"mage": {
+"hp": 100.0,
+"stamina": 100.0
+},
+"melee": {
+"hp": 100.0,
+"stamina": 100.0
+},
+"ranged": {
+"hp": 100.0,
+"stamina": 100.0
+}
+}
+xp_rewards = Array[ExtResource("4_8h5xg")]([SubResource("Resource_y7ra6"), SubResource("Resource_ysgir"), SubResource("Resource_b5p6f"), SubResource("Resource_jynsc"), SubResource("Resource_givpi"), SubResource("Resource_038yv"), SubResource("Resource_aea3x"), SubResource("Resource_kpds8"), SubResource("Resource_pomod"), SubResource("Resource_cdwon"), SubResource("Resource_hej82"), SubResource("Resource_gb0wg"), SubResource("Resource_74wf2"), SubResource("Resource_c2ugp")])
