@@ -6704,7 +6704,7 @@
         "res://src/player/presentation/player_body_animation_library.tres"
       ],
       "current_existing_asset": "res://assets/art/player/animations/player_body_block_sheet_v03.png",
-      "current_implementation_status": "Texture reference exists in listed source resource(s); state reachability separately audited",
+      "current_implementation_status": "Live Player animation unchanged; real generated V04 source poses omitted from R2 exposed in isolated native GL review, NOT visually approved or production bound",
       "classification": "EXISTS_NEEDS_REVISION",
       "generation_revision_requirement": "Controlled revision only if source-level defect cannot be fixed by permitted deterministic derivation; preserve V03 identity anchor.",
       "dependencies": [
@@ -6735,12 +6735,50 @@
         ],
         "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/exact_sources/05_climb_sleep_death.png",
         "source_sha256": "020580789050e784d4dbe389d7bd93bb3041e7948cccef209a259b2f150410e7",
-        "source_file_exists": true
+        "source_file_exists": true,
+        "full_generated_pose_review_only": {
+          "status": "REVIEW_ONLY_REAL_GENERATED_SOURCE_POSES_UNAPPROVED_NOT_RUNTIME_BOUND",
+          "original_source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_block_body_only_source.png",
+          "original_source_sha256": "6aa6886811226d155c1a088f328ee2b07ceb9f551f95b9b546865189974887bf",
+          "r2_candidate": "res://assets/art/player/animations/player_body_block_sheet_v04_r2_candidate.png",
+          "r2_candidate_sha256": "fd12c66a2eff21a09fbbaab88c4bda100eec54e07f8fe550815205d37a0b105e",
+          "full_generated_pose_review": "res://assets/art/player/animations/review_v04_full_source/player_block_all_7_generated_poses_v04_review_only.png",
+          "full_generated_pose_review_sha256": "d8147d46627ca240449b6e9791a2e1d3996d69b6cb07ed41658ba15696848cef",
+          "full_generated_pose_count": 7,
+          "r2_selected_source_indices_verified_exact": [
+            2,
+            3,
+            4
+          ],
+          "previously_unselected_indices_not_art_approved": [
+            0,
+            1,
+            5,
+            6
+          ],
+          "frame_rgba_sha256": [
+            "0d9878cd236b07a44011fcac17194fb7beba777e221f7e92314753af61b4aa42",
+            "e51a855d9f3c04c5286fd274f208b2fe461de39aefc2c4d556833526fbe67271",
+            "8f7afd92b730a33433f8c40b6d663f50101f7dbac81790d9f08c67476a56805e",
+            "e84d338e88be63757babf0169c6841783cffd8187487b9fa4c1c96fa7fe6793b",
+            "68077a9c273227697440350061f80391189782e1fffed88524084e0d686c47d7",
+            "e247a7da1f607bcb7ab20004cfb2800e1acda640d7b08dbde8b0cf1bf93c2bd5",
+            "57d6e6a95cb913c381e35c1073d01bec6dfe32ee0cecc7a07b9d3083b7cc5a07"
+          ],
+          "candidate_manifest": "res://assets/art/player/animations/review_v04_full_source/player_v04_full_source_pose_review_manifest.json",
+          "candidate_manifest_sha256": "c6c58de2ce6d19f3a6f36132d8be9438d892a0edd8802fc077dfa234a675bcdb",
+          "native_review_manifest": "res://assets/art/player/animations/review_v04_full_source/engine/player_v04_full_source_native_evidence.json",
+          "native_review_manifest_sha256": "6d74e6a4490b5a37519669033fad58948fcc5ebc1d949ccd96d1233d1b0768a2",
+          "real_gl_capture_pages": 4,
+          "final_art_approval": false,
+          "gameplay_timing_authorized": false
+        }
       },
       "issues": [
         "V03 derivation records LANCZOS reduction; integration protocol specifies nearest-neighbor. Preserve approved source; review/rederive before considering regeneration.",
         "Blue defensive arc baked into body.",
-        "Actual frame count conflicts with visual bible range; implementation completeness claim does not resolve conflict."
+        "Actual frame count conflicts with visual bible range; implementation completeness claim does not resolve conflict.",
+        "Unapproved V04 source review exposes 7 source frames including [0, 1, 5, 6]; no repeated filler frames or gameplay timing change; source quality still needs review."
       ]
     },
     {
@@ -7432,7 +7470,7 @@
         "res://src/player/presentation/player_body_animation_library.tres"
       ],
       "current_existing_asset": "res://assets/art/player/animations/player_body_hit_sheet_v03.png",
-      "current_implementation_status": "Texture reference exists in listed source resource(s); state reachability separately audited",
+      "current_implementation_status": "Live Player animation unchanged; real generated V04 source poses omitted from R2 exposed in isolated native GL review, NOT visually approved or production bound",
       "classification": "EXISTS_NEEDS_REVISION",
       "generation_revision_requirement": "Controlled revision only if source-level defect cannot be fixed by permitted deterministic derivation; preserve V03 identity anchor.",
       "dependencies": [
@@ -7464,12 +7502,48 @@
         ],
         "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/exact_sources/03_parry_cast_hit.png",
         "source_sha256": "900014457b6334bc1536a74beffe17c9223abbd66d01075cd5079bdc4ca0573d",
-        "source_file_exists": true
+        "source_file_exists": true,
+        "full_generated_pose_review_only": {
+          "status": "REVIEW_ONLY_REAL_GENERATED_SOURCE_POSES_UNAPPROVED_NOT_RUNTIME_BOUND",
+          "original_source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_parry_cast_hit_body_only_source.png",
+          "original_source_sha256": "514c5fb3427bce3a84641f7687c595e950a43afe94fdc0bfce9819750fbd43ef",
+          "r2_candidate": "res://assets/art/player/animations/player_body_hit_sheet_v04_r2_candidate.png",
+          "r2_candidate_sha256": "fbe1f5b0db49a11b20a1fb19896421fe870a77e0ffa8260702184bb52b4682c5",
+          "full_generated_pose_review": "res://assets/art/player/animations/review_v04_full_source/player_hit_all_6_generated_poses_v04_review_only.png",
+          "full_generated_pose_review_sha256": "f1b9d73a2ff139810fa5de94e4552c5f1715f08d8411521eb9c237661d1f2f97",
+          "full_generated_pose_count": 6,
+          "r2_selected_source_indices_verified_exact": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "previously_unselected_indices_not_art_approved": [
+            0
+          ],
+          "frame_rgba_sha256": [
+            "dfb2ef521aab2a3499f1723b6cb547b949ab43b968c43e556b878f1a000807f5",
+            "7fcf770d5ef01c54c939a78389147ab49ad0b4690135702d591db2641cd5e444",
+            "2d1f66c95f6ac2fde8a6e43cea4eb0fb5d1c88d1aba4622d5d5a05294431cca9",
+            "2ba3c5dd9c2e4a45e0bff133fee52dd710d87ea6dad0ccd5fa0b606fb5397c6f",
+            "8edecd3cbbdbf3a7e88bce2d41675ff633e1688860b871a04490445132931cf3",
+            "aef71965384ab97cc747a8292b9ddca0298f7fce512a89120bb30e920f8495e5"
+          ],
+          "candidate_manifest": "res://assets/art/player/animations/review_v04_full_source/player_v04_full_source_pose_review_manifest.json",
+          "candidate_manifest_sha256": "c6c58de2ce6d19f3a6f36132d8be9438d892a0edd8802fc077dfa234a675bcdb",
+          "native_review_manifest": "res://assets/art/player/animations/review_v04_full_source/engine/player_v04_full_source_native_evidence.json",
+          "native_review_manifest_sha256": "6d74e6a4490b5a37519669033fad58948fcc5ebc1d949ccd96d1233d1b0768a2",
+          "real_gl_capture_pages": 4,
+          "final_art_approval": false,
+          "gameplay_timing_authorized": false
+        }
       },
       "issues": [
         "V03 derivation records LANCZOS reduction; integration protocol specifies nearest-neighbor. Preserve approved source; review/rederive before considering regeneration.",
         "Orange impact spark baked into body.",
-        "Actual frame count conflicts with visual bible range; implementation completeness claim does not resolve conflict."
+        "Actual frame count conflicts with visual bible range; implementation completeness claim does not resolve conflict.",
+        "Unapproved V04 source review exposes 6 source frames including [0]; no repeated filler frames or gameplay timing change; source quality still needs review."
       ],
       "production_progress": {
         "source_intake": "res://assets/art/generated_sources/imagegen/player/body_only_v04/source_intake.json",

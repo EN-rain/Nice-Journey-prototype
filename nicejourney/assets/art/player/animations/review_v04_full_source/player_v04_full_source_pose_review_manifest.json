@@ -1,0 +1,88 @@
+{
+  "schema": "player-v04-omitted-source-pose-review/v1",
+  "acceptance": "REVIEW_ONLY_NOT_VISUALLY_ACCEPTED_NOT_RUNTIME_BOUND",
+  "no_padding_or_synthetic_interpolation": true,
+  "purpose": "Expose real generated-source poses omitted from R2 before any decision about art or timing",
+  "records": [
+    {
+      "state": "block",
+      "original_generated_source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_block_body_only_source.png",
+      "original_generated_source_sha256": "6aa6886811226d155c1a088f328ee2b07ceb9f551f95b9b546865189974887bf",
+      "source_row_y0_y1": [
+        0,
+        724
+      ],
+      "r2_candidate": "res://assets/art/player/animations/player_body_block_sheet_v04_r2_candidate.png",
+      "r2_candidate_sha256": "fd12c66a2eff21a09fbbaab88c4bda100eec54e07f8fe550815205d37a0b105e",
+      "r2_selected_source_indices_verified_exact": [
+        2,
+        3,
+        4
+      ],
+      "newly_exposed_source_indices_unapproved": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "original_source_pose_count": 7,
+      "frame_canvas": [
+        32,
+        32
+      ],
+      "full_source_review": "res://assets/art/player/animations/review_v04_full_source/player_block_all_7_generated_poses_v04_review_only.png",
+      "full_source_review_sha256": "d8147d46627ca240449b6e9791a2e1d3996d69b6cb07ed41658ba15696848cef",
+      "frame_rgba_sha256": [
+        "0d9878cd236b07a44011fcac17194fb7beba777e221f7e92314753af61b4aa42",
+        "e51a855d9f3c04c5286fd274f208b2fe461de39aefc2c4d556833526fbe67271",
+        "8f7afd92b730a33433f8c40b6d663f50101f7dbac81790d9f08c67476a56805e",
+        "e84d338e88be63757babf0169c6841783cffd8187487b9fa4c1c96fa7fe6793b",
+        "68077a9c273227697440350061f80391189782e1fffed88524084e0d686c47d7",
+        "e247a7da1f607bcb7ab20004cfb2800e1acda640d7b08dbde8b0cf1bf93c2bd5",
+        "57d6e6a95cb913c381e35c1073d01bec6dfe32ee0cecc7a07b9d3083b7cc5a07"
+      ],
+      "identical_frame_pairs": [],
+      "ignored_stray_source_threshold_pixels": 4,
+      "status": "SOURCE_EXACT_CANDIDATE_UNREVIEWED_NOT_PRODUCTION_OR_LIVE"
+    },
+    {
+      "state": "hit",
+      "original_generated_source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_parry_cast_hit_body_only_source.png",
+      "original_generated_source_sha256": "514c5fb3427bce3a84641f7687c595e950a43afe94fdc0bfce9819750fbd43ef",
+      "source_row_y0_y1": [
+        724,
+        1086
+      ],
+      "r2_candidate": "res://assets/art/player/animations/player_body_hit_sheet_v04_r2_candidate.png",
+      "r2_candidate_sha256": "fbe1f5b0db49a11b20a1fb19896421fe870a77e0ffa8260702184bb52b4682c5",
+      "r2_selected_source_indices_verified_exact": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "newly_exposed_source_indices_unapproved": [
+        0
+      ],
+      "original_source_pose_count": 6,
+      "frame_canvas": [
+        32,
+        32
+      ],
+      "full_source_review": "res://assets/art/player/animations/review_v04_full_source/player_hit_all_6_generated_poses_v04_review_only.png",
+      "full_source_review_sha256": "f1b9d73a2ff139810fa5de94e4552c5f1715f08d8411521eb9c237661d1f2f97",
+      "frame_rgba_sha256": [
+        "dfb2ef521aab2a3499f1723b6cb547b949ab43b968c43e556b878f1a000807f5",
+        "7fcf770d5ef01c54c939a78389147ab49ad0b4690135702d591db2641cd5e444",
+        "2d1f66c95f6ac2fde8a6e43cea4eb0fb5d1c88d1aba4622d5d5a05294431cca9",
+        "2ba3c5dd9c2e4a45e0bff133fee52dd710d87ea6dad0ccd5fa0b606fb5397c6f",
+        "8edecd3cbbdbf3a7e88bce2d41675ff633e1688860b871a04490445132931cf3",
+        "aef71965384ab97cc747a8292b9ddca0298f7fce512a89120bb30e920f8495e5"
+      ],
+      "identical_frame_pairs": [],
+      "ignored_stray_source_threshold_pixels": 0,
+      "status": "SOURCE_EXACT_CANDIDATE_UNREVIEWED_NOT_PRODUCTION_OR_LIVE"
+    }
+  ]
+}

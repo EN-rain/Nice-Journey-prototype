@@ -1,0 +1,1574 @@
+{
+  "acceptance": "CANDIDATE_ONLY_SOURCE_POSES_NOT_ART_APPROVED_NOT_LIVE",
+  "background_rgb": [
+    61,
+    61,
+    61
+  ],
+  "display_server": "Windows",
+  "godot_version": "4.6.2-stable (official)",
+  "live_library": "res://src/player/presentation/player_body_animation_library.tres",
+  "live_library_sha256": "111dfee0699d91baa5730986da4a8a1ddefabec4fe347ef0df047ba5f53c4abf",
+  "page_count": 8,
+  "pages": [
+    {
+      "class": "none",
+      "frames": 7,
+      "image": "res://assets/art/player/animations/review_v04_full_source/engine/block_none_1x.png",
+      "image_sha256": "4441ed8b78325355cfd102cdba2095a4d223daccd3c3fcb1a110c6f268e8a860",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 6,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 6,
+          "player_xy": [
+            554.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 6,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 6,
+          "player_xy": [
+            554.0,
+            240.0
+          ]
+        }
+      ],
+      "state": "block",
+      "texture": "res://assets/art/player/animations/review_v04_full_source/player_block_all_7_generated_poses_v04_review_only.png",
+      "texture_sha256": "d8147d46627ca240449b6e9791a2e1d3996d69b6cb07ed41658ba15696848cef",
+      "zoom": 1
+    },
+    {
+      "class": "none",
+      "frames": 7,
+      "image": "res://assets/art/player/animations/review_v04_full_source/engine/block_none_2x.png",
+      "image_sha256": "0af9ff2a3265848ce6c173057b57e481eaf2dee97b3654c8d19810047b38d0b4",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 6,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 6,
+          "player_xy": [
+            554.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 6,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 6,
+          "player_xy": [
+            554.0,
+            240.0
+          ]
+        }
+      ],
+      "state": "block",
+      "texture": "res://assets/art/player/animations/review_v04_full_source/player_block_all_7_generated_poses_v04_review_only.png",
+      "texture_sha256": "d8147d46627ca240449b6e9791a2e1d3996d69b6cb07ed41658ba15696848cef",
+      "zoom": 2
+    },
+    {
+      "class": "melee",
+      "frames": 7,
+      "image": "res://assets/art/player/animations/review_v04_full_source/engine/block_melee_1x.png",
+      "image_sha256": "65fe8475b6a351ae4e0887cfa09dc495439375fd8daf94b357491f89c79f1311",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 6,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 6,
+          "player_xy": [
+            554.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 6,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 6,
+          "player_xy": [
+            554.0,
+            240.0
+          ]
+        }
+      ],
+      "state": "block",
+      "texture": "res://assets/art/player/animations/review_v04_full_source/player_block_all_7_generated_poses_v04_review_only.png",
+      "texture_sha256": "d8147d46627ca240449b6e9791a2e1d3996d69b6cb07ed41658ba15696848cef",
+      "zoom": 1
+    },
+    {
+      "class": "melee",
+      "frames": 7,
+      "image": "res://assets/art/player/animations/review_v04_full_source/engine/block_melee_2x.png",
+      "image_sha256": "792b8c561dee5c8588035ce8d6ad4c9becf2f5f18d9e3fd22f670fcfbd9d497c",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 6,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 6,
+          "player_xy": [
+            554.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 6,
+          "body_hframes": 7,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 6,
+          "player_xy": [
+            554.0,
+            240.0
+          ]
+        }
+      ],
+      "state": "block",
+      "texture": "res://assets/art/player/animations/review_v04_full_source/player_block_all_7_generated_poses_v04_review_only.png",
+      "texture_sha256": "d8147d46627ca240449b6e9791a2e1d3996d69b6cb07ed41658ba15696848cef",
+      "zoom": 2
+    },
+    {
+      "class": "none",
+      "frames": 6,
+      "image": "res://assets/art/player/animations/review_v04_full_source/engine/hit_none_1x.png",
+      "image_sha256": "139ecc5605e22ee67cd28d6c828a6576d50a32afec0a37718194ad9d6de95764",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            240.0
+          ]
+        }
+      ],
+      "state": "hit",
+      "texture": "res://assets/art/player/animations/review_v04_full_source/player_hit_all_6_generated_poses_v04_review_only.png",
+      "texture_sha256": "f1b9d73a2ff139810fa5de94e4552c5f1715f08d8411521eb9c237661d1f2f97",
+      "zoom": 1
+    },
+    {
+      "class": "none",
+      "frames": 6,
+      "image": "res://assets/art/player/animations/review_v04_full_source/engine/hit_none_2x.png",
+      "image_sha256": "1befa797adb8c83539fc5c3524cc073087dbc5e8dfeff91fa076467c06b5b3cd",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            240.0
+          ]
+        }
+      ],
+      "state": "hit",
+      "texture": "res://assets/art/player/animations/review_v04_full_source/player_hit_all_6_generated_poses_v04_review_only.png",
+      "texture_sha256": "f1b9d73a2ff139810fa5de94e4552c5f1715f08d8411521eb9c237661d1f2f97",
+      "zoom": 2
+    },
+    {
+      "class": "melee",
+      "frames": 6,
+      "image": "res://assets/art/player/animations/review_v04_full_source/engine/hit_melee_1x.png",
+      "image_sha256": "3b3cbba8445b6a6cd7294884197da9fd22f6de61424cd9fa9aa518b852dcd3de",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            240.0
+          ]
+        }
+      ],
+      "state": "hit",
+      "texture": "res://assets/art/player/animations/review_v04_full_source/player_hit_all_6_generated_poses_v04_review_only.png",
+      "texture_sha256": "f1b9d73a2ff139810fa5de94e4552c5f1715f08d8411521eb9c237661d1f2f97",
+      "zoom": 1
+    },
+    {
+      "class": "melee",
+      "frames": 6,
+      "image": "res://assets/art/player/animations/review_v04_full_source/engine/hit_melee_2x.png",
+      "image_sha256": "59972300d92d8a39f4cea8b0d4976944aa65b44c38b8ddac6dd6db0df7b51c45",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "facing": "right",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            100.0
+          ]
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            240.0
+          ]
+        },
+        {
+          "body_frame": 5,
+          "body_hframes": 6,
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "facing": "left",
+          "frame": 5,
+          "player_xy": [
+            490.0,
+            240.0
+          ]
+        }
+      ],
+      "state": "hit",
+      "texture": "res://assets/art/player/animations/review_v04_full_source/player_hit_all_6_generated_poses_v04_review_only.png",
+      "texture_sha256": "f1b9d73a2ff139810fa5de94e4552c5f1715f08d8411521eb9c237661d1f2f97",
+      "zoom": 2
+    }
+  ],
+  "renderer": "gl_compatibility",
+  "scene": "res://src/player/player.tscn",
+  "schema": "player-v04-full-source-native-review/v1",
+  "viewport": [
+    640,
+    360
+  ]
+}
