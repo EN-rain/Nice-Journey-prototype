@@ -89,6 +89,11 @@ static func build_from_layout(layout: Region3AuthoredTownLayout, profile: Profil
         else:
             explored_unavailable_reason = StringName(String(explored_result.get("reason_id", explored_unavailable_reason)))
 
+    # A profile's saved safe position is an exact historical location, not an
+    # authored fixed checkpoint, a newly unlocked fast-travel point, or an
+    # invitation to show undiscovered quest/checkpoint geometry.
+    var saved_safe_location := _saved_region3_safe_location(layout, profile, explored_subzones) if explored_state_available else {}
+
     var risk_markers: Array[Dictionary] = []
     var risk_state_available := false
     var risk_unavailable_reason := StringName(content_readiness.get(
@@ -143,6 +148,7 @@ static func build_from_layout(layout: Region3AuthoredTownLayout, profile: Profil
             Region3WorldLayoutDefinition.REASON_QUEST_MARKER_GEOMETRY_UNAUTHORED
         )),
         "checkpoint_markers": [],
+        "saved_safe_location": saved_safe_location,
         "checkpoint_marker_state_available": bool(content_readiness.get("checkpoint_marker_state_available", false)),
         "checkpoint_marker_unavailable_reason_id": StringName(content_readiness.get(
             "checkpoint_marker_unavailable_reason_id",
@@ -172,9 +178,65 @@ static func _rejected(reason_id: StringName, errors: PackedStringArray) -> Dicti
         "quest_marker_state_available": false,
         "quest_marker_unavailable_reason_id": reason_id,
         "checkpoint_markers": [],
+        "saved_safe_location": {},
         "checkpoint_marker_state_available": false,
         "checkpoint_marker_unavailable_reason_id": reason_id,
         "risk_markers": [],
         "risk_marker_state_available": false,
         "risk_marker_unavailable_reason_id": reason_id,
     }
+
+
+static func _saved_region3_safe_location(
+    layout: Region3AuthoredTownLayout,
+    profile: ProfileSnapshot,
+    explored_subzones: Array
+) -> Dictionary:
+    if profile == null or profile.safe_state.is_empty():
+        return {}
+    var safe := profile.safe_state
+    if not SafeCheckpointState.validate_dictionary(safe).is_empty():
+        return {}
+    if (
+        StringName(String(safe.get("map_id", &""))) != &"region:3"
+        or int(safe.get("floor_id", -1)) != 0
+        or StringName(String(safe.get("checkpoint_anchor_id", &""))) != &"checkpoint:region3_town"
+    ):
+        return {}
+    var player_state := safe.get("player_state", {}) as Dictionary
+    var raw_x: Variant = player_state.get("position_x", null)
+    var raw_y: Variant = player_state.get("position_y", null)
+    if not _finite_numeric(raw_x) or not _finite_numeric(raw_y):
+        return {}
+    # Region3TownSessionHost normally mounts the region at its authored origin.
+    # The read-only map scene has no transform evidence for an arbitrary host
+    # offset, so fail closed if this layout instance is transformed.
+    if layout.global_transform != Transform2D.IDENTITY:
+        return {}
+    var tile_position := Vector2(float(raw_x), float(raw_y)) / float(layout.tile_size)
+    if not tile_position.is_finite():
+        return {}
+    var tile := Vector2i(floori(tile_position.x), floori(tile_position.y))
+    if tile.x < 0 or tile.y < 0 or tile.x >= layout.map_size_tiles.x or tile.y >= layout.map_size_tiles.y:
+        return {}
+    var zone_id: StringName = &""
+    for raw_entry: Variant in explored_subzones:
+        var entry := raw_entry as Dictionary
+        if (entry.get("tile_rect", Rect2i()) as Rect2i).has_point(tile):
+            zone_id = StringName(String(entry.get("zone_id", &"")))
+            break
+    if zone_id == &"":
+        return {}
+    return {
+        "checkpoint_id": &"checkpoint:region3_town",
+        "snapshot_id": StringName(String(safe.get("snapshot_id", &""))),
+        "zone_id": zone_id,
+        "position_tiles": tile_position,
+        "source_id": &"profile_safe_state",
+        "fixed_authored_checkpoint": false,
+        "travel_action_available": false,
+    }
+
+
+static func _finite_numeric(value: Variant) -> bool:
+    return (typeof(value) == TYPE_INT or typeof(value) == TYPE_FLOAT) and is_finite(float(value))

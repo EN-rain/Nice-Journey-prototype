@@ -125,7 +125,26 @@ func get_quest_anchor(anchor_id: StringName) -> Region3QuestMarkerAnchorDefiniti
 
 
 func has_authored_checkpoint_geometry() -> bool:
-    return not checkpoint_anchors.is_empty()
+    if checkpoint_anchors.is_empty():
+        return false
+    var known_zone_ids: Dictionary = {}
+    for raw_zone: Resource in zones:
+        var zone := raw_zone as Region3WorldZoneDefinition
+        if zone == null:
+            return false
+        known_zone_ids[zone.zone_id] = true
+    var seen: Dictionary = {}
+    for raw_checkpoint: Resource in checkpoint_anchors:
+        var checkpoint := raw_checkpoint as Region3CheckpointAnchorDefinition
+        if checkpoint == null or seen.has(checkpoint.checkpoint_id):
+            return false
+        seen[checkpoint.checkpoint_id] = true
+        if not checkpoint.validate_definition(map_size_tiles, known_zone_ids).is_empty():
+            return false
+        var zone := get_zone(checkpoint.zone_id)
+        if zone == null or not zone.tile_rect.has_point(checkpoint.tile):
+            return false
+    return true
 
 
 func has_authored_quest_marker_geometry() -> bool:
@@ -134,6 +153,9 @@ func has_authored_quest_marker_geometry() -> bool:
     for raw_anchor: Resource in quest_marker_anchors:
         var anchor := raw_anchor as Region3QuestMarkerAnchorDefinition
         if anchor == null or not anchor.exact_tile_authored:
+            return false
+        var zone := get_zone(anchor.zone_id)
+        if zone == null or not zone.tile_rect.has_point(anchor.tile):
             return false
     return true
 

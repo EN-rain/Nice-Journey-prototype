@@ -136,6 +136,7 @@ func _render_layer(data: Dictionary) -> void:
                 data.get("explored_subzones", [])
             )
             region_canvas.call("set_risk_markers", data.get("risk_markers", []))
+            region_canvas.call("set_saved_safe_location", data.get("saved_safe_location", {}))
             title_label.text = tr("Region Map")
             content_label.text = _region_text(data)
         MapLayerIdentityValidator.LAYER_TOWER_FLOOR_MAP:
@@ -204,6 +205,12 @@ func _region_text(data: Dictionary) -> String:
     lines.append(tr("Discovered services: %d") % services.size())
     var explored_subzones := data.get("explored_subzones", []) as Array
     lines.append(tr("Explored subzones: %d") % explored_subzones.size())
+    var last_safe: Dictionary = data.get("saved_safe_location", {}) as Dictionary
+    if not last_safe.is_empty():
+        var exact := last_safe.get("position_tiles", Vector2.ZERO) as Vector2
+        lines.append(tr("Saved safe position: (%.2f, %.2f) tiles in %s — historical snapshot, not a fixed checkpoint or fast travel") % [
+            exact.x, exact.y, String(last_safe.get("zone_id", &"")),
+        ])
     if bool(data.get("risk_marker_state_available", false)):
         var risk_markers := data.get("risk_markers", []) as Array
         lines.append(tr("Visible explored danger markers: %d") % risk_markers.size())

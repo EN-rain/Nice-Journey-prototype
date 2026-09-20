@@ -87,6 +87,8 @@ static func _region_layer(profile: ProfileSnapshot) -> Dictionary:
         "explored_subzones": (snapshot.get("explored_subzones", []) as Array).duplicate(true),
         "quest_markers": (snapshot.get("quest_markers", []) as Array).duplicate(true),
         "checkpoint_markers": (snapshot.get("checkpoint_markers", []) as Array).duplicate(true),
+        # A committed profile position is not an authored Region checkpoint.
+        "saved_safe_location": (snapshot.get("saved_safe_location", {}) as Dictionary).duplicate(true),
         "risk_markers": (snapshot.get("risk_markers", []) as Array).duplicate(true),
         "structure_count": Region3TownStructureManifestValidator.TOTAL_STRUCTURES,
         "functional_structure_count": Region3TownStructureManifestValidator.FUNCTIONAL_STRUCTURES,

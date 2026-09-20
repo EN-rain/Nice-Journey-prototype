@@ -11,6 +11,7 @@ const REASON_CONTACT_NOT_CONFIRMED: StringName = &"contact_not_confirmed"
 const REASON_CONTACT_IDENTITY_MISMATCH: StringName = &"contact_identity_mismatch"
 const REASON_GEOMETRY_MISMATCH: StringName = &"geometry_mismatch"
 const REASON_HIT_INTERVAL_OUT_OF_RANGE: StringName = &"hit_interval_out_of_range"
+const REASON_HIT_INTERVAL_NOT_SCHEDULED: StringName = &"hit_interval_not_scheduled"
 const REASON_ATTACK_AUTHORING_UNAVAILABLE: StringName = &"attack_authoring_unavailable"
 
 var runtime: TenthWardenCombatRuntime = null
@@ -136,6 +137,12 @@ func resolve_authored_contact(
         return _rejected(REASON_GEOMETRY_MISMATCH)
     if hit_interval_index < 0 or hit_interval_index >= attack.geometry.hit_interval_count:
         return _rejected(REASON_HIT_INTERVAL_OUT_OF_RANGE)
+    # A contact-confirmed caller still needs the exact authored ACTIVE tick;
+    # geometry identity alone must not enable early or late melee damage.
+    # Traveling Arc Volley projectiles resolve separately after launch.
+    if (hit_interval_index >= attack.geometry.hit_active_ticks.size()
+        or attack.geometry.hit_active_ticks[hit_interval_index] != action_machine.get_phase_elapsed_ticks()):
+        return _rejected(REASON_HIT_INTERVAL_NOT_SCHEDULED)
 
     var payload := attack.payload.make_payload(
         bool(facts["critical_triggered"]),

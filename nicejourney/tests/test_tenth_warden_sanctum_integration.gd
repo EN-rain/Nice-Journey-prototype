@@ -1,6 +1,7 @@
 extends SceneTree
 
 const SANCTUM_SCENE: PackedScene = preload("res://src/world/tower/boss/tenth_warden_sanctum.tscn")
+const BOSS_PLAYTEST: TenthWardenProductionAuthoring = preload("res://src/enemies/boss_tenth_warden/runtime/tenth_warden_playtest_v01.tres")
 
 var _failures := 0
 var _terminal_outcomes: Array[StringName] = []
@@ -15,6 +16,24 @@ func _run() -> void:
 
     _expect(sanctum != null, "Boss Sanctum uses the dedicated authored arena owner")
     _expect(sanctum.validate_authoring().is_empty(), "Boss Sanctum inspector authoring validates")
+    _expect(sanctum.validate_production_readiness(BOSS_PLAYTEST).is_empty(), "live playtest Sanctum validates attack motion and actual Arc Volley projectile authoring")
+    var projectile := sanctum.arc_volley_projectile_scene
+    sanctum.arc_volley_projectile_scene = null
+    _expect(not sanctum.validate_production_readiness(BOSS_PLAYTEST).is_empty(), "Arc Volley cannot begin as an invisible attack without projectile scene")
+    sanctum.arc_volley_projectile_scene = projectile
+    var projectile_speed := sanctum.arc_volley_projectile_speed_px_s
+    sanctum.arc_volley_projectile_speed_px_s = NAN
+    _expect(not sanctum.validate_production_readiness(BOSS_PLAYTEST).is_empty(), "nonfinite projectile travel speed cannot pass live readiness")
+    sanctum.arc_volley_projectile_speed_px_s = projectile_speed
+    var lunge_speed := sanctum.lunge_speed_px_s
+    sanctum.lunge_speed_px_s = 0.0
+    _expect(not sanctum.validate_authoring().is_empty(), "Warden Lunge cannot pass motion authoring without advancing")
+    sanctum.lunge_speed_px_s = lunge_speed
+    var step_speed := sanctum.punishing_step_speed_px_s
+    sanctum.punishing_step_speed_px_s = 0.0
+    _expect(not sanctum.validate_authoring().is_empty(), "Punishing Step cannot pass authoring without repositioning")
+    sanctum.punishing_step_speed_px_s = step_speed
+    _expect(sanctum.validate_production_readiness(BOSS_PLAYTEST).is_empty(), "reinstated Inspector motion and projectile data restores valid playtest readiness")
     _expect(sanctum.get_arena_rect() == Rect2(Vector2(-224, -128), Vector2(448, 256)), "Boss Sanctum owns one fixed readable arena rectangle")
     _expect(sanctum.player_spawn.position == Vector2(-128, 0), "player spawn is inspector-authored inside the sanctum")
     _expect(sanctum.boss_spawn.position == Vector2(128, 0), "boss spawn is inspector-authored inside the sanctum")

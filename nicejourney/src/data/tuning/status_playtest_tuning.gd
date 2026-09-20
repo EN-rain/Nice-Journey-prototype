@@ -44,19 +44,35 @@ func application(behavior: StringName, source_id: StringName = &"") -> Dictionar
 func burn_damage_for_advance(state: Dictionary, elapsed_ticks: int) -> int:
     var status_id := String(state.get("status_id", &""))
     if (not validate_tuning().is_empty() or elapsed_ticks <= 0
-        or (status_id != String(BURN_ID) and not status_id.begins_with("%s/" % String(BURN_ID)))
+        or not _is_our_burn_id(status_id)
         or StringName(String(state.get("behavior", &""))) != PrototypeStatusResolver.BEHAVIOR_BURN):
         return 0
-    var remaining := int(state.get("remaining_ticks", 0))
-    if remaining <= 0 or remaining > burn_duration_ticks:
+    var raw_remaining: Variant = state.get("remaining_ticks", null)
+    if typeof(raw_remaining) != TYPE_INT:
         return 0
+    var remaining := int(raw_remaining)
+    if remaining <= 0:
+        return 0
+    # Same-ID refresh can author a longer duration than this playtest default.
+    # Keep ticking across that extension instead of silently suspending Burn.
     var elapsed_before := burn_duration_ticks - remaining
     var elapsed_after := elapsed_before + mini(elapsed_ticks, remaining)
     var events := floori(float(elapsed_after) / float(burn_tick_interval_ticks)) - floori(float(elapsed_before) / float(burn_tick_interval_ticks))
     var magnitude: Variant = state.get("magnitude", float(burn_damage_per_tick))
     if not (typeof(magnitude) == TYPE_FLOAT or typeof(magnitude) == TYPE_INT) or not is_finite(float(magnitude)) or float(magnitude) < 0.0:
         return 0
-    return roundi(float(events) * minf(float(magnitude), 10000.0))
+    var total_damage := float(events) * float(magnitude)
+    if not is_finite(total_damage) or total_damage > float(2147483647):
+        return 0
+    # Do not silently cap a stronger same-source Burn back to base playtest damage.
+    return roundi(total_damage)
+
+
+static func _is_our_burn_id(status_id: String) -> bool:
+    if status_id == String(BURN_ID):
+        return true
+    var prefix := "%s/" % String(BURN_ID)
+    return status_id.begins_with(prefix) and StableId.is_valid(status_id.substr(prefix.length()))
 
 
 func slow_speed_multiplier(states: Array) -> float:
@@ -67,8 +83,13 @@ func slow_speed_multiplier(states: Array) -> float:
         if not raw_state is Dictionary:
             continue
         var state := raw_state as Dictionary
-        if StringName(String(state.get("behavior", &""))) == PrototypeStatusResolver.BEHAVIOR_SLOW and int(state.get("remaining_ticks", 0)) > 0:
-            var magnitude := float(state.get("magnitude", 0.0))
-            if is_finite(magnitude):
-                strongest = maxf(strongest, clampf(magnitude, 0.0, 1.0))
+        if (StringName(String(state.get("behavior", &""))) == PrototypeStatusResolver.BEHAVIOR_SLOW
+            and typeof(state.get("remaining_ticks", null)) == TYPE_INT
+            and int(state["remaining_ticks"]) > 0):
+            var raw_magnitude: Variant = state.get("magnitude", null)
+            if typeof(raw_magnitude) != TYPE_INT and typeof(raw_magnitude) != TYPE_FLOAT:
+                continue
+            var magnitude := float(raw_magnitude)
+            if is_finite(magnitude) and magnitude >= 0.0 and magnitude <= 1.0:
+                strongest = maxf(strongest, magnitude)
     return maxf(slow_speed_floor_multiplier, 1.0 - strongest)

@@ -13,6 +13,8 @@ extends Control
 @export var explored_subzone_outline_color: Color = Color(0.58, 0.72, 0.6, 0.95)
 @export var risk_outline_color: Color = Color(0.95, 0.48, 0.25, 1.0)
 @export_range(1.0, 6.0, 0.5) var risk_outline_width_px: float = 2.0
+@export var saved_safe_position_color: Color = Color(0.5, 0.9, 1.0, 1.0)
+@export_range(2.0, 14.0, 0.5) var saved_safe_position_radius_px: float = 5.0
 
 var _map_size_tiles: Vector2i = Vector2i.ZERO
 var _town_tile_rect: Rect2i = Rect2i()
@@ -21,6 +23,7 @@ var _route_polylines: Array[Dictionary] = []
 var _public_landmarks: Array[Dictionary] = []
 var _explored_subzones: Array[Dictionary] = []
 var _risk_markers: Array[Dictionary] = []
+var _saved_safe_location: Dictionary = {}
 
 
 func configure_geometry(
@@ -116,6 +119,7 @@ func configure_geometry(
     _public_landmarks = landmarks
     _explored_subzones = explored_subzones
     _risk_markers.clear()
+    _saved_safe_location.clear()
     queue_redraw()
     return true
 
@@ -128,6 +132,7 @@ func clear_geometry() -> void:
     _public_landmarks.clear()
     _explored_subzones.clear()
     _risk_markers.clear()
+    _saved_safe_location.clear()
     queue_redraw()
 
 
@@ -194,6 +199,45 @@ func risk_markers() -> Array[Dictionary]:
     return _risk_markers.duplicate(true)
 
 
+func set_saved_safe_location(raw_location: Variant) -> bool:
+    if not raw_location is Dictionary:
+        return false
+    var location := raw_location as Dictionary
+    if location.is_empty():
+        _saved_safe_location.clear()
+        queue_redraw()
+        return true
+    if (
+        location.get("source_id", &"") != &"profile_safe_state"
+        or location.get("checkpoint_id", &"") != &"checkpoint:region3_town"
+        or location.get("fixed_authored_checkpoint", true) != false
+        or location.get("travel_action_available", true) != false
+    ):
+        return false
+    var raw_position: Variant = location.get("position_tiles", null)
+    var zone_id := StringName(String(location.get("zone_id", &"")))
+    if not raw_position is Vector2 or not StableId.is_valid(String(zone_id)):
+        return false
+    var position := raw_position as Vector2
+    if not _point_inside_map(position, _map_size_tiles):
+        return false
+    var tile := Vector2i(floori(position.x), floori(position.y))
+    var discovered := false
+    for subzone: Dictionary in _explored_subzones:
+        if subzone.get("zone_id", &"") == zone_id and (subzone["tile_rect"] as Rect2i).has_point(tile):
+            discovered = true
+            break
+    if not discovered:
+        return false
+    _saved_safe_location = location.duplicate(true)
+    queue_redraw()
+    return true
+
+
+func saved_safe_location() -> Dictionary:
+    return _saved_safe_location.duplicate(true)
+
+
 func _draw() -> void:
     if _map_size_tiles.x <= 0 or _map_size_tiles.y <= 0:
         return
@@ -235,6 +279,12 @@ func _draw() -> void:
         draw_polyline(diamond, landmark_color, 2.0, true)
         draw_line(center + Vector2(-landmark_radius_px * 0.6, 0.0), center + Vector2(landmark_radius_px * 0.6, 0.0), landmark_color, 1.0, true)
         draw_line(center + Vector2(0.0, -landmark_radius_px * 0.6), center + Vector2(0.0, landmark_radius_px * 0.6), landmark_color, 1.0, true)
+    if not _saved_safe_location.is_empty():
+        var saved_position := _saved_safe_location["position_tiles"] as Vector2
+        var center := origin + saved_position * scale_factor
+        draw_circle(center, saved_safe_position_radius_px, saved_safe_position_color)
+        draw_line(center + Vector2(-saved_safe_position_radius_px * 0.6, 0.0), center + Vector2(saved_safe_position_radius_px * 0.6, 0.0), map_background_color, 1.5, true)
+        draw_line(center + Vector2(0.0, -saved_safe_position_radius_px * 0.6), center + Vector2(0.0, saved_safe_position_radius_px * 0.6), map_background_color, 1.5, true)
 
 
 func _map_transform() -> Dictionary:

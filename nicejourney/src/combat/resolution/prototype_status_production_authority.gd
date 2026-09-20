@@ -25,7 +25,23 @@ const _SLOW_MISSING = [
 ]
 
 
-static func readiness(behavior: StringName) -> Dictionary:
+static func readiness(behavior: StringName, authored: StatusProductionTuning = null) -> Dictionary:
+    var base := _baseline_readiness(behavior)
+    if authored == null or not bool(base.get("accepted", false)):
+        return base
+    var authoring := authored.authoring_readiness(behavior)
+    base["authoring_ready"] = bool(authoring.get("authoring_ready", false))
+    base["authoring_missing_fields"] = (authoring.get("missing_fields", PackedStringArray()) as PackedStringArray).duplicate()
+    base["authoring_validation_errors"] = (authoring.get("validation_errors", PackedStringArray()) as PackedStringArray).duplicate()
+    if bool(base["authoring_ready"]):
+        base["missing_authoritative_fields"] = PackedStringArray(["production_execution_owner"])
+    # This is an Inspector-authoring route; a production execution owner must
+    # consume the exact approved payload before production_ready can be true.
+    base["production_ready"] = false
+    return base
+
+
+static func _baseline_readiness(behavior: StringName) -> Dictionary:
     if behavior == PrototypeStatusResolver.BEHAVIOR_BURN:
         return {
             "accepted": true,

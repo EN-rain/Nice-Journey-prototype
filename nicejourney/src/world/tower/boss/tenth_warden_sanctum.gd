@@ -84,10 +84,13 @@ func validate_authoring() -> PackedStringArray:
         errors.append("player spawn must be finite and inside the fixed sanctum boundary")
     if not _spawn_is_valid(boss_spawn_position):
         errors.append("boss spawn must be finite and inside the fixed sanctum boundary")
-    if not is_finite(approach_speed_px_s) or not is_finite(lunge_speed_px_s) or not is_finite(punishing_step_speed_px_s):
-        errors.append("boss motion speeds must be finite")
-    if not is_finite(minimum_player_separation_px) or not is_finite(boss_boundary_margin_px):
-        errors.append("boss motion margins must be finite")
+    if (not is_finite(approach_speed_px_s) or approach_speed_px_s < 0.0
+        or not is_finite(lunge_speed_px_s) or lunge_speed_px_s <= 0.0
+        or not is_finite(punishing_step_speed_px_s) or punishing_step_speed_px_s <= 0.0):
+        errors.append("boss motion speeds must be finite and both advancing attacks must move")
+    if (not is_finite(minimum_player_separation_px) or minimum_player_separation_px <= 0.0
+        or not is_finite(boss_boundary_margin_px) or boss_boundary_margin_px < 0.0):
+        errors.append("boss motion margins must be finite and nonnegative, with positive separation")
     if (not is_finite(punishing_step_trigger_radius_px) or punishing_step_trigger_radius_px <= minimum_player_separation_px
         or not is_finite(punishing_step_behind_dot_threshold)
         or punishing_step_behind_dot_threshold < -1.0 or punishing_step_behind_dot_threshold > 0.0):
@@ -189,6 +192,17 @@ func validate_production_readiness(source_authoring: TenthWardenProductionAuthor
         return errors
     for error: String in resolved_authoring.validate_authoring():
         errors.append("production_authoring: %s" % error)
+    # The autonomous boss can select Arc Volley in either phase. A missing or
+    # invalid projectile contract would silently make an authored attack inert.
+    if arc_volley_projectile_scene == null:
+        errors.append("Arc Volley requires an Inspector-authored projectile scene")
+    elif arc_volley_projectile_scene.get_state() == null or arc_volley_projectile_scene.get_state().get_node_type(0) != "Node2D":
+        errors.append("Arc Volley projectile scene requires a Node2D root")
+    if (not is_finite(arc_volley_projectile_speed_px_s) or arc_volley_projectile_speed_px_s <= 0.0
+        or not is_finite(arc_volley_projectile_radius_px) or arc_volley_projectile_radius_px <= 0.0
+        or arc_volley_projectile_lifetime_ticks <= 0
+        or not is_finite(arc_volley_spread_degrees) or arc_volley_spread_degrees < 0.0 or arc_volley_spread_degrees > 45.0):
+        errors.append("Arc Volley travel, hit radius, lifetime and spread require valid Inspector values")
     return errors
 
 func prepare_production_encounter(

@@ -54,6 +54,8 @@ func validate_authoring() -> PackedStringArray:
         errors.append("stamina_recovery_per_tick cannot be negative")
     if poise_threshold <= 0.0:
         errors.append("poise_threshold must be positive")
+    if physical_defense < 0.0 or arcane_defense < 0.0:
+        errors.append("physical and arcane defense cannot be negative")
     if not interruptible_declared:
         errors.append("interruptible must be explicitly declared")
     if not block_supported_declared:
@@ -66,6 +68,8 @@ func validate_authoring() -> PackedStringArray:
     _validate_move_order(phase_one_move_order, "phase_one_move_order", errors)
     _validate_move_order(phase_two_move_order, "phase_two_move_order", errors)
     _validate_phase_two_heavy_moves(errors)
+    if _has_positive_move_cost() and stamina_recovery_per_tick <= 0.0:
+        errors.append("costed boss moves require positive authored stamina recovery to prevent permanent action starvation")
     return errors
 
 
@@ -158,7 +162,15 @@ func _validate_moves(errors: PackedStringArray) -> void:
         var attack: EnemySignatureAttackAuthoring = attacks_by_id.get(move_id, null) as EnemySignatureAttackAuthoring
         if phase_one_action != null and phase_two_action != null and phase_two_action.recovery_ticks >= phase_one_action.recovery_ticks:
             errors.append("phase-two recovery must be tighter than phase one for move: %s" % String(move_id))
+        if phase_two_action != null and phase_two_heavy_move_ids.has(move_id) and phase_two_action.recovery_ticks <= 0:
+            errors.append("phase-two heavy move must expose a positive recovery window: %s" % String(move_id))
         if attack != null and attack.geometry != null:
+            var ticks := attack.geometry.hit_active_ticks
+            if move_id == TenthWardenEncounterState.MOVE_ARC_VOLLEY:
+                for index: int in range(1, ticks.size()):
+                    if ticks[index] <= ticks[index - 1]:
+                        errors.append("Arc Volley pressure sequence requires strictly advancing projectile launch intervals")
+                        break
             if phase_one_action != null:
                 for live_error: String in attack.geometry.validate_live_delivery(phase_one_action.active_ticks):
                     errors.append("phase-one live delivery %s: %s" % [String(move_id), live_error])
@@ -188,6 +200,12 @@ func _validated_actions_by_id(
         if not _action_resource_mapping_supported(action):
             errors.append("%s action %s uses an unsupported boss resource" % [label, String(action.action_id)])
             continue
+        if not is_finite(action.cost_amount) or action.cost_amount > stamina:
+            errors.append("%s action %s has a nonfinite or unpayable stamina cost" % [label, String(action.action_id)])
+            continue
+        if action.startup_ticks <= 0:
+            errors.append("%s action %s needs a readable positive startup telegraph" % [label, String(action.action_id)])
+            continue
         if actions_by_id.has(action.action_id):
             errors.append("%s contains a duplicate move: %s" % [label, String(action.action_id)])
             continue
@@ -205,6 +223,10 @@ func _validate_transition_action(errors: PackedStringArray) -> void:
         errors.append("phase_transition_action is invalid")
     if not _action_resource_mapping_supported(phase_transition_action):
         errors.append("phase_transition_action uses an unsupported boss resource")
+    if phase_transition_action.cost_amount != 0.0 or phase_transition_action.cooldown_ticks != 0:
+        errors.append("non-damaging irreversible phase transition cannot require stamina or cooldown")
+    if phase_transition_action.cancellable_phase_mask != 0 or not phase_transition_action.permitted_cancel_action_ids.is_empty():
+        errors.append("irreversible phase transition cannot author voluntary cancellation")
 
 
 func _validate_move_order(order: Array[StringName], label: String, errors: PackedStringArray) -> void:
@@ -240,6 +262,13 @@ func _action_resource_mapping_supported(action: ActionDefinition) -> bool:
     if action == null or action.cost_amount <= 0.0:
         return true
     return action.cost_resource == STAMINA_RESOURCE_ID
+
+
+func _has_positive_move_cost() -> bool:
+    for action: ActionDefinition in move_actions + phase_two_move_actions:
+        if action != null and action.cost_amount > 0.0:
+            return true
+    return false
 
 
 func _locked_semantics_match(move_id: StringName, attack: EnemySignatureAttackAuthoring) -> bool:
