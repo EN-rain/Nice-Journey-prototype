@@ -7810,7 +7810,7 @@
         "res://src/player/presentation/player_body_animation_library.tres"
       ],
       "current_existing_asset": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
-      "current_implementation_status": "Texture reference exists in listed source resource(s); state reachability separately audited",
+      "current_implementation_status": "Original live player animation unchanged; source-exact R3 body/VFX candidate and isolated native renderer review verified, pending art approval and Inspector-authored live presentation/event timing",
       "classification": "EXISTS_NEEDS_REVISION",
       "generation_revision_requirement": "Controlled revision only if source-level defect cannot be fixed by permitted deterministic derivation; preserve V03 identity anchor.",
       "dependencies": [
@@ -7841,11 +7841,33 @@
         ],
         "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/exact_sources/02_dodge_attack_heavy_block.png",
         "source_sha256": "04821bcbf1f6805ab1ca17f9f34a77e205f3cd4ae3371b1720c308ba631ccc51",
-        "source_file_exists": true
+        "source_file_exists": true,
+        "detached_vfx_r3_review_only": {
+          "status": "NON_PRODUCTION_CANDIDATE_ART_AND_EVENT_TIMING_UNAPPROVED",
+          "immutable_original_generated_source_sha256": "04821bcbf1f6805ab1ca17f9f34a77e205f3cd4ae3371b1720c308ba631ccc51",
+          "source_r2": "res://assets/art/player/animations/player_body_interact_sheet_v03_r2_candidate.png",
+          "source_r2_sha256": "db10ac87dce0e6b9c428910684343505becec7d636f4f1b45dbaed4037924cf4",
+          "body_r3_review": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_r3_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "vfx_r3_review": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "vfx_r3_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "candidate_manifest": "res://assets/art/player/animations/review_r3/player_detached_vfx_v03_r3_candidate_manifest.json",
+          "candidate_manifest_sha256": "2dc3dca94aba9ae1ef6f73208ec36c9bd6dbf5e2b9f35f0438c15c75a9ca208b",
+          "native_review_manifest": "res://assets/art/player/animations/review_r3/engine/player_r3_native_evidence.json",
+          "native_review_manifest_sha256": "b56171b65b76631f01ca33dfa19b0e71721d655554b92b57ca4639c1b1d30a91",
+          "separable_pixels": 10,
+          "separated_at_frame": 2,
+          "frame_count_retained": 5,
+          "real_gl_capture_pages": 4,
+          "native_verification": "Real player scene GL Compatibility; source and split render identical, right/left, 1x/2x, none/melee; no live resource edits",
+          "real_gameplay_vfx_event_and_timing_authorized": false,
+          "final_art_approval": false
+        }
       },
       "issues": [
         "V03 derivation records LANCZOS reduction; integration protocol specifies nearest-neighbor. Preserve approved source; review/rederive before considering regeneration.",
-        "Orange interaction spark baked into body."
+        "Orange interaction spark baked into body.",
+        "R3 source-exact candidate isolates 10 detached pixels in frame 2; candidate is NOT a production texture or approved separate event/timing."
       ]
     },
     {
@@ -8404,7 +8426,7 @@
         "res://src/player/presentation/player_body_animation_library.tres"
       ],
       "current_existing_asset": "res://assets/art/player/animations/player_body_use_item_sheet_v03.png",
-      "current_implementation_status": "Texture reference exists in listed source resource(s); state reachability separately audited",
+      "current_implementation_status": "Original live player animation unchanged; source-exact R3 body/VFX candidate and isolated native renderer review verified, pending art approval and Inspector-authored live presentation/event timing",
       "classification": "EXISTS_NEEDS_REVISION",
       "generation_revision_requirement": "Controlled revision only if source-level defect cannot be fixed by permitted deterministic derivation; preserve V03 identity anchor.",
       "dependencies": [
@@ -8435,12 +8457,34 @@
         ],
         "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/exact_sources/02_dodge_attack_heavy_block.png",
         "source_sha256": "04821bcbf1f6805ab1ca17f9f34a77e205f3cd4ae3371b1720c308ba631ccc51",
-        "source_file_exists": true
+        "source_file_exists": true,
+        "detached_vfx_r3_review_only": {
+          "status": "NON_PRODUCTION_CANDIDATE_ART_AND_EVENT_TIMING_UNAPPROVED",
+          "immutable_original_generated_source_sha256": "04821bcbf1f6805ab1ca17f9f34a77e205f3cd4ae3371b1720c308ba631ccc51",
+          "source_r2": "res://assets/art/player/animations/player_body_use_item_sheet_v03_r2_candidate.png",
+          "source_r2_sha256": "7371fe794e84ccbc6545f65f60c9fec99cab2b1c662fed977f3fb2600c3cbe32",
+          "body_r3_review": "res://assets/art/player/animations/review_r3/player_use_item_body_v03_r3_detached_candidate.png",
+          "body_r3_sha256": "8fcebd9f387bfb7956fa17528a34710be19f982652430db2badb507effca5692",
+          "vfx_r3_review": "res://assets/art/player/animations/review_r3/player_use_item_vfx_v03_r3_detached_candidate.png",
+          "vfx_r3_sha256": "68ba8a7d61c1458ab8b258512344253bd54db836902a7e6bc93143efd9773005",
+          "candidate_manifest": "res://assets/art/player/animations/review_r3/player_detached_vfx_v03_r3_candidate_manifest.json",
+          "candidate_manifest_sha256": "2dc3dca94aba9ae1ef6f73208ec36c9bd6dbf5e2b9f35f0438c15c75a9ca208b",
+          "native_review_manifest": "res://assets/art/player/animations/review_r3/engine/player_r3_native_evidence.json",
+          "native_review_manifest_sha256": "b56171b65b76631f01ca33dfa19b0e71721d655554b92b57ca4639c1b1d30a91",
+          "separable_pixels": 10,
+          "separated_at_frame": 5,
+          "frame_count_retained": 7,
+          "real_gl_capture_pages": 4,
+          "native_verification": "Real player scene GL Compatibility; source and split render identical, right/left, 1x/2x, none/melee; no live resource edits",
+          "real_gameplay_vfx_event_and_timing_authorized": false,
+          "final_art_approval": false
+        }
       },
       "issues": [
         "V03 derivation records LANCZOS reduction; integration protocol specifies nearest-neighbor. Preserve approved source; review/rederive before considering regeneration.",
         "Blue item/particle pixels baked into sequence; separate item pose may be intentional, isolate VFX review.",
-        "Actual frame count conflicts with visual bible range; implementation completeness claim does not resolve conflict."
+        "Actual frame count conflicts with visual bible range; implementation completeness claim does not resolve conflict.",
+        "R3 source-exact candidate isolates 10 detached pixels in frame 5; candidate is NOT a production texture or approved separate event/timing."
       ]
     },
     {

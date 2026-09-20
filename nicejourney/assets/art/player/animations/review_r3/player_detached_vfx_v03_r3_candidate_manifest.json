@@ -1,0 +1,102 @@
+{
+  "schema": "player-detached-vfx-v03-r3-candidate/v1",
+  "acceptance": "CANDIDATE_ONLY_SOURCE_EXACT_NOT_RUNTIME_BOUND",
+  "script": "res://tools/art/derive_player_detached_vfx_v03_r3.py",
+  "bounds": "Only two existing separate effects; no dodge connected swoosh or any unknown action touched",
+  "reference_accepted_player_identity": "res://docs/art/PLAYER_VISUAL_DESIGN_BIBLE.md",
+  "records": [
+    {
+      "state": "interact",
+      "source_original": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/exact_sources/02_dodge_attack_heavy_block.png",
+      "source_original_sha256": "04821bcbf1f6805ab1ca17f9f34a77e205f3cd4ae3371b1720c308ba631ccc51",
+      "source_r2": "res://assets/art/player/animations/player_body_interact_sheet_v03_r2_candidate.png",
+      "source_r2_sha256": "db10ac87dce0e6b9c428910684343505becec7d636f4f1b45dbaed4037924cf4",
+      "frame_count": 5,
+      "canvas": [
+        160,
+        32
+      ],
+      "body_candidate": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+      "body_candidate_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+      "vfx_candidate": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+      "vfx_candidate_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+      "detached_components": [
+        {
+          "frame": 2,
+          "source_component_sizes": [
+            4,
+            3,
+            3
+          ],
+          "source_component_bounds": [
+            [
+              26,
+              7,
+              28,
+              10
+            ],
+            [
+              27,
+              10,
+              30,
+              12
+            ],
+            [
+              27,
+              13,
+              30,
+              15
+            ]
+          ],
+          "pixels": 10,
+          "visual": "three detached orange interaction spark components"
+        }
+      ],
+      "pixel_accounting": "All original RGBA pixel values preserved; body and effect ownership disjoint; source == body OR effect at each location",
+      "status": "NON_PRODUCTION_REVIEW_ONLY_PENDING_ART_APPROVAL_TIMING_AND_LIVE_GODOT_INTEGRATION"
+    },
+    {
+      "state": "use_item",
+      "source_original": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/exact_sources/02_dodge_attack_heavy_block.png",
+      "source_original_sha256": "04821bcbf1f6805ab1ca17f9f34a77e205f3cd4ae3371b1720c308ba631ccc51",
+      "source_r2": "res://assets/art/player/animations/player_body_use_item_sheet_v03_r2_candidate.png",
+      "source_r2_sha256": "7371fe794e84ccbc6545f65f60c9fec99cab2b1c662fed977f3fb2600c3cbe32",
+      "frame_count": 7,
+      "canvas": [
+        224,
+        32
+      ],
+      "body_candidate": "res://assets/art/player/animations/review_r3/player_use_item_body_v03_r3_detached_candidate.png",
+      "body_candidate_sha256": "8fcebd9f387bfb7956fa17528a34710be19f982652430db2badb507effca5692",
+      "vfx_candidate": "res://assets/art/player/animations/review_r3/player_use_item_vfx_v03_r3_detached_candidate.png",
+      "vfx_candidate_sha256": "68ba8a7d61c1458ab8b258512344253bd54db836902a7e6bc93143efd9773005",
+      "detached_components": [
+        {
+          "frame": 5,
+          "source_component_sizes": [
+            5,
+            5
+          ],
+          "source_component_bounds": [
+            [
+              25,
+              7,
+              28,
+              10
+            ],
+            [
+              23,
+              11,
+              26,
+              14
+            ]
+          ],
+          "pixels": 10,
+          "visual": "two detached cyan item particle components"
+        }
+      ],
+      "pixel_accounting": "All original RGBA pixel values preserved; body and effect ownership disjoint; source == body OR effect at each location",
+      "status": "NON_PRODUCTION_REVIEW_ONLY_PENDING_ART_APPROVAL_TIMING_AND_LIVE_GODOT_INTEGRATION"
+    }
+  ]
+}
