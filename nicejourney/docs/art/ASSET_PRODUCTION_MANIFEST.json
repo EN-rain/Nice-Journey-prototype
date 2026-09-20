@@ -16,9 +16,9 @@
   "scope": "Current Nice Journey prototype assets and concrete repository-required gaps. Future regions, unauthored items/skills, optional ambient populations and marketing imagery are not invented. Bundle records enumerate approved material/prop vocabulary where individual counts or atlas geometry are unspecified.",
   "evidence_policy": "Null means not specified or not verified. Measured existing dimensions do not impose source-generation dimensions. Historical acceptance protects existing art; it does not claim this audit reran live acceptance. Classifications describe the strongest current production need; integration-only revisions explicitly prohibit unnecessary generation.",
   "classification_counts": {
-    "ACCEPTED_DO_NOT_REGENERATE": 176,
+    "ACCEPTED_DO_NOT_REGENERATE": 177,
     "EXISTS_NEEDS_REVISION": 12,
-    "PLACEHOLDER": 20,
+    "PLACEHOLDER": 19,
     "TEXTURE_TILE_REQUIRED": 1,
     "MISSING_GENERATE": 8,
     "ANIMATION_REQUIRED": 1,
@@ -5267,7 +5267,7 @@
     {
       "stable_asset_id": "asset:ui/markers/map_marker_sheet",
       "category": "ui",
-      "subject": "Map Marker Sheet V01",
+      "subject": "Map Marker Quest and Sigil Glyph Sheet V02",
       "gameplay_purpose": "Map Marker Sheet V01",
       "required_views_directions": [
         "Flat UI icon"
@@ -5295,14 +5295,17 @@
         "res://docs/art/ART_INTEGRATION_RULES.md",
         "res://docs/art/UI_VISUAL_BIBLE.md"
       ],
-      "reference_assets": [],
-      "target_godot_resource_scene": [
-        "res://src/ui/presentation/profiles/map_marker_sheet.tres"
+      "reference_assets": [
+        "res://assets/art/generated_sources/imagegen/ui/ui_core_icons_source_v02.png"
       ],
-      "current_existing_asset": "res://assets/art/ui/markers/map_marker_sheet_v01.png",
-      "current_implementation_status": "Texture reference exists in listed source resource(s); state reachability separately audited",
-      "classification": "PLACEHOLDER",
-      "generation_revision_requirement": "Generate coherent crisp replacement icon batch, preserving exact semantic IDs.",
+      "target_godot_resource_scene": [
+        "res://src/ui/presentation/profiles/map_marker_sheet.tres",
+        "res://src/ui/map_menu.tscn"
+      ],
+      "current_existing_asset": "res://assets/art/ui/markers/map_marker_quest_sigil_v02.png",
+      "current_implementation_status": "Four byte-reproducible accepted ImageGen icon cells are Inspector-bound in the live MapMenu legend and UI catalog; no quest marker locations or travel actions invented",
+      "classification": "ACCEPTED_DO_NOT_REGENERATE",
+      "generation_revision_requirement": "NONE for accepted glyph sheet and actual read-only map legend; world quest coordinates remain independent future authoring",
       "dependencies": [
         "Existing UiIconProfile/catalog ownership and actual consuming UI"
       ],
@@ -5315,23 +5318,53 @@
         "Review actual Godot renderer at gameplay scale, baseline/pivot and nearest filtering",
         "Run focused resource/presentation/provenance validation; broad Godot gate after meaningful integration"
       ],
-      "acceptance_scope": "Existing source/art preservation; this does not claim representative final combat or all-screen acceptance.",
+      "acceptance_scope": "Exact four 32px symbols, source/derivation, actual live read-only map-menu legend and native GL renderer only; not geographic quest marker placement or map travel",
       "verified_evidence": {
-        "sha256": "7c3c5f62fc5bcd370ea4fe1d0515e177908236396f1131062fa0842437e1a859",
+        "sha256": "e918f083ae5e1110faed8538112a2b6bb5f973bc367d19234aa26ac7ad5eeb94",
         "dimensions": [
           128,
           32
         ],
         "mode": "RGBA",
-        "alpha_extrema": [
-          0,
-          255
+        "source": "res://assets/art/generated_sources/imagegen/ui/ui_core_icons_source_v02.png",
+        "source_sha256": "bd0cb8c1895eeb855b53a79ca0676c17222737c62fe0f74915d0b07a9290465c",
+        "source_file_exists": true,
+        "exact_source_cell_derivation": "four byte-verified accepted 32px RGBA core9 icon cells, pasted unchanged left-to-right, PNG optimize=False",
+        "derivation_manifest": "res://assets/art/ui/markers/map_marker_quest_sigil_v02.json",
+        "cell_semantics": [
+          "quest_family_escort",
+          "quest_family_tower_defense",
+          "quest_family_annihilation",
+          "tower_sigil"
         ],
-        "source": "project-local procedural pixel authoring",
-        "source_sha256": null,
-        "source_file_exists": false
+        "live_map_menu": "res://src/ui/map_menu.tscn",
+        "inspector_icon_profile": "res://src/ui/presentation/profiles/map_marker_sheet.tres",
+        "native_renderer_capture": "res://docs/evidence/renderer/map-marker-live-menu-native.png",
+        "native_renderer_sha256": "095372474e515239e2b75e2b5db1a3acdadfb0b775fa8919ac9579a866bf97bd",
+        "native_renderer_evidence": "res://docs/evidence/renderer/map-marker-live-menu-native.json",
+        "native_near_opaque_source_pixels_matching": 1515,
+        "map_quest_coordinates_authored": false,
+        "map_travel_action_added": false
       },
-      "issues": []
+      "issues": [],
+      "prior_audit_snapshot": {
+        "previous_asset": "res://assets/art/ui/markers/map_marker_sheet_v01.png",
+        "previous_verified_evidence": {
+          "sha256": "7c3c5f62fc5bcd370ea4fe1d0515e177908236396f1131062fa0842437e1a859",
+          "dimensions": [
+            128,
+            32
+          ],
+          "mode": "RGBA",
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "source": "project-local procedural pixel authoring",
+          "source_sha256": null,
+          "source_file_exists": false
+        }
+      }
     },
     {
       "stable_asset_id": "asset:enemies/marksman/enemy_marksman_core_sheet",

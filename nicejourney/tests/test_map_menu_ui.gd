@@ -65,6 +65,23 @@ func _run() -> void:
     _expect(menu.content_label.text.contains("Region 3 — Playable prototype"), "World layer identifies Region 3 as the playable prototype")
     _expect(menu.content_label.text.contains("Region 1 — Future locked"), "World layer keeps other regions explicitly future-locked")
     _expect(menu.status_label.text.contains("do not grant travel"), "map UI states that it cannot bypass travel/access rules")
+    var legend_root := menu.get_node_or_null("Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend") as HBoxContainer
+    var legend_notice := menu.get_node_or_null("Overlay/Panel/Layout/Scroll/ScrollContent/MarkerNotice") as Label
+    _expect(legend_root != null and legend_root.visible, "live map menu includes the four source-backed glyphs as a read-only symbol key")
+    _expect(legend_notice != null and legend_notice.text.contains("locations unauthored") and legend_notice.text.contains("travel unavailable"), "symbol key cannot imply authored quest coordinates or executable Sigil travel")
+    var marker_sheet := load("res://assets/art/ui/markers/map_marker_quest_sigil_v02.png") as Texture2D
+    _expect(marker_sheet != null and marker_sheet.get_size() == Vector2(128, 32), "live map menu resolves the exact 128x32 accepted-source derivative")
+    if legend_root != null and marker_sheet != null:
+        for index: int in range(4):
+            var identity: String = ["Escort", "Defense", "Annihilation", "Sigil"][index]
+            var glyph := legend_root.get_node_or_null(identity + "/Glyph") as TextureRect
+            var label := legend_root.get_node_or_null(identity + "/Text") as Label
+            _expect(glyph != null and glyph.texture is AtlasTexture and label != null, "legend cell %d binds Inspector-owned AtlasTexture and accessible text" % index)
+            if glyph != null and glyph.texture is AtlasTexture and label != null:
+                var tile := glyph.texture as AtlasTexture
+                _expect(tile.atlas == marker_sheet and tile.region == Rect2(index * 32, 0, 32, 32), "legend cell %d displays the correct 32px semantic glyph" % index)
+                _expect(glyph.texture_filter == CanvasItem.TEXTURE_FILTER_NEAREST and glyph.custom_minimum_size == Vector2(32, 32), "legend cell %d is native-size and nearest-filtered" % index)
+                _expect(label.text == identity, "legend cell %d uses non-color-only semantic text" % index)
 
     _expect(menu.select_layer(MapLayerIdentityValidator.LAYER_REGION_MAP), "Region layer can be selected explicitly")
     _expect(menu.current_layer_id() == MapLayerIdentityValidator.LAYER_REGION_MAP and menu.title_label.text == "Region Map", "Region layer selection updates identity and title")

@@ -1,0 +1,77 @@
+{
+  "actual_quest_marker_count": 0,
+  "engine": "4.6.2-stable (official)",
+  "notice": "Symbol key only — quest locations unauthored; map travel unavailable.",
+  "production_sha256": "e918f083ae5e1110faed8538112a2b6bb5f973bc367d19234aa26ac7ad5eeb94",
+  "production_sheet": "res://assets/art/ui/markers/map_marker_quest_sigil_v02.png",
+  "renderer": "gl_compatibility",
+  "scope": "Actual live MapMenu Region layer; four read-only glyphs and explicit unavailable-location/travel text, no authored marker positions",
+  "screen": "res://docs/evidence/renderer/map-marker-live-menu-native.png",
+  "screen_size": [
+    640,
+    360
+  ],
+  "source_cells": [
+    {
+      "name": "Escort",
+      "screen_xyxy": [
+        146.0,
+        240.5,
+        178.0,
+        272.5
+      ],
+      "source_xyxy": [
+        0,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "name": "Defense",
+      "screen_xyxy": [
+        224.0,
+        240.5,
+        256.0,
+        272.5
+      ],
+      "source_xyxy": [
+        32,
+        0,
+        64,
+        32
+      ]
+    },
+    {
+      "name": "Annihilation",
+      "screen_xyxy": [
+        314.0,
+        240.5,
+        346.0,
+        272.5
+      ],
+      "source_xyxy": [
+        64,
+        0,
+        96,
+        32
+      ]
+    },
+    {
+      "name": "Sigil",
+      "screen_xyxy": [
+        427.0,
+        240.5,
+        459.0,
+        272.5
+      ],
+      "source_xyxy": [
+        96,
+        0,
+        128,
+        32
+      ]
+    }
+  ],
+  "travel_action_in_map": false
+}

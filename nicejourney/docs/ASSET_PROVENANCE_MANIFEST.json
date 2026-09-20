@@ -1857,6 +1857,34 @@
             }
         },
         {
+            "asset_name": "Map Marker Quest and Sigil Glyph Sheet V02",
+            "project_path": "res://assets/art/ui/markers/map_marker_quest_sigil_v02.png",
+            "source": "res://assets/art/generated_sources/imagegen/ui/ui_core_icons_source_v02.png",
+            "creator_source": "Exact accepted original Nice Journey ImageGen core9 source; SHA-256 bd0cb8c1895eeb855b53a79ca0676c17222737c62fe0f74915d0b07a9290465c",
+            "license_category": "ai_generated_terms_permit",
+            "license_text": "Generated for Nice Journey under the project's AI-generated-use category; release terms require normal project review.",
+            "attribution_text": "",
+            "modifications": "four byte-verified accepted 32px RGBA core9 icon cells, pasted unchanged left-to-right, PNG optimize=False",
+            "date_imported": "2026-09-20",
+            "responsible_agent": "OpenAI ChatGPT",
+            "kind": "pixel_art",
+            "pixel_metadata": {
+                "dimensions": "128x32 px; four individually addressable 32x32 glyphs",
+                "palette_material_ramp": "Exact unaltered four accepted core9 icon palettes and silhouettes",
+                "pivot_ground_anchor": "Each static glyph uses its own 32x32 AtlasTexture region; no world geometry or character anchor",
+                "frame_order_timing": "Escort, Tower Defense, Annihilation, Tower Sigil; no animation",
+                "transparent_bounds": "RGBA source alpha preserved without recoloring, padding or filtering",
+                "intended_render_layers": [
+                    "map_menu_read_only_symbol_legend",
+                    "ui_icon_catalog"
+                ]
+            },
+            "source_sha256": "bd0cb8c1895eeb855b53a79ca0676c17222737c62fe0f74915d0b07a9290465c",
+            "output_sha256": "e918f083ae5e1110faed8538112a2b6bb5f973bc367d19234aa26ac7ad5eeb94",
+            "derivation_manifest": "res://assets/art/ui/markers/map_marker_quest_sigil_v02.json",
+            "acceptance_scope": "Four-glyph read-only MapMenu key only; quest marker location authoring and travel remain separately unavailable"
+        },
+        {
             "asset_name": "Map Marker Sheet V01",
             "project_path": "res://assets/art/ui/markers/map_marker_sheet_v01.png",
             "source": "project-local procedural pixel authoring",

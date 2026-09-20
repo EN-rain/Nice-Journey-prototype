@@ -11,7 +11,7 @@ const MODAL_ID: StringName = &"ui:map"
 @onready var status_label: Label = $Overlay/Panel/Layout/Status
 @onready var region_canvas: Control = $Overlay/Panel/Layout/RegionCanvas
 @onready var room_canvas: Control = $Overlay/Panel/Layout/RoomCanvas
-@onready var content_label: Label = $Overlay/Panel/Layout/Scroll/Content
+@onready var content_label: Label = $Overlay/Panel/Layout/Scroll/ScrollContent/Content
 @onready var back_button: Button = $Overlay/Panel/Layout/Back
 
 var _profile: ProfileSnapshot = null

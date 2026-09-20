@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Read-only evidence gate for the provisional four-cell map marker sheet.
+"""Read-only preservation gate for the superseded V01 map-marker placeholder.
 
-This script proves only the current asset/profile state. It intentionally does
-not assign invented marker semantics or mark the placeholder production-ready.
+The old four-recolor source remains intact but is no longer production-bound.
+New four-symbol semantics and current live UI are verified separately by
+reconcile_map_marker_legend_acceptance.py; do not treat V01 as accepted art.
 """
 from __future__ import annotations
 
@@ -52,11 +53,11 @@ def audit() -> dict:
         raise ValueError("map marker Inspector profile/catalog missing")
     profile_text = PROFILE.read_text(encoding="utf-8")
     catalog_text = CATALOG.read_text(encoding="utf-8")
-    if ("map_marker_sheet_v01.png" not in profile_text
+    if ("map_marker_quest_sigil_v02.png" not in profile_text
             or 'icon_id = &"map_marker_sheet"' not in profile_text
             or "minimum_size = Vector2(32, 32)" not in profile_text
             or "profiles/map_marker_sheet.tres" not in catalog_text):
-        raise ValueError("map marker profile/catalog binding changed; re-audit")
+        raise ValueError("superseded placeholder not preserved with accepted V02 profile/catalog")
     # No claim about all possible runtime calls: this targeted search covers
     # the canonical Godot UI/world source surfaces that own map presentation.
     consumer_mentions: list[str] = []
@@ -69,7 +70,7 @@ def audit() -> dict:
                 consumer_mentions.append("res://" + path.relative_to(ROOT).as_posix())
     return {
         "asset_id": "asset:ui/markers/map_marker_sheet",
-        "classification": "PLACEHOLDER",
+        "classification": "SUPERSEDED_V01_PLACEHOLDER_PRESERVED",
         "sha256": sha,
         "dimensions": [128, 32],
         "cell_count": 4,
@@ -80,7 +81,7 @@ def audit() -> dict:
         "inspector_profile_and_catalog_present": True,
         "other_ui_world_consumer_mentions": sorted(consumer_mentions),
         "semantic_cell_mapping_verified": False,
-        "status": "existing_recolored_procedural_placeholder_no_verified_semantic_cell_mapping",
+        "status": "V01 preserved but not live; exact-source V02 accepted for four-glyph read-only map legend",
         "generation_performed": False,
     }
 
@@ -97,10 +98,10 @@ def main() -> int:
     if args.json:
         print(json.dumps(result, indent=2))
     else:
-        print("MAP MARKER PLACEHOLDER AUDIT PASS: four 32x32 recolors of the "
-              "same silhouette; generic catalog profile present; other UI/world "
+        print("MAP MARKER V01 PRESERVATION AUDIT PASS: four 32x32 recolors of the "
+              "same silhouette, V02 bound to live profile/catalog; other UI/world "
               f"consumer mentions={result['other_ui_world_consumer_mentions']}; "
-              "cell semantics UNVERIFIED; no files written")
+              "V01 cell semantics UNVERIFIED; no files written")
     return 0
 
 

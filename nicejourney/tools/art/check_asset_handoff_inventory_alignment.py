@@ -48,11 +48,19 @@ def check() -> None:
         "npc.temporary_escort_actor.animation": "ANIMATION_REQUIRED",
         "asset:environments/tower/tiles/tower_common_tileset": "TEXTURE_TILE_REQUIRED",
         "boss.tenth_warden.telegraph.twin_cut": "VFX_REQUIRED",
-        "asset:ui/markers/map_marker_sheet": "PLACEHOLDER",
+        "asset:ui/markers/map_marker_sheet": "ACCEPTED_DO_NOT_REGENERATE",
     }
     for asset_id, classification in expected_open.items():
         if left[asset_id]["classification"] != classification:
             raise AssertionError(f"Unsafe premature closure of {asset_id}")
+
+    marker = left["asset:ui/markers/map_marker_sheet"]
+    evidence = marker.get("verified_evidence", {})
+    if (marker.get("current_existing_asset") != "res://assets/art/ui/markers/map_marker_quest_sigil_v02.png"
+            or evidence.get("sha256") != "e918f083ae5e1110faed8538112a2b6bb5f973bc367d19234aa26ac7ad5eeb94"
+            or evidence.get("map_quest_coordinates_authored") is not False
+            or evidence.get("map_travel_action_added") is not False):
+        raise AssertionError("Accepted map-sheet art must not invent geographic markers or travel")
 
     print(f"ASSET INVENTORY ALIGNMENT PASS: 223 unique IDs, identical classification per ID and totals: {left_counts}")
 

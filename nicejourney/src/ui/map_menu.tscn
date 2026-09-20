@@ -1,8 +1,25 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Script" path="res://src/ui/map_menu.gd" id="1_menu"]
 [ext_resource type="Script" path="res://src/ui/map_room_canvas.gd" id="2_canvas"]
 [ext_resource type="Script" path="res://src/ui/map_region_canvas.gd" id="3_region_canvas"]
+[ext_resource type="Texture2D" path="res://assets/art/ui/markers/map_marker_quest_sigil_v02.png" id="4_markers"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_escort"]
+atlas = ExtResource("4_markers")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_defense"]
+atlas = ExtResource("4_markers")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_annihilation"]
+atlas = ExtResource("4_markers")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sigil"]
+atlas = ExtResource("4_markers")
+region = Rect2(96, 0, 32, 32)
 
 [node name="MapMenu" type="CanvasLayer"]
 layer = 89
@@ -94,7 +111,95 @@ custom_minimum_size = Vector2(0, 104)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Content" type="Label" parent="Overlay/Panel/Layout/Scroll"]
+[node name="ScrollContent" type="VBoxContainer" parent="Overlay/Panel/Layout/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="MarkerNotice" type="Label" parent="Overlay/Panel/Layout/Scroll/ScrollContent"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Symbol key only — quest locations unauthored; map travel unavailable."
+autowrap_mode = 2
+
+[node name="MarkerLegend" type="HBoxContainer" parent="Overlay/Panel/Layout/Scroll/ScrollContent"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 8
+
+[node name="Escort" type="HBoxContainer" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Glyph" type="TextureRect" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend/Escort"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+texture_filter = 1
+texture = SubResource("AtlasTexture_escort")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Text" type="Label" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend/Escort"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Escort"
+
+[node name="Defense" type="HBoxContainer" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Glyph" type="TextureRect" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend/Defense"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+texture_filter = 1
+texture = SubResource("AtlasTexture_defense")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Text" type="Label" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend/Defense"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Defense"
+
+[node name="Annihilation" type="HBoxContainer" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Glyph" type="TextureRect" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend/Annihilation"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+texture_filter = 1
+texture = SubResource("AtlasTexture_annihilation")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Text" type="Label" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend/Annihilation"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Annihilation"
+
+[node name="Sigil" type="HBoxContainer" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Glyph" type="TextureRect" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend/Sigil"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+texture_filter = 1
+texture = SubResource("AtlasTexture_sigil")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Text" type="Label" parent="Overlay/Panel/Layout/Scroll/ScrollContent/MarkerLegend/Sigil"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Sigil"
+
+[node name="Content" type="Label" parent="Overlay/Panel/Layout/Scroll/ScrollContent"]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
