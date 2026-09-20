@@ -18109,27 +18109,52 @@
       "category": "npc_animation",
       "subject": "Escort actor movement/wait presentation",
       "gameplay_purpose": "Escort actor movement/wait presentation",
-      "required_views_directions": null,
-      "required_animation_states": [],
-      "required_frame_counts": null,
-      "expected_gameplay_dimensions": null,
-      "source_generation_dimensions": null,
-      "transparency_requirement": "Not authored; resolve in asset brief",
-      "visual_style_authority": [
-        "Nice_Journey_Master_Game_Specification_V2_1.md Escort family and §30.2"
+      "required_views_directions": [
+        "right-authored side view; mirrored-left per proposed NPC bible"
       ],
-      "reference_assets": [],
+      "required_animation_states": [
+        "idle",
+        "walk"
+      ],
+      "required_frame_counts": {
+        "idle": 4,
+        "walk": 6,
+        "authority": "proposed NPC visual bible"
+      },
+      "expected_gameplay_dimensions": {
+        "derivative_sheet": [
+          320,
+          32
+        ],
+        "cell": [
+          32,
+          32
+        ],
+        "layout": "proposed four idle cells followed by six walk cells"
+      },
+      "source_generation_dimensions": null,
+      "transparency_requirement": "32x32 gameplay cells on actual transparent RGBA sheet",
+      "visual_style_authority": [
+        "Nice_Journey_Master_Game_Specification_V2_1.md Escort family and §30.2",
+        "res://docs/art/NPC_VISUAL_DESIGN_BIBLE.md"
+      ],
+      "reference_assets": [
+        "res://assets/art/npc/escort_anchor_v01.png"
+      ],
       "target_godot_resource_scene": [
-        "res://src/world/tower/escorts/tower_escort_runtime.gd"
+        "res://src/world/npc/presentation/profiles/temporary_escort.tres",
+        "res://src/world/tower/escorts/tower_escort_runtime.gd",
+        "res://src/world/region3/quests/region3_escort_actor.gd"
       ],
       "current_existing_asset": null,
-      "current_implementation_status": "Escort mechanical route/wait/failure states exist, visual presenter absent.",
+      "current_implementation_status": "Accepted static escort sprite is live and the Tower physics wait/follow presentation handoff exists; optional ten-cell animation input now fails closed on bad sheet, tracks and duplicate/noisy poses; genuine generated motion source NOT received",
       "classification": "ANIMATION_REQUIRED",
-      "generation_revision_requirement": "Establish accepted character anchor before controlled animation; map only genuine runtime states.",
+      "generation_revision_requirement": "Generate genuine right-facing identity-consistent four idle and six walk poses from the accepted static source; visually review full source; deterministically derive ten 32px cells, document hashes/provenance, bind external AnimationLibrary and verify real Godot live gameplay before acceptance",
       "dependencies": [
-        "npc.temporary_escort_actor",
-        "Author state-to-animation mapping; frame counts unspecified",
-        "NPC_VISUAL_DESIGN_BIBLE.md static-anchor scope does not authorize movement animation yet"
+        "npc.temporary_escort_actor: accepted static anchor preserved and hash-verified",
+        "Genuine four idle and six walk source poses plus source/derivative provenance",
+        "NPC_VISUAL_DESIGN_BIBLE.md proposed 32px visual conventions and existing Tower wait/follow state mapping",
+        "Native live animation visual review; synthetic intake tests are NOT final image acceptance"
       ],
       "priority": "P0",
       "acceptance_criteria": [
@@ -18140,9 +18165,23 @@
         "Review actual Godot renderer at gameplay scale, baseline/pivot and nearest filtering",
         "Run focused resource/presentation/provenance validation; broad Godot gate after meaningful integration"
       ],
-      "issues": [],
+      "issues": [
+        "Motion source, identity-consistent pose review and live animated renderer evidence are still missing; do not generate duplicates from the accepted static anchor"
+      ],
       "verified_evidence": {},
-      "required_content": null
+      "required_content": null,
+      "partial_integration_evidence": {
+        "accepted_static_source": "res://assets/art/npc/escort_anchor_v01.png",
+        "accepted_static_source_sha256": "2cfa01c99e1716c168a69aff61cda8593c9ebac7e06e4ba39aa23d764aafd84e",
+        "accepted_static_source_preserved": true,
+        "generation_source_for_motion_received": false,
+        "proposed_derivative_layout": "320x32 RGBA: exact 32px cells idle[0..3], walk[4..9]; left mirrored from right-authored source",
+        "proposed_frame_counts_from": "res://docs/art/NPC_VISUAL_DESIGN_BIBLE.md:43-54",
+        "animation_intake_gate": "res://src/world/npc/presentation/npc_visual_profile.gd",
+        "synthetic_contract_test_not_art_acceptance": "res://tests/test_escort_animation_intake_gate.gd",
+        "live_tower_escort_semantic_handoff": "res://src/world/tower/escorts/tower_escort_runtime.gd",
+        "real_gameplay_animation_accepted": false
+      }
     },
     {
       "stable_asset_id": "r3:interior:functional:01",
