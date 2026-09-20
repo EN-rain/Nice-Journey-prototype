@@ -1857,6 +1857,33 @@
             }
         },
         {
+            "asset_name": "Application Icon Tower Sigil V02 (Prototype)",
+            "project_path": "res://assets/art/ui/application/application_icon_tower_sigil_v02.png",
+            "source": "res://assets/art/ui/markers/tower_sigil_icon_v01.png",
+            "creator_source": "Exact 4x nearest reuse of an accepted Nice Journey ImageGen core9 Tower Sigil derivative; source SHA-256 1dfeea179a0df7320388fcfadba55e715d367656be4e6585a756b14b99a70b39",
+            "license_category": "ai_generated_terms_permit",
+            "license_text": "Derived from existing accepted Nice Journey AI-generated art; release terms remain subject to normal project review.",
+            "attribution_text": "",
+            "modifications": "Exact 32x32 accepted Tower Sigil RGBA -> 128x128 4x nearest-neighbor; no recolor, crop, new figure, typography or invented emblem",
+            "date_imported": "2026-09-20",
+            "responsible_agent": "OpenAI ChatGPT",
+            "kind": "pixel_art",
+            "pixel_metadata": {
+                "dimensions": "128x128 px application icon, source 32x32 px",
+                "palette_material_ramp": "Exact accepted Tower Sigil dark-outline and gold/teal palette; no added symbols/colors",
+                "pivot_ground_anchor": "Full centered icon canvas; no actor/world anchor",
+                "frame_order_timing": "One static icon, no animation",
+                "transparent_bounds": "Original Tower Sigil RGBA alpha preserved exactly under 4x pixel-nearest scaling",
+                "intended_render_layers": [
+                    "godot_project_application_icon"
+                ]
+            },
+            "source_sha256": "1dfeea179a0df7320388fcfadba55e715d367656be4e6585a756b14b99a70b39",
+            "output_sha256": "26d6b6318856e04bae3b2c32adbce24e5f0c79fa411b9fa7706d2b03fee9f185",
+            "derivation_manifest": "res://assets/art/ui/application/application_icon_tower_sigil_v02.json",
+            "acceptance_scope": "Godot prototype project icon only; no final brand identity/platform export promise"
+        },
+        {
             "asset_name": "Map Marker Quest and Sigil Glyph Sheet V02",
             "project_path": "res://assets/art/ui/markers/map_marker_quest_sigil_v02.png",
             "source": "res://assets/art/generated_sources/imagegen/ui/ui_core_icons_source_v02.png",

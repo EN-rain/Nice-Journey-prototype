@@ -1,0 +1,16 @@
+{
+  "capture": "res://docs/evidence/renderer/application-icon-tower-sigil-v02-native.png",
+  "engine": "4.6.2-stable (official)",
+  "icon": "res://assets/art/ui/application/application_icon_tower_sigil_v02.png",
+  "icon_sha256": "26d6b6318856e04bae3b2c32adbce24e5f0c79fa411b9fa7706d2b03fee9f185",
+  "native_dimensions": [
+    128,
+    128
+  ],
+  "project_config_icon": "res://assets/art/ui/application/application_icon_tower_sigil_v02.png",
+  "release_export_performed": false,
+  "render_transform": "native Sprite2D centered (64,64); scale 1; nearest; transparent SubViewport",
+  "renderer": "gl_compatibility",
+  "scope": "Native 128x128 actual Godot GL Compatibility preview of project config/icon; no release export or packaged OS icon claimed",
+  "source_accepted_sigil": "res://assets/art/ui/markers/tower_sigil_icon_v01.png"
+}

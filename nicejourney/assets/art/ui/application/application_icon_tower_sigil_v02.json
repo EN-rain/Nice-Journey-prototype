@@ -1,0 +1,17 @@
+{
+  "status": "ACCEPTED_SOURCE_DERIVATIVE_PROTOTYPE_PROJECT_ICON",
+  "stable_asset_id": "application.icon",
+  "accepted_source": "res://assets/art/ui/markers/tower_sigil_icon_v01.png",
+  "accepted_source_sha256": "1dfeea179a0df7320388fcfadba55e715d367656be4e6585a756b14b99a70b39",
+  "derivative": "res://assets/art/ui/application/application_icon_tower_sigil_v02.png",
+  "derivative_sha256": "26d6b6318856e04bae3b2c32adbce24e5f0c79fa411b9fa7706d2b03fee9f185",
+  "output_dimensions": [
+    128,
+    128
+  ],
+  "mode": "RGBA",
+  "recipe": "Exact 32x32 accepted Tower Sigil RGBA -> 128x128 4x nearest-neighbor; no recolor, crop, new figure, typographic overlay or invented emblem",
+  "godot_binding": "res://project.godot [application] config/icon",
+  "legacy_default_svg_preserved": "res://icon.svg",
+  "acceptance_scope": "Source-backed prototype project icon; no new branded title/logo, platform ICO, release export or packaged app icon verified"
+}

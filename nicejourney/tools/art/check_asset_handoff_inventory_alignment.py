@@ -49,6 +49,7 @@ def check() -> None:
         "asset:environments/tower/tiles/tower_common_tileset": "TEXTURE_TILE_REQUIRED",
         "boss.tenth_warden.telegraph.twin_cut": "VFX_REQUIRED",
         "asset:ui/markers/map_marker_sheet": "ACCEPTED_DO_NOT_REGENERATE",
+        "application.icon": "ACCEPTED_DO_NOT_REGENERATE",
     }
     for asset_id, classification in expected_open.items():
         if left[asset_id]["classification"] != classification:
@@ -61,6 +62,14 @@ def check() -> None:
             or evidence.get("map_quest_coordinates_authored") is not False
             or evidence.get("map_travel_action_added") is not False):
         raise AssertionError("Accepted map-sheet art must not invent geographic markers or travel")
+
+    app_icon = left["application.icon"]
+    app_proof = app_icon.get("verified_evidence", {})
+    if (app_icon.get("current_existing_asset") != "res://assets/art/ui/application/application_icon_tower_sigil_v02.png"
+            or app_proof.get("output_sha256") != "26d6b6318856e04bae3b2c32adbce24e5f0c79fa411b9fa7706d2b03fee9f185"
+            or app_proof.get("source_sha256") != "1dfeea179a0df7320388fcfadba55e715d367656be4e6585a756b14b99a70b39"
+            or app_proof.get("final_product_brand_or_packaged_platform_icon_claimed") is not False):
+        raise AssertionError("Accepted prototype icon must stay exact source-backed and not imply final branding/export")
 
     print(f"ASSET INVENTORY ALIGNMENT PASS: 223 unique IDs, identical classification per ID and totals: {left_counts}")
 

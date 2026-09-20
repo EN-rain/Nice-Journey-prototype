@@ -17,9 +17,9 @@
   "scope": "Current Nice Journey prototype assets and concrete repository-required gaps. Future regions, unauthored items/skills, optional ambient populations and marketing imagery are not invented. Bundle records enumerate approved material/prop vocabulary where individual counts or atlas geometry are unspecified.",
   "evidence_policy": "Null means not specified or not verified. Measured existing dimensions do not impose source-generation dimensions. Historical acceptance protects existing art; it does not claim this audit reran live acceptance. Classifications describe the strongest current production need; integration-only revisions explicitly prohibit unnecessary generation.",
   "classification_counts": {
-    "ACCEPTED_DO_NOT_REGENERATE": 177,
+    "ACCEPTED_DO_NOT_REGENERATE": 178,
     "EXISTS_NEEDS_REVISION": 12,
-    "PLACEHOLDER": 19,
+    "PLACEHOLDER": 18,
     "TEXTURE_TILE_REQUIRED": 1,
     "ANIMATION_REQUIRED": 1,
     "MISSING_GENERATE": 8,
@@ -19336,7 +19336,7 @@
     {
       "stable_asset_id": "application.icon",
       "category": "ui_application_icon",
-      "subject": "Application icon",
+      "subject": "Source-backed Tower Sigil prototype application icon",
       "gameplay_purpose": "Application icon",
       "required_views_directions": [
         "Flat icon"
@@ -19348,18 +19348,20 @@
         128
       ],
       "source_generation_dimensions": null,
-      "transparency_requirement": "Not authored; resolve in asset brief",
+      "transparency_requirement": "128x128 RGBA; original Tower Sigil alpha unchanged by 4x nearest scaling",
       "visual_style_authority": [
         "res://docs/art/ART_INTEGRATION_RULES.md"
       ],
-      "reference_assets": [],
+      "reference_assets": [
+        "res://assets/art/ui/markers/tower_sigil_icon_v01.png"
+      ],
       "target_godot_resource_scene": [
         "res://project.godot"
       ],
-      "current_existing_asset": "res://icon.svg",
-      "current_implementation_status": "Project config references default Godot SVG icon; no Nice Journey branding authority located.",
-      "classification": "PLACEHOLDER",
-      "generation_revision_requirement": "Retain until a concrete product-icon brief is authored; no release/export changes authorized.",
+      "current_existing_asset": "res://assets/art/ui/application/application_icon_tower_sigil_v02.png",
+      "current_implementation_status": "Actual project config/icon references 128px icon derived only from accepted Tower Sigil; native GL Compatibility 128px capture verified with unchanged alpha and 5104 source pixels",
+      "classification": "ACCEPTED_DO_NOT_REGENERATE",
+      "generation_revision_requirement": "NONE for reversible source-backed prototype app icon; distinct final product branding/platform export icon requires separately authored approval",
       "dependencies": [],
       "priority": "P3",
       "acceptance_criteria": [
@@ -19370,11 +19372,37 @@
         "Review actual Godot renderer at gameplay scale, baseline/pivot and nearest filtering",
         "Run focused resource/presentation/provenance validation; broad Godot gate after meaningful integration"
       ],
-      "issues": [
-        "Not a gameplay art blocker; brand identity unspecified."
-      ],
-      "verified_evidence": {},
-      "required_content": null
+      "issues": [],
+      "verified_evidence": {
+        "source": "res://assets/art/ui/markers/tower_sigil_icon_v01.png",
+        "source_sha256": "1dfeea179a0df7320388fcfadba55e715d367656be4e6585a756b14b99a70b39",
+        "source_file_exists": true,
+        "output": "res://assets/art/ui/application/application_icon_tower_sigil_v02.png",
+        "output_sha256": "26d6b6318856e04bae3b2c32adbce24e5f0c79fa411b9fa7706d2b03fee9f185",
+        "output_dimensions": [
+          128,
+          128
+        ],
+        "output_mode": "RGBA",
+        "derivation_recipe": "Exact 32x32 accepted Tower Sigil RGBA -> 128x128 4x nearest-neighbor; no recolor, crop, new figure, typography or invented emblem",
+        "derivation_manifest": "res://assets/art/ui/application/application_icon_tower_sigil_v02.json",
+        "actual_project_config": "res://project.godot",
+        "actual_config_icon_bound": true,
+        "native_renderer_capture": "res://docs/evidence/renderer/application-icon-tower-sigil-v02-native.png",
+        "native_renderer_capture_sha256": "7d3e49c6480eee909ff401d94b074315eeff8080835dbb7360905c51a42982a4",
+        "native_renderer_metadata": "res://docs/evidence/renderer/application-icon-tower-sigil-v02-native.json",
+        "native_source_pixels_checked": 5104,
+        "native_max_rgb_delta": 3,
+        "native_max_alpha_delta": 0,
+        "legacy_default_svg_preserved": true,
+        "final_product_brand_or_packaged_platform_icon_claimed": false
+      },
+      "required_content": null,
+      "acceptance_scope": "Source-backed prototype Godot project icon, not a separately approved brand/logo or packaged Windows/Linux/macOS icon",
+      "prior_audit_snapshot": {
+        "previous_asset": "res://icon.svg",
+        "reason": "Unbranded Godot default; original file preserved"
+      }
     }
   ],
   "evidence_and_legacy_inventory": [
