@@ -30,6 +30,9 @@ func _ready() -> void:
         play_semantic_state(semantic_state)
 
 func set_semantic_state(next_state: StringName) -> void:
+    # Replaying a looping walk every physics tick would freeze it on frame zero.
+    if semantic_state == next_state:
+        return
     semantic_state = next_state
     play_semantic_state(next_state)
 

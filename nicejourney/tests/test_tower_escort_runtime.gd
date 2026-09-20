@@ -64,7 +64,17 @@ func _run() -> void:
     _expect(bool(wait.get("accepted", false)) and _objective(profile, &"primary_floor_2").wait_requested, "wait interaction commits to the authoritative escort objective state")
     var waited := runtime.advance_fixed(PHYSICS_DELTA)
     _expect(bool(waited.get("accepted", false)) and StringName(waited.get("reason_id", &"")) == &"wait_requested" and runtime.actor.global_position.is_equal_approx(wait_position), "wait state physically stops the escort without changing route progress")
+    var escort_presenter := runtime.actor.get_node_or_null("NpcVisualPresenter") as NpcVisualPresenter
+    _expect(escort_presenter != null, "escort runtime preserves its live static identity presenter")
+    if escort_presenter != null:
+        _expect(escort_presenter.semantic_state == &"wait", "authoritative wait state reaches escort presentation")
+        _expect(escort_presenter.animation_player == null, "missing genuine animation source remains static, not fabricated")
     _expect(bool(host.set_escort_wait_requested(&"primary_floor_2", false).get("accepted", false)), "follow interaction clears the persisted wait request")
+    var follow_step := runtime.advance_fixed(PHYSICS_DELTA)
+    _expect(bool(follow_step.get("accepted", false)), "escort resumes its existing physical driver after follow request")
+    if escort_presenter != null and bool(follow_step.get("accepted", false)):
+        var should_walk := not bool(follow_step.get("complete", false)) and float(follow_step.get("moved_distance_px", 0.0)) > 0.01
+        _expect(escort_presenter.semantic_state == (&"follow" if should_walk else &"wait"), "escort visuals follow actual physical movement rather than intent alone")
     var damaged := runtime.apply_resolved_damage(25)
     _expect(bool(damaged.get("accepted", false)) and int(damaged.get("current_hp", 0)) == 75, "production Escort health accepts already-resolved HP damage without adding a second mitigation layer")
 

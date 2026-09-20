@@ -156,13 +156,17 @@ func advance_fixed(delta: float) -> Dictionary:
         return _rejected(&"not_configured")
     if _terminal:
         actor.velocity = Vector2.ZERO
+        _sync_escort_visual(true, 0.0, actor.global_position, true)
         return _rejected(&"objective_terminal")
     var objective := _load_objective_state()
     if objective == null:
         actor.velocity = Vector2.ZERO
+        _sync_escort_visual(true, 0.0, actor.global_position, false)
         return _rejected(REASON_OBJECTIVE_MISMATCH)
+    var position_before := actor.global_position
     var result := driver.physics_step(delta, objective.wait_requested)
     if not bool(result.get("accepted", false)):
+        _sync_escort_visual(true, 0.0, position_before, false)
         return result
 
     var reached := result.get("reached_route_node_ids", []) as Array
@@ -196,6 +200,7 @@ func advance_fixed(delta: float) -> Dictionary:
         progress_committed.emit(quest_id, goal.duplicate(true))
         if _terminal:
             escort_completed.emit(quest_id, _actor_id(), goal.duplicate(true))
+    _sync_escort_visual(objective.wait_requested, float(result.get("moved_distance_px", 0.0)), position_before, bool(result.get("complete", false)))
     result["objective_state"] = _objective_dictionary()
     return result
 
@@ -210,8 +215,26 @@ func set_wait_requested(wait_requested: bool) -> Dictionary:
         {"wait_requested": wait_requested}
     )
     if bool(result.get("accepted", false)):
+        if wait_requested and actor != null:
+            _sync_escort_visual(true, 0.0, actor.global_position, false)
         progress_committed.emit(quest_id, result.duplicate(true))
     return result
+
+
+func _sync_escort_visual(wait_requested: bool, moved_distance_px: float, position_before: Vector2, complete: bool) -> void:
+    # Presentation follows actual movement and the persisted wait request; it
+    # never decides route progress, collision, panic, or any quest state.
+    if actor == null:
+        return
+    var presenter := actor.get_node_or_null("NpcVisualPresenter") as NpcVisualPresenter
+    if presenter == null:
+        return
+    var moving := not wait_requested and not complete and moved_distance_px > 0.01
+    presenter.set_semantic_state(&"follow" if moving else &"wait")
+    var delta_x := actor.global_position.x - position_before.x
+    if presenter.sprite != null and absf(delta_x) > 0.01:
+        presenter.facing_right = delta_x > 0.0
+        presenter.sprite.flip_h = not presenter.facing_right and presenter.profile != null and presenter.profile.mirror_left
 
 
 func apply_resolved_damage(amount: int) -> Dictionary:
