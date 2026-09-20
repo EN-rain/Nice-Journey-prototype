@@ -37,9 +37,15 @@ func _run() -> void:
     var reapply_state := (reapply.get("states", []) as Array)[0] as Dictionary
     _expect(bool(reapply.get("accepted", false)) and (reapply.get("states", []) as Array).size() == 1 and is_equal_approx(float(reapply_state["magnitude"]), 5.0) and int(reapply_state["remaining_ticks"]) == 180, "reapplication retains a single status, stronger magnitude and longer remaining duration")
     _expect(TUNING.burn_damage_for_advance({"status_id": TUNING.BURN_ID, "behavior": &"burn", "remaining_ticks": 180, "magnitude": 5.0}, 30) == 5, "reapplied stronger Burn magnitude changes the next tick without inventing extra status IDs")
-    _expect(TUNING.burn_damage_for_advance({"status_id": TUNING.BURN_ID, "behavior": &"burn", "remaining_ticks": 180}, 29) == 0, "Burn does not apply before its first 30-tick deadline")
-    _expect(TUNING.burn_damage_for_advance({"status_id": TUNING.BURN_ID, "behavior": &"burn", "remaining_ticks": 180}, 30) == 2, "Burn delivers only one explicitly authored damage tick at the first deadline")
-    _expect(TUNING.burn_damage_for_advance({"status_id": TUNING.BURN_ID, "behavior": &"burn", "remaining_ticks": 151}, 61) == 6, "Burn crosses multiple cadence boundaries deterministically")
+    var default_burn_state := (applied.get("states", []) as Array)[0] as Dictionary
+    _expect(TUNING.burn_damage_for_advance(default_burn_state, 29) == 0, "Burn does not apply before its first 30-tick deadline")
+    _expect(TUNING.burn_damage_for_advance(default_burn_state, 30) == 2, "Burn delivers only one explicitly authored damage tick at the first deadline")
+    var partially_advanced_burn := default_burn_state.duplicate(true)
+    partially_advanced_burn["remaining_ticks"] = 151
+    _expect(TUNING.burn_damage_for_advance(partially_advanced_burn, 61) == 6, "Burn crosses multiple cadence boundaries deterministically")
+    var missing_burn_magnitude := default_burn_state.duplicate(true)
+    missing_burn_magnitude.erase("magnitude")
+    _expect(TUNING.burn_damage_for_advance(missing_burn_magnitude, 30) == 0, "missing Burn magnitude cannot silently become default damage")
     _expect(TUNING.burn_damage_for_advance({"status_id": &"status:not_our_burn", "behavior": &"burn", "remaining_ticks": 180}, 30) == 0, "playtest damage owner never claims unrelated Burn statuses")
     _expect(TUNING.burn_damage_for_advance({"status_id": &"status:playtest_burn/", "behavior": &"burn", "remaining_ticks": 180}, 30) == 0, "blank source suffix is not an eligible Burn source")
     _expect(TUNING.burn_damage_for_advance({"status_id": &"status:playtest_burn/bad source", "behavior": &"burn", "remaining_ticks": 180}, 30) == 0, "malformed source suffix cannot acquire Burn damage")
@@ -48,8 +54,13 @@ func _run() -> void:
     _expect(TUNING.burn_damage_for_advance({"status_id": TUNING.BURN_ID, "behavior": &"burn", "remaining_ticks": 180, "magnitude": INF}, 30) == 0, "nonfinite Burn magnitude cannot mutate live HP")
     _expect(TUNING.burn_damage_for_advance({"status_id": TUNING.BURN_ID, "behavior": &"burn", "remaining_ticks": 360, "magnitude": 3.0}, 30) == 3, "longer same-ID authored duration keeps Burn ticking above the default playtest lifetime")
     _expect(TUNING.slow_speed_multiplier([{"behavior": &"slow", "remaining_ticks": "10", "magnitude": 0.9}]) == 1.0, "malformed Slow duration cannot alter movement")
-    _expect(is_equal_approx(TUNING.slow_speed_multiplier([{"behavior": &"slow", "remaining_ticks": 10, "magnitude": 0.25}, {"behavior": &"slow", "remaining_ticks": 10, "magnitude": 0.9}]), 0.4), "Slow uses strongest reduction with authored minimum speed")
-    _expect(TUNING.slow_speed_multiplier([]) == 1.0 and TUNING.slow_speed_multiplier([{"behavior": &"slow", "remaining_ticks": 0, "magnitude": 0.9}]) == 1.0, "inactive Slow cannot apply a stale movement penalty")
+    var source_slow := {"status_id": TUNING.SLOW_ID, "behavior": &"slow", "remaining_ticks": 10, "magnitude": 0.25}
+    var second_source_slow := {"status_id": &"status:second_slow", "behavior": &"slow", "remaining_ticks": 10, "magnitude": 0.9}
+    _expect(is_equal_approx(TUNING.slow_speed_multiplier([source_slow, second_source_slow]), 0.4), "Slow uses strongest reduction with authored minimum speed")
+    var expired_slow := second_source_slow.duplicate(true)
+    expired_slow["remaining_ticks"] = 0
+    _expect(TUNING.slow_speed_multiplier([]) == 1.0 and TUNING.slow_speed_multiplier([expired_slow]) == 1.0, "inactive Slow cannot apply a stale movement penalty")
+    _expect(TUNING.slow_speed_multiplier([source_slow, {"behavior": &"slow", "remaining_ticks": 10, "magnitude": 0.9}]) == 1.0, "malformed peer status cannot partially apply a valid Slow")
     _expect(TUNING.slow_speed_multiplier([{"behavior": &"slow", "remaining_ticks": 10, "magnitude": "invalid"}]) == 1.0, "malformed Slow magnitude cannot alter movement")
     _expect(TUNING.slow_speed_multiplier([{"behavior": &"slow", "remaining_ticks": 10, "magnitude": 1.25}]) == 1.0, "out-of-range Slow magnitude is rejected instead of silently clamped")
     _expect(not bool(PrototypeStatusProductionAuthority.readiness(PrototypeStatusResolver.BEHAVIOR_BURN).get("production_ready", true)) and not bool(PrototypeStatusProductionAuthority.readiness(PrototypeStatusResolver.BEHAVIOR_SLOW).get("production_ready", true)), "provisional numbers do not impersonate final DR-06 production authority")

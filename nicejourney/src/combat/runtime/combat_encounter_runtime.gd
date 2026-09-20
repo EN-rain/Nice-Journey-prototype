@@ -67,6 +67,15 @@ func get_combatant(actor_id: StringName) -> CombatantRuntimeState:
     return _combatants.get(actor_id) as CombatantRuntimeState
 
 
+func get_registered_combatant_ids() -> Array[StringName]:
+    # Read-only, deterministic IDs for opt-in combat telemetry and QA.
+    var ids: Array[StringName] = []
+    for raw_id: Variant in _combatants.keys():
+        ids.append(StringName(String(raw_id)))
+    ids.sort()
+    return ids
+
+
 func is_enemy_tactical_eligible(actor_id: StringName) -> bool:
     var lifecycle := _enemy_lifecycles.get(actor_id) as EnemyRootLifecycle
     return lifecycle != null and lifecycle.is_tactical_eligible()

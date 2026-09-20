@@ -58,8 +58,6 @@ func _run() -> void:
 
     _expect(_begin_live(runtime, driver, 89001), "first duelist signature enters ACTIVE")
     var context := runtime.get_active_delivery_context(89001)
-    context["has_committed_observation_position"] = true
-    context["committed_observation_position"] = game.player.global_position
     host.enemy_active_delivery_window_opened.emit(eid, context)
     _expect(p_state.current_hp < pre_hit and bool(live.last_delivery_result.get("accepted", false)), "physics-confirmed authored melee hit damages player through the encounter")
     var once := p_state.current_hp
@@ -73,8 +71,6 @@ func _run() -> void:
     game.combat_runtime.request_block(true)
     _expect(_begin_live(runtime, driver, 89002), "second signature starts for frontal shield block")
     var blocked_context := runtime.get_active_delivery_context(89002)
-    blocked_context["has_committed_observation_position"] = true
-    blocked_context["committed_observation_position"] = game.player.global_position
     host.enemy_active_delivery_window_opened.emit(eid, blocked_context)
     _expect(p_state.current_hp == once and live.last_delivery_result.get("outcome", &"") == DirectHitResolver.OUTCOME_BLOCKED, "real player facing/block facts prevent HP damage")
     driver.cancel()
@@ -86,8 +82,6 @@ func _run() -> void:
     _expect(game.combat_runtime.request_parry(), "melee shield opens supported parry window")
     _expect(_begin_live(runtime, driver, 89003), "third signature starts during player parry")
     var parry_context := runtime.get_active_delivery_context(89003)
-    parry_context["has_committed_observation_position"] = true
-    parry_context["committed_observation_position"] = game.player.global_position
     host.enemy_active_delivery_window_opened.emit(eid, parry_context)
     _expect(live.last_delivery_result.get("outcome", &"") == DirectHitResolver.OUTCOME_PARRIED and game._successful_parry_ticks > 0, "real supported parry interrupts enemy and enables finite Riposte window")
     _expect(runtime.phase_id == EnemyArchetypeRuntime.PHASE_IDLE, "parried enemy releases authoritative ACTIVE reservation")
@@ -124,7 +118,7 @@ func _begin_live(runtime: EnemyArchetypeRuntime, driver: EnemySignatureActionPha
         "observed_player_committed": false,
         "observation_age_ticks": 0,
     }, {})
-    if not bool(driver.begin(selection, instance_id, {}).get("accepted", false)):
+    if not bool(driver.begin(selection, instance_id, {"observed_target_position": Vector2(250, 180)}).get("accepted", false)):
         return false
     for _tick: int in int(driver.timing["windup_ticks"]):
         driver.advance_fixed_tick()

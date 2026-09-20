@@ -1,0 +1,18 @@
+{
+  "center_world_tile": [
+    10,
+    23
+  ],
+  "committed_route_centers": 6,
+  "drawn_route_floor_cells": 14,
+  "engine": "4.6.2-stable (official)",
+  "image": "res://docs/evidence/renderer/tower-floor-1-connected-route-review.png",
+  "module_tile_pixels": 32,
+  "native_canvas": [
+    640,
+    360
+  ],
+  "scope": "VISUAL_ONLY_EXISTING_PLACEHOLDER / no final generated art acceptance",
+  "source_atlas": "res://assets/art/environments/tower/tiles/tower_common_tileset_v01.png",
+  "source_sha256": "b4851c0ba3a7b674c730fcdd756c8e21f256094b651a3958f6130dc525193129"
+}

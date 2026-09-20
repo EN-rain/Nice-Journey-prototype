@@ -3,6 +3,7 @@ extends Resource
 
 @export var playtest_placeholder: bool = true
 @export var stats_by_archetype: Dictionary = {}
+@export var balance_evidence_reference: String = ""
 
 
 func validate_catalog() -> PackedStringArray:
@@ -39,3 +40,28 @@ func stats_for(archetype_id: StringName) -> EnemyArchetypePlaytestStats:
         return null
     var value: Variant = stats_by_archetype.get(String(archetype_id), null)
     return (value as EnemyArchetypePlaytestStats).duplicate(true) as EnemyArchetypePlaytestStats if value is EnemyArchetypePlaytestStats else null
+
+
+# A separate diagnostic from valid PLAYTEST runtime data: do not silently
+# promote twelve neutral role profiles or fabricate difficulty/reward authority.
+func production_readiness_errors() -> PackedStringArray:
+    var errors := validate_catalog()
+    if playtest_placeholder:
+        errors.append("enemy role stats remain PLAYTEST")
+    if balance_evidence_reference.strip_edges().is_empty():
+        errors.append("approved per-role balance evidence reference is missing")
+    var distinct_profiles := {}
+    for archetype_id: StringName in EnemyArchetypeCatalog.ALL_ARCHETYPE_IDS:
+        var stats := stats_for(archetype_id)
+        if stats == null:
+            continue
+        var profile := [stats.hp_multiplier, stats.stamina_bonus, stats.physical_defense_bonus,
+            stats.arcane_defense_bonus, stats.poise_multiplier]
+        distinct_profiles[str(profile)] = true
+        if stats.difficulty_rating == -1:
+            errors.append("%s difficulty is unauthored" % String(archetype_id))
+        if stats.xp_reward == -1 or stats.gold_reward == -1:
+            errors.append("%s encounter reward policy is unauthored (do not grant rewards)" % String(archetype_id))
+    if distinct_profiles.size() < 2:
+        errors.append("all enemy roles still share one neutral stat profile")
+    return errors

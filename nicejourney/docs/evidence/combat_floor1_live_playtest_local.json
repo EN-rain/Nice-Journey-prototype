@@ -1,0 +1,234 @@
+{
+	"floor_id": 1,
+	"label": "PLAYTEST LIVE Floor 1 physical encounter, scripted aiming/actions, no fatal fixtures",
+	"limitations": [
+		"Scripted clear stand-off selection, combat-position reset, aiming, first active skill and basic attacks; not a human playtest.",
+		"Single fixed generated Floor 1 primary per class; enemy hits can legitimately miss and cannot establish hit probabilities.",
+		"Other live residents may attack; playtest stops on death, target defeat, or tick limit.",
+		"Only the first equipped rank-one active skill is tested; other skills/ranks/passives, equipment, boss and final difficulty are not tested or approved."
+	],
+	"model": "live_floor1_primary_ai_movement_projectiles_basic_and_first_equipped_active_skill",
+	"rows": [
+		{
+			"accepted_enemy_world_contacts": 2,
+			"action_counts": {
+				"action:playtest:arc_cleave": 1,
+				"basic_attack_melee": 3
+			},
+			"all_enemies_defeated": false,
+			"capture_complete": false,
+			"class_id": "melee",
+			"combat_start_distance_px": 32.0,
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 11.3999998569489
+			},
+			"cooldown_active_ticks": {
+				"action:playtest:arc_cleave": 24
+			},
+			"damage_by_action": {
+				"action:playtest:arc_cleave": 36,
+				"basic_attack_melee": 28
+			},
+			"damage_dealt": 64,
+			"damage_taken": 11,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"encounter_id": "encounter:tower_f01_room_objective_00",
+			"enemy_active_windows": 4,
+			"enemy_defeats": 1,
+			"enemy_max_hp": 120,
+			"enemy_movement_px": 8.40008544921875,
+			"first_action_tick": 127,
+			"floor_id": 1,
+			"last_damage_tick": 192,
+			"observed_resource_minima": {
+				"stamina": 88.6000001430511
+			},
+			"overkill_damage": 2,
+			"player_deaths": 0,
+			"player_hp_remaining": 89,
+			"rejected_actions": 0,
+			"scenario_id": "capture:encounter:tower_f01_room_objective_00",
+			"schema_version": 1,
+			"scripted_basics_requested": 3,
+			"seconds": 3.2,
+			"skill_trial": {
+				"accepted": true,
+				"action_id": "action:playtest:arc_cleave",
+				"rank": 1,
+				"requested": true,
+				"skill_id": "arc_cleave"
+			},
+			"source": "observed_combat_signals",
+			"stand_off_clear": true,
+			"stand_off_distance_px": 104.0,
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"action:playtest:arc_cleave": 3,
+				"basic_attack_melee": 3
+			},
+			"target_archetype_id": "duelist",
+			"target_defeated": true,
+			"target_hp_after": 0,
+			"target_hp_before": 40,
+			"target_time_to_defeat_ticks": 65,
+			"ticks": 192,
+			"time_to_defeat_ticks": -1,
+			"timed_out": false
+		},
+		{
+			"accepted_enemy_world_contacts": 2,
+			"action_counts": {
+				"action:playtest:piercing_shot": 1,
+				"basic_attack_ranged": 3
+			},
+			"all_enemies_defeated": false,
+			"capture_complete": false,
+			"class_id": "ranged",
+			"combat_start_distance_px": 32.0,
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 12.0
+			},
+			"cooldown_active_ticks": {
+				"action:playtest:piercing_shot": 24
+			},
+			"damage_by_action": {
+				"action:playtest:piercing_shot": 39,
+				"basic_attack_ranged": 27
+			},
+			"damage_dealt": 66,
+			"damage_taken": 11,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"encounter_id": "encounter:tower_f01_room_objective_00",
+			"enemy_active_windows": 4,
+			"enemy_defeats": 1,
+			"enemy_max_hp": 120,
+			"enemy_movement_px": 8.40008544921875,
+			"first_action_tick": 127,
+			"floor_id": 1,
+			"last_damage_tick": 206,
+			"observed_resource_minima": {
+				"stamina": 88.0
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"player_hp_remaining": 89,
+			"rejected_actions": 0,
+			"scenario_id": "capture:encounter:tower_f01_room_objective_00",
+			"schema_version": 1,
+			"scripted_basics_requested": 3,
+			"seconds": 3.43333333333333,
+			"skill_trial": {
+				"accepted": true,
+				"action_id": "action:playtest:piercing_shot",
+				"rank": 1,
+				"requested": true,
+				"skill_id": "piercing_shot"
+			},
+			"source": "observed_combat_signals",
+			"stand_off_clear": true,
+			"stand_off_distance_px": 104.0,
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"action:playtest:piercing_shot": 3,
+				"basic_attack_ranged": 3
+			},
+			"target_archetype_id": "duelist",
+			"target_defeated": true,
+			"target_hp_after": 0,
+			"target_hp_before": 40,
+			"target_time_to_defeat_ticks": 79,
+			"ticks": 206,
+			"time_to_defeat_ticks": -1,
+			"timed_out": false
+		},
+		{
+			"accepted_enemy_world_contacts": 2,
+			"action_counts": {
+				"action:playtest:arcane_lance": 1,
+				"basic_attack_mage": 3
+			},
+			"all_enemies_defeated": false,
+			"capture_complete": false,
+			"class_id": "mage",
+			"combat_start_distance_px": 32.0,
+			"committed_resource_costs": {
+				"mana": 11.3999998569489,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+				"action:playtest:arcane_lance": 24
+			},
+			"damage_by_action": {
+				"action:playtest:arcane_lance": 15,
+				"basic_attack_mage": 25
+			},
+			"damage_dealt": 40,
+			"damage_taken": 11,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"encounter_id": "encounter:tower_f01_room_objective_00",
+			"enemy_active_windows": 4,
+			"enemy_defeats": 1,
+			"enemy_max_hp": 120,
+			"enemy_movement_px": 8.40008544921875,
+			"first_action_tick": 126,
+			"floor_id": 1,
+			"last_damage_tick": 207,
+			"observed_resource_minima": {
+				"mana": 88.6000001430511,
+				"stamina": 100.0
+			},
+			"overkill_damage": 2,
+			"player_deaths": 0,
+			"player_hp_remaining": 89,
+			"rejected_actions": 0,
+			"scenario_id": "capture:encounter:tower_f01_room_objective_00",
+			"schema_version": 1,
+			"scripted_basics_requested": 3,
+			"seconds": 3.45,
+			"skill_trial": {
+				"accepted": true,
+				"action_id": "action:playtest:arcane_lance",
+				"rank": 1,
+				"requested": true,
+				"skill_id": "arcane_lance"
+			},
+			"source": "observed_combat_signals",
+			"stand_off_clear": true,
+			"stand_off_distance_px": 104.0,
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"action:playtest:arcane_lance": 1,
+				"basic_attack_mage": 3
+			},
+			"target_archetype_id": "duelist",
+			"target_defeated": true,
+			"target_hp_after": 0,
+			"target_hp_before": 40,
+			"target_time_to_defeat_ticks": 81,
+			"ticks": 207,
+			"time_to_defeat_ticks": -1,
+			"timed_out": false
+		}
+	],
+	"scenario": "verified_clear_out_of_close_range_standoff_then_scripted_32px_combat_and_dynamic_aim"
+}

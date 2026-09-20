@@ -89,15 +89,25 @@ func _run() -> void:
         "Region 3 projectile retains the exact encounter host that spawned it")
     var ranged_state := ranged["player_state"] as CombatantRuntimeState
     var ranged_initial_hp := ranged_state.current_hp
+    for _active_tick: int in int((ranged["driver"] as EnemySignatureActionPhaseDriver).timing["active_ticks"]):
+        _expect((ranged["driver"] as EnemySignatureActionPhaseDriver).advance_fixed_tick(),
+            "projectile's originating attack advances through its ACTIVE phase")
+    _expect((ranged["runtime"] as EnemyArchetypeRuntime).phase_id == EnemyArchetypeRuntime.PHASE_RECOVERY,
+        "projectile remains in flight after its authenticated launch window closes")
+    for _recovery_tick: int in int((ranged["driver"] as EnemySignatureActionPhaseDriver).timing["recovery_ticks"]):
+        _expect((ranged["driver"] as EnemySignatureActionPhaseDriver).advance_fixed_tick(),
+            "originating projectile action finishes recovery without reserving flight time")
+    _expect((ranged["runtime"] as EnemyArchetypeRuntime).phase_id == EnemyArchetypeRuntime.PHASE_IDLE,
+        "traveling projectile persists after action completion and reservation release")
     for _tick: int in 40:
         live._physics_process(1.0 / 60.0)
         if live._projectiles.is_empty():
             break
     _expect(ranged_state.current_hp < ranged_initial_hp
         and live.last_delivery_result.get("encounter_id", &"") == ranged_id,
-        "Region 3 projectile ray confirms a live player hit through the correct executor")
+        "launched Region 3 projectile impacts through its original executor after ACTIVE ends")
     region.enemy_active_delivery_window_opened.emit(ranged_id, ranged_context)
-    _expect(live._projectiles.size() == 1, "second projectile is still owned by its Region 3 encounter")
+    _expect(live._projectiles.is_empty(), "replayed ACTIVE context cannot spawn a projectile after recovery begins")
     region._end_encounter()
     _expect(live._projectiles.is_empty(), "Region 3 encounter-end signal immediately clears pending projectiles")
 

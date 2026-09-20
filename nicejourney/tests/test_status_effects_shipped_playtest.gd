@@ -16,16 +16,31 @@ func _run() -> void:
     var slow := STATUS.application(PrototypeStatusResolver.BEHAVIOR_SLOW)
     _expect(burn.get("status_id", &"") == STATUS.BURN_ID and burn.get("duration_ticks", 0) == 180, "Burn source and lifetime are fixed and uniquely identified")
     _expect(slow.get("status_id", &"") == STATUS.SLOW_ID and slow.get("duration_ticks", 0) == 150, "Slow source and lifetime are fixed and uniquely identified")
-    _expect(STATUS.burn_damage_for_advance({"status_id": STATUS.BURN_ID, "behavior": &"burn", "remaining_ticks": 180}, 29) == 0, "Burn does not hit before the first 30-tick cadence")
-    _expect(STATUS.burn_damage_for_advance({"status_id": STATUS.BURN_ID, "behavior": &"burn", "remaining_ticks": 180}, 30) == 2, "Burn hits at the first exact cadence")
-    _expect(STATUS.burn_damage_for_advance({"status_id": STATUS.BURN_ID, "behavior": &"burn", "remaining_ticks": 151}, 61) == 6, "Burn accounts for multiple cadence crossings over one deterministic advance")
+    var burn_state := {"status_id": STATUS.BURN_ID, "behavior": &"burn", "remaining_ticks": 180, "magnitude": 2.0}
+    _expect(STATUS.burn_damage_for_advance(burn_state, 29) == 0, "Burn does not hit before the first 30-tick cadence")
+    _expect(STATUS.burn_damage_for_advance(burn_state, 30) == 2, "Burn hits at the first exact cadence")
+    var advanced_burn := burn_state.duplicate(true)
+    advanced_burn["remaining_ticks"] = 151
+    _expect(STATUS.burn_damage_for_advance(advanced_burn, 61) == 6, "Burn accounts for multiple cadence crossings over one deterministic advance")
+    var incomplete_burn := burn_state.duplicate(true)
+    incomplete_burn.erase("magnitude")
+    _expect(STATUS.burn_damage_for_advance(incomplete_burn, 30) == 0, "incomplete persisted Burn cannot manufacture the resource default damage")
+    var corrupt_burn := burn_state.duplicate(true)
+    corrupt_burn["magnitude"] = INF
+    _expect(STATUS.burn_damage_for_advance(corrupt_burn, 30) == 0, "nonfinite Burn damage fails closed")
     _expect(STATUS.application(PrototypeStatusResolver.BEHAVIOR_BURN, &"enemy:ember_a").get("status_id") == &"status:playtest_burn/enemy:ember_a",
         "Burn authoring can derive a stable ID from its actual source without changing damage tuning")
     _expect(STATUS.application(PrototypeStatusResolver.BEHAVIOR_SLOW, &"enemy:controller_a").get("status_id") == &"status:playtest_slow/enemy:controller_a",
         "Slow authoring can derive a stable ID from its actual source without changing reduction tuning")
     _expect(STATUS.application(PrototypeStatusResolver.BEHAVIOR_BURN, &"bad source").is_empty(),
         "invalid source IDs cannot enter live status application")
-    _expect(is_equal_approx(STATUS.slow_speed_multiplier([{"behavior": &"slow", "remaining_ticks": 60, "magnitude": 0.25}, {"behavior": &"slow", "remaining_ticks": 10, "magnitude": 0.9}]), 0.4), "Slow uses strongest reduction and clamps movement to 40 percent")
+    var source_slow_states := [
+        {"status_id": STATUS.SLOW_ID, "behavior": &"slow", "remaining_ticks": 60, "magnitude": 0.25},
+        {"status_id": &"status:second_slow", "behavior": &"slow", "remaining_ticks": 10, "magnitude": 0.9},
+    ]
+    _expect(is_equal_approx(STATUS.slow_speed_multiplier(source_slow_states), 0.4), "Slow uses strongest reduction and clamps movement to 40 percent")
+    source_slow_states.append({"behavior": &"slow", "remaining_ticks": 9, "magnitude": 0.99})
+    _expect(STATUS.slow_speed_multiplier(source_slow_states) == 1.0, "a malformed status collection cannot partially apply Slow")
     _expect(STATUS.slow_speed_multiplier([]) == 1.0, "no Slow leaves movement unchanged")
 
     var encounter := CombatEncounterRuntime.new()

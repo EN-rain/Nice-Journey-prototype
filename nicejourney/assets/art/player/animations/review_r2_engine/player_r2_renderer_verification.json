@@ -1,0 +1,230 @@
+{
+  "schema": "player-r2-real-renderer-verification/v1",
+  "capture_manifest": "assets\\art\\player\\animations\\review_r2_engine\\player_r2_renderer_evidence.json",
+  "capture_manifest_sha256": "6a3b2afb7b62e3ac2bd8b75fa5186b5313d8a7ce7ee361906e5dad8a155dc59f",
+  "status": "OBJECTIVE_RENDER_VERIFIED_VISUAL_ART_AND_GRIP_APPROVAL_PENDING",
+  "criteria": "Each body source pixel alpha>=245 RGB matches actual non-headless screenshot <=3; alpha255 matches exactly; player-profile equipment changes captured pixels in all sampled frames and facings; actual resource/pose hashes and transforms match.",
+  "limitations": "Does not prove equipment shape touches the anatomically correct gloved hand; does not prove candidate lacks a connected baked effect or weapon; does not validate candidate frame timing/acceptance.",
+  "states": {
+    "attack": {
+      "screenshot_native_frame_samples": 48,
+      "near_opaque_source_pixels_checked": 34380,
+      "near_opaque_screenshot_matches_within_3": 34380,
+      "fully_opaque_source_pixels_checked_and_exact": 4010,
+      "class_equipment_delta_min_max": {
+        "melee": [
+          1952,
+          2124
+        ],
+        "ranged": [
+          684,
+          700
+        ],
+        "mage": [
+          276,
+          424
+        ]
+      },
+      "candidate_max_nearest_body_to_grip_px_at_2x": 3.0,
+      "status": "NATIVE_RENDERER_SOURCE_PIXELS_AND_PROFILE_OVERLAY_VERIFIED_VISUAL_APPROVAL_PENDING"
+    },
+    "heavy_attack": {
+      "screenshot_native_frame_samples": 48,
+      "near_opaque_source_pixels_checked": 36260,
+      "near_opaque_screenshot_matches_within_3": 36260,
+      "fully_opaque_source_pixels_checked_and_exact": 4000,
+      "class_equipment_delta_min_max": {
+        "melee": [
+          1896,
+          2120
+        ],
+        "ranged": [
+          684,
+          700
+        ],
+        "mage": [
+          276,
+          428
+        ]
+      },
+      "candidate_max_nearest_body_to_grip_px_at_2x": 1.414,
+      "status": "NATIVE_RENDERER_SOURCE_PIXELS_AND_PROFILE_OVERLAY_VERIFIED_VISUAL_APPROVAL_PENDING"
+    },
+    "block": {
+      "screenshot_native_frame_samples": 40,
+      "near_opaque_source_pixels_checked": 31700,
+      "near_opaque_screenshot_matches_within_3": 31700,
+      "fully_opaque_source_pixels_checked_and_exact": 4840,
+      "class_equipment_delta_min_max": {
+        "melee": [
+          1880,
+          2112
+        ],
+        "ranged": [
+          688,
+          704
+        ],
+        "mage": [
+          276,
+          420
+        ]
+      },
+      "candidate_max_nearest_body_to_grip_px_at_2x": 0.0,
+      "status": "NATIVE_RENDERER_SOURCE_PIXELS_AND_PROFILE_OVERLAY_VERIFIED_VISUAL_APPROVAL_PENDING"
+    },
+    "parry": {
+      "screenshot_native_frame_samples": 48,
+      "near_opaque_source_pixels_checked": 35650,
+      "near_opaque_screenshot_matches_within_3": 35650,
+      "fully_opaque_source_pixels_checked_and_exact": 4080,
+      "class_equipment_delta_min_max": {
+        "melee": [
+          1896,
+          2200
+        ],
+        "ranged": [
+          684,
+          700
+        ],
+        "mage": [
+          276,
+          424
+        ]
+      },
+      "candidate_max_nearest_body_to_grip_px_at_2x": 0.0,
+      "status": "NATIVE_RENDERER_SOURCE_PIXELS_AND_PROFILE_OVERLAY_VERIFIED_VISUAL_APPROVAL_PENDING"
+    },
+    "cast": {
+      "screenshot_native_frame_samples": 56,
+      "near_opaque_source_pixels_checked": 38980,
+      "near_opaque_screenshot_matches_within_3": 38980,
+      "fully_opaque_source_pixels_checked_and_exact": 4880,
+      "class_equipment_delta_min_max": {
+        "melee": [
+          1884,
+          2172
+        ],
+        "ranged": [
+          684,
+          708
+        ],
+        "mage": [
+          276,
+          424
+        ]
+      },
+      "candidate_max_nearest_body_to_grip_px_at_2x": 2.236,
+      "status": "NATIVE_RENDERER_SOURCE_PIXELS_AND_PROFILE_OVERLAY_VERIFIED_VISUAL_APPROVAL_PENDING"
+    },
+    "hit": {
+      "screenshot_native_frame_samples": 44,
+      "near_opaque_source_pixels_checked": 34820,
+      "near_opaque_screenshot_matches_within_3": 34820,
+      "fully_opaque_source_pixels_checked_and_exact": 4080,
+      "class_equipment_delta_min_max": {
+        "melee": [
+          1912,
+          2188
+        ],
+        "ranged": [
+          688,
+          708
+        ],
+        "mage": [
+          276,
+          428
+        ]
+      },
+      "candidate_max_nearest_body_to_grip_px_at_2x": 2.0,
+      "status": "NATIVE_RENDERER_SOURCE_PIXELS_AND_PROFILE_OVERLAY_VERIFIED_VISUAL_APPROVAL_PENDING"
+    },
+    "interact": {
+      "screenshot_native_frame_samples": 40,
+      "near_opaque_source_pixels_checked": 28960,
+      "near_opaque_screenshot_matches_within_3": 28960,
+      "fully_opaque_source_pixels_checked_and_exact": 3330,
+      "class_equipment_delta_min_max": {
+        "melee": [
+          1920,
+          2164
+        ],
+        "ranged": [
+          688,
+          700
+        ],
+        "mage": [
+          276,
+          428
+        ]
+      },
+      "candidate_max_nearest_body_to_grip_px_at_2x": 3.0,
+      "status": "NATIVE_RENDERER_SOURCE_PIXELS_AND_PROFILE_OVERLAY_VERIFIED_VISUAL_APPROVAL_PENDING"
+    },
+    "use_item": {
+      "screenshot_native_frame_samples": 56,
+      "near_opaque_source_pixels_checked": 40090,
+      "near_opaque_screenshot_matches_within_3": 40090,
+      "fully_opaque_source_pixels_checked_and_exact": 4500,
+      "class_equipment_delta_min_max": {
+        "melee": [
+          1892,
+          2148
+        ],
+        "ranged": [
+          688,
+          700
+        ],
+        "mage": [
+          276,
+          424
+        ]
+      },
+      "candidate_max_nearest_body_to_grip_px_at_2x": 3.0,
+      "status": "NATIVE_RENDERER_SOURCE_PIXELS_AND_PROFILE_OVERLAY_VERIFIED_VISUAL_APPROVAL_PENDING"
+    },
+    "death": {
+      "screenshot_native_frame_samples": 48,
+      "near_opaque_source_pixels_checked": 30500,
+      "near_opaque_screenshot_matches_within_3": 30500,
+      "fully_opaque_source_pixels_checked_and_exact": 3540,
+      "class_equipment_delta_min_max": {
+        "melee": [
+          1884,
+          2228
+        ],
+        "ranged": [
+          688,
+          704
+        ],
+        "mage": [
+          276,
+          424
+        ]
+      },
+      "candidate_max_nearest_body_to_grip_px_at_2x": 10.05,
+      "status": "NATIVE_RENDERER_SOURCE_PIXELS_AND_PROFILE_OVERLAY_VERIFIED_VISUAL_APPROVAL_PENDING"
+    },
+    "dodge": {
+      "screenshot_native_frame_samples": 32,
+      "near_opaque_source_pixels_checked": 24030,
+      "near_opaque_screenshot_matches_within_3": 24030,
+      "fully_opaque_source_pixels_checked_and_exact": 2610,
+      "class_equipment_delta_min_max": {
+        "melee": [
+          1872,
+          2192
+        ],
+        "ranged": [
+          684,
+          700
+        ],
+        "mage": [
+          276,
+          432
+        ]
+      },
+      "candidate_max_nearest_body_to_grip_px_at_2x": 1.0,
+      "status": "NATIVE_RENDERER_SOURCE_PIXELS_AND_PROFILE_OVERLAY_VERIFIED_VISUAL_APPROVAL_PENDING"
+    }
+  }
+}

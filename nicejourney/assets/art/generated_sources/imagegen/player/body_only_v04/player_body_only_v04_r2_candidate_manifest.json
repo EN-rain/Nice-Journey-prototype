@@ -1,0 +1,1148 @@
+{
+  "schema": "player-body-only-v04-r2-candidate/v1",
+  "acceptance": "CANDIDATE_ONLY_SOURCE_REVIEWED_DERIVATIVE_UNACCEPTED_NOT_RUNTIME_BOUND",
+  "script": "res://tools/art/derive_player_body_only_v04_r2.py",
+  "method": "whole-row connected body selection prevents neighbors leaking at artificial cell cuts; shared per-source uniform pixel scale retains crouch and windup pose heights",
+  "records": [
+    {
+      "state": "attack",
+      "stage": "DERIVED_CANDIDATE_PENDING_NATIVE_RENDERER_AND_WEAPON_REVIEW",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_attack_body_only_source.png",
+      "source_sha256": "07da238fa35537841cfc7f6ae2b014b90261329e8f605a2b1de92e3648564fb7",
+      "source_dimensions": [
+        2171,
+        724
+      ],
+      "source_row_y0_y1": [
+        0,
+        724
+      ],
+      "source_frame_count": 6,
+      "selected_source_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "discarded_disconnected_threshold_pixels": 2,
+      "selection": "left-to-right complete 8-connected body components across full source row",
+      "alpha_component_threshold": 24,
+      "calibration": {
+        "source_upright_frame_index": 0,
+        "source_upright_reference": "attack frame 0",
+        "source_upright_height_px": 306,
+        "target_upright_height_px": 28,
+        "uniform_scale_fraction": [
+          28,
+          306
+        ]
+      },
+      "pixel_processing": "component-isolated RGBA; nearest-neighbor once at common scale; transparent RGB zero outside body",
+      "frame_canvas": [
+        32,
+        32
+      ],
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "output": "res://assets/art/player/animations/player_body_attack_sheet_v04_r2_candidate.png",
+      "output_sha256": "26c848c33e2b9141ad30d9c5962099be0511d736bc4ea0031f6f2304be4ec276",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "frames": [
+        {
+          "output_frame": 0,
+          "source_frame": 0,
+          "alpha_crop_xyxy": [
+            53,
+            208,
+            304,
+            514
+          ],
+          "source_component_pixels": 43635,
+          "scaled_size": [
+            23,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            27,
+            30
+          ]
+        },
+        {
+          "output_frame": 1,
+          "source_frame": 1,
+          "alpha_crop_xyxy": [
+            379,
+            210,
+            653,
+            514
+          ],
+          "source_component_pixels": 45066,
+          "scaled_size": [
+            25,
+            28
+          ],
+          "paste_xy": [
+            3,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            3,
+            2,
+            28,
+            30
+          ]
+        },
+        {
+          "output_frame": 2,
+          "source_frame": 2,
+          "alpha_crop_xyxy": [
+            737,
+            211,
+            999,
+            514
+          ],
+          "source_component_pixels": 42700,
+          "scaled_size": [
+            24,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            28,
+            30
+          ]
+        },
+        {
+          "output_frame": 3,
+          "source_frame": 3,
+          "alpha_crop_xyxy": [
+            1112,
+            211,
+            1379,
+            514
+          ],
+          "source_component_pixels": 42848,
+          "scaled_size": [
+            24,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            28,
+            30
+          ]
+        },
+        {
+          "output_frame": 4,
+          "source_frame": 4,
+          "alpha_crop_xyxy": [
+            1414,
+            211,
+            1708,
+            514
+          ],
+          "source_component_pixels": 43883,
+          "scaled_size": [
+            27,
+            28
+          ],
+          "paste_xy": [
+            2,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            2,
+            2,
+            29,
+            30
+          ]
+        },
+        {
+          "output_frame": 5,
+          "source_frame": 5,
+          "alpha_crop_xyxy": [
+            1815,
+            210,
+            2045,
+            515
+          ],
+          "source_component_pixels": 40536,
+          "scaled_size": [
+            21,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            26,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "state": "heavy_attack",
+      "stage": "DERIVED_CANDIDATE_PENDING_NATIVE_RENDERER_AND_WEAPON_REVIEW",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_heavy_attack_body_only_source.png",
+      "source_sha256": "af670f93bfc622ed45d76e96227b8710662a17380ed69346171151f5e5abe3df",
+      "source_dimensions": [
+        2171,
+        724
+      ],
+      "source_row_y0_y1": [
+        0,
+        724
+      ],
+      "source_frame_count": 6,
+      "selected_source_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "discarded_disconnected_threshold_pixels": 1,
+      "selection": "left-to-right complete 8-connected body components across full source row",
+      "alpha_component_threshold": 24,
+      "calibration": {
+        "source_upright_frame_index": 0,
+        "source_upright_reference": "heavy_attack frame 0",
+        "source_upright_height_px": 307,
+        "target_upright_height_px": 28,
+        "uniform_scale_fraction": [
+          28,
+          307
+        ]
+      },
+      "pixel_processing": "component-isolated RGBA; nearest-neighbor once at common scale; transparent RGB zero outside body",
+      "frame_canvas": [
+        32,
+        32
+      ],
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "output": "res://assets/art/player/animations/player_body_heavy_attack_sheet_v04_r2_candidate.png",
+      "output_sha256": "45aad75de63d58c10aa6fc3caf05aa986bec64af88c367872b58fa8aa535cc40",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "frames": [
+        {
+          "output_frame": 0,
+          "source_frame": 0,
+          "alpha_crop_xyxy": [
+            52,
+            247,
+            311,
+            554
+          ],
+          "source_component_pixels": 46979,
+          "scaled_size": [
+            24,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            28,
+            30
+          ]
+        },
+        {
+          "output_frame": 1,
+          "source_frame": 1,
+          "alpha_crop_xyxy": [
+            382,
+            228,
+            659,
+            555
+          ],
+          "source_component_pixels": 46766,
+          "scaled_size": [
+            25,
+            30
+          ],
+          "paste_xy": [
+            3,
+            0
+          ],
+          "output_alpha_bbox_xyxy": [
+            3,
+            0,
+            28,
+            30
+          ]
+        },
+        {
+          "output_frame": 2,
+          "source_frame": 2,
+          "alpha_crop_xyxy": [
+            721,
+            280,
+            1003,
+            554
+          ],
+          "source_component_pixels": 44790,
+          "scaled_size": [
+            26,
+            25
+          ],
+          "paste_xy": [
+            3,
+            5
+          ],
+          "output_alpha_bbox_xyxy": [
+            3,
+            5,
+            29,
+            30
+          ]
+        },
+        {
+          "output_frame": 3,
+          "source_frame": 3,
+          "alpha_crop_xyxy": [
+            1091,
+            295,
+            1380,
+            554
+          ],
+          "source_component_pixels": 44236,
+          "scaled_size": [
+            26,
+            24
+          ],
+          "paste_xy": [
+            3,
+            6
+          ],
+          "output_alpha_bbox_xyxy": [
+            3,
+            6,
+            29,
+            30
+          ]
+        },
+        {
+          "output_frame": 4,
+          "source_frame": 4,
+          "alpha_crop_xyxy": [
+            1458,
+            255,
+            1731,
+            554
+          ],
+          "source_component_pixels": 45857,
+          "scaled_size": [
+            25,
+            27
+          ],
+          "paste_xy": [
+            3,
+            3
+          ],
+          "output_alpha_bbox_xyxy": [
+            3,
+            3,
+            28,
+            30
+          ]
+        },
+        {
+          "output_frame": 5,
+          "source_frame": 5,
+          "alpha_crop_xyxy": [
+            1845,
+            249,
+            2087,
+            555
+          ],
+          "source_component_pixels": 43834,
+          "scaled_size": [
+            22,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            27,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "state": "block",
+      "stage": "DERIVED_CANDIDATE_PENDING_NATIVE_RENDERER_AND_WEAPON_REVIEW",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_block_body_only_source.png",
+      "source_sha256": "6aa6886811226d155c1a088f328ee2b07ceb9f551f95b9b546865189974887bf",
+      "source_dimensions": [
+        2171,
+        724
+      ],
+      "source_row_y0_y1": [
+        0,
+        724
+      ],
+      "source_frame_count": 7,
+      "selected_source_frames": [
+        2,
+        3,
+        4
+      ],
+      "discarded_disconnected_threshold_pixels": 4,
+      "selection": "left-to-right complete 8-connected body components across full source row",
+      "alpha_component_threshold": 24,
+      "calibration": {
+        "source_upright_frame_index": 0,
+        "source_upright_reference": "block frame 0",
+        "source_upright_height_px": 289,
+        "target_upright_height_px": 28,
+        "uniform_scale_fraction": [
+          28,
+          289
+        ]
+      },
+      "pixel_processing": "component-isolated RGBA; nearest-neighbor once at common scale; transparent RGB zero outside body",
+      "frame_canvas": [
+        32,
+        32
+      ],
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "output": "res://assets/art/player/animations/player_body_block_sheet_v04_r2_candidate.png",
+      "output_sha256": "fd12c66a2eff21a09fbbaab88c4bda100eec54e07f8fe550815205d37a0b105e",
+      "output_dimensions": [
+        96,
+        32
+      ],
+      "frames": [
+        {
+          "output_frame": 0,
+          "source_frame": 2,
+          "alpha_crop_xyxy": [
+            642,
+            216,
+            872,
+            504
+          ],
+          "source_component_pixels": 37821,
+          "scaled_size": [
+            22,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            27,
+            30
+          ]
+        },
+        {
+          "output_frame": 1,
+          "source_frame": 3,
+          "alpha_crop_xyxy": [
+            938,
+            215,
+            1175,
+            503
+          ],
+          "source_component_pixels": 38234,
+          "scaled_size": [
+            23,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            27,
+            30
+          ]
+        },
+        {
+          "output_frame": 2,
+          "source_frame": 4,
+          "alpha_crop_xyxy": [
+            1240,
+            216,
+            1474,
+            504
+          ],
+          "source_component_pixels": 37972,
+          "scaled_size": [
+            23,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            27,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "state": "parry",
+      "stage": "DERIVED_CANDIDATE_PENDING_NATIVE_RENDERER_AND_WEAPON_REVIEW",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_parry_cast_hit_body_only_source.png",
+      "source_sha256": "514c5fb3427bce3a84641f7687c595e950a43afe94fdc0bfce9819750fbd43ef",
+      "source_dimensions": [
+        1448,
+        1086
+      ],
+      "source_row_y0_y1": [
+        0,
+        362
+      ],
+      "source_frame_count": 6,
+      "selected_source_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "discarded_disconnected_threshold_pixels": 0,
+      "selection": "left-to-right complete 8-connected body components across full source row",
+      "alpha_component_threshold": 24,
+      "calibration": {
+        "source_upright_frame_index": null,
+        "source_upright_reference": "cast frame 0 of shared source",
+        "source_upright_height_px": 216,
+        "target_upright_height_px": 28,
+        "uniform_scale_fraction": [
+          28,
+          216
+        ]
+      },
+      "pixel_processing": "component-isolated RGBA; nearest-neighbor once at common scale; transparent RGB zero outside body",
+      "frame_canvas": [
+        32,
+        32
+      ],
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "output": "res://assets/art/player/animations/player_body_parry_sheet_v04_r2_candidate.png",
+      "output_sha256": "129520ec4a4731b76b74c084d625ac672327031c8b3baeeba47407336d267e77",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "frames": [
+        {
+          "output_frame": 0,
+          "source_frame": 0,
+          "alpha_crop_xyxy": [
+            35,
+            102,
+            214,
+            317
+          ],
+          "source_component_pixels": 20309,
+          "scaled_size": [
+            23,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            27,
+            30
+          ]
+        },
+        {
+          "output_frame": 1,
+          "source_frame": 1,
+          "alpha_crop_xyxy": [
+            271,
+            110,
+            450,
+            317
+          ],
+          "source_component_pixels": 20465,
+          "scaled_size": [
+            23,
+            27
+          ],
+          "paste_xy": [
+            4,
+            3
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            3,
+            27,
+            30
+          ]
+        },
+        {
+          "output_frame": 2,
+          "source_frame": 2,
+          "alpha_crop_xyxy": [
+            494,
+            111,
+            677,
+            317
+          ],
+          "source_component_pixels": 20463,
+          "scaled_size": [
+            24,
+            27
+          ],
+          "paste_xy": [
+            4,
+            3
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            3,
+            28,
+            30
+          ]
+        },
+        {
+          "output_frame": 3,
+          "source_frame": 3,
+          "alpha_crop_xyxy": [
+            744,
+            100,
+            928,
+            317
+          ],
+          "source_component_pixels": 20905,
+          "scaled_size": [
+            24,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            28,
+            30
+          ]
+        },
+        {
+          "output_frame": 4,
+          "source_frame": 4,
+          "alpha_crop_xyxy": [
+            981,
+            103,
+            1158,
+            317
+          ],
+          "source_component_pixels": 20393,
+          "scaled_size": [
+            23,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            27,
+            30
+          ]
+        },
+        {
+          "output_frame": 5,
+          "source_frame": 5,
+          "alpha_crop_xyxy": [
+            1202,
+            102,
+            1374,
+            317
+          ],
+          "source_component_pixels": 19763,
+          "scaled_size": [
+            22,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            27,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "state": "cast",
+      "stage": "DERIVED_CANDIDATE_PENDING_NATIVE_RENDERER_AND_WEAPON_REVIEW",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_parry_cast_hit_body_only_source.png",
+      "source_sha256": "514c5fb3427bce3a84641f7687c595e950a43afe94fdc0bfce9819750fbd43ef",
+      "source_dimensions": [
+        1448,
+        1086
+      ],
+      "source_row_y0_y1": [
+        362,
+        724
+      ],
+      "source_frame_count": 7,
+      "selected_source_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "discarded_disconnected_threshold_pixels": 0,
+      "selection": "left-to-right complete 8-connected body components across full source row",
+      "alpha_component_threshold": 24,
+      "calibration": {
+        "source_upright_frame_index": 0,
+        "source_upright_reference": "cast frame 0",
+        "source_upright_height_px": 216,
+        "target_upright_height_px": 28,
+        "uniform_scale_fraction": [
+          28,
+          216
+        ]
+      },
+      "pixel_processing": "component-isolated RGBA; nearest-neighbor once at common scale; transparent RGB zero outside body",
+      "frame_canvas": [
+        32,
+        32
+      ],
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "output": "res://assets/art/player/animations/player_body_cast_sheet_v04_r2_candidate.png",
+      "output_sha256": "ef2ede898015a7110469bca29207568e84de7434370177561897396f553100ae",
+      "output_dimensions": [
+        224,
+        32
+      ],
+      "frames": [
+        {
+          "output_frame": 0,
+          "source_frame": 0,
+          "alpha_crop_xyxy": [
+            23,
+            436,
+            188,
+            652
+          ],
+          "source_component_pixels": 19442,
+          "scaled_size": [
+            21,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            26,
+            30
+          ]
+        },
+        {
+          "output_frame": 1,
+          "source_frame": 1,
+          "alpha_crop_xyxy": [
+            217,
+            436,
+            398,
+            652
+          ],
+          "source_component_pixels": 19914,
+          "scaled_size": [
+            23,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            27,
+            30
+          ]
+        },
+        {
+          "output_frame": 2,
+          "source_frame": 2,
+          "alpha_crop_xyxy": [
+            422,
+            437,
+            588,
+            652
+          ],
+          "source_component_pixels": 19290,
+          "scaled_size": [
+            22,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            27,
+            30
+          ]
+        },
+        {
+          "output_frame": 3,
+          "source_frame": 3,
+          "alpha_crop_xyxy": [
+            618,
+            436,
+            802,
+            652
+          ],
+          "source_component_pixels": 20077,
+          "scaled_size": [
+            24,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            28,
+            30
+          ]
+        },
+        {
+          "output_frame": 4,
+          "source_frame": 4,
+          "alpha_crop_xyxy": [
+            830,
+            436,
+            1001,
+            652
+          ],
+          "source_component_pixels": 19668,
+          "scaled_size": [
+            22,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            27,
+            30
+          ]
+        },
+        {
+          "output_frame": 5,
+          "source_frame": 5,
+          "alpha_crop_xyxy": [
+            1058,
+            437,
+            1230,
+            652
+          ],
+          "source_component_pixels": 19322,
+          "scaled_size": [
+            22,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            27,
+            30
+          ]
+        },
+        {
+          "output_frame": 6,
+          "source_frame": 6,
+          "alpha_crop_xyxy": [
+            1250,
+            436,
+            1412,
+            652
+          ],
+          "source_component_pixels": 19260,
+          "scaled_size": [
+            21,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            26,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "state": "hit",
+      "stage": "DERIVED_CANDIDATE_PENDING_NATIVE_RENDERER_AND_WEAPON_REVIEW",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_parry_cast_hit_body_only_source.png",
+      "source_sha256": "514c5fb3427bce3a84641f7687c595e950a43afe94fdc0bfce9819750fbd43ef",
+      "source_dimensions": [
+        1448,
+        1086
+      ],
+      "source_row_y0_y1": [
+        724,
+        1086
+      ],
+      "source_frame_count": 6,
+      "selected_source_frames": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "discarded_disconnected_threshold_pixels": 0,
+      "selection": "left-to-right complete 8-connected body components across full source row",
+      "alpha_component_threshold": 24,
+      "calibration": {
+        "source_upright_frame_index": null,
+        "source_upright_reference": "cast frame 0 of shared source",
+        "source_upright_height_px": 216,
+        "target_upright_height_px": 28,
+        "uniform_scale_fraction": [
+          28,
+          216
+        ]
+      },
+      "pixel_processing": "component-isolated RGBA; nearest-neighbor once at common scale; transparent RGB zero outside body",
+      "frame_canvas": [
+        32,
+        32
+      ],
+      "ground_anchor": [
+        16,
+        29
+      ],
+      "output": "res://assets/art/player/animations/player_body_hit_sheet_v04_r2_candidate.png",
+      "output_sha256": "fbe1f5b0db49a11b20a1fb19896421fe870a77e0ffa8260702184bb52b4682c5",
+      "output_dimensions": [
+        160,
+        32
+      ],
+      "frames": [
+        {
+          "output_frame": 0,
+          "source_frame": 1,
+          "alpha_crop_xyxy": [
+            257,
+            762,
+            461,
+            977
+          ],
+          "source_component_pixels": 22969,
+          "scaled_size": [
+            26,
+            28
+          ],
+          "paste_xy": [
+            3,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            3,
+            2,
+            29,
+            30
+          ]
+        },
+        {
+          "output_frame": 1,
+          "source_frame": 2,
+          "alpha_crop_xyxy": [
+            485,
+            769,
+            704,
+            977
+          ],
+          "source_component_pixels": 22108,
+          "scaled_size": [
+            28,
+            27
+          ],
+          "paste_xy": [
+            2,
+            3
+          ],
+          "output_alpha_bbox_xyxy": [
+            2,
+            3,
+            30,
+            30
+          ]
+        },
+        {
+          "output_frame": 2,
+          "source_frame": 3,
+          "alpha_crop_xyxy": [
+            748,
+            802,
+            941,
+            977
+          ],
+          "source_component_pixels": 20762,
+          "scaled_size": [
+            25,
+            23
+          ],
+          "paste_xy": [
+            3,
+            7
+          ],
+          "output_alpha_bbox_xyxy": [
+            3,
+            7,
+            28,
+            30
+          ]
+        },
+        {
+          "output_frame": 3,
+          "source_frame": 4,
+          "alpha_crop_xyxy": [
+            979,
+            823,
+            1161,
+            977
+          ],
+          "source_component_pixels": 17356,
+          "scaled_size": [
+            24,
+            20
+          ],
+          "paste_xy": [
+            4,
+            10
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            10,
+            28,
+            30
+          ]
+        },
+        {
+          "output_frame": 4,
+          "source_frame": 5,
+          "alpha_crop_xyxy": [
+            1206,
+            761,
+            1375,
+            977
+          ],
+          "source_component_pixels": 20150,
+          "scaled_size": [
+            22,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            27,
+            30
+          ]
+        }
+      ]
+    }
+  ]
+}

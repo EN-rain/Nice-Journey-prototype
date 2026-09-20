@@ -61,7 +61,7 @@ static func build(raw_manifest: Variant, visual_catalog: TowerRoomVisualCatalog,
         if profile == null or not profile.validate_profile().is_empty():
             root.free()
             return _rejected(REASON_INVALID_PRESENTATION, PackedStringArray(["missing valid visual profile for %s" % String(definition.visual_room_type)]))
-        var room_node: Node2D = _build_room(room, definition, profile, tile_size)
+        var room_node: Node2D = _build_room(room, definition, profile, visual_catalog, tile_size)
         if room_node == null:
             root.free()
             return _rejected(REASON_BUILD_FAILED, PackedStringArray(["failed to compose room %s" % String(room.get("room_instance_id", ""))]))
@@ -80,6 +80,14 @@ static func build(raw_manifest: Variant, visual_catalog: TowerRoomVisualCatalog,
         marker.set_meta(&"to_connector_id", StringName(String(edge["to_connector_id"])))
         marker.set_meta(&"route_width_tiles", int(edge["route_width_tiles"]))
         marker.set_meta(&"route_tiles", (edge["route_tiles"] as Array).duplicate(true))
+        var route_floor := TileMapLayer.new()
+        route_floor.name = "FloorTiles"
+        route_floor.tile_set = visual_catalog.floor_tileset
+        route_floor.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+        route_floor.scale = Vector2.ONE * (float(tile_size) / float(visual_catalog.floor_tileset.tile_size.x))
+        route_floor.z_index = -4
+        _append_route_floor(route_floor, edge["route_tiles"] as Array, int(edge["route_width_tiles"]), visual_catalog.floor_tile_source_id)
+        marker.add_child(route_floor)
         var route_navigation := Node2D.new()
         route_navigation.name = "Navigation"
         marker.add_child(route_navigation)
@@ -94,7 +102,7 @@ static func build(raw_manifest: Variant, visual_catalog: TowerRoomVisualCatalog,
     }
 
 
-static func _build_room(room: Dictionary, definition: TowerRoomModuleDefinition, profile: TowerRoomVisualProfile, tile_size: int) -> Node2D:
+static func _build_room(room: Dictionary, definition: TowerRoomModuleDefinition, profile: TowerRoomVisualProfile, visual_catalog: TowerRoomVisualCatalog, tile_size: int) -> Node2D:
     var rect: Rect2i = room["rect"] as Rect2i
     var room_node := Node2D.new()
     room_node.name = _node_name(String(room["room_instance_id"]))
@@ -103,6 +111,19 @@ static func _build_room(room: Dictionary, definition: TowerRoomModuleDefinition,
     room_node.set_meta(&"module_id", definition.module_id)
     room_node.set_meta(&"visual_room_type", definition.visual_room_type)
     room_node.set_meta(&"tags", (room["tags"] as Array).duplicate(true))
+
+    # Visual-only floor coverage follows the committed module footprint. The
+    # authored collision, connectors, routes and navigation remain separate.
+    var floor_tiles := TileMapLayer.new()
+    floor_tiles.name = "FloorTiles"
+    floor_tiles.tile_set = visual_catalog.floor_tileset
+    floor_tiles.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+    floor_tiles.scale = Vector2.ONE * (float(tile_size) / float(visual_catalog.floor_tileset.tile_size.x))
+    floor_tiles.z_index = -4
+    for floor_y: int in range(definition.footprint_size.y):
+        for floor_x: int in range(definition.footprint_size.x):
+            floor_tiles.set_cell(Vector2i(floor_x, floor_y), visual_catalog.floor_tile_source_id, Vector2i((floor_x + floor_y) % 4, 0))
+    room_node.add_child(floor_tiles)
 
     var visual := TowerRoomVisual.new()
     visual.name = "Visual"
@@ -181,6 +202,18 @@ static func _append_route_navigation(parent: Node2D, route_tiles: Array, width_t
         var center := (Vector2(tile) + Vector2(0.5, 0.5)) * float(tile_size)
         var top_left := center - Vector2(width_px, width_px) * 0.5
         _append_navigation_pixel_rect(parent, Rect2(top_left, Vector2(width_px, width_px)), "Route%03d" % index)
+
+
+static func _append_route_floor(floor_tiles: TileMapLayer, route_tiles: Array, width_tiles: int, atlas_source_id: int) -> void:
+    # Paint only already-committed graph link tiles, respecting their authored
+    # width. This is decoration: the authoritative navigation remains above.
+    var first_offset: int = -int((width_tiles - 1) / 2)
+    for raw_tile: Variant in route_tiles:
+        var center: Vector2i = raw_tile as Vector2i
+        for offset_y: int in range(first_offset, first_offset + width_tiles):
+            for offset_x: int in range(first_offset, first_offset + width_tiles):
+                var cell := center + Vector2i(offset_x, offset_y)
+                floor_tiles.set_cell(cell, atlas_source_id, Vector2i((cell.x + cell.y) % 4, 0))
 
 
 static func _append_navigation_rect(parent: Node2D, rect: Rect2i, tile_size: int, region_name: String) -> void:

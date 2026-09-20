@@ -51,6 +51,9 @@ func is_configured() -> bool:
         _configured
         and player != null
         and is_instance_valid(player)
+        and player.movement != null
+        and is_instance_valid(player.movement)
+        and player.movement.tuning != null
         and combat_runtime != null
         and is_instance_valid(combat_runtime)
         and tuning != null
@@ -58,7 +61,9 @@ func is_configured() -> bool:
 
 
 func make_snapshot(attacker_position: Vector2, target_position: Vector2) -> Dictionary:
-    if not is_configured():
+    # Inspector data and movement settings can change after configure();
+    # never grant an evade/parry/block snapshot from a now-invalid interval.
+    if not is_configured() or not tuning.validate_tuning(player.movement.tuning).is_empty():
         return {}
 
     var defense_mode := combat_runtime.get_defense_mode()
@@ -122,6 +127,10 @@ static func is_facing_covered(
     coverage_degrees: float
 ) -> bool:
     if not is_finite(coverage_degrees) or coverage_degrees <= 0.0 or coverage_degrees > 180.0:
+        return false
+    if (not is_finite(defender_forward.x) or not is_finite(defender_forward.y)
+        or not is_finite(attacker_position.x) or not is_finite(attacker_position.y)
+        or not is_finite(target_position.x) or not is_finite(target_position.y)):
         return false
     if defender_forward.length_squared() <= 0.000001:
         return false

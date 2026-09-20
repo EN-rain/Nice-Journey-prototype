@@ -1,0 +1,845 @@
+{
+  "schema": "player-remaining-v03-r2-candidate/v1",
+  "stage": "FOUR_DERIVED_CANDIDATES_UNREVIEWED_NOT_RUNTIME_BOUND",
+  "script": "res://tools/art/derive_player_remaining_v03_r2.py",
+  "records": [
+    {
+      "state": "interact",
+      "stage": "DERIVED_CANDIDATE_PENDING_VISUAL_SOURCE_REVIEW_AND_WEAPON_ALIGNMENT",
+      "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/exact_sources/02_dodge_attack_heavy_block.png",
+      "source_sha256": "04821bcbf1f6805ab1ca17f9f34a77e205f3cd4ae3371b1720c308ba631ccc51",
+      "source_dimensions": [
+        1448,
+        1086
+      ],
+      "recorded_source_row": [
+        119,
+        350
+      ],
+      "original_v03_lanczos_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+      "uniform_scale": [
+        28,
+        229
+      ],
+      "normalization": "recorded visual-classification cells; threshold24 alpha crop; same NEAREST scale across every pose; transparent padding center/baseline29",
+      "output": "res://assets/art/player/animations/player_body_interact_sheet_v03_r2_candidate.png",
+      "output_sha256": "db10ac87dce0e6b9c428910684343505becec7d636f4f1b45dbaed4037924cf4",
+      "output_dimensions": [
+        160,
+        32
+      ],
+      "frames": [
+        {
+          "output_frame": 0,
+          "source_cell_xyxy": [
+            122,
+            119,
+            301,
+            350
+          ],
+          "alpha_crop_xyxy": [
+            124,
+            119,
+            299,
+            348
+          ],
+          "scaled_size": [
+            21,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            26,
+            30
+          ],
+          "major_components": [
+            21953
+          ],
+          "discarded_subthreshold_pixels": 3493
+        },
+        {
+          "output_frame": 1,
+          "source_cell_xyxy": [
+            368,
+            119,
+            574,
+            350
+          ],
+          "alpha_crop_xyxy": [
+            370,
+            119,
+            572,
+            348
+          ],
+          "scaled_size": [
+            25,
+            28
+          ],
+          "paste_xy": [
+            3,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            3,
+            2,
+            28,
+            30
+          ],
+          "major_components": [
+            23435
+          ],
+          "discarded_subthreshold_pixels": 4809
+        },
+        {
+          "output_frame": 2,
+          "source_cell_xyxy": [
+            616,
+            119,
+            851,
+            350
+          ],
+          "alpha_crop_xyxy": [
+            619,
+            120,
+            847,
+            348
+          ],
+          "scaled_size": [
+            28,
+            28
+          ],
+          "paste_xy": [
+            2,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            2,
+            2,
+            30,
+            30
+          ],
+          "major_components": [
+            23211
+          ],
+          "discarded_subthreshold_pixels": 7049
+        },
+        {
+          "output_frame": 3,
+          "source_cell_xyxy": [
+            877,
+            119,
+            1063,
+            350
+          ],
+          "alpha_crop_xyxy": [
+            879,
+            119,
+            1061,
+            348
+          ],
+          "scaled_size": [
+            22,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            27,
+            30
+          ],
+          "major_components": [
+            21832
+          ],
+          "discarded_subthreshold_pixels": 4031
+        },
+        {
+          "output_frame": 4,
+          "source_cell_xyxy": [
+            1121,
+            119,
+            1300,
+            350
+          ],
+          "alpha_crop_xyxy": [
+            1123,
+            119,
+            1298,
+            348
+          ],
+          "scaled_size": [
+            21,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            26,
+            30
+          ],
+          "major_components": [
+            21928
+          ],
+          "discarded_subthreshold_pixels": 3637
+        }
+      ]
+    },
+    {
+      "state": "use_item",
+      "stage": "DERIVED_CANDIDATE_PENDING_VISUAL_SOURCE_REVIEW_AND_WEAPON_ALIGNMENT",
+      "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/exact_sources/02_dodge_attack_heavy_block.png",
+      "source_sha256": "04821bcbf1f6805ab1ca17f9f34a77e205f3cd4ae3371b1720c308ba631ccc51",
+      "source_dimensions": [
+        1448,
+        1086
+      ],
+      "recorded_source_row": [
+        764,
+        1001
+      ],
+      "original_v03_lanczos_sha256": "6db3f4970e0b74f2f4f25c9124b5e8f87a922187076ad8c56ff3dda3094b02b2",
+      "uniform_scale": [
+        28,
+        226
+      ],
+      "normalization": "recorded visual-classification cells; threshold24 alpha crop; same NEAREST scale across every pose; transparent padding center/baseline29",
+      "output": "res://assets/art/player/animations/player_body_use_item_sheet_v03_r2_candidate.png",
+      "output_sha256": "7371fe794e84ccbc6545f65f60c9fec99cab2b1c662fed977f3fb2600c3cbe32",
+      "output_dimensions": [
+        224,
+        32
+      ],
+      "frames": [
+        {
+          "output_frame": 0,
+          "source_cell_xyxy": [
+            19,
+            764,
+            195,
+            1001
+          ],
+          "alpha_crop_xyxy": [
+            21,
+            773,
+            193,
+            999
+          ],
+          "scaled_size": [
+            21,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            26,
+            30
+          ],
+          "major_components": [
+            21297
+          ],
+          "discarded_subthreshold_pixels": 3984
+        },
+        {
+          "output_frame": 1,
+          "source_cell_xyxy": [
+            213,
+            764,
+            389,
+            1001
+          ],
+          "alpha_crop_xyxy": [
+            216,
+            773,
+            387,
+            998
+          ],
+          "scaled_size": [
+            21,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            26,
+            30
+          ],
+          "major_components": [
+            21225
+          ],
+          "discarded_subthreshold_pixels": 3807
+        },
+        {
+          "output_frame": 2,
+          "source_cell_xyxy": [
+            409,
+            764,
+            595,
+            1001
+          ],
+          "alpha_crop_xyxy": [
+            413,
+            772,
+            593,
+            999
+          ],
+          "scaled_size": [
+            22,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            27,
+            30
+          ],
+          "major_components": [
+            21991
+          ],
+          "discarded_subthreshold_pixels": 4861
+        },
+        {
+          "output_frame": 3,
+          "source_cell_xyxy": [
+            619,
+            764,
+            798,
+            1001
+          ],
+          "alpha_crop_xyxy": [
+            623,
+            765,
+            796,
+            998
+          ],
+          "scaled_size": [
+            21,
+            29
+          ],
+          "paste_xy": [
+            5,
+            1
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            1,
+            26,
+            30
+          ],
+          "major_components": [
+            23014
+          ],
+          "discarded_subthreshold_pixels": 4350
+        },
+        {
+          "output_frame": 4,
+          "source_cell_xyxy": [
+            823,
+            764,
+            1000,
+            1001
+          ],
+          "alpha_crop_xyxy": [
+            825,
+            765,
+            998,
+            999
+          ],
+          "scaled_size": [
+            21,
+            29
+          ],
+          "paste_xy": [
+            5,
+            1
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            1,
+            26,
+            30
+          ],
+          "major_components": [
+            23189
+          ],
+          "discarded_subthreshold_pixels": 3882
+        },
+        {
+          "output_frame": 5,
+          "source_cell_xyxy": [
+            1018,
+            764,
+            1226,
+            1001
+          ],
+          "alpha_crop_xyxy": [
+            1020,
+            770,
+            1224,
+            999
+          ],
+          "scaled_size": [
+            25,
+            28
+          ],
+          "paste_xy": [
+            3,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            3,
+            2,
+            28,
+            30
+          ],
+          "major_components": [
+            21303
+          ],
+          "discarded_subthreshold_pixels": 6222
+        },
+        {
+          "output_frame": 6,
+          "source_cell_xyxy": [
+            1228,
+            764,
+            1404,
+            1001
+          ],
+          "alpha_crop_xyxy": [
+            1230,
+            772,
+            1402,
+            999
+          ],
+          "scaled_size": [
+            21,
+            28
+          ],
+          "paste_xy": [
+            5,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            5,
+            2,
+            26,
+            30
+          ],
+          "major_components": [
+            21317
+          ],
+          "discarded_subthreshold_pixels": 4326
+        }
+      ]
+    },
+    {
+      "state": "death",
+      "stage": "DERIVED_CANDIDATE_PENDING_VISUAL_SOURCE_REVIEW_AND_WEAPON_ALIGNMENT",
+      "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/exact_sources/04_interact_pickup_use_item.png",
+      "source_sha256": "ed20954b4a208024da52cfce195d0298558a4f7d26d985155bceaa134067368c",
+      "source_dimensions": [
+        1448,
+        1086
+      ],
+      "recorded_source_row": [
+        781,
+        999
+      ],
+      "original_v03_lanczos_sha256": "bdc067805e431809328edcc3856f7ec27eabcc33b4773983ded971cdb218d044",
+      "uniform_scale": [
+        28,
+        216
+      ],
+      "normalization": "recorded visual-classification cells; threshold24 alpha crop; same NEAREST scale across every pose; transparent padding center/baseline29",
+      "output": "res://assets/art/player/animations/player_body_death_sheet_v03_r2_candidate.png",
+      "output_sha256": "f011fa5944071a25d3eeef6f7345452d2688e63ba079a312f10de290698a528e",
+      "output_dimensions": [
+        192,
+        32
+      ],
+      "frames": [
+        {
+          "output_frame": 0,
+          "source_cell_xyxy": [
+            30,
+            781,
+            216,
+            999
+          ],
+          "alpha_crop_xyxy": [
+            32,
+            781,
+            214,
+            997
+          ],
+          "scaled_size": [
+            24,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            28,
+            30
+          ],
+          "major_components": [
+            20671
+          ],
+          "discarded_subthreshold_pixels": 5541
+        },
+        {
+          "output_frame": 1,
+          "source_cell_xyxy": [
+            232,
+            781,
+            432,
+            999
+          ],
+          "alpha_crop_xyxy": [
+            234,
+            787,
+            430,
+            997
+          ],
+          "scaled_size": [
+            25,
+            27
+          ],
+          "paste_xy": [
+            3,
+            3
+          ],
+          "output_alpha_bbox_xyxy": [
+            3,
+            3,
+            28,
+            30
+          ],
+          "major_components": [
+            20374
+          ],
+          "discarded_subthreshold_pixels": 4665
+        },
+        {
+          "output_frame": 2,
+          "source_cell_xyxy": [
+            441,
+            781,
+            647,
+            999
+          ],
+          "alpha_crop_xyxy": [
+            444,
+            825,
+            645,
+            997
+          ],
+          "scaled_size": [
+            26,
+            22
+          ],
+          "paste_xy": [
+            3,
+            8
+          ],
+          "output_alpha_bbox_xyxy": [
+            3,
+            8,
+            29,
+            30
+          ],
+          "major_components": [
+            19988
+          ],
+          "discarded_subthreshold_pixels": 4541
+        },
+        {
+          "output_frame": 3,
+          "source_cell_xyxy": [
+            651,
+            781,
+            897,
+            999
+          ],
+          "alpha_crop_xyxy": [
+            654,
+            850,
+            893,
+            997
+          ],
+          "scaled_size": [
+            31,
+            19
+          ],
+          "paste_xy": [
+            0,
+            11
+          ],
+          "output_alpha_bbox_xyxy": [
+            0,
+            11,
+            31,
+            30
+          ],
+          "major_components": [
+            18607
+          ],
+          "discarded_subthreshold_pixels": 3818
+        },
+        {
+          "output_frame": 4,
+          "source_cell_xyxy": [
+            904,
+            781,
+            1151,
+            999
+          ],
+          "alpha_crop_xyxy": [
+            907,
+            893,
+            1149,
+            993
+          ],
+          "scaled_size": [
+            31,
+            13
+          ],
+          "paste_xy": [
+            0,
+            17
+          ],
+          "output_alpha_bbox_xyxy": [
+            0,
+            17,
+            31,
+            30
+          ],
+          "major_components": [
+            14942
+          ],
+          "discarded_subthreshold_pixels": 2400
+        },
+        {
+          "output_frame": 5,
+          "source_cell_xyxy": [
+            1174,
+            781,
+            1421,
+            999
+          ],
+          "alpha_crop_xyxy": [
+            1176,
+            893,
+            1419,
+            992
+          ],
+          "scaled_size": [
+            32,
+            13
+          ],
+          "paste_xy": [
+            0,
+            17
+          ],
+          "output_alpha_bbox_xyxy": [
+            0,
+            17,
+            32,
+            30
+          ],
+          "major_components": [
+            14692
+          ],
+          "discarded_subthreshold_pixels": 2500
+        }
+      ]
+    },
+    {
+      "state": "dodge",
+      "stage": "DERIVED_CANDIDATE_PENDING_VISUAL_SOURCE_REVIEW_AND_WEAPON_ALIGNMENT",
+      "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/exact_sources/05_climb_sleep_death.png",
+      "source_sha256": "020580789050e784d4dbe389d7bd93bb3041e7948cccef209a259b2f150410e7",
+      "source_dimensions": [
+        1448,
+        1086
+      ],
+      "recorded_source_row": [
+        55,
+        253
+      ],
+      "original_v03_lanczos_sha256": "22c0e2b5f39810181236542f8422c1a1401a64bd97c1b97f15388fc15fa44d5c",
+      "uniform_scale": [
+        28,
+        197
+      ],
+      "normalization": "recorded visual-classification cells; threshold24 alpha crop; same NEAREST scale across every pose; transparent padding center/baseline29",
+      "output": "res://assets/art/player/animations/player_body_dodge_sheet_v03_r2_candidate.png",
+      "output_sha256": "284e78107cd47a37897d03c1f69742d5a6ab2bca390cb34df4e961182544cf96",
+      "output_dimensions": [
+        128,
+        32
+      ],
+      "frames": [
+        {
+          "output_frame": 0,
+          "source_cell_xyxy": [
+            257,
+            55,
+            434,
+            253
+          ],
+          "alpha_crop_xyxy": [
+            259,
+            56,
+            431,
+            253
+          ],
+          "scaled_size": [
+            24,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            28,
+            30
+          ],
+          "major_components": [
+            19031
+          ],
+          "discarded_subthreshold_pixels": 4675
+        },
+        {
+          "output_frame": 1,
+          "source_cell_xyxy": [
+            496,
+            55,
+            693,
+            253
+          ],
+          "alpha_crop_xyxy": [
+            498,
+            89,
+            691,
+            250
+          ],
+          "scaled_size": [
+            27,
+            23
+          ],
+          "paste_xy": [
+            2,
+            7
+          ],
+          "output_alpha_bbox_xyxy": [
+            2,
+            7,
+            29,
+            30
+          ],
+          "major_components": [
+            18625
+          ],
+          "discarded_subthreshold_pixels": 4013
+        },
+        {
+          "output_frame": 2,
+          "source_cell_xyxy": [
+            719,
+            55,
+            944,
+            253
+          ],
+          "alpha_crop_xyxy": [
+            721,
+            80,
+            942,
+            249
+          ],
+          "scaled_size": [
+            31,
+            24
+          ],
+          "paste_xy": [
+            0,
+            6
+          ],
+          "output_alpha_bbox_xyxy": [
+            0,
+            6,
+            31,
+            30
+          ],
+          "major_components": [
+            22182
+          ],
+          "discarded_subthreshold_pixels": 6585
+        },
+        {
+          "output_frame": 3,
+          "source_cell_xyxy": [
+            982,
+            55,
+            1156,
+            253
+          ],
+          "alpha_crop_xyxy": [
+            984,
+            56,
+            1153,
+            253
+          ],
+          "scaled_size": [
+            24,
+            28
+          ],
+          "paste_xy": [
+            4,
+            2
+          ],
+          "output_alpha_bbox_xyxy": [
+            4,
+            2,
+            28,
+            30
+          ],
+          "major_components": [
+            17611
+          ],
+          "discarded_subthreshold_pixels": 4236
+        }
+      ]
+    }
+  ]
+}

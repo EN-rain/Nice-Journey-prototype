@@ -179,16 +179,16 @@ func _test_region3_inventory() -> void:
             "Region 3 %s generated V02 exterior" % building
         )
     for index: int in range(1, 13):
-        var revision := "v02" if index <= 10 else "v01"
-        var expected_size := Vector2i(160, 160) if index <= 10 else Vector2i(96, 96)
         _expect_texture_size(
-            "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_%02d_%s.png" % [index, revision],
-            expected_size,
-            "Region 3 decorative structure %02d %s" % [index, revision]
+            "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_%02d_v02.png" % index,
+            Vector2i(160, 160),
+            "Region 3 decorative structure %02d current V02" % index
         )
-    _expect_texture_size("res://assets/art/environments/region3/props/region3_prop_sheet_v01.png", Vector2i(128, 64), "Region 3 prop sheet")
-    _expect_texture_size("res://assets/art/environments/region3/roads/region3_ground_road_tileset_v01.png", Vector2i(256, 32), "Region 3 road/ground tileset")
-    _expect_texture_size("res://assets/art/environments/region3/ruins/region3_ruins_module_sheet_v01.png", Vector2i(128, 96), "Region 3 ruins module sheet")
+    _expect_texture_size("res://assets/art/environments/region3/props/region3_prop_sheet_v02.png", Vector2i(256, 256), "Region 3 current V02 prop sheet")
+    _expect_texture_size("res://assets/art/environments/region3/roads/region3_ground_road_tileset_v02.png", Vector2i(128, 64), "Region 3 current V02 road/ground tileset")
+    _expect_texture_size("res://assets/art/environments/region3/ruins/region3_ruins_module_sheet_v02.png", Vector2i(256, 128), "Region 3 current V02 ruins module sheet")
+    _expect_texture_size("res://assets/art/environments/region3/outskirts/region3_outskirts_support_sheet_v02.png", Vector2i(192, 128), "Region 3 current V02 outskirts sheet")
+    _expect_texture_size("res://assets/art/environments/region3/risk_zone/region3_risk_zone_support_sheet_v02.png", Vector2i(192, 128), "Region 3 current V02 risk-zone sheet")
 
 func _test_tower_inventory() -> void:
     _expect_texture_size("res://assets/art/environments/tower/tiles/tower_common_tileset_v01.png", Vector2i(128, 128), "tower common tileset")
@@ -202,7 +202,7 @@ func _test_tower_inventory() -> void:
 func _test_ui_inventory() -> void:
     _expect(SKILL_ICONS.size() == 18, "UI inventory contains one icon contract for each prototype skill")
     for skill_id: String in SKILL_ICONS:
-        _expect_texture_size("res://assets/art/ui/skills/skill_%s_v01.png" % skill_id, Vector2i(32, 32), "skill icon %s" % skill_id)
+        _expect_texture_size("res://assets/art/ui/skills/skill_%s_v02.png" % skill_id, Vector2i(32, 32), "current skill icon %s" % skill_id)
     for class_id: String in ["melee", "ranged", "mage"]:
         _expect_texture_size("res://assets/art/ui/classes/class_%s_icon_v01.png" % class_id, Vector2i(32, 32), "class icon %s" % class_id)
     for family: String in ["escort", "tower_defense", "annihilation"]:

@@ -67,6 +67,8 @@ var _active_combat_guard_token: int = 0
 var _unsupported_manual_save_guard_token: int = 0
 var _unsupported_manual_save_guard_reason_text: String = ""
 var _player_combat_bindings: Dictionary = {}
+var _balance_capture_by_encounter: Dictionary = {}
+var _completed_balance_captures: Array[Dictionary] = []
 var _death_guard_token: int = 0
 var last_player_defeat_event: Dictionary = {}
 var last_tower_encounter_trigger_result: Dictionary = {}
@@ -113,6 +115,8 @@ var last_music_routing_errors: PackedStringArray = PackedStringArray()
 @export var grid_color: Color = Color(0.14, 0.15, 0.19, 1.0)
 @export_range(0.5, 8.0, 0.5) var grid_line_width: float = 1.0
 @export var tenth_warden_production_authoring: TenthWardenProductionAuthoring = null
+@export_category("Development-only combat measurements")
+@export var collect_combat_balance_telemetry: bool = false
 @export var player_defender_facts_tuning: PlayerDefenderFactsTuning = null
 @export var music_routing_definition: AudioMusicRoutingDefinition = null
 @export var vendor_stock_catalog: VendorStockCatalog = null
@@ -1922,6 +1926,7 @@ func _apply_region3_playtest_content() -> void:
 
 
 func _exit_tree() -> void:
+    _finish_all_balance_captures()
     _cleanup_floor10_boss_encounter(false)
     _music_state_controller.stop()
     _music_routing_ready = false
@@ -3415,6 +3420,7 @@ func activate_tower_encounter(
             return {"accepted": false, "reason_id": &"player_status_state_sync_failed"}
         if _player_combat_bindings.size() == 1:
             player.bind_combat_runtime(encounter, player_state.actor_id)
+        _begin_balance_capture(encounter, player_state.actor_id)
     _sync_operation_guard_with_active_combat()
     return result
 
@@ -4055,6 +4061,7 @@ func _activate_floor10_boss_encounter(room_instance_id: StringName) -> Dictionar
     if not player.bind_combat_runtime(sanctum.encounter_runtime, player_state.actor_id):
         _cleanup_floor10_boss_encounter(true)
         return {"accepted": false, "reason_id": REASON_FLOOR10_BOSS_PLAYER_BIND_FAILED}
+    _begin_balance_capture(sanctum.encounter_runtime, player_state.actor_id)
 
     if sanctum.player_spawn != null:
         player.global_position = sanctum.player_spawn.global_position
@@ -4403,6 +4410,7 @@ func _bind_player_presentation_to_surviving_encounter(excluded_encounter_id: Str
 
 
 func _release_player_combat_binding(encounter_id: StringName) -> void:
+    _finish_balance_capture(encounter_id)
     var binding := _player_combat_bindings.get(encounter_id) as PlayerCombatantRuntimeBinding
     if binding != null:
         binding.unbind()
@@ -4413,6 +4421,97 @@ func _clear_player_combat_bindings() -> void:
     for raw_id: Variant in encounter_ids:
         _release_player_combat_binding(StringName(raw_id))
     player.unbind_combat_runtime()
+
+func set_balance_capture_enabled(enabled: bool) -> void:
+    # Development tool only: capture stays out of profile saves and combat rules.
+    collect_combat_balance_telemetry = enabled
+    if not enabled:
+        _finish_all_balance_captures()
+        return
+    for raw_id: Variant in _player_combat_bindings.keys():
+        var binding := _player_combat_bindings[raw_id] as PlayerCombatantRuntimeBinding
+        if binding != null and binding.is_bound():
+            _begin_balance_capture(binding.encounter, binding.actor_id)
+
+
+func get_balance_capture_report() -> Dictionary:
+    var results: Array[Dictionary] = _completed_balance_captures.duplicate(true)
+    var encounter_ids: Array = _balance_capture_by_encounter.keys()
+    encounter_ids.sort_custom(func(left: Variant, right: Variant) -> bool: return String(left) < String(right))
+    for raw_id: Variant in encounter_ids:
+        var capture := _balance_capture_by_encounter[raw_id] as CombatBalanceTelemetry
+        if capture == null:
+            continue
+        var row := capture.snapshot()
+        row["encounter_id"] = String(raw_id)
+        row["capture_complete"] = false
+        results.append(row)
+    return {
+        "schema_version": CombatBalanceTelemetry.SCHEMA_VERSION,
+        "label": "PLAYTEST live encounter measurements; not approved numerical balance",
+        "source": "opt_in_gameplay_combat_signals",
+        "capture_enabled": collect_combat_balance_telemetry,
+        "rows": results,
+        "limitations": [
+            "Action commitments and contact HP are observed, not estimates.",
+            "Cooldown occupancy and resource minima require an active capture physics tick.",
+            "Damage from outside encounter contact/status signals is not included.",
+            "Manual human-input fairness and approved final balance require separate review.",
+        ],
+    }
+
+
+func export_balance_capture_to_user_data() -> Dictionary:
+    # Explicit QA request only. Never write trace files to save slots or on every frame.
+    var path := "user://combat_balance_capture_local.json"
+    var file := FileAccess.open(path, FileAccess.WRITE)
+    if file == null:
+        return {"accepted": false, "reason_id": &"telemetry_file_unavailable"}
+    file.store_string(JSON.stringify(get_balance_capture_report(), "\t") + "\n")
+    file.close()
+    return {"accepted": true, "path": ProjectSettings.globalize_path(path)}
+
+
+func _begin_balance_capture(encounter: CombatEncounterRuntime, actor_id: StringName) -> void:
+    if (not collect_combat_balance_telemetry or encounter == null
+        or _balance_capture_by_encounter.has(encounter.encounter_id)
+        or combat_runtime == null or combat_runtime.action_state_machine == null):
+        return
+    var capture := CombatBalanceTelemetry.new()
+    var scenario_id := StringName("capture:%s" % String(encounter.encounter_id))
+    if capture.begin(encounter, actor_id, combat_runtime.get_class_id(),
+        scenario_id, combat_runtime.action_state_machine):
+        _balance_capture_by_encounter[encounter.encounter_id] = capture
+
+
+func _finish_balance_capture(encounter_id: StringName) -> void:
+    var capture := _balance_capture_by_encounter.get(encounter_id) as CombatBalanceTelemetry
+    if capture == null:
+        return
+    var row := capture.snapshot()
+    row["encounter_id"] = String(encounter_id)
+    row["capture_complete"] = true
+    _completed_balance_captures.append(row)
+    capture.stop()
+    _balance_capture_by_encounter.erase(encounter_id)
+
+
+func _finish_all_balance_captures() -> void:
+    var ids: Array = _balance_capture_by_encounter.keys()
+    for raw_id: Variant in ids:
+        _finish_balance_capture(StringName(String(raw_id)))
+
+
+func _advance_balance_captures() -> void:
+    if _balance_capture_by_encounter.is_empty():
+        return
+    var stamina := player.stamina.current_stamina if player != null and player.stamina != null else -1.0
+    var mana := combat_runtime.get_mana() if combat_runtime != null and combat_runtime.has_mana() else -1.0
+    for capture: CombatBalanceTelemetry in _balance_capture_by_encounter.values():
+        if capture != null:
+            capture.advance_fixed_tick()
+            capture.sample_resources(stamina, mana)
+
 
 func _configure_music_routing() -> void:
     _music_routing_ready = false
@@ -4479,6 +4578,7 @@ func get_music_routing_snapshot() -> Dictionary:
 
 
 func _physics_process(_delta: float) -> void:
+    _advance_balance_captures()
     if _successful_parry_ticks > 0:
         _successful_parry_ticks -= 1
 
@@ -4561,6 +4661,7 @@ func _on_region3_side_encounter_started(encounter_id: StringName, encounter: Com
     binding.live_player_defeated.connect(_on_live_player_defeated.bind(encounter_id))
     _player_combat_bindings[encounter_id] = binding
     player.bind_combat_runtime(encounter, player_state.actor_id)
+    _begin_balance_capture(encounter, player_state.actor_id)
     _sync_operation_guard_with_active_combat()
 
 

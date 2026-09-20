@@ -7,6 +7,7 @@ const WORLD_SIZE_PIXELS: int = TILE_SIZE * WORLD_TILES
 const UNCONFIGURED_ESCORT_TUNING: TowerEscortRuntimeTuning = preload("res://src/data/tuning/tower_escort_runtime_unconfigured.tres")
 
 @export var escort_tuning: TowerEscortRuntimeTuning = UNCONFIGURED_ESCORT_TUNING
+@export var escort_npc_visual_profile: NpcVisualProfile = preload("res://src/world/npc/presentation/profiles/temporary_escort.tres")
 
 var active_floor_id: int = 0
 var active_arrival: Dictionary = {}
@@ -73,6 +74,7 @@ func activate_escort(
         return {"accepted": false, "reason_id": &"escort_already_active", "quest_id": quest_id}
     var tuning := authored_tuning if authored_tuning != null else escort_tuning
     var runtime := TowerEscortRuntime.new()
+    runtime.npc_visual_profile = escort_npc_visual_profile
     runtime.name = _node_name("Escort_%s" % String(quest_id))
     active_runtime_root.add_child(runtime)
     var result := runtime.configure(profile, floor_state, quest_id, tuning, TILE_SIZE, restored_safe_state)

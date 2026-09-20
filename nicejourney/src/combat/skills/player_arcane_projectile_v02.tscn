@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/art/player/weapons/arcane_projectile_v02.png" id="1_arcane"]
+
+[node name="ArcaneProjectile" type="Node2D"]
+z_index = 26
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("1_arcane")
+offset = Vector2(0, -1)
+texture_filter = 1

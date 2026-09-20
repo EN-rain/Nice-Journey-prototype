@@ -12,8 +12,11 @@ const MODES: Array[StringName] = [MODE_MELEE, MODE_PROJECTILE, MODE_PULSE, MODE_
 @export var basic_by_class: Dictionary = {}
 @export var active_skill_effects: Dictionary = {}
 
-# Projectile/area visuals are editor-owned scenes, not generated images.
+# Projectile/area visuals are editor-owned scenes. The placeholder remains
+# exclusive to the delayed pulse and ward; class projectiles use distinct art.
 @export var projectile_placeholder_scene: PackedScene = null
+@export var ranged_projectile_scene: PackedScene = preload("res://src/combat/skills/player_arrow_projectile_v02.tscn")
+@export var mage_projectile_scene: PackedScene = preload("res://src/combat/skills/player_arcane_projectile_v02.tscn")
 
 
 func validate_content() -> PackedStringArray:
@@ -22,6 +25,10 @@ func validate_content() -> PackedStringArray:
         errors.append("playtest attack content must remain explicitly provisional")
     if projectile_placeholder_scene == null:
         errors.append("projectile placeholder scene is required")
+    for entry: Array in [["ranged", ranged_projectile_scene], ["mage", mage_projectile_scene]]:
+        var scene := entry[1] as PackedScene
+        if scene == null or scene.get_state() == null or scene.get_state().get_node_type(0) != "Node2D":
+            errors.append("%s projectile requires an Inspector-authored Node2D scene" % String(entry[0]))
     for class_id: StringName in [&"melee", &"ranged", &"mage"]:
         var raw: Variant = basic_by_class.get(String(class_id), null)
         if not raw is Dictionary:
@@ -30,6 +37,12 @@ func validate_content() -> PackedStringArray:
         var mode := MODE_MELEE if class_id == &"melee" else MODE_PROJECTILE
         for error: String in _validate_record(raw as Dictionary, mode):
             errors.append("basic %s: %s" % [String(class_id), error])
+        var basic := raw as Dictionary
+        var expected_domain := DirectHitResolver.DOMAIN_ARCANE if class_id == &"mage" else DirectHitResolver.DOMAIN_PHYSICAL
+        if StringName(String(basic.get("domain", &""))) != expected_domain:
+            errors.append("basic %s must use its approved damage domain" % String(class_id))
+        if int(basic.get("max_targets", 0)) != 1 or (mode == MODE_PROJECTILE and int(basic.get("projectile_count", 0)) != 1):
+            errors.append("basic %s must deliver a single target/hit without tracked ammunition" % String(class_id))
     if basic_by_class.size() != 3:
         errors.append("only three canonical basic class records are permitted")
     var count := 0
@@ -43,6 +56,9 @@ func validate_content() -> PackedStringArray:
             var expected_mode := _mode_for_skill(skill_id)
             for error: String in _validate_record(raw as Dictionary, expected_mode, skill_id):
                 errors.append("%s: %s" % [String(skill_id), error])
+            var expected_domain := DirectHitResolver.DOMAIN_ARCANE if SkillCatalog.get_definition(skill_id).class_id == &"mage" else DirectHitResolver.DOMAIN_PHYSICAL
+            if StringName(String((raw as Dictionary).get("domain", &""))) != expected_domain:
+                errors.append("%s must use its approved damage domain" % String(skill_id))
     if active_skill_effects.size() != count:
         errors.append("exactly nine canonical active skill records required")
     return errors
@@ -91,6 +107,8 @@ func _validate_record(entry: Dictionary, expected_mode: StringName, skill_id: St
     var domain := StringName(String(entry.get("domain", &"")))
     if domain not in [DirectHitResolver.DOMAIN_PHYSICAL, DirectHitResolver.DOMAIN_ARCANE]:
         errors.append("damage domain must be physical or arcane")
+    if skill_id != &"" and mode != MODE_WARD and float(entry.get("raw_damage", 0.0)) <= 0.0:
+        errors.append("damaging active skill must have positive authored raw_damage")
     if mode == MODE_PROJECTILE:
         for key: String in ["projectile_speed_px_per_second", "projectile_hit_radius_px"]:
             var raw: Variant = entry.get(key, null)

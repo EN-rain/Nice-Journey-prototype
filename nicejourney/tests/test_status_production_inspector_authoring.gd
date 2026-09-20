@@ -19,6 +19,12 @@ func _run() -> void:
         _expect(not bool(PrototypeStatusProductionAuthority.readiness(behavior, empty).get("production_ready", true)), "%s cannot become production-ready through unassigned template" % behavior)
 
     var ready := _authored_fixture()
+    ready.burn_reapplication_tick_phase_policy_id = &""
+    var missing_reapply_phase := ready.authoring_readiness(&"burn")
+    _expect(not bool(missing_reapply_phase.get("authoring_ready", true))
+        and (missing_reapply_phase.get("missing_fields", PackedStringArray()) as PackedStringArray).has("tick_phase_when_same_source_refreshes"),
+        "Burn production authoring must declare whether a same-source duration refresh preserves or resets cadence")
+    ready = _authored_fixture()
     for behavior: StringName in [
         PrototypeStatusResolver.BEHAVIOR_BURN,
         PrototypeStatusResolver.BEHAVIOR_SLOW,
@@ -57,6 +63,7 @@ func _authored_fixture() -> StatusProductionTuning:
     content.burn_tick_interval_ticks = 30
     content.burn_damage_per_tick = 2
     content.burn_first_tick_policy_id = &"status_policy:first_tick_fixture"
+    content.burn_reapplication_tick_phase_policy_id = &"status_policy:refresh_phase_fixture"
     content.burn_damage_domain_policy_id = &"status_policy:damage_domain_fixture"
     content.burn_mitigation_policy_id = &"status_policy:mitigation_fixture"
     content.burn_cross_source_aggregation_policy_id = &"status_policy:burn_aggregation_fixture"

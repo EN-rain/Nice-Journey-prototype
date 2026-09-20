@@ -1,0 +1,50 @@
+{
+  "asset_source": "res://assets/art/environments/tower/tiles/tower_common_tileset_v01.png",
+  "asset_source_sha256": "b4851c0ba3a7b674c730fcdd756c8e21f256094b651a3958f6130dc525193129",
+  "atlas_tileset_resource": "res://src/world/tower/presentation/tower_common_floor_tileset_v01.tres",
+  "godot_version": "4.6.2-stable (official)",
+  "image": "res://docs/evidence/renderer/tower-floor-atlas-v01-review.png",
+  "image_dimensions": [
+    1280,
+    720
+  ],
+  "native_tile_pixels": 32,
+  "renderer": "Godot Compatibility / OpenGL",
+  "room_examples": [
+    {
+      "module": "module:entrance_safe_v01",
+      "pixel_position": [
+        88,
+        264
+      ],
+      "size_tiles": [
+        6,
+        6
+      ]
+    },
+    {
+      "module": "module:annihilation_objective_v01",
+      "pixel_position": [
+        390,
+        200
+      ],
+      "size_tiles": [
+        10,
+        10
+      ]
+    },
+    {
+      "module": "module:boss_sanctum_v01",
+      "pixel_position": [
+        780,
+        136
+      ],
+      "size_tiles": [
+        14,
+        14
+      ]
+    }
+  ],
+  "scope": "Atlas floor coverage/room category contrast only; no final replacement-art acceptance or boss combat fairness claim",
+  "status": "PROVISIONAL_TEXTURE_LIVE_RENDERER_CAPTURE"
+}

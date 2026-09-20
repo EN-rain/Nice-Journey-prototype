@@ -11,9 +11,14 @@ const REASON_CONTACT_NOT_CONFIRMED: StringName = &"contact_not_confirmed"
 const REASON_CONTACT_IDENTITY_MISMATCH: StringName = &"contact_identity_mismatch"
 const REASON_GEOMETRY_MISMATCH: StringName = &"geometry_mismatch"
 const REASON_HIT_INTERVAL_OUT_OF_RANGE: StringName = &"hit_interval_out_of_range"
+const REASON_PROJECTILE_LAUNCH_UNAVAILABLE: StringName = &"projectile_launch_unavailable"
+const REASON_PROJECTILE_TICKET_INVALID: StringName = &"projectile_ticket_invalid"
 
 var runtime: EnemyArchetypeRuntime = null
 var phase_driver: EnemySignatureActionPhaseDriver = null
+var _next_projectile_ticket: int = 0
+var _last_launched_reservation_token: int = 0
+var _projectile_tickets: Dictionary = {}
 
 
 func configure(
@@ -26,7 +31,80 @@ func configure(
         return false
     runtime = source_runtime
     phase_driver = source_phase_driver
+    _projectile_tickets.clear()
+    _next_projectile_ticket = 0
+    _last_launched_reservation_token = 0
     return true
+
+
+# Launch is admitted only against an actual ACTIVE commitment. An authenticated
+# projectile may travel into RECOVERY or the next idle action without extending
+# the attack reservation or re-opening an ACTIVE hit window.
+func authorize_projectile_launch(action_instance_id: int, geometry_id: StringName) -> int:
+    if runtime == null or phase_driver == null or runtime.definition == null:
+        return 0
+    if phase_driver.runtime != runtime or phase_driver.action_instance_id != action_instance_id:
+        return 0
+    var context := runtime.get_active_delivery_context(action_instance_id)
+    if not bool(context.get("accepted", false)):
+        return 0
+    var reservation_token := int(context.get("reservation_token", 0))
+    if reservation_token <= 0 or reservation_token == _last_launched_reservation_token:
+        return 0
+    if not runtime.definition.validate_signature_attack_authoring().is_empty():
+        return 0
+    var attack := runtime.definition.signature_attack_authoring
+    if attack == null or attack.geometry == null or attack.payload == null:
+        return 0
+    if (attack.payload.delivery != DirectHitResolver.DELIVERY_PROJECTILE
+        or attack.geometry.geometry_id != geometry_id
+        or not attack.geometry.validate_live_delivery(int(phase_driver.timing.get("active_ticks", 0))).is_empty()
+        or attack.geometry.hit_interval_count != 1
+        or attack.geometry.hit_active_ticks[0] != 0):
+        return 0
+    var payload := attack.payload.make_payload(false, false)
+    if payload.is_empty():
+        return 0
+    _last_launched_reservation_token = reservation_token
+    _next_projectile_ticket += 1
+    _projectile_tickets[_next_projectile_ticket] = {
+        "action_instance_id": action_instance_id,
+        "geometry_id": geometry_id,
+        "payload": payload.duplicate(true),
+        "encounter": runtime.encounter,
+        "actor_id": runtime.actor_id,
+        "target_id": runtime.target_id,
+    }
+    return _next_projectile_ticket
+
+
+func release_projectile_launch(ticket: int) -> void:
+    _projectile_tickets.erase(ticket)
+
+
+func resolve_launched_projectile_impact(ticket: int, geometry_id: StringName,
+    evade_window_active: bool, defense_mode: StringName, facing_covered: bool) -> Dictionary:
+    var launch := _projectile_tickets.get(ticket, {}) as Dictionary
+    # Consuming the ticket before resolution makes repeated physics contacts inert.
+    _projectile_tickets.erase(ticket)
+    if launch.is_empty():
+        return _rejected(REASON_PROJECTILE_TICKET_INVALID)
+    if (runtime == null or phase_driver == null or phase_driver.runtime != runtime
+        or runtime.encounter != launch.get("encounter")
+        or runtime.actor_id != launch.get("actor_id")
+        or runtime.target_id != launch.get("target_id")
+        or geometry_id != launch.get("geometry_id")
+        or runtime.encounter.get_combatant(runtime.actor_id) == null
+        or runtime.encounter.get_combatant(runtime.target_id) == null):
+        return _rejected(REASON_PROJECTILE_LAUNCH_UNAVAILABLE)
+    var result := runtime.encounter.resolve_direct_contact(
+        runtime.actor_id, runtime.target_id, int(launch["action_instance_id"]), 0,
+        (launch["payload"] as Dictionary).duplicate(true),
+        evade_window_active, defense_mode, facing_covered
+    )
+    result["attacker_interrupt_applied"] = false
+    result["projectile_launch_ticket"] = ticket
+    return result
 
 
 # This executor does not own attack geometry or payload authoring. Callers may invoke it

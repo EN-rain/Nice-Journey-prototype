@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="NpcPlacementAuthoring" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/world/npc/presentation/npc_placement_authoring.gd" id="1_script"]
+[ext_resource type="Resource" path="res://src/world/npc/presentation/profiles/story_lore.tres" id="2_profile"]
+
+[resource]
+script = ExtResource("1_script")
+npc_visual_profile = ExtResource("2_profile")
+proposed_quest_anchor_ids = Array[StringName]([&"R3-MAIN-START"])
+proposed_structure_id = &"r3:functional:02"
+approved_placement = false
+placement_authority_ref = ""
+approved_actor_id = &""
+approved_quest_id = &""
+selected_quest_anchor_id = &""
+unique_actor_node_path = NodePath("")

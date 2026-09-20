@@ -74,6 +74,12 @@ func _exercise_floor(floor_id: int, visual_catalog: TowerRoomVisualCatalog) -> v
             var arrivals := runtime_room.get_node_or_null("ArrivalCandidates") as Node2D
             _expect(arrivals != null and arrivals.get_child_count() == definition.arrival_candidates.size(), "room %s instantiates every authored safe-arrival candidate" % String(room_id))
             var visual := runtime_room.get_node_or_null("Visual") as TowerRoomVisual
+            var floor_tiles := runtime_room.get_node_or_null("FloorTiles") as TileMapLayer
+            _expect(floor_tiles != null and floor_tiles.tile_set == visual_catalog.floor_tileset, "room %s uses the inspector-owned floor TileSet" % String(room_id))
+            if floor_tiles != null:
+                _expect(floor_tiles.get_used_cells().size() == definition.footprint_size.x * definition.footprint_size.y, "room %s has complete visual floor coverage" % String(room_id))
+                _expect(floor_tiles.get_cell_source_id(Vector2i.ZERO) == visual_catalog.floor_tile_source_id, "room %s uses the declared floor atlas source" % String(room_id))
+                _expect(floor_tiles.texture_filter == CanvasItem.TEXTURE_FILTER_NEAREST, "room %s floor keeps nearest filtering" % String(room_id))
             _expect(visual != null and visual.profile != null and visual.profile.room_type == definition.visual_room_type, "room %s consumes the inspector-owned semantic tower visual profile" % String(room_id))
             if visual != null:
                 var sprite := visual.get_node_or_null("Sprite") as Sprite2D
@@ -84,6 +90,13 @@ func _exercise_floor(floor_id: int, visual_catalog: TowerRoomVisualCatalog) -> v
             var route_navigation := link.get_node_or_null("Navigation") as Node2D
             var route_tiles: Array = link.get_meta(&"route_tiles", []) as Array
             _expect(route_navigation != null and route_navigation.get_child_count() == route_tiles.size(), "Floor %d link navigation covers every committed route tile" % floor_id)
+            var route_floor := link.get_node_or_null("FloorTiles") as TileMapLayer
+            _expect(route_floor != null and route_floor.tile_set == visual_catalog.floor_tileset, "Floor %d link has inspector-owned floor TileSet" % floor_id)
+            if route_floor != null:
+                _expect(route_floor.get_used_cells().size() >= route_tiles.size(), "Floor %d link has visible coverage of every route center" % floor_id)
+                _expect(route_floor.texture_filter == CanvasItem.TEXTURE_FILTER_NEAREST, "Floor %d link retains nearest pixel filtering" % floor_id)
+                for raw_tile: Variant in route_tiles:
+                    _expect(route_floor.get_cell_source_id(raw_tile as Vector2i) == visual_catalog.floor_tile_source_id, "Floor %d committed route tile is actually drawn" % floor_id)
     root.queue_free()
     await process_frame
 

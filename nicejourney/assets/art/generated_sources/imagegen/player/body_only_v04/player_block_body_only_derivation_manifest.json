@@ -1,0 +1,26 @@
+{
+  "schema": "player-body-only-v04-derivation/v1",
+  "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_block_body_only_source.png",
+  "source_sha256": "6aa6886811226d155c1a088f328ee2b07ceb9f551f95b9b546865189974887bf",
+  "source_dimensions": [
+    2171,
+    724
+  ],
+  "source_frame_count": 7,
+  "selected_source_frames": [
+    2,
+    3,
+    4
+  ],
+  "frame_count": 3,
+  "output": "res://assets/art/player/animations/player_body_block_sheet_v04_staged.png",
+  "output_sha256": "6484c760c04dad622fcca73dc7230a68c58c3e9f5b174a9af59363160cab8078",
+  "output_dimensions": [
+    96,
+    32
+  ],
+  "alpha_threshold": 24,
+  "method": "seven equal-width source cells; select source frames 2-4 for preparation + held staging; visible-alpha crop; NEAREST to 30px body height; center at y=1",
+  "acceptance_status": "STAGED_NOT_INTEGRATED",
+  "blocker": "Block transition/held timing ownership requires runtime review before replacing V03 resource"
+}

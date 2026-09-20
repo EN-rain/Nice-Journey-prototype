@@ -9,14 +9,19 @@
     ],
     "exact_bytes_preserved": true
   },
-  "derivation_notice": "The current checkout does not contain the original crop script. Existing 32x32 review derivatives were preserved byte-for-byte into production paths; no new resampling or crop was performed in this step.",
+  "derivation_notice": "Reproduced all six output byte hashes from the preserved1536x1024 source using tools/art/derive_npc_identity_anchors_v01.py into tmp/npc_repro_check. All six matched production exactly.",
   "outputs": [
     {
       "role": "coordinator",
       "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_coordinator_anchor_v01.png",
       "production_path": "res://assets/art/npc/coordinator_anchor_v01.png",
       "operation": "byte_preserving_copy",
-      "crop_rect_px": null,
+      "crop_rect_px": [
+        0,
+        0,
+        512,
+        512
+      ],
       "dimensions": [
         32,
         32
@@ -36,14 +41,37 @@
       ],
       "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
       "last_opaque_pixel_index": 30,
-      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention",
+      "project_path": "res://assets/art/npc/coordinator_anchor_v01.png",
+      "modifications": "512x512 grid cell; nearest-neighbor resize to32x32; integer translation from measured alpha bbox center/bottom to x16,last occupied y30 (same existing player convention); fully transparent RGB zeroed. Exact algorithm in derivation script. Reproduced byte-identical.",
+      "acceptance_status": "ACCEPTED_FOR_STATIC_NPC_ANCHOR_INTEGRATION",
+      "renderer_evidence": {
+        "path": "res://docs/evidence/renderer/npc_identity_anchors_v01.png",
+        "sha256": "81449a6dca061e04b50cfe02e9a8ee8f8ea0cc90f0e3a66caec41388c46090e0",
+        "dimensions": [
+          640,
+          360
+        ],
+        "godot": "4.6.2.stable.mono.official.71f334935",
+        "renderer": "Compatibility/OpenGL 3.3 Intel Iris Xe",
+        "verified": "fresh capture after production path wiring; six NPC profiles rendered through NpcVisualPresenter; nearest filtering; baseline lines aligned"
+      },
+      "source": "res://assets/art/generated_sources/imagegen/npc/npc_identity_anchors_source_v01.png",
+      "source_sha256": "81f13fa706293b678f64d2f4bb163324b02c7b036eadf59dd3b80b6af551e23b",
+      "output_sha256": "0eb90067315b125bb74e9a2c87466d99a1f41cd2a39374b956fb17c9a205f83b",
+      "derivation_manifest": "res://assets/art/npc/npc_identity_anchors_derivation_manifest.json"
     },
     {
       "role": "merchant",
       "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_merchant_anchor_v01.png",
       "production_path": "res://assets/art/npc/merchant_anchor_v01.png",
       "operation": "byte_preserving_copy",
-      "crop_rect_px": null,
+      "crop_rect_px": [
+        512,
+        0,
+        1024,
+        512
+      ],
       "dimensions": [
         32,
         32
@@ -63,14 +91,37 @@
       ],
       "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
       "last_opaque_pixel_index": 30,
-      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention",
+      "project_path": "res://assets/art/npc/merchant_anchor_v01.png",
+      "modifications": "512x512 grid cell; nearest-neighbor resize to32x32; integer translation from measured alpha bbox center/bottom to x16,last occupied y30 (same existing player convention); fully transparent RGB zeroed. Exact algorithm in derivation script. Reproduced byte-identical.",
+      "acceptance_status": "ACCEPTED_FOR_STATIC_NPC_ANCHOR_INTEGRATION",
+      "renderer_evidence": {
+        "path": "res://docs/evidence/renderer/npc_identity_anchors_v01.png",
+        "sha256": "81449a6dca061e04b50cfe02e9a8ee8f8ea0cc90f0e3a66caec41388c46090e0",
+        "dimensions": [
+          640,
+          360
+        ],
+        "godot": "4.6.2.stable.mono.official.71f334935",
+        "renderer": "Compatibility/OpenGL 3.3 Intel Iris Xe",
+        "verified": "fresh capture after production path wiring; six NPC profiles rendered through NpcVisualPresenter; nearest filtering; baseline lines aligned"
+      },
+      "source": "res://assets/art/generated_sources/imagegen/npc/npc_identity_anchors_source_v01.png",
+      "source_sha256": "81f13fa706293b678f64d2f4bb163324b02c7b036eadf59dd3b80b6af551e23b",
+      "output_sha256": "a669f3d415361dc446468c872dcb2010708e2e66a0df9f44e713cf4ad71b4583",
+      "derivation_manifest": "res://assets/art/npc/npc_identity_anchors_derivation_manifest.json"
     },
     {
       "role": "blacksmith",
       "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_blacksmith_anchor_v01.png",
       "production_path": "res://assets/art/npc/blacksmith_anchor_v01.png",
       "operation": "byte_preserving_copy",
-      "crop_rect_px": null,
+      "crop_rect_px": [
+        1024,
+        0,
+        1536,
+        512
+      ],
       "dimensions": [
         32,
         32
@@ -90,14 +141,37 @@
       ],
       "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
       "last_opaque_pixel_index": 30,
-      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention",
+      "project_path": "res://assets/art/npc/blacksmith_anchor_v01.png",
+      "modifications": "512x512 grid cell; nearest-neighbor resize to32x32; integer translation from measured alpha bbox center/bottom to x16,last occupied y30 (same existing player convention); fully transparent RGB zeroed. Exact algorithm in derivation script. Reproduced byte-identical.",
+      "acceptance_status": "ACCEPTED_FOR_STATIC_NPC_ANCHOR_INTEGRATION",
+      "renderer_evidence": {
+        "path": "res://docs/evidence/renderer/npc_identity_anchors_v01.png",
+        "sha256": "81449a6dca061e04b50cfe02e9a8ee8f8ea0cc90f0e3a66caec41388c46090e0",
+        "dimensions": [
+          640,
+          360
+        ],
+        "godot": "4.6.2.stable.mono.official.71f334935",
+        "renderer": "Compatibility/OpenGL 3.3 Intel Iris Xe",
+        "verified": "fresh capture after production path wiring; six NPC profiles rendered through NpcVisualPresenter; nearest filtering; baseline lines aligned"
+      },
+      "source": "res://assets/art/generated_sources/imagegen/npc/npc_identity_anchors_source_v01.png",
+      "source_sha256": "81f13fa706293b678f64d2f4bb163324b02c7b036eadf59dd3b80b6af551e23b",
+      "output_sha256": "e02ebf564d0b44a5a07a2920f21055f45f14c8ec4acaa6d149713bad950fb9fa",
+      "derivation_manifest": "res://assets/art/npc/npc_identity_anchors_derivation_manifest.json"
     },
     {
       "role": "lore_elder",
       "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_lore_elder_anchor_v01.png",
       "production_path": "res://assets/art/npc/lore_elder_anchor_v01.png",
       "operation": "byte_preserving_copy",
-      "crop_rect_px": null,
+      "crop_rect_px": [
+        0,
+        512,
+        512,
+        1024
+      ],
       "dimensions": [
         32,
         32
@@ -117,14 +191,37 @@
       ],
       "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
       "last_opaque_pixel_index": 30,
-      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention",
+      "project_path": "res://assets/art/npc/lore_elder_anchor_v01.png",
+      "modifications": "512x512 grid cell; nearest-neighbor resize to32x32; integer translation from measured alpha bbox center/bottom to x16,last occupied y30 (same existing player convention); fully transparent RGB zeroed. Exact algorithm in derivation script. Reproduced byte-identical.",
+      "acceptance_status": "ACCEPTED_FOR_STATIC_NPC_ANCHOR_INTEGRATION",
+      "renderer_evidence": {
+        "path": "res://docs/evidence/renderer/npc_identity_anchors_v01.png",
+        "sha256": "81449a6dca061e04b50cfe02e9a8ee8f8ea0cc90f0e3a66caec41388c46090e0",
+        "dimensions": [
+          640,
+          360
+        ],
+        "godot": "4.6.2.stable.mono.official.71f334935",
+        "renderer": "Compatibility/OpenGL 3.3 Intel Iris Xe",
+        "verified": "fresh capture after production path wiring; six NPC profiles rendered through NpcVisualPresenter; nearest filtering; baseline lines aligned"
+      },
+      "source": "res://assets/art/generated_sources/imagegen/npc/npc_identity_anchors_source_v01.png",
+      "source_sha256": "81f13fa706293b678f64d2f4bb163324b02c7b036eadf59dd3b80b6af551e23b",
+      "output_sha256": "a3910dcf1e8284b9ec2062d6092f837e0c2a886605e2fb3534c6b066e3535de9",
+      "derivation_manifest": "res://assets/art/npc/npc_identity_anchors_derivation_manifest.json"
     },
     {
       "role": "variable_quest",
       "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_variable_quest_anchor_v01.png",
       "production_path": "res://assets/art/npc/variable_quest_anchor_v01.png",
       "operation": "byte_preserving_copy",
-      "crop_rect_px": null,
+      "crop_rect_px": [
+        512,
+        512,
+        1024,
+        1024
+      ],
       "dimensions": [
         32,
         32
@@ -144,14 +241,37 @@
       ],
       "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
       "last_opaque_pixel_index": 30,
-      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention",
+      "project_path": "res://assets/art/npc/variable_quest_anchor_v01.png",
+      "modifications": "512x512 grid cell; nearest-neighbor resize to32x32; integer translation from measured alpha bbox center/bottom to x16,last occupied y30 (same existing player convention); fully transparent RGB zeroed. Exact algorithm in derivation script. Reproduced byte-identical.",
+      "acceptance_status": "ACCEPTED_FOR_STATIC_NPC_ANCHOR_INTEGRATION",
+      "renderer_evidence": {
+        "path": "res://docs/evidence/renderer/npc_identity_anchors_v01.png",
+        "sha256": "81449a6dca061e04b50cfe02e9a8ee8f8ea0cc90f0e3a66caec41388c46090e0",
+        "dimensions": [
+          640,
+          360
+        ],
+        "godot": "4.6.2.stable.mono.official.71f334935",
+        "renderer": "Compatibility/OpenGL 3.3 Intel Iris Xe",
+        "verified": "fresh capture after production path wiring; six NPC profiles rendered through NpcVisualPresenter; nearest filtering; baseline lines aligned"
+      },
+      "source": "res://assets/art/generated_sources/imagegen/npc/npc_identity_anchors_source_v01.png",
+      "source_sha256": "81f13fa706293b678f64d2f4bb163324b02c7b036eadf59dd3b80b6af551e23b",
+      "output_sha256": "6dc9da24b3508ea440d221bdcac865060a7c1ab5d358aa4f053738f8e9ffd1bb",
+      "derivation_manifest": "res://assets/art/npc/npc_identity_anchors_derivation_manifest.json"
     },
     {
       "role": "escort",
       "review_source": "res://assets/art/generated_sources/imagegen/npc/review/npc_escort_anchor_v01.png",
       "production_path": "res://assets/art/npc/escort_anchor_v01.png",
       "operation": "byte_preserving_copy",
-      "crop_rect_px": null,
+      "crop_rect_px": [
+        1024,
+        512,
+        1536,
+        1024
+      ],
       "dimensions": [
         32,
         32
@@ -171,7 +291,33 @@
       ],
       "alpha_bbox_convention": "PIL getbbox xyxy; max y is exclusive",
       "last_opaque_pixel_index": 30,
-      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention"
+      "anchor_relation": "last opaque pixel index 30; ground_anchor.y 29 matches the existing player V03 body convention",
+      "project_path": "res://assets/art/npc/escort_anchor_v01.png",
+      "modifications": "512x512 grid cell; nearest-neighbor resize to32x32; integer translation from measured alpha bbox center/bottom to x16,last occupied y30 (same existing player convention); fully transparent RGB zeroed. Exact algorithm in derivation script. Reproduced byte-identical.",
+      "acceptance_status": "ACCEPTED_FOR_STATIC_NPC_ANCHOR_INTEGRATION",
+      "renderer_evidence": {
+        "path": "res://docs/evidence/renderer/npc_identity_anchors_v01.png",
+        "sha256": "81449a6dca061e04b50cfe02e9a8ee8f8ea0cc90f0e3a66caec41388c46090e0",
+        "dimensions": [
+          640,
+          360
+        ],
+        "godot": "4.6.2.stable.mono.official.71f334935",
+        "renderer": "Compatibility/OpenGL 3.3 Intel Iris Xe",
+        "verified": "fresh capture after production path wiring; six NPC profiles rendered through NpcVisualPresenter; nearest filtering; baseline lines aligned"
+      },
+      "source": "res://assets/art/generated_sources/imagegen/npc/npc_identity_anchors_source_v01.png",
+      "source_sha256": "81f13fa706293b678f64d2f4bb163324b02c7b036eadf59dd3b80b6af551e23b",
+      "output_sha256": "2cfa01c99e1716c168a69aff61cda8593c9ebac7e06e4ba39aa23d764aafd84e",
+      "derivation_manifest": "res://assets/art/npc/npc_identity_anchors_derivation_manifest.json"
     }
-  ]
+  ],
+  "derivation_script": "res://tools/art/derive_npc_identity_anchors_v01.py",
+  "focused_validation": {
+    "test": "res://tests/test_npc_identity_anchor_resources.gd",
+    "engine": "4.6.2.stable.mono.official.71f334935",
+    "exit_code": 0,
+    "failures": 0
+  },
+  "acceptance_scope": "Static identity textures and Inspector profiles/presenter accepted. NPC live world placement, dialogue/service binding and escort motion remain separate."
 }

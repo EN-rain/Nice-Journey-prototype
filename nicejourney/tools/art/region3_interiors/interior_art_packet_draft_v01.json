@@ -1,0 +1,125 @@
+{
+  "schema": "nicejourney.region3_interior_art_packet_draft.v1",
+  "status": "ART_ONLY_PROPOSAL_NOT_RUNTIME_AUTHORITY",
+  "authority": [
+    "Master §24.4 eight functional/12 decorative/20 total",
+    "Master §24.12 compact reusable interiors, initial reserved lots not room dimensions",
+    "Region3AuthoredTownLayout actual eight r3:functional:01..08 exterior anchors"
+  ],
+  "approved": {
+    "interior_count": 8,
+    "decorative_non_enterable": 12,
+    "source_asset_ids": "r3:interior:functional:01..08",
+    "art_style": "match exact existing Region3 functional exterior art; crisp 16-bit-inspired pixel raster, nearest-neighbor, coherent orthographic angled top-down perspective",
+    "actual_interior_scene_count": 0
+  },
+  "unknown_requires_authoring": {
+    "interior_room_dimensions_px": null,
+    "interior_grid_tile_size_px": null,
+    "wall_height_and_occlusion": null,
+    "door_width_or_scene_entrance_location": null,
+    "exit_target_and_return_position": null,
+    "interactable_positions": null,
+    "collision_and_navigation": null,
+    "indoor_camera_bounds": null,
+    "save_and_travel_semantics": null
+  },
+  "visual_kit_proposal": [
+    "repeatable opaque floor material, edge-tested",
+    "modular inner wall straight segments/corners and separate doorway/threshold visuals",
+    "separate transparent role prop silhouettes, grounded to common art scale",
+    "no full room backgrounds, gameplay-trigger appearance or fake enterability"
+  ],
+  "generation_prompt": "Create ONLY an isolated reusable modular pixel-art interior material and prop kit matching the attached accepted Region 3 exterior sprites. Consistent orthographic angled top-down perspective, crisp palette ramps and nearest-neighbor readability. Repeatable floor with clean opposing edges, compatible separate wall straight/corner pieces, visual doorway threshold parts, and isolated transparent service props. Keep each part complete without clipping, text, grid labels, characters, quest markers, invented room layouts or invented interaction mechanics. Do not assume final cell size/door width until authored.",
+  "proposed_integration": "One shared TileSet/TileMapLayer floor/wall/doorway material kit, one Inspector-owned visual profile per proposed interior scene, Marker2D for entrance/exit and actual service scene child only after approval. No connection to exterior interaction or travel until authored entry/exit/return/collision/save policy.",
+  "proposed_scenes": [
+    {
+      "asset_id": "r3:interior:functional:01",
+      "exterior_structure_id": "r3:functional:01",
+      "role": "central_tower",
+      "approved_purpose": "tower access/physical entrance",
+      "scene_path_proposed_only": "res://src/world/region3/interiors/central_tower_interior.tscn",
+      "approved_exterior_style_reference": "res://assets/art/environments/region3/functional_buildings/region3_central_tower_exterior_v02.png",
+      "room_geometry": null,
+      "entrance_and_exit": null,
+      "interactable_positions": null
+    },
+    {
+      "asset_id": "r3:interior:functional:02",
+      "exterior_structure_id": "r3:functional:02",
+      "role": "quest_hall",
+      "approved_purpose": "quest coordination/board and NPC services",
+      "scene_path_proposed_only": "res://src/world/region3/interiors/quest_hall_interior.tscn",
+      "approved_exterior_style_reference": "res://assets/art/environments/region3/functional_buildings/region3_quest_hall_exterior_v02.png",
+      "room_geometry": null,
+      "entrance_and_exit": null,
+      "interactable_positions": null
+    },
+    {
+      "asset_id": "r3:interior:functional:03",
+      "exterior_structure_id": "r3:functional:03",
+      "role": "blacksmith",
+      "approved_purpose": "equipment upgrading",
+      "scene_path_proposed_only": "res://src/world/region3/interiors/blacksmith_interior.tscn",
+      "approved_exterior_style_reference": "res://assets/art/environments/region3/functional_buildings/region3_blacksmith_exterior_v02.png",
+      "room_geometry": null,
+      "entrance_and_exit": null,
+      "interactable_positions": null
+    },
+    {
+      "asset_id": "r3:interior:functional:04",
+      "exterior_structure_id": "r3:functional:04",
+      "role": "general_merchant",
+      "approved_purpose": "buying/selling core goods",
+      "scene_path_proposed_only": "res://src/world/region3/interiors/general_merchant_interior.tscn",
+      "approved_exterior_style_reference": "res://assets/art/environments/region3/functional_buildings/region3_merchant_exterior_v02.png",
+      "room_geometry": null,
+      "entrance_and_exit": null,
+      "interactable_positions": null
+    },
+    {
+      "asset_id": "r3:interior:functional:05",
+      "exterior_structure_id": "r3:functional:05",
+      "role": "inn_rest_house",
+      "approved_purpose": "rest/recovery/save presentation",
+      "scene_path_proposed_only": "res://src/world/region3/interiors/inn_rest_house_interior.tscn",
+      "approved_exterior_style_reference": "res://assets/art/environments/region3/functional_buildings/region3_inn_exterior_v02.png",
+      "room_geometry": null,
+      "entrance_and_exit": null,
+      "interactable_positions": null
+    },
+    {
+      "asset_id": "r3:interior:functional:06",
+      "exterior_structure_id": "r3:functional:06",
+      "role": "storage_house",
+      "approved_purpose": "player storage",
+      "scene_path_proposed_only": "res://src/world/region3/interiors/storage_house_interior.tscn",
+      "approved_exterior_style_reference": "res://assets/art/environments/region3/functional_buildings/region3_storage_exterior_v02.png",
+      "room_geometry": null,
+      "entrance_and_exit": null,
+      "interactable_positions": null
+    },
+    {
+      "asset_id": "r3:interior:functional:07",
+      "exterior_structure_id": "r3:functional:07",
+      "role": "training_hall",
+      "approved_purpose": "tutorial/practice/skills",
+      "scene_path_proposed_only": "res://src/world/region3/interiors/training_hall_interior.tscn",
+      "approved_exterior_style_reference": "res://assets/art/environments/region3/functional_buildings/region3_training_exterior_v02.png",
+      "room_geometry": null,
+      "entrance_and_exit": null,
+      "interactable_positions": null
+    },
+    {
+      "asset_id": "r3:interior:functional:08",
+      "exterior_structure_id": "r3:functional:08",
+      "role": "clinic_apothecary",
+      "approved_purpose": "healing/consumables; no full alchemy",
+      "scene_path_proposed_only": "res://src/world/region3/interiors/clinic_apothecary_interior.tscn",
+      "approved_exterior_style_reference": "res://assets/art/environments/region3/functional_buildings/region3_clinic_exterior_v02.png",
+      "room_geometry": null,
+      "entrance_and_exit": null,
+      "interactable_positions": null
+    }
+  ]
+}

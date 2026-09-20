@@ -1,0 +1,111 @@
+{
+  "schema": "nicejourney.boss_telegraph_art_handoff_v1",
+  "scope": "The Tenth Warden: 5 VFX_REQUIRED review candidates and 10 placeholder boss body images",
+  "status": "ISOLATED_VISUAL_REVIEW_ONLY_NO_FINAL_GEOMETRY_NO_IMAGE_GENERATION",
+  "authorities": [
+    "Nice_Journey_Master_Game_Specification_V2_1.md DR-07",
+    "docs/art/ENEMY_VISUAL_DESIGN_BIBLE.md",
+    "docs/art/VFX_VISUAL_BIBLE.md",
+    "src/enemies/boss_tenth_warden/AGENTS.md"
+  ],
+  "approved_contract": {
+    "boss_title": "The Tenth Warden",
+    "true_personal_name_and_origin": "TBD",
+    "arena": "fixed Boss Sanctum; no pits/shrinking walls/unavoidable ambient damage",
+    "phases": 2,
+    "transition": "at or below 50% HP after committed action recovery; one non-damaging irreversible action",
+    "adds": false,
+    "healing_between_phases": false,
+    "move_families": [
+      "twin_cut",
+      "warden_lunge",
+      "arc_volley",
+      "crescent_sweep",
+      "punishing_step"
+    ],
+    "arc_volley": "dodgeable/blockable; NOT parryable",
+    "crescent_sweep": "unblockable; dodgeable",
+    "phase_two": "recombine learned moves; visible weak point on authored heavy recovery",
+    "boss_frame_px": [
+      96,
+      96
+    ],
+    "render_style": "crisp 16-bit-inspired pixel raster; transparent RGBA; nearest-neighbor; boss silhouette and telegraphs distinct"
+  },
+  "existing_placeholder_images": {
+    "base": "res://assets/art/enemies/boss_tenth_warden/",
+    "current_reference_only": "tenth_warden_idle_v01.png",
+    "core_sheet": "tenth_warden_core_sheet_v01.png (864x96, 9 96x96 cells; layout/reference only, not accepted final anchor)",
+    "pose_files": [
+      "tenth_warden_idle_v01.png",
+      "tenth_warden_phase_two_v01.png",
+      "tenth_warden_twin_cut_v01.png",
+      "tenth_warden_warden_lunge_v01.png",
+      "tenth_warden_arc_volley_v01.png",
+      "tenth_warden_crescent_sweep_v01.png",
+      "tenth_warden_punishing_step_v01.png",
+      "tenth_warden_hit_v01.png",
+      "tenth_warden_death_v01.png"
+    ],
+    "pose_size_px": [
+      96,
+      96
+    ],
+    "classifications": "All TEN files (core sheet and 9 pose images) PLACEHOLDER. Preserve V01 for regression until replacement source passes review.",
+    "source_generated_identity": "No dedicated immutable GPT-generated boss identity source found under assets/art/generated_sources/imagegen for Tenth Warden",
+    "unapproved_visual_facts": [
+      "exact canonical costume/palette/face/weapon geometry",
+      "character source sheet and source SHA-256",
+      "exact left/right poses, frame counts and animation timing",
+      "final grounding/foot baseline and authored attachment sockets",
+      "exact weak-point visual location/range"
+    ]
+  },
+  "review_effect_mapping": [
+    {
+      "move": "twin_cut",
+      "effect": "telegraph_short_arc",
+      "status": "proposed primitive visual-only",
+      "actual_collision_shape": "PLAYTEST rectangle, not necessarily arc"
+    },
+    {
+      "move": "warden_lunge",
+      "effect": "telegraph_lunge_path",
+      "status": "proposed primitive visual-only",
+      "actual_collision_shape": "PLAYTEST rectangle; contact actor movement/turning final review needed"
+    },
+    {
+      "move": "arc_volley",
+      "effect": "telegraph_projectile_lane",
+      "status": "proposed primitive visual-only",
+      "actual_collision_shape": "PLAYTEST rectangle admission plus projectile trajectories; no parry implication"
+    },
+    {
+      "move": "crescent_sweep",
+      "effect": "telegraph_wide_sweep",
+      "status": "proposed primitive visual-only",
+      "actual_collision_shape": "PLAYTEST rectangle, not necessarily sweep"
+    },
+    {
+      "move": "punishing_step",
+      "effect": "telegraph_boss_warning",
+      "status": "proposed generic warning only; NO shape claim",
+      "actual_collision_shape": "PLAYTEST rectangle; target-dependent reposition not final"
+    }
+  ],
+  "timeline_authority": "src/enemies/boss_tenth_warden/runtime/tenth_warden_playtest_v01.tres: authored=true, playtest_placeholder=true. Per-move phase one and phase two action tick lengths and geometry:playtest:tenth_warden:* are provisional. NO final per-move geometry, telegraph scale/rotation/position/timing, or hit-boundary animation linkage approved.",
+  "source_prompt": "Design a coherent proposal for ONE adaptive-duelist milestone boss identity, The Tenth Warden. Treat attached current V01 96x96 placeholder poses as staging/identity continuity references only, NOT final approved costume or lore. One complete pixel-art character, crisp 16-bit-inspired opaque pixels on actual transparent RGBA 96x96 gameplay canvas per pose, consistent head/armor/weapon silhouette and palette across views, same foot baseline, margins and readable action direction. First produce an isolated neutral identity proposal and approve it before making poses. Then separate idle, phase-two, hit, defeat and EXACTLY five move-family poses (two committed close cuts; forward lunge; readable ranged launch without implying parry; broad dodgeable/unblockable sweep; short conditional reposition strike). No invented name, faction symbol, origin, arena art, adds, healing, UI, text, baked telegraph/hit geometry, arbitrary timing or extra moves. Preserve body pose versus warning-overlay separation.",
+  "telegraph_prompt": "Use accepted existing telegraph_short_arc/lunge_path/projectile_lane/wide_sweep/boss_warning primitives as review candidates, not new images. Only generate new special-case VFX after final runtime hit shapes and motion snapshots prove the existing primitive cannot depict the geometry. Every final VFX must show preparation, active risk, defense semantic and recovery distinctly; no color-only risk distinction; never show projectile-parry or blockable wide sweep.",
+  "acceptance_before_closure": [
+    "Approve boss identity anchor/source and derivative nine poses at 96x96 in native renderer",
+    "Approve FINAL five per-move phase-specific timing and exact attack/projectile/actor displacement geometry",
+    "Approve each visual primitive placement/scale/rotation/phase duration matched to actual hit area, including Twin Cut two contacts",
+    "Test arc volley block/dodge/not-parry and crescent dodge/unblockable visuals; player foreground/weak-point legibility",
+    "Bind FINAL inspected resources to five production *.tres only after runtime validation; screenshots or video at true gameplay zoom and reduced-motion checks"
+  ],
+  "files_review_only": [
+    "res://tools/art/boss_telegraph_review/tenth_warden_telegraph_review_fixture.gd",
+    "res://tools/art/boss_telegraph_review/tenth_warden_telegraph_review_only.tres",
+    "res://tools/art/boss_telegraph_review/test_tenth_warden_telegraph_review.gd"
+  ]
+}

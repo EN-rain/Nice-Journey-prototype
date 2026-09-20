@@ -217,7 +217,10 @@ func request_block(active: bool) -> bool:
 
 
 func request_parry() -> bool:
-    if not supports_parry() or tuning == null:
+    # Tuning is an Inspector resource and may change after configure_class().
+    # A zero/invalid window would otherwise enter PARRY indefinitely because
+    # only positive active windows advance into recovery.
+    if not supports_parry() or tuning == null or not tuning.validate_tuning().is_empty():
         return false
     if _parry_window_ticks_remaining > 0 or _parry_recovery_ticks_remaining > 0:
         return false

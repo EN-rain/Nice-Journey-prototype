@@ -47,21 +47,19 @@ func burn_damage_for_advance(state: Dictionary, elapsed_ticks: int) -> int:
         or not _is_our_burn_id(status_id)
         or StringName(String(state.get("behavior", &""))) != PrototypeStatusResolver.BEHAVIOR_BURN):
         return 0
-    var raw_remaining: Variant = state.get("remaining_ticks", null)
-    if typeof(raw_remaining) != TYPE_INT:
+    # A hand-authored/rehydrated status must carry its own valid magnitude;
+    # missing fields must never fall back to the resource's default damage.
+    var normalized := PrototypeStatusResolver.normalize_states([state])
+    if not bool(normalized.get("accepted", false)):
         return 0
-    var remaining := int(raw_remaining)
-    if remaining <= 0:
-        return 0
+    var valid_state := (normalized["states"] as Array)[0] as Dictionary
+    var remaining := int(valid_state["remaining_ticks"])
     # Same-ID refresh can author a longer duration than this playtest default.
     # Keep ticking across that extension instead of silently suspending Burn.
     var elapsed_before := burn_duration_ticks - remaining
     var elapsed_after := elapsed_before + mini(elapsed_ticks, remaining)
     var events := floori(float(elapsed_after) / float(burn_tick_interval_ticks)) - floori(float(elapsed_before) / float(burn_tick_interval_ticks))
-    var magnitude: Variant = state.get("magnitude", float(burn_damage_per_tick))
-    if not (typeof(magnitude) == TYPE_FLOAT or typeof(magnitude) == TYPE_INT) or not is_finite(float(magnitude)) or float(magnitude) < 0.0:
-        return 0
-    var total_damage := float(events) * float(magnitude)
+    var total_damage := float(events) * float(valid_state["magnitude"])
     if not is_finite(total_damage) or total_damage > float(2147483647):
         return 0
     # Do not silently cap a stronger same-source Burn back to base playtest damage.
@@ -78,10 +76,11 @@ static func _is_our_burn_id(status_id: String) -> bool:
 func slow_speed_multiplier(states: Array) -> float:
     if not validate_tuning().is_empty():
         return 1.0
+    var normalized := PrototypeStatusResolver.normalize_states(states)
+    if not bool(normalized.get("accepted", false)):
+        return 1.0
     var strongest := 0.0
-    for raw_state: Variant in states:
-        if not raw_state is Dictionary:
-            continue
+    for raw_state: Variant in normalized["states"] as Array:
         var state := raw_state as Dictionary
         if (StringName(String(state.get("behavior", &""))) == PrototypeStatusResolver.BEHAVIOR_SLOW
             and typeof(state.get("remaining_ticks", null)) == TYPE_INT

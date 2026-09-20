@@ -28,6 +28,7 @@ func _init() -> void:
 func _run() -> void:
     _check_nine_authored_rank_paths()
     _check_invalid_adjustment_fails_closed()
+    _check_cross_resource_delivery_authoring()
     for class_id: String in ["melee", "ranged", "mage"]:
         await _check_live_class_rank(class_id)
     await _check_live_aegis_rank()
@@ -124,6 +125,48 @@ func _check_invalid_adjustment_fails_closed() -> void:
     changed["arc_cleave"]["rank_3"] = changed["arc_cleave"]["rank_2"].duplicate(true)
     invalid.rank_adjustments = changed
     _expect(not invalid.validate_content().is_empty(), "rank 3 must improve at least one dimension beyond rank 2")
+
+
+func _check_cross_resource_delivery_authoring() -> void:
+    _expect(TUNING.validate_delivery_content(ATTACKS).is_empty(), "shipped action clocks admit every authored projectile and evade window")
+    var invalid := TUNING.duplicate(true) as ActiveSkillsPlaytest
+    var actions: Array[ActionDefinition] = invalid.actions.duplicate(true)
+    actions[4] = actions[4].duplicate(true) as ActionDefinition
+    actions[4].active_ticks = 4
+    invalid.actions = actions
+    _expect(not invalid.validate_delivery_content(ATTACKS).is_empty(), "Fan Shot refuses an ACTIVE window that clips its last sequential projectile")
+    invalid = TUNING.duplicate(true) as ActiveSkillsPlaytest
+    actions = invalid.actions.duplicate(true)
+    actions[5] = actions[5].duplicate(true) as ActionDefinition
+    actions[5].active_ticks = 3
+    invalid.actions = actions
+    _expect(not invalid.validate_delivery_content(ATTACKS).is_empty(), "Backstep refuses an evade duration longer than its ACTIVE phase")
+    invalid = TUNING.duplicate(true) as ActiveSkillsPlaytest
+    actions = invalid.actions.duplicate(true)
+    actions[6] = actions[6].duplicate(true) as ActionDefinition
+    actions[6].uses_aim = false
+    invalid.actions = actions
+    _expect(not invalid.validate_delivery_content(ATTACKS).is_empty(), "Arcane Lance refuses an un-aimed committed projectile action")
+    var malformed := ATTACKS.duplicate(true) as PlayerPlaytestAttackContent
+    malformed.basic_by_class = ATTACKS.basic_by_class.duplicate(true)
+    malformed.basic_by_class["mage"]["domain"] = &"physical"
+    _expect(not malformed.validate_content().is_empty(), "resource-free Mage basic must retain Arcane domain")
+    malformed = ATTACKS.duplicate(true) as PlayerPlaytestAttackContent
+    malformed.basic_by_class = ATTACKS.basic_by_class.duplicate(true)
+    malformed.basic_by_class["ranged"]["projectile_count"] = 3
+    _expect(not malformed.validate_content().is_empty(), "resource-free bow basic cannot become a multi-projectile skill")
+    malformed = ATTACKS.duplicate(true) as PlayerPlaytestAttackContent
+    malformed.active_skill_effects = ATTACKS.active_skill_effects.duplicate(true)
+    malformed.active_skill_effects["arcane_lance"]["domain"] = &"physical"
+    _expect(not malformed.validate_content().is_empty(), "Arcane Lance cannot switch damage domain through PLAYTEST geometry")
+    _expect(TUNING.effect_for_rank(&"unknown_skill", 2, ATTACKS.skill_for(&"arc_cleave")).is_empty(),
+        "unknown skill rank requests fail closed without accessing absent adjustments")
+    invalid = TUNING.duplicate(true) as ActiveSkillsPlaytest
+    var adjustments := invalid.rank_adjustments.duplicate(true)
+    adjustments["aegis_ward"]["rank_3"]["magnitude_multiplier"] = 10.0
+    invalid.rank_adjustments = adjustments
+    _expect(invalid.validate_content().is_empty() and not invalid.validate_delivery_content(ATTACKS).is_empty(),
+        "ranked ward duration cannot exceed the existing 600-tick authoring bound")
 
 
 func _check_live_class_rank(class_id: String) -> void:

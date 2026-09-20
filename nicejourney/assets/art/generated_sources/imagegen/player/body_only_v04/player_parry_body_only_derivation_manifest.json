@@ -1,0 +1,182 @@
+{
+  "schema": "player-body-only-v04-derivation/v1",
+  "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_parry_cast_hit_body_only_source.png",
+  "source_sha256": "514c5fb3427bce3a84641f7687c595e950a43afe94fdc0bfce9819750fbd43ef",
+  "source_dimensions": [
+    1448,
+    1086
+  ],
+  "source_row": 0,
+  "frame_count": 6,
+  "output": "res://assets/art/player/animations/player_body_parry_sheet_v04.png",
+  "output_sha256": "cbd5dc964826c21a27f2f91adc94c9e00b9d156ce12d719a898094c5bfa6806d",
+  "output_dimensions": [
+    192,
+    32
+  ],
+  "alpha_threshold": 24,
+  "method": "row group segmentation; visible-alpha crop; aspect-preserving NEAREST reduction to 30px body height; paste centered at y=1 in 32x32 cell; preserve alpha",
+  "ground_anchor": [
+    16,
+    29
+  ],
+  "selection_note": null,
+  "frames": [
+    {
+      "output_frame": 0,
+      "source_frame": 0,
+      "source_group": [
+        35,
+        214
+      ],
+      "alpha_crop": [
+        35,
+        102,
+        214,
+        317
+      ],
+      "crop_size": [
+        179,
+        215
+      ],
+      "derived_size": [
+        25,
+        30
+      ],
+      "paste_xy": [
+        3,
+        1
+      ]
+    },
+    {
+      "output_frame": 1,
+      "source_frame": 1,
+      "source_group": [
+        271,
+        450
+      ],
+      "alpha_crop": [
+        271,
+        110,
+        450,
+        317
+      ],
+      "crop_size": [
+        179,
+        207
+      ],
+      "derived_size": [
+        26,
+        30
+      ],
+      "paste_xy": [
+        3,
+        1
+      ]
+    },
+    {
+      "output_frame": 2,
+      "source_frame": 2,
+      "source_group": [
+        494,
+        677
+      ],
+      "alpha_crop": [
+        494,
+        111,
+        677,
+        317
+      ],
+      "crop_size": [
+        183,
+        206
+      ],
+      "derived_size": [
+        27,
+        30
+      ],
+      "paste_xy": [
+        2,
+        1
+      ]
+    },
+    {
+      "output_frame": 3,
+      "source_frame": 3,
+      "source_group": [
+        744,
+        928
+      ],
+      "alpha_crop": [
+        744,
+        100,
+        928,
+        317
+      ],
+      "crop_size": [
+        184,
+        217
+      ],
+      "derived_size": [
+        25,
+        30
+      ],
+      "paste_xy": [
+        3,
+        1
+      ]
+    },
+    {
+      "output_frame": 4,
+      "source_frame": 4,
+      "source_group": [
+        981,
+        1158
+      ],
+      "alpha_crop": [
+        981,
+        103,
+        1158,
+        317
+      ],
+      "crop_size": [
+        177,
+        214
+      ],
+      "derived_size": [
+        25,
+        30
+      ],
+      "paste_xy": [
+        3,
+        1
+      ]
+    },
+    {
+      "output_frame": 5,
+      "source_frame": 5,
+      "source_group": [
+        1202,
+        1374
+      ],
+      "alpha_crop": [
+        1202,
+        102,
+        1374,
+        317
+      ],
+      "crop_size": [
+        172,
+        215
+      ],
+      "derived_size": [
+        24,
+        30
+      ],
+      "paste_xy": [
+        4,
+        1
+      ]
+    }
+  ]
+}

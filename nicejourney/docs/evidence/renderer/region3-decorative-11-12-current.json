@@ -1,0 +1,43 @@
+{
+  "godot_version": "4.6.2-stable (official)",
+  "records": [
+    {
+      "building_id": 11,
+      "camera_position": [
+        1632,
+        3168
+      ],
+      "camera_zoom": [
+        1,
+        1
+      ],
+      "image": "res://docs/evidence/renderer/region3-decorative-11-native-current.png",
+      "image_dimensions": [
+        640,
+        360
+      ],
+      "production_sha256": "7ba9c2406ab49b0f2c501e78acd07d71e5ac5c22567a6aee9e65d0e015404b42",
+      "production_texture": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_11_v02.png"
+    },
+    {
+      "building_id": 12,
+      "camera_position": [
+        1632,
+        2016
+      ],
+      "camera_zoom": [
+        1,
+        1
+      ],
+      "image": "res://docs/evidence/renderer/region3-decorative-12-native-current.png",
+      "image_dimensions": [
+        640,
+        360
+      ],
+      "production_sha256": "58fc5f99ff7069136f618a91efda1be5a420d75476468e8b54fe2b4be7f7cc02",
+      "production_texture": "res://assets/art/environments/region3/decorative_buildings/region3_decorative_building_12_v02.png"
+    }
+  ],
+  "scene": "res://src/world/region3/presentation/region3_town_visual_showcase.tscn",
+  "scope": "Fresh native-canvas renderer capture; source hash and visual acceptance remain separately audited"
+}

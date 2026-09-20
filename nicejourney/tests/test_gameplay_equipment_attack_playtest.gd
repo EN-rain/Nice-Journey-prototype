@@ -37,6 +37,9 @@ func _check_class(class_id: String) -> void:
     _expect(EquipmentState.validate_dictionary(upgraded).is_empty() and runtime.bind_equipment_state(upgraded), "%s upgraded weapon remains a valid profile equipment record" % class_id)
     _expect(is_equal_approx(runtime.get_playtest_weapon_attack_bonus(), 1.0), "%s one Blacksmith attack_power rank grants the Inspector-authored +1 bonus" % class_id)
     _expect(is_equal_approx(float(runtime.make_basic_attack_payload().get("raw_damage", -1.0)), base_damage + 1.0), "%s equipped upgrade changes actual basic-hit resolver payload" % class_id)
+    weapon["upgrade_rank"] = 2
+    _expect(runtime.bind_equipment_state(upgraded), "%s persisted higher-rank equipment shape remains compatible" % class_id)
+    _expect(is_zero_approx(runtime.get_playtest_weapon_attack_bonus()), "%s unavailable rank-two recipe cannot manufacture an unapproved live attack bonus" % class_id)
     _expect(runtime.bind_equipment_state(profile.equipment_state), "%s original equipped item can be restored without changes" % class_id)
     _expect(is_equal_approx(float(runtime.make_basic_attack_payload().get("raw_damage", -1.0)), base_damage), "%s unupgraded equipment restores the exact original damage" % class_id)
     var empty := EquipmentState.new().to_dictionary()

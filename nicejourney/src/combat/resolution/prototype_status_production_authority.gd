@@ -7,6 +7,7 @@ const _BURN_MISSING = [
     "magnitude_semantics",
     "tick_interval_ticks",
     "first_tick_timing",
+    "tick_phase_when_same_source_refreshes",
     "damage_per_tick",
     "damage_domain",
     "mitigation_or_defense_interaction",

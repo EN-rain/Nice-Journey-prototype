@@ -6,6 +6,7 @@
 resource_name = "PLAYTEST starter weapon rank damage v01 — provisional attack_power"
 script = ExtResource("1_equipment_playtest")
 playtest_placeholder = true
+maximum_authored_upgrade_rank = 1
 attack_power_per_upgrade_rank = {
 "starter_bow": 1.0,
 "starter_staff": 1.0,

@@ -10,6 +10,11 @@ extends Resource
 @export_range(0.0, 10.0, 0.001) var dodge_invulnerability_duration_seconds: float = 0.0
 @export_range(0.0, 180.0, 0.1) var frontal_coverage_degrees: float = 0.0
 
+@export_category("Final defense approval — leave empty for PLAYTEST")
+@export var approved_final_values: bool = false
+@export var approval_reference_id: StringName = &""
+@export var manual_fairness_evidence_id: StringName = &""
+
 
 func validate_tuning(movement_tuning: MovementTuning = null) -> PackedStringArray:
     var errors := PackedStringArray()
@@ -39,3 +44,34 @@ func validate_tuning(movement_tuning: MovementTuning = null) -> PackedStringArra
             errors.append("dodge invulnerability interval must fit inside authored dodge movement duration")
 
     return errors
+
+
+func production_readiness(
+    movement_tuning: MovementTuning = null,
+    starter_tuning: StarterCombatTuning = null
+) -> Dictionary:
+    # The runtime may execute provisional dodge/block/parry values, but only
+    # explicitly approved tuning with observed player-contact evidence may be
+    # described as production-ready. Do not infer fairness from a green test.
+    var errors := validate_tuning(movement_tuning)
+    var missing := PackedStringArray()
+    if playtest_placeholder:
+        missing.append("playtest_placeholder")
+    if not approved_final_values:
+        missing.append("approved_final_values")
+    if not StableId.is_valid(String(approval_reference_id)):
+        missing.append("approval_reference_id")
+    if not StableId.is_valid(String(manual_fairness_evidence_id)):
+        missing.append("manual_fairness_evidence_id")
+    if movement_tuning == null:
+        missing.append("movement_tuning_for_dodge_interval")
+    if starter_tuning == null:
+        missing.append("starter_combat_tuning_for_parry_window_and_recovery")
+    else:
+        for error: String in starter_tuning.validate_tuning():
+            errors.append("starter combat: %s" % error)
+    return {
+        "production_ready": missing.is_empty() and errors.is_empty(),
+        "missing_fields": missing,
+        "validation_errors": errors,
+    }

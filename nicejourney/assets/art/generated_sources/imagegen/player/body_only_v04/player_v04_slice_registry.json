@@ -1,0 +1,187 @@
+{
+  "schema": "player-v04-slice-registry/v1",
+  "records": [
+    {
+      "project_path": "res://assets/art/player/animations/player_body_idle_sheet_v03.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/raw_batch/nice_journey_main_character_sprite_batches_transparent.zip",
+      "source_sha256": "ed4140616a6bfe1bbbc252eae7927ff124db55baee09a818ca11abddca8cd1b0",
+      "output_sha256": "75c3bf609ca213c4e7ecaf8a477fca0ea4c60f8c49a0677bd262ef468783ede8",
+      "dimensions": [
+        128,
+        32
+      ],
+      "modifications": "Existing accepted NEAREST candidate retained; no new mutation",
+      "derivation_manifest": "res://docs/evidence/art/nearest_candidates/player_main_character_v03_nearest_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_EXISTING_CLEAN",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-sheet-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_walk_sheet_v03.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/raw_batch/nice_journey_main_character_sprite_batches_transparent.zip",
+      "source_sha256": "ed4140616a6bfe1bbbc252eae7927ff124db55baee09a818ca11abddca8cd1b0",
+      "output_sha256": "7b6a4991decb845487ca4edb3beee330d60b5f004770ce930d8f9132b47d1963",
+      "dimensions": [
+        192,
+        32
+      ],
+      "modifications": "Existing accepted NEAREST candidate retained; no new mutation",
+      "derivation_manifest": "res://docs/evidence/art/nearest_candidates/player_main_character_v03_nearest_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_EXISTING_CLEAN",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-sheet-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_run_sheet_v03.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/raw_batch/nice_journey_main_character_sprite_batches_transparent.zip",
+      "source_sha256": "ed4140616a6bfe1bbbc252eae7927ff124db55baee09a818ca11abddca8cd1b0",
+      "output_sha256": "9acfeacd0eb2bd2a030c1e59d8dc4ce101e00b1b3dca7b8ad0993ac586bed331",
+      "dimensions": [
+        192,
+        32
+      ],
+      "modifications": "Existing accepted NEAREST candidate retained; no new mutation",
+      "derivation_manifest": "res://docs/evidence/art/nearest_candidates/player_main_character_v03_nearest_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_EXISTING_CLEAN",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-sheet-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_dash_sheet_v03.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/raw_batch/nice_journey_main_character_sprite_batches_transparent.zip",
+      "source_sha256": "ed4140616a6bfe1bbbc252eae7927ff124db55baee09a818ca11abddca8cd1b0",
+      "output_sha256": "537e4f4481e507fcd579e3f3f7e836ae2b96315898e3a6a209e2634f1ec6fedf",
+      "dimensions": [
+        128,
+        32
+      ],
+      "modifications": "Existing accepted NEAREST candidate retained; no new mutation",
+      "derivation_manifest": "res://docs/evidence/art/nearest_candidates/player_main_character_v03_nearest_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_EXISTING_CLEAN",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-sheet-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_climb_sheet_v03.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/raw_batch/nice_journey_main_character_sprite_batches_transparent.zip",
+      "source_sha256": "ed4140616a6bfe1bbbc252eae7927ff124db55baee09a818ca11abddca8cd1b0",
+      "output_sha256": "70071b911ab0245d406e56f2acb2657a1d3b8e9994743470707f2e356877bba9",
+      "dimensions": [
+        192,
+        32
+      ],
+      "modifications": "Existing accepted NEAREST candidate retained; no new mutation",
+      "derivation_manifest": "res://docs/evidence/art/nearest_candidates/player_main_character_v03_nearest_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_EXISTING_CLEAN",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-sheet-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_pickup_sheet_v03.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/raw_batch/nice_journey_main_character_sprite_batches_transparent.zip",
+      "source_sha256": "ed4140616a6bfe1bbbc252eae7927ff124db55baee09a818ca11abddca8cd1b0",
+      "output_sha256": "e6950ce6c20893983a2df5fceffbf76a99a6061a49b9af336af656d857479c8e",
+      "dimensions": [
+        160,
+        32
+      ],
+      "modifications": "Existing accepted NEAREST candidate retained; no new mutation",
+      "derivation_manifest": "res://docs/evidence/art/nearest_candidates/player_main_character_v03_nearest_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_EXISTING_CLEAN",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-sheet-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_sleep_sheet_v03.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/main_character_batches_v03/raw_batch/nice_journey_main_character_sprite_batches_transparent.zip",
+      "source_sha256": "ed4140616a6bfe1bbbc252eae7927ff124db55baee09a818ca11abddca8cd1b0",
+      "output_sha256": "d16478ec9eb198c6fddb8bd28223def6c325b51cfdd61630ea9d6dbd32c5854a",
+      "dimensions": [
+        128,
+        32
+      ],
+      "modifications": "Existing accepted NEAREST candidate retained; no new mutation",
+      "derivation_manifest": "res://docs/evidence/art/nearest_candidates/player_main_character_v03_nearest_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_EXISTING_CLEAN",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-sheet-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_attack_sheet_v04.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_attack_body_only_source.png",
+      "source_sha256": "07da238fa35537841cfc7f6ae2b014b90261329e8f605a2b1de92e3648564fb7",
+      "output_sha256": "4cd7fa67fc5c66a23c2f13d33494c0105d0d4b48f4f4efd7966bdf19a36b750d",
+      "dimensions": [
+        192,
+        32
+      ],
+      "modifications": "Visible alpha crop threshold 24; aspect preserving NEAREST to 30px body height; 32px cell center, y=1; hit selects source frames 1-5",
+      "derivation_manifest": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_attack_body_only_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_CANDIDATE_STAGED_V04",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-revised-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_heavy_attack_sheet_v04.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_heavy_attack_body_only_source.png",
+      "source_sha256": "af670f93bfc622ed45d76e96227b8710662a17380ed69346171151f5e5abe3df",
+      "output_sha256": "939d41763c4dc57c4eef998e39037d6eb036f181e1c5cdc862b508fa182b4dfe",
+      "dimensions": [
+        192,
+        32
+      ],
+      "modifications": "Visible alpha crop threshold 24; aspect preserving NEAREST to 30px body height; 32px cell center, y=1; hit selects source frames 1-5",
+      "derivation_manifest": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_heavy_attack_body_only_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_CANDIDATE_STAGED_V04",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-revised-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_parry_sheet_v04.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_parry_cast_hit_body_only_source.png",
+      "source_sha256": "514c5fb3427bce3a84641f7687c595e950a43afe94fdc0bfce9819750fbd43ef",
+      "output_sha256": "cbd5dc964826c21a27f2f91adc94c9e00b9d156ce12d719a898094c5bfa6806d",
+      "dimensions": [
+        192,
+        32
+      ],
+      "modifications": "Visible alpha crop threshold 24; aspect preserving NEAREST to 30px body height; 32px cell center, y=1; hit selects source frames 1-5",
+      "derivation_manifest": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_parry_body_only_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_CANDIDATE_STAGED_V04",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-revised-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_cast_sheet_v04.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_parry_cast_hit_body_only_source.png",
+      "source_sha256": "514c5fb3427bce3a84641f7687c595e950a43afe94fdc0bfce9819750fbd43ef",
+      "output_sha256": "f806eedf5bde1ebe792ce4804b885fcdef4017a7529f98aca766aabafdc50b7d",
+      "dimensions": [
+        224,
+        32
+      ],
+      "modifications": "Visible alpha crop threshold 24; aspect preserving NEAREST to 30px body height; 32px cell center, y=1; hit selects source frames 1-5",
+      "derivation_manifest": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_cast_body_only_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_CANDIDATE_STAGED_V04",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-revised-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_hit_sheet_v04.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_parry_cast_hit_body_only_source.png",
+      "source_sha256": "514c5fb3427bce3a84641f7687c595e950a43afe94fdc0bfce9819750fbd43ef",
+      "output_sha256": "e67268e3dee88e6c99f5b8513c654be4e5fd8e7e993b21b1580b6bddb29dc886",
+      "dimensions": [
+        160,
+        32
+      ],
+      "modifications": "Visible alpha crop threshold 24; aspect preserving NEAREST to 30px body height; 32px cell center, y=1; hit selects source frames 1-5",
+      "derivation_manifest": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_hit_body_only_derivation_manifest.json",
+      "acceptance_status": "ACCEPTED_CANDIDATE_STAGED_V04",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-revised-renderer-review.png"
+    },
+    {
+      "project_path": "res://assets/art/player/animations/player_body_block_sheet_v04_staged.png",
+      "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_block_body_only_source.png",
+      "source_sha256": "6aa6886811226d155c1a088f328ee2b07ceb9f551f95b9b546865189974887bf",
+      "output_sha256": "6484c760c04dad622fcca73dc7230a68c58c3e9f5b174a9af59363160cab8078",
+      "dimensions": [
+        96,
+        32
+      ],
+      "modifications": "Selected source frames 2-4; alpha crop threshold 24; NEAREST to 30px body height; staged only",
+      "derivation_manifest": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_block_body_only_derivation_manifest.json",
+      "acceptance_status": "STAGED_NOT_INTEGRATED",
+      "renderer_evidence": "res://docs/evidence/renderer/player-v04-revised-renderer-review.png"
+    }
+  ]
+}

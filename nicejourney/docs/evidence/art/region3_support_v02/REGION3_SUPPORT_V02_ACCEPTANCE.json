@@ -22,7 +22,7 @@
       "derivation_manifest": "docs/evidence/art/region3_support_v02/derivation_manifests/region3_prop_sheet_v02.manifest.json",
       "derivation_manifest_sha256": "5873c9bdb8499c99e4de8ac823a0ca83bbed5e0c4c7eaa42ef247f1c9033cbb3",
       "derivation_manifest_atlas_sha256": "a5e8ddd8d5094bc7a704dd9b1ba73a49dbc1fda7c66dafcdb544c1dee7fb35e8",
-      "acceptance": "ACCEPTED_REVIEWED_EXISTING",
+      "acceptance": "ACCEPTED_ATLAS_FOCUSED_VALIDATED",
       "source_bytes_preserved": true,
       "production_bytes_preserved": true
     },
@@ -45,7 +45,7 @@
       "derivation_manifest": "docs/evidence/art/region3_support_v02/derivation_manifests/region3_ground_road_tileset_v02.manifest.json",
       "derivation_manifest_sha256": "ea0ae3755668719db30514a397cdb92ef1841cfd496d0e7b568803bbfcd8842c",
       "derivation_manifest_atlas_sha256": "b03fa58ba34e3673fee1e5ba003b66bbeab3fd645e0ced9b484996ae263cbb0d",
-      "acceptance": "ACCEPTED_REVIEWED_EXISTING",
+      "acceptance": "ACCEPTED_ATLAS_FOCUSED_VALIDATED",
       "source_bytes_preserved": true,
       "production_bytes_preserved": true
     },
@@ -68,7 +68,7 @@
       "derivation_manifest": "docs/evidence/art/region3_support_v02/derivation_manifests/region3_ruins_module_sheet_v02.manifest.json",
       "derivation_manifest_sha256": "48a34b63bd33da6b5285bc3ede4dc223e22bfb08e60cfd92bbadb9c59ba08f0c",
       "derivation_manifest_atlas_sha256": "f38c64b0009b53c2e8c437053663d9479db2354d107961d6bca248654bbf919a",
-      "acceptance": "ACCEPTED_REVIEWED_EXISTING",
+      "acceptance": "ACCEPTED_ATLAS_FOCUSED_VALIDATED",
       "source_bytes_preserved": true,
       "production_bytes_preserved": true
     },
@@ -91,7 +91,7 @@
       "derivation_manifest": "docs/evidence/art/region3_support_v02/derivation_manifests/region3_outskirts_support_sheet_v02.manifest.json",
       "derivation_manifest_sha256": "aefa0288897522df9588a7a171a89a1804d012230ccca345782f46774fa3389e",
       "derivation_manifest_atlas_sha256": "dc5a6360cf3853d0ad80b8544588ed901f985d7b1c6a3b3aacc78536e0101e60",
-      "acceptance": "ACCEPTED_REVIEWED_EXISTING",
+      "acceptance": "ACCEPTED_ATLAS_FOCUSED_VALIDATED",
       "source_bytes_preserved": true,
       "production_bytes_preserved": true
     },
@@ -114,7 +114,7 @@
       "derivation_manifest": "docs/evidence/art/region3_support_v02/derivation_manifests/region3_risk_zone_support_sheet_v02.manifest.json",
       "derivation_manifest_sha256": "03e5ef8b0a016d445838eec854bc5df5e032bcdc8f00867f943ee192a95d79b5",
       "derivation_manifest_atlas_sha256": "3970b501faecdd966cd82cc18273a27788a60e8fd7ef34ff68b81c98ff23b733",
-      "acceptance": "ACCEPTED_REVIEWED_EXISTING",
+      "acceptance": "ACCEPTED_ATLAS_FOCUSED_VALIDATED",
       "source_bytes_preserved": true,
       "production_bytes_preserved": true
     }
@@ -174,6 +174,18 @@
       "capture_origin": "reused_reviewed_existing",
       "promoted_exact_bytes": true,
       "visual_review": "passed"
+    },
+    {
+      "path": "docs/evidence/art/region3_support_v02/renderer/region3_support_catalog_complete.png",
+      "sha256": "edec64eddd64d6ffc525446dbd30d1f06c4abf3a93f06397ccfaa6080f38393c",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "capture_origin": "fresh_godot_4.6.2_opengl_compatibility",
+      "visual_review": "Root inspected all 16 props, 7 ground tiles, 7 ruins, 6 outskirts, 6 risk subjects fully visible; atlas index7 empty for ground/ruins.",
+      "scale": "props/ruins/outskirts/risk native1x; ground2x",
+      "capture_script": "tools/art/capture_region3_support_catalog.gd"
     }
   ],
   "focused_gates": [
@@ -211,5 +223,7 @@
     }
   ],
   "all_source_and_derivative_hashes_match_recorded_values": true,
-  "all_focused_gates_passed": true
+  "all_focused_gates_passed": true,
+  "acceptance_scope": "Exact source/derivative atlases accepted visually with focused gates. Complete Region3 ground coverage and all intended scene placements are not certified by this atlas showcase.",
+  "superseded_capture_warning": "Earlier town/outskirts/risk/repetition captures are partial context only, insufficient alone for full batch visual acceptance. Fresh complete catalog resolves atlas-coverage review; road capture remains separate."
 }

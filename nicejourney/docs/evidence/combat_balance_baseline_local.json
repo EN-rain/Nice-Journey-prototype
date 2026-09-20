@@ -1,0 +1,1924 @@
+{
+	"archetype_count": 12,
+	"class_count": 3,
+	"floor_id": 5,
+	"label": "PLAYTEST controlled normal-damage baseline, NOT approved final balance",
+	"limitations": [
+		"No actual movement, physics hit probability, AI retaliation, skills, passives, upgrades or boss.",
+		"No player survival, human-input fairness, drop economy or final numerical approval.",
+		"HP uses the shipped floor-scaled role-stat formula, not a generated floor placement.",
+		"Time to defeat is action-clock ticks measured from the first basic request."
+	],
+	"rows": [
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "duelist",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:duelist",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "bruiser",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:bruiser",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "defender",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:defender",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "skirmisher",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:skirmisher",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "assassin",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:assassin",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "marksman",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:marksman",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "mobile_ranged",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:mobile_ranged",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "caster",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:caster",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "support",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:support",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": false,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "summoner",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:summoner",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": false,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "flying_harrier",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:flying_harrier",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_melee": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "controller_disruptor",
+			"basic_hit_count": 8,
+			"class_id": "melee",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_melee": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 103,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 10.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 8,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:melee:controller_disruptor",
+			"schema_version": 1,
+			"seconds": 1.71666666666667,
+			"signature_damage_available": false,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_melee": 8
+			},
+			"ticks": 103,
+			"time_to_defeat_ticks": 103
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "duelist",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:duelist",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "bruiser",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:bruiser",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "defender",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:defender",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "skirmisher",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:skirmisher",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "assassin",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:assassin",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "marksman",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:marksman",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "mobile_ranged",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:mobile_ranged",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "caster",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:caster",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "support",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:support",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": false,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "summoner",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:summoner",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": false,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "flying_harrier",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:flying_harrier",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_ranged": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "controller_disruptor",
+			"basic_hit_count": 8,
+			"class_id": "ranged",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_ranged": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 126,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:ranged:controller_disruptor",
+			"schema_version": 1,
+			"seconds": 2.1,
+			"signature_damage_available": false,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_ranged": 8
+			},
+			"ticks": 126,
+			"time_to_defeat_ticks": 126
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "duelist",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:duelist",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "bruiser",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:bruiser",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "defender",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:defender",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "skirmisher",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:skirmisher",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "assassin",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:assassin",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "marksman",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:marksman",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "mobile_ranged",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:mobile_ranged",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "caster",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:caster",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "support",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:support",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": false,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "summoner",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:summoner",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": false,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "flying_harrier",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:flying_harrier",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": true,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		},
+		{
+			"action_counts": {
+				"basic_attack_mage": 8
+			},
+			"all_enemies_defeated": true,
+			"archetype_id": "controller_disruptor",
+			"basic_hit_count": 8,
+			"class_id": "mage",
+			"committed_resource_costs": {
+				"mana": 0.0,
+				"stamina": 0.0
+			},
+			"cooldown_active_ticks": {
+
+			},
+			"damage_by_action": {
+				"basic_attack_mage": 72
+			},
+			"damage_dealt": 72,
+			"damage_taken": 0,
+			"defense_outcomes": {
+				"blocked": 0,
+				"dodged": 0,
+				"guard_broken": 0,
+				"parried": 0
+			},
+			"enemy_defeats": 1,
+			"enemy_hp_from_shipped_role_formula": 72,
+			"enemy_max_hp": 72,
+			"first_action_tick": 0,
+			"floor_id": 5,
+			"last_damage_tick": 134,
+			"model": "controlled_stationary_guaranteed_hit_nonretaliating",
+			"normal_basic_raw_damage": 9.0,
+			"observed_resource_minima": {
+
+			},
+			"overkill_damage": 0,
+			"player_deaths": 0,
+			"rejected_actions": 0,
+			"scenario_id": "baseline:floor5:mage:controller_disruptor",
+			"schema_version": 1,
+			"seconds": 2.23333333333333,
+			"signature_damage_available": false,
+			"source": "observed_combat_signals",
+			"status_damage_dealt": 0,
+			"status_damage_taken": 0,
+			"successful_contacts_by_action": {
+				"basic_attack_mage": 8
+			},
+			"ticks": 134,
+			"time_to_defeat_ticks": 134
+		}
+	],
+	"scenario": "floor_5_stationary_nonretaliating_unobstructed_guaranteed_contact",
+	"schema_version": 1
+}

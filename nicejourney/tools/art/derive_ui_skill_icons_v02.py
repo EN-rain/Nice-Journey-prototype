@@ -11,6 +11,8 @@ import hashlib
 import json
 from pathlib import Path
 from PIL import Image
+from audit_ui_core9_attribution import audit_core9
+from verify_ui_core9_exact_derivation import verify as verify_core9_exact
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE_DIR = ROOT / "assets/art/generated_sources/imagegen/ui"
@@ -30,18 +32,6 @@ BATCHES = [
         "piercing_shot", "fan_shot", "backstep_shot",
         "longshot", "fleet_recovery", "expose",
     ]),
-]
-
-CORE9 = [
-    ("class_mage", "class_mage_icon_v01.png", "class_mage_icon_v01.png"),
-    ("class_melee", "class_melee_icon_v01.png", "class_melee_icon_v01.png"),
-    ("class_ranged", "class_ranged_icon_v01.png", "class_ranged_icon_v01.png"),
-    ("quest_family_annihilation", "quest_family_annihilation_v01.png", "quest_family_annihilation_v01.png"),
-    ("quest_family_escort", "quest_family_escort_v01.png", "quest_family_escort_v01.png"),
-    ("quest_family_tower_defense", "quest_family_tower_defense_v01.png", "quest_family_tower_defense_v01.png"),
-    ("status_burn", "status_burn_v01.png", "status_burn_v01.png"),
-    ("status_slow", "status_slow_v01.png", "status_slow_v01.png"),
-    ("tower_sigil", "tower_sigil_icon_v01.png", "tower_sigil_icon_v01.png"),
 ]
 
 def sha256(path: Path) -> str:
@@ -95,31 +85,23 @@ def derive_batch(class_id: str, source_name: str, names: list[str]) -> list[dict
     return records
 
 def main() -> None:
+    # Fail before writing skill PNGs if current core source/output attribution
+    # cannot be verified. Old v01_backup_core9 files are historical evidence,
+    # not the sources of the current core icon bytes.
+    exact_core_records = verify_core9_exact()
+    core_records = audit_core9()
+    for record, exact in zip(core_records, exact_core_records):
+        if record["output"] != exact["output"] or record["cell_index"] != exact["source_cell_index"]:
+            raise RuntimeError("Core9 provenance no longer matches its exact reproduction")
+        record["attribution_status"] = "exact_source_cell_byte_derivation_verified"
+        record["exact_derivation_verified"] = True
+        record["exact_derivation_recipe"] = "full 418x418 cell -> direct RGBA PIL NEAREST 32x32 -> PNG optimize=False; no alpha cutoff/bbox/padding/compositing"
+        record["exact_derivation_verifier"] = "res://tools/art/verify_ui_core9_exact_derivation.py"
+        record["status"] = "preserved_existing_core9_exact_derivation_verified"
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     records = []
     for class_id, source_name, names in BATCHES:
         records.extend(derive_batch(class_id, source_name, names))
-    core_records = []
-    core_dir = SOURCE_DIR / "v01_backup_core9"
-    for asset_id, source_name, output_name in CORE9:
-        source = core_dir / source_name
-        output = ROOT / "assets/art/ui/classes" / output_name if asset_id.startswith("class_") else None
-        if asset_id.startswith("quest_"):
-            output = ROOT / "assets/art/ui/quests" / output_name
-        elif asset_id.startswith("status_"):
-            output = ROOT / "assets/art/ui/status" / output_name
-        elif asset_id == "tower_sigil":
-            output = ROOT / "assets/art/ui/markers" / output_name
-        core_records.append({
-            "asset_id": f"ui_{asset_id}_v01",
-            "source": f"res://assets/art/generated_sources/imagegen/ui/v01_backup_core9/{source_name}",
-            "source_sha256": sha256(source),
-            "source_dimensions": list(Image.open(source).size),
-            "output": f"res://{output.relative_to(ROOT).as_posix()}",
-            "output_sha256": sha256(output),
-            "output_dimensions": list(Image.open(output).size),
-            "status": "preserved_existing_core9",
-        })
     manifest = {
         "schema": "nice_journey.ui_skill_icon_v02_derivation.v1",
         "tool": "tools/art/derive_ui_skill_icons_v02.py",

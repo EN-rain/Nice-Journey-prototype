@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3]
+[gd_scene load_steps=36 format=3]
 
 [ext_resource type="Script" path="res://src/world/region3/layout/region3_authored_town_layout.gd" id="1_layout"]
 [ext_resource type="Script" path="res://src/world/region3/layout/region3_town_structure_anchor.gd" id="2_anchor"]
@@ -30,6 +30,10 @@
 [ext_resource type="Script" path="res://src/world/region3/interactions/region3_functional_service_interaction.gd" id="28_service_interaction"]
 [ext_resource type="Resource" path="res://src/world/region3/layout/region3_world_layout_definition.tres" id="29_world_layout"]
 [ext_resource type="Texture2D" path="res://assets/art/environments/region3/roads/derived/region3_ground_tile_v02_01.png" id="30_road_tile"]
+[ext_resource type="Script" path="res://src/world/npc/presentation/npc_visual_presenter.gd" id="31_npc_presenter"]
+[ext_resource type="Resource" path="res://src/world/npc/presentation/profiles/tower_quest_coordinator.tres" id="32_npc_coordinator"]
+[ext_resource type="Resource" path="res://src/world/npc/presentation/profiles/blacksmith_upgrader.tres" id="33_npc_blacksmith"]
+[ext_resource type="Resource" path="res://src/world/npc/presentation/profiles/merchant.tres" id="34_npc_merchant"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_storage_interaction"]
 radius = 24.0
@@ -82,6 +86,10 @@ expected_role_id = &"quest_hall"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="QuestHall/ServiceInteraction"]
 shape = SubResource("CircleShape2D_service_interaction")
 
+[node name="NpcVisualPresenter" type="Node2D" parent="QuestHall/ServiceInteraction"]
+script = ExtResource("31_npc_presenter")
+profile = ExtResource("32_npc_coordinator")
+
 [node name="Blacksmith" type="Node2D" parent="."]
 position = Vector2(3168, 2368)
 script = ExtResource("2_anchor")
@@ -105,6 +113,10 @@ expected_role_id = &"blacksmith"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blacksmith/ServiceInteraction"]
 shape = SubResource("CircleShape2D_service_interaction")
 
+[node name="NpcVisualPresenter" type="Node2D" parent="Blacksmith/ServiceInteraction"]
+script = ExtResource("31_npc_presenter")
+profile = ExtResource("33_npc_blacksmith")
+
 [node name="GeneralMerchant" type="Node2D" parent="."]
 position = Vector2(1920, 2944)
 script = ExtResource("2_anchor")
@@ -127,6 +139,10 @@ expected_role_id = &"general_merchant"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GeneralMerchant/ServiceInteraction"]
 shape = SubResource("CircleShape2D_service_interaction")
+
+[node name="NpcVisualPresenter" type="Node2D" parent="GeneralMerchant/ServiceInteraction"]
+script = ExtResource("31_npc_presenter")
+profile = ExtResource("34_npc_merchant")
 
 [node name="InnRestHouse" type="Node2D" parent="."]
 position = Vector2(3168, 2944)

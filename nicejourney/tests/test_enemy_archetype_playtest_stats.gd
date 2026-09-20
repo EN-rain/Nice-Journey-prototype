@@ -27,6 +27,13 @@ func _test_shipped_role_data() -> void:
     if catalog == null:
         return
     _expect(catalog.stats_by_archetype.size() == 12, "all twelve mechanical roles have explicit stat records")
+    var readiness := catalog.production_readiness_errors()
+    _expect(readiness.has("all enemy roles still share one neutral stat profile")
+        and readiness.has("duelist difficulty is unauthored")
+        and readiness.has("approved per-role balance evidence reference is missing"),
+        "neutral roles and unauthored difficulty remain explicit production blockers")
+    _expect(ATTACKS.production_readiness_errors().has("approved enemy attack balance/contact evidence reference is missing"),
+        "playtest attack catalog cannot be presented as approved final contact balance")
     for id: StringName in EnemyArchetypeCatalog.ALL_ARCHETYPE_IDS:
         var stats := catalog.stats_for(id)
         _expect(stats != null and stats.archetype_id == id, "%s has canonical independent Inspector stats" % String(id))
@@ -59,6 +66,11 @@ func _test_invalid_roles_and_non_damage_attack_boundaries() -> void:
     invalid.difficulty_rating = -1
     invalid.xp_reward = -2
     _expect(not invalid.validate_authoring().is_empty(), "unapproved negative rewards reject")
+    invalid.xp_reward = 1000001
+    _expect(not invalid.validate_authoring().is_empty(), "out-of-range reward rejects even when bypassing Inspector")
+    invalid.xp_reward = -1
+    invalid.difficulty_rating = 101
+    _expect(not invalid.validate_authoring().is_empty(), "out-of-range difficulty rejects even when bypassing Inspector")
 
     _expect(ATTACKS.validate_catalog().is_empty(), "shipped nine hits and three special actions validate")
     var modified := ATTACKS.duplicate(true) as EnemyPlaytestAttackCatalog
@@ -73,6 +85,27 @@ func _test_invalid_roles_and_non_damage_attack_boundaries() -> void:
     duelist.payload.raw_damage = 0.0
     zero_damage.attack_by_archetype["duelist"] = duelist
     _expect(not zero_damage.validate_catalog().is_empty(), "nine damaging signatures cannot silently become zero damage")
+    _expect(zero_damage.attack_for(&"marksman") == null,
+        "invalid attack manifest fails closed for all live archetypes, even otherwise valid records")
+    var unsupported_tick := ATTACKS.duplicate(true) as EnemyPlaytestAttackCatalog
+    var altered_hit := ATTACKS.attack_for(&"duelist")
+    altered_hit.geometry.hit_active_ticks = PackedInt32Array([1])
+    unsupported_tick.attack_by_archetype["duelist"] = altered_hit
+    _expect(not unsupported_tick.validate_catalog().is_empty(),
+        "a second ACTIVE tick cannot be authored while live delivery emits only at tick zero")
+    var unsupported_delivery := ATTACKS.duplicate(true) as EnemyPlaytestAttackCatalog
+    var altered_shot := ATTACKS.attack_for(&"marksman")
+    altered_shot.payload.delivery = DirectHitResolver.DELIVERY_CONTACT
+    unsupported_delivery.attack_by_archetype["marksman"] = altered_shot
+    _expect(not unsupported_delivery.validate_catalog().is_empty(),
+        "ranged signature cannot silently lose its live projectile delivery mode")
+    var invalid_shape := ATTACKS.duplicate(true) as EnemyPlaytestAttackCatalog
+    var altered_shape := ATTACKS.attack_for(&"bruiser")
+    var empty_rectangle := RectangleShape2D.new()
+    empty_rectangle.size = Vector2.ZERO
+    altered_shape.geometry.query_shape = empty_rectangle
+    invalid_shape.attack_by_archetype["bruiser"] = altered_shape
+    _expect(not invalid_shape.validate_catalog().is_empty(), "degenerate attack physics shapes reject")
 
 
 func _test_role_stats_reach_real_factory() -> void:

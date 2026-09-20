@@ -11,6 +11,10 @@ func _init() -> void:
 func _run() -> void:
     _expect(CATALOG != null, "tower room visual catalog loads")
     if CATALOG != null:
+        _expect(CATALOG.floor_tileset != null and CATALOG.floor_tileset.tile_size == Vector2i(32, 32), "tower floor TileSet is inspector assigned at the authored 32px cell size")
+        if CATALOG.floor_tileset != null and CATALOG.floor_tileset.has_source(CATALOG.floor_tile_source_id):
+            var floor_atlas := CATALOG.floor_tileset.get_source(CATALOG.floor_tile_source_id) as TileSetAtlasSource
+            _expect(floor_atlas != null and floor_atlas.texture != null and floor_atlas.texture.get_size() == Vector2(128, 128), "tower floor TileSet consumes the preserved 4x4 source atlas")
         _expect(CATALOG.profiles.size() == 8, "catalog exposes all eight current tower room visual categories")
         _expect(CATALOG.validate_catalog().is_empty(), "tower room visual profiles validate")
         for room_type: StringName in TowerRoomVisualProfile.ROOM_TYPES:

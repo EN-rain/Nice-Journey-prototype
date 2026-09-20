@@ -1,0 +1,208 @@
+{
+  "schema": "player-body-only-v04-derivation/v1",
+  "source": "res://assets/art/generated_sources/imagegen/player/body_only_v04/player_parry_cast_hit_body_only_source.png",
+  "source_sha256": "514c5fb3427bce3a84641f7687c595e950a43afe94fdc0bfce9819750fbd43ef",
+  "source_dimensions": [
+    1448,
+    1086
+  ],
+  "source_row": 1,
+  "frame_count": 7,
+  "output": "res://assets/art/player/animations/player_body_cast_sheet_v04.png",
+  "output_sha256": "f806eedf5bde1ebe792ce4804b885fcdef4017a7529f98aca766aabafdc50b7d",
+  "output_dimensions": [
+    224,
+    32
+  ],
+  "alpha_threshold": 24,
+  "method": "row group segmentation; visible-alpha crop; aspect-preserving NEAREST reduction to 30px body height; paste centered at y=1 in 32x32 cell; preserve alpha",
+  "ground_anchor": [
+    16,
+    29
+  ],
+  "selection_note": null,
+  "frames": [
+    {
+      "output_frame": 0,
+      "source_frame": 0,
+      "source_group": [
+        23,
+        188
+      ],
+      "alpha_crop": [
+        23,
+        436,
+        188,
+        652
+      ],
+      "crop_size": [
+        165,
+        216
+      ],
+      "derived_size": [
+        23,
+        30
+      ],
+      "paste_xy": [
+        4,
+        1
+      ]
+    },
+    {
+      "output_frame": 1,
+      "source_frame": 1,
+      "source_group": [
+        217,
+        398
+      ],
+      "alpha_crop": [
+        217,
+        436,
+        398,
+        652
+      ],
+      "crop_size": [
+        181,
+        216
+      ],
+      "derived_size": [
+        25,
+        30
+      ],
+      "paste_xy": [
+        3,
+        1
+      ]
+    },
+    {
+      "output_frame": 2,
+      "source_frame": 2,
+      "source_group": [
+        422,
+        588
+      ],
+      "alpha_crop": [
+        422,
+        437,
+        588,
+        652
+      ],
+      "crop_size": [
+        166,
+        215
+      ],
+      "derived_size": [
+        23,
+        30
+      ],
+      "paste_xy": [
+        4,
+        1
+      ]
+    },
+    {
+      "output_frame": 3,
+      "source_frame": 3,
+      "source_group": [
+        618,
+        802
+      ],
+      "alpha_crop": [
+        618,
+        436,
+        802,
+        652
+      ],
+      "crop_size": [
+        184,
+        216
+      ],
+      "derived_size": [
+        26,
+        30
+      ],
+      "paste_xy": [
+        3,
+        1
+      ]
+    },
+    {
+      "output_frame": 4,
+      "source_frame": 4,
+      "source_group": [
+        830,
+        1001
+      ],
+      "alpha_crop": [
+        830,
+        436,
+        1001,
+        652
+      ],
+      "crop_size": [
+        171,
+        216
+      ],
+      "derived_size": [
+        24,
+        30
+      ],
+      "paste_xy": [
+        4,
+        1
+      ]
+    },
+    {
+      "output_frame": 5,
+      "source_frame": 5,
+      "source_group": [
+        1058,
+        1230
+      ],
+      "alpha_crop": [
+        1058,
+        437,
+        1230,
+        652
+      ],
+      "crop_size": [
+        172,
+        215
+      ],
+      "derived_size": [
+        24,
+        30
+      ],
+      "paste_xy": [
+        4,
+        1
+      ]
+    },
+    {
+      "output_frame": 6,
+      "source_frame": 6,
+      "source_group": [
+        1250,
+        1412
+      ],
+      "alpha_crop": [
+        1250,
+        436,
+        1412,
+        652
+      ],
+      "crop_size": [
+        162,
+        216
+      ],
+      "derived_size": [
+        22,
+        30
+      ],
+      "paste_xy": [
+        5,
+        1
+      ]
+    }
+  ]
+}

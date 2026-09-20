@@ -94,6 +94,10 @@ func _test_melee_defense_state() -> void:
     _expect(runtime.get_defense_mode() == DirectHitResolver.DEFENSE_BLOCK, "Melee block exposes authoritative defense mode")
     _expect(not runtime.request_basic_attack(Vector2.RIGHT), "committed basic attack does not start through active block")
     _expect(runtime.request_block(false) and runtime.get_defense_mode() == DirectHitResolver.DEFENSE_NONE, "block release clears defense state")
+    tuning.melee_parry_window_ticks = 0
+    _expect(not runtime.request_parry() and runtime.get_defense_mode() == DirectHitResolver.DEFENSE_NONE,
+        "invalidated live Inspector parry window cannot create permanent zero-window parry")
+    tuning.melee_parry_window_ticks = 3
     _expect(runtime.request_parry(), "supported Melee parry starts its authored timing window")
     _expect(runtime.get_defense_mode() == DirectHitResolver.DEFENSE_PARRY and runtime.get_parry_window_ticks_remaining() == 3, "parry exposes its configured active window")
     _expect(not runtime.request_parry(), "parry cannot be spammed during its active window")

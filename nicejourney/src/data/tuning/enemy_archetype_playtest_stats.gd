@@ -28,8 +28,8 @@ func validate_authoring() -> PackedStringArray:
         if not is_finite(value) or value < 0.0 or value > 10000.0:
             errors.append("role stamina/defense additions must be finite and within Inspector bounds")
             break
-    if difficulty_rating != -1 and difficulty_rating <= 0:
-        errors.append("difficulty rating must be positive or explicitly unauthored (-1)")
-    if xp_reward < -1 or gold_reward < -1:
-        errors.append("rewards must be nonnegative or explicitly unauthored (-1)")
+    if difficulty_rating != -1 and (difficulty_rating <= 0 or difficulty_rating > 100):
+        errors.append("difficulty rating must be 1..100 or explicitly unauthored (-1)")
+    if xp_reward < -1 or xp_reward > 1000000 or gold_reward < -1 or gold_reward > 1000000:
+        errors.append("rewards must be 0..1000000 or explicitly unauthored (-1)")
     return errors

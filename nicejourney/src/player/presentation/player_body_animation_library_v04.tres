@@ -2,16 +2,16 @@
 
 [ext_resource type="Texture2D" path="res://assets/art/player/animations/player_body_attack_sheet_v04.png" id="tex_attack_v04"]
 [ext_resource type="Texture2D" uid="uid://ndlej3xhna5v" path="res://assets/art/player/animations/player_body_block_sheet_v03.png" id="tex_block"]
-[ext_resource type="Texture2D" uid="uid://dl7l51uwwi75x" path="res://assets/art/player/animations/player_body_cast_sheet_v03.png" id="tex_cast"]
+[ext_resource type="Texture2D" path="res://assets/art/player/animations/player_body_cast_sheet_v04.png" id="tex_cast_v04"]
 [ext_resource type="Texture2D" uid="uid://bft586jlsu0j0" path="res://assets/art/player/animations/player_body_climb_sheet_v03.png" id="tex_climb"]
 [ext_resource type="Texture2D" uid="uid://ciss2d82rb8ss" path="res://assets/art/player/animations/player_body_dash_sheet_v03.png" id="tex_dash"]
 [ext_resource type="Texture2D" uid="uid://l7hib26sr4st" path="res://assets/art/player/animations/player_body_death_sheet_v03.png" id="tex_death"]
 [ext_resource type="Texture2D" uid="uid://c50dmgjyi0t3f" path="res://assets/art/player/animations/player_body_dodge_sheet_v03.png" id="tex_dodge"]
 [ext_resource type="Texture2D" path="res://assets/art/player/animations/player_body_heavy_attack_sheet_v04.png" id="tex_heavy_attack_v04"]
-[ext_resource type="Texture2D" uid="uid://m5qjf0by2hdl" path="res://assets/art/player/animations/player_body_hit_sheet_v03.png" id="tex_hit"]
+[ext_resource type="Texture2D" path="res://assets/art/player/animations/player_body_hit_sheet_v04.png" id="tex_hit_v04"]
 [ext_resource type="Texture2D" uid="uid://nkiq28aakpxh" path="res://assets/art/player/animations/player_body_idle_sheet_v03.png" id="tex_idle"]
 [ext_resource type="Texture2D" uid="uid://c0cpl5yq2ggcv" path="res://assets/art/player/animations/player_body_interact_sheet_v03.png" id="tex_interact"]
-[ext_resource type="Texture2D" uid="uid://d05l46r8sbv6l" path="res://assets/art/player/animations/player_body_parry_sheet_v03.png" id="tex_parry"]
+[ext_resource type="Texture2D" path="res://assets/art/player/animations/player_body_parry_sheet_v04.png" id="tex_parry_v04"]
 [ext_resource type="Texture2D" uid="uid://dcnnbt85fekxx" path="res://assets/art/player/animations/player_body_pickup_sheet_v03.png" id="tex_pickup"]
 [ext_resource type="Texture2D" uid="uid://bgkq8qeyjgkvi" path="res://assets/art/player/animations/player_body_run_sheet_v03.png" id="tex_run"]
 [ext_resource type="Texture2D" uid="uid://dx873je4dmq4a" path="res://assets/art/player/animations/player_body_sleep_sheet_v03.png" id="tex_sleep"]
@@ -132,7 +132,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("tex_cast")]
+"values": [ExtResource("tex_cast_v04")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -438,7 +438,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("tex_hit")]
+"values": [ExtResource("tex_hit_v04")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -450,7 +450,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [6]
+"values": [5]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -471,10 +471,10 @@ tracks/3/path = NodePath("BodyVisual/Body:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.04, 0.08, 0.12, 0.16),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [0, 1, 2, 3, 4]
 }
 
 [sub_resource type="Animation" id="Animation_idle"]
@@ -591,7 +591,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("tex_parry")]
+"values": [ExtResource("tex_parry_v04")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false

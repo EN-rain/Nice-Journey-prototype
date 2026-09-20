@@ -1,0 +1,74 @@
+{
+  "candidate": "res://assets/art/ui/markers/review/map_marker_quest_sigil_v02_candidate.png",
+  "candidate_sha256": "e918f083ae5e1110faed8538112a2b6bb5f973bc367d19234aa26ac7ad5eeb94",
+  "cells": [
+    {
+      "native_screen_xyxy": [
+        80,
+        128,
+        112,
+        160
+      ],
+      "semantic": "Escort",
+      "source_xyxy": [
+        0,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "native_screen_xyxy": [
+        224,
+        128,
+        256,
+        160
+      ],
+      "semantic": "Tower Defense",
+      "source_xyxy": [
+        32,
+        0,
+        64,
+        32
+      ]
+    },
+    {
+      "native_screen_xyxy": [
+        368,
+        128,
+        400,
+        160
+      ],
+      "semantic": "Annihilation",
+      "source_xyxy": [
+        64,
+        0,
+        96,
+        32
+      ]
+    },
+    {
+      "native_screen_xyxy": [
+        512,
+        128,
+        544,
+        160
+      ],
+      "semantic": "Tower Sigil",
+      "source_xyxy": [
+        96,
+        0,
+        128,
+        32
+      ]
+    }
+  ],
+  "godot_version": "4.6.2-stable (official)",
+  "image": "res://docs/evidence/renderer/map-marker-quest-sigil-candidate-native.png",
+  "scope": "Four 32x32 glyphs from 128x32 candidate sampled on real GL Compatibility 640x360 renderer; no live map semantics or quest-marker coordinates implied",
+  "size": [
+    640,
+    360
+  ],
+  "status": "REVIEW_ONLY_NOT_ACCEPTED"
+}

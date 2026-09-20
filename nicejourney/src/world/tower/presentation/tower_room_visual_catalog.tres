@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="TowerRoomVisualCatalog" load_steps=10 format=3]
+[gd_resource type="Resource" script_class="TowerRoomVisualCatalog" load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://src/world/tower/presentation/tower_room_visual_catalog.gd" id="1_catalog"]
 [ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/combat_visual_profile.tres" id="2_combat"]
@@ -9,9 +9,11 @@
 [ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/elite_visual_profile.tres" id="7_elite"]
 [ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/objective_visual_profile.tres" id="8_objective"]
 [ext_resource type="Resource" path="res://src/world/tower/presentation/profiles/boss_visual_profile.tres" id="9_boss"]
+[ext_resource type="TileSet" path="res://src/world/tower/presentation/tower_common_floor_tileset_v01.tres" id="10_floor"]
 
 [resource]
 script = ExtResource("1_catalog")
+floor_tileset = ExtResource("10_floor")
 profiles = [
 ExtResource("2_combat"),
 ExtResource("3_safe"),

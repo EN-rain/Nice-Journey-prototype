@@ -11,6 +11,7 @@ extends Resource
 @export var burn_tick_interval_ticks: int = -1
 @export var burn_damage_per_tick: int = -1
 @export var burn_first_tick_policy_id: StringName = &""
+@export var burn_reapplication_tick_phase_policy_id: StringName = &""
 @export var burn_damage_domain_policy_id: StringName = &""
 @export var burn_mitigation_policy_id: StringName = &""
 @export var burn_cross_source_aggregation_policy_id: StringName = &""
@@ -38,6 +39,7 @@ func authoring_readiness(behavior: StringName) -> Dictionary:
         _require_positive(burn_tick_interval_ticks, "tick_interval_ticks", missing)
         _require_positive(burn_damage_per_tick, "damage_per_tick", missing)
         _require_policy(burn_first_tick_policy_id, "first_tick_timing", missing)
+        _require_policy(burn_reapplication_tick_phase_policy_id, "tick_phase_when_same_source_refreshes", missing)
         _require_policy(burn_damage_domain_policy_id, "damage_domain", missing)
         _require_policy(burn_mitigation_policy_id, "mitigation_or_defense_interaction", missing)
         _require_policy(burn_cross_source_aggregation_policy_id, "cross_status_id_execution_aggregation_policy", missing)

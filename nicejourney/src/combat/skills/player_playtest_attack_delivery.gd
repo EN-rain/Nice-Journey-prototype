@@ -50,9 +50,11 @@ func configure(source_player: PlayerController, source_class_runtime: ClassComba
 func configure_skill_ranks(profile: ProfileSnapshot, tuning: ActiveSkillsPlaytest) -> bool:
     skill_rank_profile = null
     skill_rank_tuning = null
-    if profile == null or tuning == null or not tuning.validate_content().is_empty():
+    if profile == null or tuning == null or content == null or not tuning.validate_delivery_content(content).is_empty():
         return false
     if not SkillLoadoutState.validate_dictionary(profile.skill_state).is_empty():
+        return false
+    if class_runtime != null and class_runtime.get_class_id() != StringName(profile.class_id):
         return false
     skill_rank_profile = profile
     skill_rank_tuning = tuning
@@ -164,7 +166,7 @@ func _deliver_instant(effect: Dictionary, payload: Dictionary, origin: Vector2,
 
 
 func _spawn_projectiles(effect: Dictionary, payload: Dictionary, aim: Vector2, instance_id: int) -> void:
-    if content == null or content.projectile_placeholder_scene == null:
+    if content == null or class_runtime == null:
         return
     var count := int(effect.get("projectile_count", 1))
     var spread := float(effect.get("half_angle_degrees", 0.0))
@@ -181,7 +183,25 @@ func _spawn_projectiles(effect: Dictionary, payload: Dictionary, aim: Vector2, i
 
 
 func _spawn_projectile(effect: Dictionary, payload: Dictionary, direction: Vector2, instance_id: int, index: int) -> void:
-    var visual := content.projectile_placeholder_scene.instantiate() as Node2D
+    var projectile_scene: PackedScene = null
+    match class_runtime.get_class_id():
+        &"ranged":
+            projectile_scene = content.ranged_projectile_scene
+        &"mage":
+            projectile_scene = content.mage_projectile_scene
+        _:
+            # Standalone delivery tests can inject an authored projectile into
+            # a contact-only class fixture. Preserve its projectile snapshot
+            # semantics without changing any live class's attack selection.
+            if StringName(String(effect.get("mode", &""))) == PlayerPlaytestAttackContent.MODE_PROJECTILE:
+                match StringName(String(payload.get("domain", &""))):
+                    DirectHitResolver.DOMAIN_PHYSICAL:
+                        projectile_scene = content.ranged_projectile_scene
+                    DirectHitResolver.DOMAIN_ARCANE:
+                        projectile_scene = content.mage_projectile_scene
+    if projectile_scene == null:
+        return
+    var visual := projectile_scene.instantiate() as Node2D
     if visual == null:
         return
     add_child(visual)

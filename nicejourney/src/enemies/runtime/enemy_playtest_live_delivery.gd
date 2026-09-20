@@ -73,6 +73,17 @@ func _on_active_window(encounter_id: StringName, context: Dictionary, emitter: V
     var driver: EnemySignatureActionPhaseDriver = source.get_action_phase_driver(encounter_id, actor_id)
     if driver == null or not geometry.validate_live_delivery(int(driver.timing.get("active_ticks", 0))).is_empty():
         return
+    # A host signal is an announcement, not authority to replay or retarget an
+    # attack. Check the live reservation and the original observed aim again.
+    var current := runtime.get_active_delivery_context(int(context.get("action_instance_id", -1)))
+    if (not bool(current.get("accepted", false))
+        or driver.action_instance_id != int(context.get("action_instance_id", -1))
+        or current.get("reservation_token") != context.get("reservation_token")
+        or current.get("action_id") != context.get("action_id")
+        or current.get("target_id") != context.get("target_id")
+        or current.get("has_committed_observation_position") != context.get("has_committed_observation_position")
+        or current.get("committed_observation_position") != context.get("committed_observation_position")):
+        return
     var raw_target: Variant = context.get("committed_observation_position", null)
     if not bool(context.get("has_committed_observation_position", false)) or not raw_target is Vector2 or not (raw_target as Vector2).is_finite():
         return
@@ -103,11 +114,15 @@ func _on_active_window(encounter_id: StringName, context: Dictionary, emitter: V
 func _spawn_projectile(encounter_id: StringName, actor_id: StringName, instance_id: int,
     origin: Vector2, direction: Vector2, geometry: EnemyAttackGeometryAuthoring,
     executor: EnemyActiveAttackDeliveryExecutor, source: Variant) -> void:
+    var ticket := executor.authorize_projectile_launch(instance_id, geometry.geometry_id)
+    if ticket <= 0:
+        return
     var marker := projectile_placeholder_scene.instantiate() as Node2D
     if marker == null:
+        executor.release_projectile_launch(ticket)
         return
     add_child(marker)
-    marker.global_position = origin
+    marker.global_position = geometry.live_query_transform(Transform2D(direction.angle(), origin)).origin
     marker.rotation = direction.angle()
     marker.modulate = Color(1.0, 0.35, 0.32, 0.9)
     _projectiles.append({
@@ -115,11 +130,13 @@ func _spawn_projectile(encounter_id: StringName, actor_id: StringName, instance_
         "encounter_id": encounter_id,
         "actor_id": actor_id,
         "action_instance_id": instance_id,
+        "launch_ticket": ticket,
         "direction": direction,
         "traveled": 0.0,
         "max_reach": geometry.max_reach_px,
         "remaining": projectile_lifetime_ticks,
         "geometry_id": geometry.geometry_id,
+        "collision_mask": geometry.collision_mask,
         "executor": executor,
         "source": source,
     })
@@ -130,12 +147,14 @@ func _physics_process(delta: float) -> void:
         var projectile := _projectiles[index] as Dictionary
         var marker := projectile.get("visual") as Node2D
         if marker == null or not is_instance_valid(marker):
+            _release_projectile_ticket(projectile)
             _projectiles.remove_at(index)
             continue
         var encounter_id := StringName(String(projectile["encounter_id"]))
         var actor_id := StringName(String(projectile["actor_id"]))
         var source: Variant = _source_for_encounter(encounter_id)
         if source == null or source != projectile.get("source"):
+            _release_projectile_ticket(projectile)
             marker.queue_free()
             _projectiles.remove_at(index)
             continue
@@ -143,7 +162,7 @@ func _physics_process(delta: float) -> void:
         var direction := projectile["direction"] as Vector2
         var step := direction * projectile_speed_px_per_second * delta
         var destination := origin + step
-        var ray := PhysicsRayQueryParameters2D.create(origin, destination, 1)
+        var ray := PhysicsRayQueryParameters2D.create(origin, destination, int(projectile["collision_mask"]))
         ray.collide_with_areas = false
         ray.collide_with_bodies = true
         var collision := get_world_2d().direct_space_state.intersect_ray(ray)
@@ -152,7 +171,8 @@ func _physics_process(delta: float) -> void:
                 _confirm_player_contact(encounter_id, actor_id, int(projectile["action_instance_id"]),
                     0, StringName(String(projectile["geometry_id"])),
                     projectile["executor"] as EnemyActiveAttackDeliveryExecutor,
-                    origin, source)
+                    origin, source, int(projectile["launch_ticket"]))
+            _release_projectile_ticket(projectile)
             marker.queue_free()
             _projectiles.remove_at(index)
             continue
@@ -160,13 +180,15 @@ func _physics_process(delta: float) -> void:
         projectile["traveled"] = float(projectile["traveled"]) + step.length()
         projectile["remaining"] = int(projectile["remaining"]) - 1
         if float(projectile["traveled"]) >= float(projectile["max_reach"]) or int(projectile["remaining"]) <= 0:
+            _release_projectile_ticket(projectile)
             marker.queue_free()
             _projectiles.remove_at(index)
 
 
 func _confirm_player_contact(encounter_id: StringName, actor_id: StringName,
     action_instance_id: int, hit_interval_index: int, geometry_id: StringName,
-    executor: EnemyActiveAttackDeliveryExecutor, origin: Vector2, expected_source: Variant = null) -> Dictionary:
+    executor: EnemyActiveAttackDeliveryExecutor, origin: Vector2, expected_source: Variant = null,
+    launch_ticket: int = 0) -> Dictionary:
     if executor == null or player == null or not defender_provider.is_configured():
         return {"accepted": false, "reason_id": &"playtest_defender_unavailable"}
     var source: Variant = _source_for_encounter(encounter_id)
@@ -196,10 +218,11 @@ func _confirm_player_contact(encounter_id: StringName, actor_id: StringName,
     var base_block_supported := player_state.block_supported if player_state != null else false
     if player_state != null and bool(defender_facts.get("playtest_ward_active", false)):
         player_state.block_supported = true
-    var result := executor.resolve_authored_contact(contact,
-        bool(defender_facts["evade_window_active"]),
-        StringName(String(defender_facts["defense_mode"])),
-        bool(defender_facts["facing_covered"]))
+    var result := executor.resolve_launched_projectile_impact(
+        launch_ticket, geometry_id, bool(defender_facts["evade_window_active"]),
+        StringName(String(defender_facts["defense_mode"])), bool(defender_facts["facing_covered"])) if launch_ticket > 0 else executor.resolve_authored_contact(
+        contact, bool(defender_facts["evade_window_active"]),
+        StringName(String(defender_facts["defense_mode"])), bool(defender_facts["facing_covered"]))
     if player_state != null:
         player_state.block_supported = base_block_supported
     last_delivery_result = result.duplicate(true)
@@ -238,6 +261,7 @@ func _clear_projectiles(source: Variant = null, encounter_id: StringName = &"") 
     for entry: Dictionary in _projectiles:
         if source != null and (entry.get("source") != source or (encounter_id != &"" and entry.get("encounter_id") != encounter_id)):
             continue
+        _release_projectile_ticket(entry)
         var marker := entry.get("visual") as Node2D
         if marker != null and is_instance_valid(marker):
             marker.queue_free()
@@ -246,6 +270,12 @@ func _clear_projectiles(source: Variant = null, encounter_id: StringName = &"") 
     else:
         _projectiles = _projectiles.filter(func(entry: Dictionary) -> bool:
             return entry.get("source") != source or (encounter_id != &"" and entry.get("encounter_id") != encounter_id))
+
+
+func _release_projectile_ticket(entry: Dictionary) -> void:
+    var executor := entry.get("executor") as EnemyActiveAttackDeliveryExecutor
+    if executor != null:
+        executor.release_projectile_launch(int(entry.get("launch_ticket", 0)))
 
 
 func _exit_tree() -> void:

@@ -36,6 +36,20 @@ func _test_tuning_fails_closed_without_authority() -> void:
         not authored.validate_tuning(movement).is_empty(),
         "dodge invulnerability interval cannot extend beyond the authored dodge movement duration"
     )
+    var shipped := preload("res://src/data/tuning/player_defender_facts_playtest_v01.tres") as PlayerDefenderFactsTuning
+    var pending := shipped.production_readiness(movement, STARTER_COMBAT_TUNING)
+    _expect(not bool(pending.get("production_ready", true)), "shipped defender windows and facing cone stay PLAYTEST despite valid runtime authoring")
+    _expect((pending.get("missing_fields", PackedStringArray()) as PackedStringArray).has("manual_fairness_evidence_id"), "defense requires recorded three-class manual contact fairness evidence")
+    var hypothetical := PlayerDefenderFactsTuning.new()
+    hypothetical.authored = true
+    hypothetical.dodge_invulnerability_start_seconds = 0.015
+    hypothetical.dodge_invulnerability_duration_seconds = 0.09
+    hypothetical.frontal_coverage_degrees = 120.0
+    hypothetical.approved_final_values = true
+    hypothetical.approval_reference_id = &"approval:test_only"
+    hypothetical.manual_fairness_evidence_id = &"evidence:test_only"
+    _expect(not bool(hypothetical.production_readiness(null, STARTER_COMBAT_TUNING).get("production_ready", true)), "production gate requires live dodge movement bounds")
+    _expect(bool(hypothetical.production_readiness(movement, STARTER_COMBAT_TUNING).get("production_ready", false)), "hypothetical explicitly approved, bounded defense data passes authoring gate")
 
 
 func _test_live_provider_uses_authoritative_player_state() -> void:
@@ -67,6 +81,7 @@ func _test_live_provider_uses_authoritative_player_state() -> void:
     var behind := provider.make_snapshot(player.global_position + Vector2(-32.0, 0.0), player.global_position)
     _expect(bool(front.get("facing_covered", false)), "frontal coverage uses the player's authoritative combat aim direction")
     _expect(not bool(behind.get("facing_covered", true)), "attacks behind the authored frontal cone are not covered")
+    _expect(not PlayerDefenderFactsProvider.is_facing_covered(Vector2.RIGHT, Vector2(INF, 0.0), player.global_position, 120.0), "nonfinite attacker coordinates cannot grant frontal defense")
 
     _expect(combat.request_block(true), "Melee fixture enters its real block state")
     var blocked := provider.make_snapshot(player.global_position + Vector2(32.0, 0.0), player.global_position)
@@ -84,6 +99,9 @@ func _test_live_provider_uses_authoritative_player_state() -> void:
     player.movement.tick(player, player.stamina, 0.06)
     var after_window := provider.make_snapshot(player.global_position + Vector2(32.0, 0.0), player.global_position)
     _expect(not bool(after_window.get("evade_window_active", true)), "dodge invulnerability ends independently of the remaining dodge movement")
+
+    tuning.dodge_invulnerability_duration_seconds = player.movement.tuning.dodge_duration + 1.0
+    _expect(provider.make_snapshot(player.global_position + Vector2.RIGHT, player.global_position).is_empty(), "mutating authored dodge bounds after configure cannot grant a stale defender snapshot")
 
     _expect(
         not PlayerDefenderFactsProvider.is_facing_covered(Vector2.RIGHT, Vector2.ZERO, Vector2.ZERO, 120.0),
