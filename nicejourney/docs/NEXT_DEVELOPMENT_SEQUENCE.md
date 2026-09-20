@@ -46,6 +46,8 @@ The selected code-only areas now include strict persisted vendor number/quantity
 
 ## Current priority order
 
+The new `test_three_class_required_route_live_qa.gd` covers live Quest Hall preparation, ten authored Tower entries/exits/turn-ins and disk XP/checkpoint continuity for all three classes, plus real Floor-1 enemy contact/quest completion. Its Floor-2–9 objectives and Floor-10 boss victory are **controlled test outcomes**; this is not a completed human-input combat, escort or boss-fairness playtest. The local working-tree gate passed 273/0 but included separate uncommitted concurrent art changes; the last committed 271/0 reference baseline above remains distinct. See the newest `IMPLEMENTATION_STATE.md` entry for the precise scope.
+
 ### 1. Tenth Warden playtest and final balance
 
 The shipped boss encounter is now playable through the normal Floor 10 trigger using `src/enemies/boss_tenth_warden/runtime/tenth_warden_playtest_v01.tres` and `src/data/tuning/player_defender_facts_playtest_v01.tres`. Both are inspector-editable, explicitly `playtest_placeholder = true` and reproducible by `tools/create_tenth_warden_playtest_tuning.gd`. Their stats, phase cadence/timing, move costs/payloads, temporary shared hit geometries, 50% transition, heavy-recovery weak-point and 0.12-second-dodge-compatible defense window are **provisional playtest hypotheses**, not approved final balancing.
