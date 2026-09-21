@@ -7,6 +7,7 @@ visible pixels beyond the corresponding no-equipment render. Pixel fidelity
 does not establish subjective equipment/grip fit or absence of baked VFX.
 """
 
+import argparse
 import hashlib
 import json
 from collections import defaultdict
@@ -20,6 +21,12 @@ PROJECT = Path(__file__).resolve().parents[2]
 REVIEW = PROJECT / "assets/art/player/animations/review_r2_engine"
 MANIFEST = REVIEW / "player_r2_renderer_evidence.json"
 REPORT = REVIEW / "player_r2_renderer_verification.json"
+PARSER = argparse.ArgumentParser(description=__doc__)
+PARSER.add_argument(
+    "--write-report", action="store_true",
+    help="explicitly refresh this tool's own renderer verification JSON after successful checks",
+)
+ARGS = PARSER.parse_args()
 STATES = (
     "attack", "heavy_attack", "block", "parry", "cast", "hit",
     "interact", "use_item", "death", "dodge",
@@ -186,6 +193,15 @@ report = {
     "limitations": "Does not prove equipment shape touches the anatomically correct gloved hand; does not prove candidate lacks a connected baked effect or weapon; does not validate candidate frame timing/acceptance.",
     "states": summaries,
 }
-REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+report_text = json.dumps(report, indent=2) + "\n"
+if ARGS.write_report:
+    REPORT.write_text(report_text, encoding="utf-8")
+else:
+    # read_text normalizes this Windows-authored report's CRLF to LF,
+    # preserving its exact on-disk bytes in the default check-only path.
+    assert REPORT.is_file() and REPORT.read_text(encoding="utf-8") == report_text, (
+        "renderer verification has changed; review before explicitly refreshing "
+        "with --write-report"
+    )
 print("PASS 50 real Compatibility captures / 10 states / both directions / 1x,2x and all three starter equipment profiles")
 print("REPORT", REPORT.relative_to(PROJECT), "sha256", sha(REPORT))

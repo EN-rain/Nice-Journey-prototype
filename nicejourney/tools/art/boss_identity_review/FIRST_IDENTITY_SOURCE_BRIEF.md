@@ -5,26 +5,37 @@ isolated neutral boss identity image first, **not** the nine-pose replacement,
 core sheet, telegraphs, room background, or a production asset. No source exists
 for this candidate yet. Do not mark a manifest record accepted from this brief.
 
-## Clean-context image prompt
+## Fresh-image-only prompt — one boss, one pose
 
-> A single full-body fantasy adaptive-duelist milestone boss, The Tenth Warden,
-> in a neutral ready stance. Crisp 16-bit-inspired pixel art with controlled
-> palette ramps and a strong, readable head, armor, and directional weapon
-> silhouette, for a side-biased top-down 3/4 orthographic pixel game. One
-> consistent whole figure at a fixed scale, feet visible with generous margins,
-> isolated on real transparent RGBA. Design an original coherent identity,
-> readable when fitted into one **96×96 gameplay sprite**, not a tiny figure
-> on a full illustration canvas. No text, labels, grid, sprite sheet, extra
-> poses, VFX, baked telegraph, hit box, scenery, arena, UI, status dashboard,
-> faction insignia, lore, named person, adds, or healing imagery.
+Use a **new image-only conversation**. Provide *only* the short prompt below and,
+if visual reference is necessary, the isolated 96×96 V01 idle PNG. Do not supply
+the nine-cell core sheet, any escort image, previous failed generation, project
+status, or the longer boss telegraph packet to the image generator. Those
+multi-pose and adjacent escort cues are not authority for this first image.
 
-Supply these **reference images** to the art generator for *staging/size only*:
+> ONE isolated fantasy milestone-boss character: **The Tenth Warden**, an
+> imposing armored adaptive duelist holding one clearly readable directional
+> weapon in a still, neutral ready stance. Full body and feet visible; crisp
+> 16-bit-inspired pixel art, restrained cool palette, strong head/armor/weapon
+> silhouette, side-biased top-down 3/4 game view, true transparent background.
+> Compose ONE complete figure suitable for later fitting into ONE 96×96 game
+> sprite. No companion or escort, no walking
+> cycle, no repeated figures or frames, no strip/grid/sprite sheet, no “Idle” or
+> “Walk” labels or any text, no UI/scenery/VFX/attack geometry/faction emblem.
 
-- `res://assets/art/enemies/boss_tenth_warden/tenth_warden_idle_v01.png`
-  (96×96, SHA-256 `9ebc89eade1df590bb09009b554352eb11ad7c7a6b865a3f22fb24e359cdb85d`)
-- `res://assets/art/enemies/boss_tenth_warden/tenth_warden_core_sheet_v01.png`
-  (864×96, nine 96×96 cells, SHA-256
-  `eb9991a07b697abf5ef3e346f5897fcddce1155a59b64a5028a8385d6c87c8f5`)
+**Only optional visual staging reference:**
+`res://assets/art/enemies/boss_tenth_warden/tenth_warden_idle_v01.png`
+(96×96, SHA-256 `9ebc89eade1df590bb09009b554352eb11ad7c7a6b865a3f22fb24e359cdb85d`).
+This procedural placeholder gives scale/composition only; it does not fix the
+final boss's gender, costume, face, weapon design, palette or lore.
+
+**Rejected output, not an intake source:** the latest result was reported as a
+female escort-like **4-idle/6-walk labeled strip**. It is the wrong subject and
+layout regardless of alpha, file dimensions, or mechanical intake success.
+No exact source bytes/hash were supplied for it here. Do not salvage frames or
+add that image to generated-source provenance. If the fresh attempt again
+produces an escort or a character strip, stop in that context rather than
+iterating minor wording in the same contaminated conversation.
 
 The procedural V01 costume, face, palette, main weapon geometry, and weak-point
 location **are not approved identity facts**. The game approves exactly two boss
