@@ -149,16 +149,20 @@ def main() -> None:
     parser.add_argument("--check", action="store_true", help="verify exact candidate bytes, never modify")
     args = parser.parse_args()
     outputs, records = derive()
+    targets = [(OUTPUT / filename, data) for filename, data in outputs.items()]
     if not args.check:
+        # Fail before staging ANY file if a later body, VFX or provenance
+        # target conflicts. Never leave a partly updated review packet.
+        for path, data in targets:
+            if path.exists() and path.read_bytes() != data:
+                raise FileExistsError(f"refusing to overwrite existing review source: {path}")
         OUTPUT.mkdir(parents=True, exist_ok=True)
-    for filename, data in outputs.items():
-        path = OUTPUT / filename
+    for path, data in targets:
         if args.check:
             if not path.exists() or path.read_bytes() != data:
                 raise ValueError(f"missing or non-reproducible R3 review: {path}")
         elif path.exists():
-            if path.read_bytes() != data:
-                raise FileExistsError(f"refusing to overwrite existing review source: {path}")
+            pass  # Preflight has verified the preserved review bytes.
         else:
             path.write_bytes(data)
         print(f"{'PASS' if args.check else 'STAGED'} {path.relative_to(PROJECT)} sha256={sha(data)}")
