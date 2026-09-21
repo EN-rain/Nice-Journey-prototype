@@ -56,6 +56,17 @@ class IdentitySourceIntakeTests(unittest.TestCase):
         self.assertFalse(result["mechanically_reviewable"])
         self.assertIn("visible pixels touch source boundary; figure may be cropped", result["errors"])
 
+    def test_faint_alpha_fringe_at_edge_is_rejected(self) -> None:
+        path = self.candidate()
+        with Image.open(path) as loaded:
+            image = loaded.copy()
+        image.putpixel((0, 128), (85, 98, 128, 10))
+        image.save(path)
+        result = inspect(path)
+        self.assertFalse(result["mechanically_reviewable"])
+        self.assertEqual(result["visible_bbox_exclusive"], [68, 32, 178, 225])
+        self.assertIn("visible pixels touch source boundary; figure may be cropped", result["errors"])
+
     def test_bad_expected_sha_is_rejected(self) -> None:
         result = inspect(self.candidate(), "0" * 64)
         self.assertFalse(result["mechanically_reviewable"])

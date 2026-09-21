@@ -86,6 +86,11 @@ def inspect(source: Path, expected_sha256: str | None = None) -> dict[str, Any]:
             result["fully_transparent_pixels"] = alpha.histogram()[0]
             if extrema[0] != 0:
                 errors.append("source lacks fully transparent background pixels")
+            # The descriptive figure bounds ignore very faint anti-alias noise,
+            # but source-boundary rejection must include ANY nonzero alpha:
+            # alpha 1..23 at an edge is still source content that may be cut.
+            full_alpha_bbox = alpha.getbbox()
+            result["nonzero_alpha_bbox_exclusive"] = list(full_alpha_bbox) if full_alpha_bbox else None
             visible = alpha.point(lambda a: 255 if a >= ALPHA_THRESHOLD else 0)
             bbox = visible.getbbox()
             result["visible_alpha_threshold"] = ALPHA_THRESHOLD
@@ -96,7 +101,12 @@ def inspect(source: Path, expected_sha256: str | None = None) -> dict[str, Any]:
                 left, top, right, bottom = bbox
                 margins = [left, top, im.width - right, im.height - bottom]
                 result["source_margins_ltrb"] = margins
-                if min(margins) == 0:
+                if full_alpha_bbox is not None and (
+                    full_alpha_bbox[0] == 0
+                    or full_alpha_bbox[1] == 0
+                    or full_alpha_bbox[2] == im.width
+                    or full_alpha_bbox[3] == im.height
+                ):
                     errors.append("visible pixels touch source boundary; figure may be cropped")
     except (OSError, ValueError, UnidentifiedImageError, Image.DecompressionBombError) as exc:
         errors.append(f"source PNG could not be safely decoded: {type(exc).__name__}")

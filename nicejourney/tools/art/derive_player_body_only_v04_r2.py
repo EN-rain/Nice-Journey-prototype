@@ -200,12 +200,22 @@ def main():
     parser.add_argument("--check", action="store_true", help="recompute and byte-compare without writing")
     args = parser.parse_args()
     outputs, records = assemble()
-    for name, data in outputs.items():
-        path = MANIFEST if name == MANIFEST.name else OUTPUT / name
+    targets = [(MANIFEST if name == MANIFEST.name else OUTPUT / name, data)
+               for name, data in outputs.items()]
+    # Validate every existing review target before creating any output: a
+    # changed algorithm must never silently replace preserved candidate PNGs
+    # or leave a partially updated set when a later path conflicts.
+    if not args.check:
+        for path, data in targets:
+            if path.exists() and path.read_bytes() != data:
+                raise FileExistsError(f"refusing to overwrite existing V04 R2 candidate: {path}")
+    for path, data in targets:
         if args.check:
             if not path.is_file() or path.read_bytes() != data:
                 raise ValueError(f"missing or non-reproducible: {path}")
             status = "BYTE_IDENTICAL"
+        elif path.exists():
+            status = "EXISTING_IDENTICAL"
         else:
             path.write_bytes(data)
             status = "WROTE"
