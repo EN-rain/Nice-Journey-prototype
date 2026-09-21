@@ -230,7 +230,10 @@ func request_escort_wait(wait_requested: bool) -> Dictionary:
         return _rejected(&"region3_escort_not_active")
     if _player.global_position.distance_to(_escort_actor.global_position) > _descriptor["escort_follow_distance_px"]:
         return _rejected(&"region3_escort_too_distant")
-    return _record_event(QuestFamilyObjectiveService.EVENT_WAIT_CHANGED, {"wait_requested": wait_requested})
+    var result := _record_event(QuestFamilyObjectiveService.EVENT_WAIT_CHANGED, {"wait_requested": wait_requested})
+    if wait_requested and bool(result.get("accepted", false)):
+        _sync_escort_visual(_escort_actor.global_position, true)
+    return result
 
 func request_leave(confirmed: bool) -> Dictionary:
     if _active_quest_id == &"":
@@ -347,10 +350,13 @@ func _start_actors() -> bool:
                 _escort_actor.current_hp = int(persisted_runtime["escort_hp"])
                 _escort_actor.queue_redraw()
             _escort_driver = QuestEscortWaypointDriver.new()
-            return _escort_driver.configure(
+            var driver_errors := _escort_driver.configure(
                 _escort_actor, route, float(_descriptor["escort_speed_px_per_second"]),
                 float(_descriptor["escort_arrival_tolerance_px"]), next_index
-            ).is_empty()
+            )
+            if driver_errors.is_empty():
+                _sync_escort_visual(_escort_actor.global_position, true)
+            return driver_errors.is_empty()
         Region3SideQuestAttemptService.QUEST_DEFENSE:
             _defense_actor = Region3DefenseObjectiveActor.new()
             _defense_actor.name = "RegionalDefenseObjective"
@@ -535,6 +541,8 @@ func _escort_runtime_snapshot() -> Dictionary:
     }
 
 func _on_escort_defeated() -> void:
+    if _escort_actor != null:
+        _sync_escort_visual(_escort_actor.global_position, true)
     var result := _record_event(QuestFamilyObjectiveService.EVENT_FAILED, {"reason_id": &"escort_actor_defeated"})
     if bool(result.get("accepted", false)):
         _clear_live_session()
@@ -619,6 +627,7 @@ func _advance_escort(delta: float) -> void:
     var waiting := bool(objective.get("wait_requested", false)) or is_far
     if _encounter == null and _escort_driver.next_route_index() == 0:
         waiting = true
+    var position_before := _escort_actor.global_position
     var update := _escort_driver.physics_step(delta, waiting)
     for node_id: StringName in update.get("reached_route_node_ids", []) as Array[StringName]:
         var event := _record_event(QuestFamilyObjectiveService.EVENT_ROUTE_NODE_REACHED, {"route_node_id": node_id})
@@ -626,8 +635,10 @@ func _advance_escort(delta: float) -> void:
             _escort_actor.velocity = Vector2.ZERO
             _restore_escort_checkpoint()
             return
+    var goal_completed := false
     if bool(update.get("complete", false)):
         if waiting:
+            _sync_escort_visual(position_before, true)
             return
         var goal := _descriptor["escort_goal_world_position"] as Vector2
         var distance := _escort_actor.global_position.distance_to(goal)
@@ -635,7 +646,24 @@ func _advance_escort(delta: float) -> void:
             _escort_actor.velocity = _escort_actor.global_position.direction_to(goal) * minf(float(_descriptor["escort_speed_px_per_second"]), distance / delta)
             _escort_actor.move_and_slide()
         if _escort_actor.global_position.distance_to(goal) <= float(_descriptor["escort_arrival_tolerance_px"]):
-            _record_event(QuestFamilyObjectiveService.EVENT_GOAL_REACHED, {"goal_id": (_descriptor["objective_config"] as Dictionary)["goal_id"]})
+            var goal_result := _record_event(QuestFamilyObjectiveService.EVENT_GOAL_REACHED, {"goal_id": (_descriptor["objective_config"] as Dictionary)["goal_id"]})
+            goal_completed = bool(goal_result.get("accepted", false)) and bool(goal_result.get("objectives_complete", false))
+    _sync_escort_visual(position_before, goal_completed)
+
+func _sync_escort_visual(position_before: Vector2, force_wait: bool = false) -> void:
+    # Presentation follows the physical actor, including the final approach to
+    # the goal. It must not decide quest progress, separation, or route movement.
+    if _escort_actor == null:
+        return
+    var presenter := _escort_actor.get_node_or_null("NpcVisualPresenter") as NpcVisualPresenter
+    if presenter == null:
+        return
+    var displacement := _escort_actor.global_position - position_before
+    var moved := displacement.length_squared() > 0.0001
+    presenter.set_semantic_state(&"follow" if moved and not force_wait else &"wait")
+    if presenter.sprite != null and absf(displacement.x) > 0.01:
+        presenter.facing_right = displacement.x > 0.0
+        presenter.sprite.flip_h = not presenter.facing_right and presenter.profile != null and presenter.profile.mirror_left
 
 func _restore_escort_checkpoint() -> void:
     if _escort_actor == null or _escort_driver == null:
@@ -647,6 +675,7 @@ func _restore_escort_checkpoint() -> void:
     _escort_actor.global_position = (route[index - 1] as Dictionary)["world_position"] if index > 0 and index <= route.size() else _descriptor["escort_start_world_position"]
     _escort_driver.configure(_escort_actor, route, float(_descriptor["escort_speed_px_per_second"]),
         float(_descriptor["escort_arrival_tolerance_px"]), index)
+    _sync_escort_visual(_escort_actor.global_position, true)
 
 func _advance_objective_hazards() -> void:
     var target: Node2D = _defense_actor if _defense_actor != null else _escort_actor

@@ -1,0 +1,30 @@
+{
+  "comparison_image": "res://tools/art/tower_floor_review/tower_floor_rim_native_comparison_v01.png",
+  "comparison_sha256": "c39550de8fa967eee19a625bc34e9dbffe348606b1c4356c836e3d2112d92266",
+  "engine": "4.6.2-stable (official)",
+  "left_rect": [
+    12,
+    48,
+    288,
+    288
+  ],
+  "native_canvas": [
+    640,
+    360
+  ],
+  "production_textures_rebound": false,
+  "review_atlas": "res://tools/art/tower_floor_review/tower_common_tileset_floor_rim_review_v01.png",
+  "review_sha256": "d0fd893b4db7d1d6d6ed696f384a24dafc01aa1683045e20668e4b564a5fc89a",
+  "right_rect": [
+    340,
+    48,
+    288,
+    288
+  ],
+  "source": "res://assets/art/environments/tower/tiles/tower_common_tileset_v01.png",
+  "source_sha256": "b4851c0ba3a7b674c730fcdd756c8e21f256094b651a3958f6130dc525193129",
+  "status": "REVIEW_ONLY_NOT_ACCEPTED_NOT_BOUND",
+  "tile_size": 32,
+  "tile_variant_rule": "(floor_x + floor_y) % 4 in atlas row 0",
+  "tiles_per_side": 9
+}

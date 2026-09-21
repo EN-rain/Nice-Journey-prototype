@@ -1,0 +1,46 @@
+{
+  "schema": "nicejourney.tower_floor_rim_review/v01",
+  "status": "REVIEW_ONLY_NOT_ACCEPTED_NOT_BOUND",
+  "source": "res://assets/art/environments/tower/tiles/tower_common_tileset_v01.png",
+  "source_sha256": "b4851c0ba3a7b674c730fcdd756c8e21f256094b651a3958f6130dc525193129",
+  "output": "res://tools/art/tower_floor_review/tower_common_tileset_floor_rim_review_v01.png",
+  "atlas_size": [
+    128,
+    128
+  ],
+  "cell_size": [
+    32,
+    32
+  ],
+  "edited_cell_coords": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "source_transform": "copy inner dark rim pixels at x/y=1 or 30 from original nearest 28x28 core (clamp source coordinates to 2..29); preserve 1px outer edge",
+  "changed_pixels_per_cell": [
+    116,
+    116,
+    116,
+    116
+  ],
+  "core_pixels_identical": true,
+  "all_outer_edges_identical": true,
+  "cross_variant_edges_match": true,
+  "other_12_cells_identical": true,
+  "acceptance_limit": "Two unique procedural floors remain; no final generated material source or production binding is claimed.",
+  "output_sha256": "d0fd893b4db7d1d6d6ed696f384a24dafc01aa1683045e20668e4b564a5fc89a"
+}

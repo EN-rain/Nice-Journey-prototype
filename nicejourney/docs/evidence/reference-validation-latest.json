@@ -1,6 +1,6 @@
 ﻿{
     "evidence_kind":  "DR-08-safe reference validation and performance smoke",
-    "generated_utc":  "2026-09-20T23:58:56.5708059Z",
+    "generated_utc":  "2026-09-21T01:08:09.3516037Z",
     "final_hardware_acceptance":  false,
     "project_root":  "D:\\nicejourney\\nicejourney",
     "engine":  {
@@ -27,7 +27,7 @@
                                                      "DriveLetter":  "D",
                                                      "FileSystem":  "NTFS",
                                                      "Size":  256042332160,
-                                                     "SizeRemaining":  81641652224
+                                                     "SizeRemaining":  81640415232
                                                  },
                               "project_disk":  {
                                                    "FriendlyName":  "Fanxiang MD87",
@@ -43,7 +43,7 @@
                              "validation_script_sha256":  "a8c684e335b638ce699f6313c59173f37844181112b6d45a66231e5c7a0329c5",
                              "performance_smoke_script_sha256":  "33c36b6a7c75c1443fcda7fb01655d078845e4b0beeb0a2e39fb4f119a1edf29"
                          },
-    "test_manifest_count":  285,
+    "test_manifest_count":  286,
     "test_manifest":  [
                           {
                               "name":  "test_accessibility_settings.gd",
@@ -966,6 +966,11 @@
                               "sha256":  "56571e4eefd634e25720a5e2271abac91ffc7e039380f449b81761697a23f815"
                           },
                           {
+                              "name":  "test_region3_escort_presentation.gd",
+                              "resource_path":  "res://tests/test_region3_escort_presentation.gd",
+                              "sha256":  "bd24d8782f22aa69012219a2b101c01c7010383050d57c8e45077069d6beabcb"
+                          },
+                          {
                               "name":  "test_region3_functional_building_visuals.gd",
                               "resource_path":  "res://tests/test_region3_functional_building_visuals.gd",
                               "sha256":  "687b8f1185d92c3d63658306333e1759674617183cf03c41746e3a415fc47d70"
@@ -1068,7 +1073,7 @@
                           {
                               "name":  "test_region3_side_quest_escort_completion.gd",
                               "resource_path":  "res://tests/test_region3_side_quest_escort_completion.gd",
-                              "sha256":  "0da440525c88675b2bc8a7b63f7b0ecc398e482d521105a21dccb7d5825ad02c"
+                              "sha256":  "f19ec7ea4878ff9ac499874d149ca95ddf8a5304d908f7b60bc7a71c7ab67adf"
                           },
                           {
                               "name":  "test_region3_side_quest_failure_recovery.gd",
@@ -1476,2015 +1481,2022 @@
                                    "kind":  "editor_parse",
                                    "name":  "editor_parse",
                                    "exit_code":  0,
-                                   "duration_ms":  9984.938,
+                                   "duration_ms":  10231.832,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_accessibility_settings.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  4531.784,
+                                   "duration_ms":  5188.265,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_action_input_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  5464.694,
+                                   "duration_ms":  3958.275,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_action_production_skill_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1123.374,
+                                   "duration_ms":  1104.361,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_active_combat_registry.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  640.881,
+                                   "duration_ms":  498.105,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_active_skill_production_contract.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1151.028,
+                                   "duration_ms":  1251.503,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_active_skill_rank_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  4384.209,
+                                   "duration_ms":  5619.974,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_ai_observation_admission.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  394.47,
+                                   "duration_ms":  497.214,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_ai_observation_contract.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  398.154,
+                                   "duration_ms":  394.309,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_application_icon_project_binding.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  396.672,
+                                   "duration_ms":  487.025,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_asset_provenance_manifest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  490.872,
+                                   "duration_ms":  581.576,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_attack_participation_admission.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  492.965,
+                                   "duration_ms":  495.512,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_attack_pressure_ledger.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  508.255,
+                                   "duration_ms":  504.783,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_attack_reservation_ledger.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  490.603,
+                                   "duration_ms":  489.906,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_audio_foundation.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  491.943,
+                                   "duration_ms":  401.181,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_audio_lifecycle.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  394.953,
+                                   "duration_ms":  526.469,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_audio_music_routing_definition.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  393.43,
+                                   "duration_ms":  486.945,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_audio_music_state_controller.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  494.843,
+                                   "duration_ms":  399.106,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_audio_native_playback.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  573.74,
+                                   "duration_ms":  674.645,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_audio_settings.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3638.473,
+                                   "duration_ms":  4330.987,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_claim_ledger.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  391.954,
+                                   "duration_ms":  658.544,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_combat_attack_pressure_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  483.734,
+                                   "duration_ms":  743.277,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_combat_balance_telemetry.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  575.857,
+                                   "duration_ms":  593.342,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_combat_contact_ledger.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  397.851,
+                                   "duration_ms":  490.296,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_combat_effect_presentation_inspector_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  496.907,
+                                   "duration_ms":  686.199,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_combat_encounter_runtime.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  581.538,
+                                   "duration_ms":  693.37,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_combat_hud_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3635.32,
+                                   "duration_ms":  4991.237,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_combat_production_authority.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  860.773,
+                                   "duration_ms":  762.504,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_danger.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  507.751,
+                                   "duration_ms":  390.916,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_death_retry_rollback.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  765.548,
+                                   "duration_ms":  764.844,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_development_observability.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3459.697,
+                                   "duration_ms":  4078.415,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_direct_hit_resolver.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  484.576,
+                                   "duration_ms":  703.637,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_economy_content_catalog.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  767.671,
+                                   "duration_ms":  872.82,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_economy_json_round_trip.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  760.78,
+                                   "duration_ms":  771.872,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_economy_transactions.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  671.067,
+                                   "duration_ms":  778.406,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_economy_vendor_stock_catalog.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  484.147,
+                                   "duration_ms":  486.872,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_encounter_blackboard.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  487.183,
+                                   "duration_ms":  498.769,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_active_attack_delivery_executor.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  576.75,
+                                   "duration_ms":  581.478,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_archetype_playtest_stats.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1048.476,
+                                   "duration_ms":  1038.317,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_archetype_runtime.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  575.997,
+                                   "duration_ms":  575.272,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_first_slice.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  482.531,
+                                   "duration_ms":  482.528,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_full_archetype_catalog.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  481.478,
+                                   "duration_ms":  481.831,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_non_damage_shipped_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3359.631,
+                                   "duration_ms":  3469.126,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_playtest_live_delivery.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3449.264,
+                                   "duration_ms":  3467.556,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_playtest_region3_live_delivery.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3365.026,
+                                   "duration_ms":  3375.472,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_presentation_inspector_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  580.265,
+                                   "duration_ms":  571.235,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_prototype_decision_driver.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  665.286,
+                                   "duration_ms":  579.118,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_prototype_movement_driver.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  2064.656,
+                                   "duration_ms":  2242.811,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_root_lifecycle.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  392.538,
+                                   "duration_ms":  481.075,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_runtime_presentation_binding.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  764.576,
+                                   "duration_ms":  757.074,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_shipped_attacks_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  494.19,
+                                   "duration_ms":  480.631,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_shipped_playtest_attacks.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3267.451,
+                                   "duration_ms":  3465.199,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_signature_action_phase_driver.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  579.75,
+                                   "duration_ms":  574.602,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_slice_encounter_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  592.184,
+                                   "duration_ms":  484.304,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_enemy_tactical_selector.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  480.885,
+                                   "duration_ms":  477.372,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_equipment_slot_identity.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  391.527,
+                                   "duration_ms":  385.852,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_equipment_transactions.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  669.661,
+                                   "duration_ms":  666.224,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_equipment_upgrade_effect_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  2897.885,
+                                   "duration_ms":  2979.542,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_escort_animation_intake_gate.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  485.698,
+                                   "duration_ms":  476.233,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_floor10_boss_progression_bridge.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1132.366,
+                                   "duration_ms":  1128.218,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_floor10_primary_boss_objective.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  855.197,
+                                   "duration_ms":  754.867,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_full_ai_simulation_ledger.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  487.421,
+                                   "duration_ms":  403.929,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_active_skill_clock_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3733.155,
+                                   "duration_ms":  3857.897,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_aegis_ward_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3453.462,
+                                   "duration_ms":  4249.432,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_balance_capture_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3827.832,
+                                   "duration_ms":  4145.188,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_consumable_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3355.852,
+                                   "duration_ms":  3968.757,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_death_retry_restore.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3828.29,
+                                   "duration_ms":  4778.322,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_equipment_attack_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3924.014,
+                                   "duration_ms":  5212.322,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_equipment_combat_effects_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  4138.335,
+                                   "duration_ms":  4556.404,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_floor10_preboss_checkpoint.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3455.289,
+                                   "duration_ms":  5263.797,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_manual_save_flow.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  4660.212,
+                                   "duration_ms":  5542.093,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_modal_back_navigation.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3356.745,
+                                   "duration_ms":  3557.713,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_music_routing.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3454.387,
+                                   "duration_ms":  3756.415,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_overlapping_player_status_coherence.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3359.3,
+                                   "duration_ms":  4021.605,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_passive_live_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  4008.973,
+                                   "duration_ms":  5310.611,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_pending_reward_autosave.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3358.326,
+                                   "duration_ms":  5013.096,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_player_drop_runtime.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3547.123,
+                                   "duration_ms":  4759.818,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_presentation_inspector_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3265.879,
+                                   "duration_ms":  3749.676,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_primary_floor_progression_flow.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  4749.339,
+                                   "duration_ms":  5325.472,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_production_integration_readiness.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3201.694,
+                                   "duration_ms":  4531.676,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_prototype_encounter_autopreparation.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  4020.868,
+                                   "duration_ms":  5193.368,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_quest_xp_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3546.015,
+                                   "duration_ms":  4322.82,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_region3_economy_blacksmith_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3358.824,
+                                   "duration_ms":  4552.326,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_region3_merchant_inventory_flow.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3453.79,
+                                   "duration_ms":  4941.298,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_region3_recovery_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3463.934,
+                                   "duration_ms":  3932.515,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_region3_service_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3452.842,
+                                   "duration_ms":  3738.466,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_region3_startup.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3635.836,
+                                   "duration_ms":  3641.003,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_safe_resource_roundtrip.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3544.554,
+                                   "duration_ms":  3647.906,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_tenth_warden_production_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3449.83,
+                                   "duration_ms":  3727.794,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_tower_access_menu_flow.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3723.566,
+                                   "duration_ms":  3831.093,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_tower_encounter_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3447.402,
+                                   "duration_ms":  3459.343,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_tower_restore.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3547.154,
+                                   "duration_ms":  3644.393,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_tower_session_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3362.819,
+                                   "duration_ms":  3556.738,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_tower_travel_flow.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3734.242,
+                                   "duration_ms":  3829.662,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_gameplay_training_hall_skills_flow.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3454.056,
+                                   "duration_ms":  3553.018,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_input_bindings.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  392.481,
+                                   "duration_ms":  489.031,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_input_ownership.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3266.602,
+                                   "duration_ms":  3277.699,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_interaction_commit_admission.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  388.343,
+                                   "duration_ms":  395.124,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_inventory_destroy_transaction.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  764.037,
+                                   "duration_ms":  764.839,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_inventory_drop_menu_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3367.915,
+                                   "duration_ms":  3372.195,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_inventory_drop_transaction.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  763.273,
+                                   "duration_ms":  858.488,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_inventory_equip_quick_menu_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  855.06,
+                                   "duration_ms":  859.831,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_inventory_menu_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3450.96,
+                                   "duration_ms":  3455.904,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_inventory_state.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  671.578,
+                                   "duration_ms":  673.512,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_inventory_view_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  761.792,
+                                   "duration_ms":  762.424,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_item_category_catalog.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  481.758,
+                                   "duration_ms":  490.732,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_level_progression_policy.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  391.548,
+                                   "duration_ms":  494.451,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_level_progression_production_authority.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  397.381,
+                                   "duration_ms":  488.558,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_level_progression_production_reward.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  763.914,
+                                   "duration_ms":  764.18,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_level_progression_profile_commit.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  762.71,
+                                   "duration_ms":  860.889,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_level_progression_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  855.381,
+                                   "duration_ms":  853.622,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_level_progression_thresholds.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  393.833,
+                                   "duration_ms":  392.698,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_level_threshold_tuning.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  674.094,
+                                   "duration_ms":  680.524,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_level_xp_reward_definition.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  393.814,
+                                   "duration_ms":  393.006,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_loot_resolution.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  492.706,
+                                   "duration_ms":  486.49,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_m0.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  791.205,
+                                   "duration_ms":  672.916,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_m1.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  5329.851,
+                                   "duration_ms":  5031.076,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_m2_foundation.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  484.88,
+                                   "duration_ms":  493.657,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_main_profile_flow.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3553.509,
+                                   "duration_ms":  3643.059,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_manual_save_request_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  672.62,
+                                   "duration_ms":  763.348,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_map_layer_identity.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  404.444,
+                                   "duration_ms":  394.852,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_map_menu_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1410.329,
+                                   "duration_ms":  1508.296,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_map_region_canvas.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  483.805,
+                                   "duration_ms":  483.514,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_map_room_canvas.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  479.879,
+                                   "duration_ms":  491.671,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_map_view_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1139.254,
+                                   "duration_ms":  1226.62,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_merchant_blacksmith_menu_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  854.51,
+                                   "duration_ms":  957.8,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_normal_inventory_capacity_policy.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  392.028,
+                                   "duration_ms":  392.193,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_normal_item_ownership_validation.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  766.504,
+                                   "duration_ms":  772.93,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_normal_stack_quantity.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  401.07,
+                                   "duration_ms":  399.425,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_npc_identity_anchor_resources.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  398.798,
+                                   "duration_ms":  966.941,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_npc_live_consumer_bindings.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1319.651,
+                                   "duration_ms":  1723.448,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_npc_unplaced_role_proposals.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1038.154,
+                                   "duration_ms":  1228.373,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_operation_guard.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  390.725,
+                                   "duration_ms":  393.73,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_overlapping_encounter_full_ai_cap.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  484.092,
+                                   "duration_ms":  485.398,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_passive_skill_runtime_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  763.296,
+                                   "duration_ms":  872.047,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_pause_coordinator.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3265.512,
+                                   "duration_ms":  3362.076,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_pending_reward_claim_transaction.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  761.363,
+                                   "duration_ms":  862.574,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_active_skill_distinct_effects.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  4100.936,
+                                   "duration_ms":  4195.808,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_body_animation_assets.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  955.827,
+                                   "duration_ms":  955.046,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_burn_live_health_mirror.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3465.004,
+                                   "duration_ms":  3455.273,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_combatant_runtime_binding.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3556.84,
+                                   "duration_ms":  3740.617,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_defender_facts_provider.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  950.988,
+                                   "duration_ms":  1165.576,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_defense_outcome_effect_binding.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  948.109,
+                                   "duration_ms":  1246.24,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_drop_state_validation.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  768.667,
+                                   "duration_ms":  774.927,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_playtest_live_attack_delivery.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  6878.176,
+                                   "duration_ms":  6881.95,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_presentation_inspector_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  947.586,
+                                   "duration_ms":  953.425,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_projectile_sprite_presentation.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3541.77,
+                                   "duration_ms":  3644.1,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_projectile_static_renderer.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  393.381,
+                                   "duration_ms":  396.644,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_runtime_body_animation_binding.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3726.909,
+                                   "duration_ms":  3823.02,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_status_safe_persistence_boundary.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1041.39,
+                                   "duration_ms":  1045.481,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_player_status_slow_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3263.446,
+                                   "duration_ms":  3455.525,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_poise_resolver.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  391.668,
+                                   "duration_ms":  396.003,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_primary_floor_turn_in.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  862.55,
+                                   "duration_ms":  952.946,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_profile_creation.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  762.998,
+                                   "duration_ms":  765.161,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_profile_economy_ui_boundary.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  763.077,
+                                   "duration_ms":  766.689,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_profile_inventory_mutation_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  763.268,
+                                   "duration_ms":  859.396,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_profile_safe_state_coherence.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  761.191,
+                                   "duration_ms":  766.748,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_profile_storage_transaction.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  769.16,
+                                   "duration_ms":  795.539,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_profile_upgrade_ui_boundary.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  765.957,
+                                   "duration_ms":  1063.475,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_progression_finite_route_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  858.662,
+                                   "duration_ms":  1058.051,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_progression_shipped_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3359.15,
+                                   "duration_ms":  3668.917,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_project_resource_paths.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  573.707,
+                                   "duration_ms":  587.317,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_protected_item_operation_policy.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  482.423,
+                                   "duration_ms":  490.228,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_prototype_status_resolver.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  489.423,
+                                   "duration_ms":  493.311,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_prototype_tower_floor_catalog.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  390.843,
+                                   "duration_ms":  496.578,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_qa_maps_navigation_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1412.531,
+                                   "duration_ms":  1509.864,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_qa_perf_metrics.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  390.327,
+                                   "duration_ms":  504.465,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_qa_perf_worst_contract.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  487.803,
+                                   "duration_ms":  494.836,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_activation_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  971.576,
+                                   "duration_ms":  976.422,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_definition_contract.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  681.205,
+                                   "duration_ms":  685.467,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_escort_waypoint_driver.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  949.788,
+                                   "duration_ms":  952.792,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_family_objective_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  870.407,
+                                   "duration_ms":  858.323,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_family_objective_states.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  487.563,
+                                   "duration_ms":  498.32,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_leave_transactions.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  767.819,
+                                   "duration_ms":  912.682,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_log_menu_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3452.01,
+                                   "duration_ms":  4029.589,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_log_pending_selection_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  856.621,
+                                   "duration_ms":  961.013,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_log_view_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  760.928,
+                                   "duration_ms":  883.73,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_primary_production_authority.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  763.791,
+                                   "duration_ms":  859.78,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_sigil_packaging.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  761.395,
+                                   "duration_ms":  857.85,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_quest_tracker_view_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  856.786,
+                                   "duration_ms":  856.292,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_reference_validation_contract.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  392.451,
+                                   "duration_ms":  397.283,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_authored_town_layout.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1038.933,
+                                   "duration_ms":  1144.665,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_collision_traversal.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1131.835,
+                                   "duration_ms":  1141.538,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_decorative_building_visuals.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1040.261,
+                                   "duration_ms":  1044.11,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_environment_dressing.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1041.164,
+                                   "duration_ms":  1044.464,
+                                   "script_error_count":  0
+                               },
+                               {
+                                   "kind":  "test",
+                                   "name":  "test_region3_escort_presentation.gd",
+                                   "exit_code":  0,
+                                   "duration_ms":  1324.094,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_functional_building_visuals.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  484.701,
+                                   "duration_ms":  489.962,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_inventory_drop_transaction.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1133.904,
+                                   "duration_ms":  1341.621,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_live_side_quest_attempts.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1783.49,
+                                   "duration_ms":  1975.176,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_live_side_quest_host.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3182.665,
+                                   "duration_ms":  3172.91,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_map_snapshot_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1135.429,
+                                   "duration_ms":  1134.478,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_player_drop_runtime.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3640.767,
+                                   "duration_ms":  3728.268,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_playtest_economy_content.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  2894.32,
+                                   "duration_ms":  2991.14,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_recovery_service_definition.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  390.376,
+                                   "duration_ms":  486.998,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_recovery_transaction_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  759.512,
+                                   "duration_ms":  766.128,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_route_connectivity.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1044.674,
+                                   "duration_ms":  1044.556,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_route_follow_driver.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  2340.027,
+                                   "duration_ms":  2343.261,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_route_navigation_graph.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1037.873,
+                                   "duration_ms":  1046.367,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_saved_safe_map_location.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1224.688,
+                                   "duration_ms":  1139.324,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_saved_safe_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1336.133,
+                                   "duration_ms":  1329.324,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_service_content_boundaries.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1136.017,
+                                   "duration_ms":  1133.524,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_service_discovery_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  670.131,
+                                   "duration_ms":  763.131,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_services_economy_audio_content_status.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3178.16,
+                                   "duration_ms":  3365.016,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_services_economy_audio_production_content.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  480.886,
+                                   "duration_ms":  599.222,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_shipped_services_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3359.672,
+                                   "duration_ms":  3934.744,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_side_quest_death_retry.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3449.54,
+                                   "duration_ms":  3647.516,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_side_quest_escort_completion.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  16048.925,
+                                   "duration_ms":  16524.173,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_side_quest_failure_recovery.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  2898.727,
+                                   "duration_ms":  2908.769,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_side_quest_live_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  4186.247,
+                                   "duration_ms":  4394.528,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_side_quest_restore.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  4284.968,
+                                   "duration_ms":  4488.075,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_side_quest_staging.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1038.321,
+                                   "duration_ms":  1046.728,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_side_quest_wave_restore.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  4562.782,
+                                   "duration_ms":  4654.347,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_storage_service_interaction.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1040.598,
+                                   "duration_ms":  1049.282,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_subzone_discovery.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1046.824,
+                                   "duration_ms":  1143.186,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_town_structure_manifest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  402.384,
+                                   "duration_ms":  487.812,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_region3_world_layout_definition.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1038.146,
+                                   "duration_ms":  1045.292,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_remaining_enemy_presentation_inspector_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  670.781,
+                                   "duration_ms":  687.55,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_reward_overflow_claims.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  492.466,
+                                   "duration_ms":  489.687,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_save_compatibility.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  672.558,
+                                   "duration_ms":  768.231,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_save_request_coordinator.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  761.815,
+                                   "duration_ms":  770.58,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_side_quests_and_skills_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3368.65,
+                                   "duration_ms":  3568.646,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_skill_execution_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  765.849,
+                                   "duration_ms":  765.032,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_skill_hud_view_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  855.301,
+                                   "duration_ms":  860.641,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_skill_loadout_progression.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  853.927,
+                                   "duration_ms":  857.706,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_skill_tree_view_service.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  758.747,
+                                   "duration_ms":  769.026,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_skills_menu_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3455.088,
+                                   "duration_ms":  3656.638,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_starter_class_combat.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  855.049,
+                                   "duration_ms":  965.695,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_starter_profile_equipment_initialization.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  772.802,
+                                   "duration_ms":  885.632,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_status_effects_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  483.531,
+                                   "duration_ms":  623.986,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_status_effects_shipped_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3272,
+                                   "duration_ms":  3566.778,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_status_player_enemy_parity.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  506.492,
+                                   "duration_ms":  582.116,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_status_production_execution.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  486.528,
+                                   "duration_ms":  582.778,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_status_production_inspector_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  482.585,
+                                   "duration_ms":  494.041,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_status_runtime_ownership.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  486.91,
+                                   "duration_ms":  486.168,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_storage_json_round_trip.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  762.083,
+                                   "duration_ms":  762.699,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_storage_transactions.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  674.799,
+                                   "duration_ms":  676.627,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_summoner_reinforcement_live.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3360.332,
+                                   "duration_ms":  3741.668,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_summoner_reinforcement_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1598.747,
+                                   "duration_ms":  1813.58,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tenth_warden_arc_volley_projectiles.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3267.832,
+                                   "duration_ms":  3663.013,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tenth_warden_autonomous_lifecycle.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1133.132,
+                                   "duration_ms":  1138.757,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tenth_warden_combat_runtime_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  576.235,
+                                   "duration_ms":  581.166,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tenth_warden_contact_tick_admission.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  853.178,
+                                   "duration_ms":  856.026,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tenth_warden_encounter_state.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  393.777,
+                                   "duration_ms":  484.961,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tenth_warden_motion_targeting.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3357.675,
+                                   "duration_ms":  3458.96,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tenth_warden_presentation_inspector_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  583.711,
+                                   "duration_ms":  579.255,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tenth_warden_production_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  765.388,
+                                   "duration_ms":  770.654,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tenth_warden_runtime_presentation_binding.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  574.711,
+                                   "duration_ms":  583.226,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tenth_warden_sanctum_integration.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1133.806,
+                                   "duration_ms":  1136.398,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tenth_warden_shipped_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3357.89,
+                                   "duration_ms":  3556.785,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_three_class_combat_balance_baseline.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1038.944,
+                                   "duration_ms":  1138.704,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_three_class_floor1_live_combat_playtest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  13743.374,
+                                   "duration_ms":  13924.014,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_three_class_live_death_retry.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  5402.682,
+                                   "duration_ms":  5303.798,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_three_class_required_route_live_qa.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  65235.479,
+                                   "duration_ms":  66792.452,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_access_menu.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  762.868,
+                                   "duration_ms":  773.712,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_access_menu_ui.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  855.34,
+                                   "duration_ms":  967.456,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_checkpoint_arrival.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3272.435,
+                                   "duration_ms":  3834.149,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_destination_preparation.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  852.882,
+                                   "duration_ms":  954.019,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_encounter_presentation_factory.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1229.8,
+                                   "duration_ms":  1226.917,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_encounter_progress_binding.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1043.289,
+                                   "duration_ms":  1141.316,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_encounter_runtime_factory.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  951.889,
+                                   "duration_ms":  952.073,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_encounter_session_host.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1684.345,
+                                   "duration_ms":  1699.953,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_escort_objective_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  856.032,
+                                   "duration_ms":  764.037,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_escort_runtime.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1503.548,
+                                   "duration_ms":  1790.463,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_floor_discovery.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1146.024,
+                                   "duration_ms":  1235.186,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_floor_generation_commit.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  774.861,
+                                   "duration_ms":  778.804,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_floor_runtime_composer.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1138.015,
+                                   "duration_ms":  1141.94,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_floor_session_host.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1226.89,
+                                   "duration_ms":  1228.343,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_generation_identity_factory.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  668.912,
+                                   "duration_ms":  762.251,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_manifest_save_round_trip.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  857.352,
+                                   "duration_ms":  857.112,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_minimap_hud.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3361.377,
+                                   "duration_ms":  3647.89,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_module_catalog.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  769.093,
+                                   "duration_ms":  770.974,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_prevalidated_fallbacks.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  762.727,
+                                   "duration_ms":  858.269,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_production_encounter_content_catalog.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1132.3,
+                                   "duration_ms":  1225.807,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_prototype_encounter_content_catalog.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  943.346,
+                                   "duration_ms":  1050.134,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_prototype_enemy_runtime_factory.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1040.518,
+                                   "duration_ms":  1040.739,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_room_visual_showcase.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  482.316,
+                                   "duration_ms":  488.688,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_room_visuals.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  391.25,
+                                   "duration_ms":  487.283,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_travel_commit.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  1222.462,
+                                   "duration_ms":  1328.084,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_travel_plan.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  947.339,
+                                   "duration_ms":  948.457,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_travel_preparation.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  855.768,
+                                   "duration_ms":  1249.882,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_tower_traversal_manifest.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  758.27,
+                                   "duration_ms":  859.658,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_ui_icon_catalog_inspector_authoring.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  3173.641,
+                                   "duration_ms":  3364.762,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_ui_icon_catalog_showcase.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  486.393,
+                                   "duration_ms":  487.477,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_upgrade_recipe_catalog.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  484.932,
+                                   "duration_ms":  583.942,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_upgrade_transactions.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  496.402,
+                                   "duration_ms":  515.306,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_visual_asset_inventory.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  493.968,
+                                   "duration_ms":  966.558,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "test",
                                    "name":  "test_world_region_catalog.gd",
                                    "exit_code":  0,
-                                   "duration_ms":  396.882,
+                                   "duration_ms":  497.58,
                                    "script_error_count":  0
                                },
                                {
                                    "kind":  "main_scene_headless_smoke",
                                    "name":  "main_scene",
                                    "exit_code":  0,
-                                   "duration_ms":  3174.991,
+                                   "duration_ms":  3273.748,
                                    "script_error_count":  0
                                }
                            ],
     "renderer_active_smoke":  {
                                   "exit_code":  0,
-                                  "duration_ms":  15654.027,
+                                  "duration_ms":  15812.967,
                                   "script_error_count":  0,
                                   "renderer_log":  "OpenGL API 3.3.0 - Build 32.0.101.7088 - Compatibility - Using Device: Intel - Intel(R) Iris(R) Xe Graphics",
                                   "metrics":  {
@@ -3496,17 +3508,17 @@
                                                                     },
                                                   "camera_zoom":  "(1.0, 1.0)",
                                                   "camera_zoom_step":  0,
-                                                  "frame_ms_max":  17.699,
+                                                  "frame_ms_max":  18.016,
                                                   "frame_ms_mean":  16.667,
-                                                  "frame_ms_p50":  16.661,
-                                                  "frame_ms_p95":  17.071,
-                                                  "frame_ms_p99":  17.228,
-                                                  "frames_over_16_667_ms":  296,
+                                                  "frame_ms_p50":  16.679,
+                                                  "frame_ms_p95":  17.17,
+                                                  "frame_ms_p99":  17.393,
+                                                  "frames_over_16_667_ms":  306,
                                                   "frames_over_40_ms":  0,
                                                   "max_draw_calls_in_frame":  15,
-                                                  "max_physics_process_ms":  0.674,
-                                                  "max_process_ms":  17.242,
-                                                  "max_static_memory_bytes":  70986192,
+                                                  "max_physics_process_ms":  0.645,
+                                                  "max_process_ms":  17.488,
+                                                  "max_static_memory_bytes":  71003843,
                                                   "physics_frames_elapsed":  600,
                                                   "physics_ticks_per_second":  60,
                                                   "sample_frames":  600,
