@@ -12,9 +12,14 @@ import unittest
 
 from PIL import Image
 
-from intake_escort_animation_sources import (
-    EXPECTED_LOCAL_BOXES, NORMALIZATION, IntakeBlocked, _derive, _normalized_body,
-)
+if __package__:
+    from .intake_escort_animation_sources import (
+        EXPECTED_LOCAL_BOXES, NORMALIZATION, IntakeBlocked, _derive, _normalized_body,
+    )
+else:
+    from intake_escort_animation_sources import (
+        EXPECTED_LOCAL_BOXES, NORMALIZATION, IntakeBlocked, _derive, _normalized_body,
+    )
 
 HERE = Path(__file__).resolve().parent
 INTAKE = HERE / "intake_escort_animation_sources.py"

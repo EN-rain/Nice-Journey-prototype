@@ -59,8 +59,19 @@ recomposed = body.copy()
 recomposed[fx[:, :, 3] > 0] = fx[fx[:, :, 3] > 0]
 assert np.array_equal(recomposed, r2), "R3 review is not exact separated V03 R2 source"
 original_rgba_differences = int(np.count_nonzero(np.any(live != r2, axis=2)))
-assert original_rgba_differences > 0, "No novel live-versus-R3 review needed"
-print(f"PASS original LIVE V03 vs R3 composition: {original_rgba_differences} different RGBA source pixels")
+per_frame_source_differences = [
+    int(np.count_nonzero(np.any(live[:, i * 32:(i + 1) * 32] != r2[:, i * 32:(i + 1) * 32], axis=2)))
+    for i in range(COUNT)
+]
+assert original_rgba_differences == sum(per_frame_source_differences)
+assert all(count > 0 for count in per_frame_source_differences), (
+    "Live V03 and source-backed R3 composition differ in every interact frame",
+    per_frame_source_differences,
+)
+print(
+    f"PASS live V03 vs source-backed R2/R3 composition: {original_rgba_differences} "
+    f"different RGBA pixels across all five frames {per_frame_source_differences}"
+)
 
 native_differing_pixels = 0
 verified_opaque_source_pixels = 0
@@ -127,9 +138,24 @@ for page in record["pages"]:
 for zoom in (1, 2):
     none = page_pictures[("none", zoom)]
     melee = page_pictures[("melee", zoom)]
-    assert int(np.count_nonzero(np.any(none != melee, axis=2))) > 0, (
-        zoom, "actual configured melee equipment must differ from no-equipment capture"
-    )
+    # A whole-page difference is too weak: one equipped character would make
+    # the page pass even if the other 19 actor samples lacked actual equipment.
+    page = next(p for p in record["pages"] if p["class"] == "none" and p["zoom"] == zoom)
+    equipped_actor_samples = 0
+    for sample in page["samples"]:
+        x = round(sample["player_xy"][0]) - 16 * zoom
+        y = round(sample["player_xy"][1]) - 29 * zoom
+        side = 32 * zoom
+        without = none[y:y + side, x:x + side]
+        with_melee = melee[y:y + side, x:x + side]
+        assert without.shape == with_melee.shape == (side, side, 4)
+        assert np.any(without != with_melee), (
+            zoom, sample["revision"], sample["facing"], sample["frame"],
+            "individual Player actor has no visible melee equipment difference",
+        )
+        equipped_actor_samples += 1
+    assert equipped_actor_samples == 4 * COUNT
+    print(f"PASS melee overlay individually visible for all {equipped_actor_samples} actors at {zoom}x")
 print(
     f"PASS 4 native GL pages, {native_differing_pixels} live-versus-R3 screenshot pixel differences, "
     f"{verified_opaque_source_pixels} independent near-opaque source-pixel matches; "
