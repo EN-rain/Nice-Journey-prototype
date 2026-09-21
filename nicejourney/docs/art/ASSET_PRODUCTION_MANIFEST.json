@@ -18284,7 +18284,7 @@
         "Run focused resource/presentation/provenance validation; broad Godot gate after meaningful integration"
       ],
       "issues": [
-        "Motion source, identity-consistent pose review and live animated renderer evidence are still missing; do not generate duplicates from the accepted static anchor"
+        "Original generated 4-idle/6-walk PNGs remain in the ChatGPT handoff bundle, not the Windows repository; the exact ten-cell derivative has a native review only. Original-source preservation, artistic motion/identity approval and live Tower/Region3 animated acceptance remain open"
       ],
       "verified_evidence": {},
       "required_content": null,
@@ -18293,6 +18293,14 @@
         "accepted_static_source_sha256": "2cfa01c99e1716c168a69aff61cda8593c9ebac7e06e4ba39aa23d764aafd84e",
         "accepted_static_source_preserved": true,
         "generation_source_for_motion_received": false,
+        "candidate_original_idle_sha256": "c5277c8808795b1e04976abceafd5f2d13d7060d74d824dbc86ed8a3870b2535",
+        "candidate_original_walk_sha256": "fdac1a8dc4987fea6ff039f238151a6ce9230ef526df9e96b696715b3df03c70",
+        "candidate_original_source_dimensions": [2172, 724],
+        "candidate_source_bundle_sha256": "83e47ae896201c05f417808278e0db5349998ae9e249846b1eeda9ed6e06e9bf",
+        "candidate_derivative_review": "res://assets/art/generated_sources/imagegen/npc/review/escort_idle_walk_320x32_review_20260921.png",
+        "candidate_derivative_review_sha256": "184ef03d9b91f1f1d5b31361a02d22da6e4c5162a0d66c528a9326113c923054",
+        "candidate_native_review_evidence": "res://tools/art/escort_animation_review/engine/escort_animation_candidate_native_evidence.json",
+        "candidate_native_review_scope": "REVIEW ONLY: actual NpcVisualPresenter; 4 native GL 640x360 pages, 40 right/left frame samples, 21740 alpha>=245 pixels within RGB delta 3/8; full-resolution sources not transferred to Windows",
         "proposed_derivative_layout": "320x32 RGBA: exact 32px cells idle[0..3], walk[4..9]; left mirrored from right-authored source",
         "proposed_frame_counts_from": "res://docs/art/NPC_VISUAL_DESIGN_BIBLE.md:43-54",
         "animation_intake_gate": "res://src/world/npc/presentation/npc_visual_profile.gd",

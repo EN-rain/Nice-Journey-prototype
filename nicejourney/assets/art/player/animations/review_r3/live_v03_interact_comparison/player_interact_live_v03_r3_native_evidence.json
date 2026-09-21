@@ -1,0 +1,1749 @@
+{
+  "acceptance": "REVIEW_ONLY_NOT_PRODUCTION_OR_ART_ACCEPTED",
+  "background_rgb": [
+    61,
+    61,
+    61
+  ],
+  "dimensions": [
+    640,
+    360
+  ],
+  "display_server": "Windows",
+  "engine_version": "4.6.2-stable (official)",
+  "frame_count": 5,
+  "page_count": 4,
+  "pages": [
+    {
+      "class": "none",
+      "frames": 5,
+      "image": "res://assets/art/player/animations/review_r3/live_v03_interact_comparison/interact_none_1x.png",
+      "image_sha256": "d8b51cc65cf0ab0e346a8d6fca64687622d6646d84107fe2135e3428e519db85",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 1
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 1
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 1
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 1
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 1
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 1
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 1
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 1
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 1
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 1
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 1
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 1
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 1
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 1
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 1
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 1
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 1
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 1
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 1
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 1
+        }
+      ],
+      "state": "interact",
+      "zoom": 1
+    },
+    {
+      "class": "none",
+      "frames": 5,
+      "image": "res://assets/art/player/animations/review_r3/live_v03_interact_comparison/interact_none_2x.png",
+      "image_sha256": "6cb95dad4821194c22a516e941356a0921eda19f4aeb95da5833fce77babe07d",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 2
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 2
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 2
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 2
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 2
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 2
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 2
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 2
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 2
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 2
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 2
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 2
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 2
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 2
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 2
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 2
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 2
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 2
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 2
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 2
+        }
+      ],
+      "state": "interact",
+      "zoom": 2
+    },
+    {
+      "class": "melee",
+      "frames": 5,
+      "image": "res://assets/art/player/animations/review_r3/live_v03_interact_comparison/interact_melee_1x.png",
+      "image_sha256": "e32f4dc58f8f58026d8bec2a94651d4c3caf496bba84e499dd41c968012806ff",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 1
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 1
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 1
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 1
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 1
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 1
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 1
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 1
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 1
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 1
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 1
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 1
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 1
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 1
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 1
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 1
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 1
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 1
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 1
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 1
+        }
+      ],
+      "state": "interact",
+      "zoom": 1
+    },
+    {
+      "class": "melee",
+      "frames": 5,
+      "image": "res://assets/art/player/animations/review_r3/live_v03_interact_comparison/interact_melee_2x.png",
+      "image_sha256": "077fae7186474b763f666646c89ccf7f7889e80373e7072a367a70c9ac5c2d94",
+      "samples": [
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 2
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 2
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 2
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 2
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            67.0
+          ],
+          "revision": "live_v03",
+          "row": 0,
+          "zoom": 2
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 2
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 2
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 2
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 2
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "right",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            139.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 1,
+          "zoom": 2
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 2
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 2
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 2
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 2
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+          "body_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "",
+          "effect_sha256": "",
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            211.0
+          ],
+          "revision": "live_v03",
+          "row": 2,
+          "zoom": 2
+        },
+        {
+          "body_frame": 0,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 0,
+          "player_xy": [
+            170.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 2
+        },
+        {
+          "body_frame": 1,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 1,
+          "player_xy": [
+            234.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 2
+        },
+        {
+          "body_frame": 2,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 2,
+          "player_xy": [
+            298.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 2
+        },
+        {
+          "body_frame": 3,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 3,
+          "player_xy": [
+            362.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 2
+        },
+        {
+          "body_frame": 4,
+          "body_hframes": 5,
+          "body_path": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+          "body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+          "body_visual_scale": [
+            -1.0,
+            1.0
+          ],
+          "effect_path": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+          "effect_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690",
+          "facing": "left",
+          "frame": 4,
+          "player_xy": [
+            426.0,
+            283.0
+          ],
+          "revision": "r3_body_and_source_sparks",
+          "row": 3,
+          "zoom": 2
+        }
+      ],
+      "state": "interact",
+      "zoom": 2
+    }
+  ],
+  "production_library": "res://src/player/presentation/player_body_animation_library.tres",
+  "production_library_sha256": "111dfee0699d91baa5730986da4a8a1ddefabec4fe347ef0df047ba5f53c4abf",
+  "rendering_method": "gl_compatibility",
+  "scene": "res://src/player/player.tscn",
+  "schema": "player-interact-live-v03-versus-r3-native-review/v1",
+  "source_live": "res://assets/art/player/animations/player_body_interact_sheet_v03.png",
+  "source_live_sha256": "6df0a03f1b64154ca3ec3e36093167fa0778335cf6aeb83cf4ea88b444f05443",
+  "source_r3_body": "res://assets/art/player/animations/review_r3/player_interact_body_v03_r3_detached_candidate.png",
+  "source_r3_body_sha256": "30ed5bb9f47b4c741cc97987cd2f64a9025bb80944814097114a261fba607802",
+  "source_r3_vfx": "res://assets/art/player/animations/review_r3/player_interact_vfx_v03_r3_detached_candidate.png",
+  "source_r3_vfx_sha256": "23d3f59f81392e67e21c14a76794e4451bc136dba5d90365612b189d50548690"
+}

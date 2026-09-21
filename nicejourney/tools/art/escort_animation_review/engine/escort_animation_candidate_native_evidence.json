@@ -1,0 +1,494 @@
+{
+  "derivative": "res://assets/art/generated_sources/imagegen/npc/review/escort_idle_walk_320x32_review_20260921.png",
+  "derivative_sha256": "184ef03d9b91f1f1d5b31361a02d22da6e4c5162a0d66c528a9326113c923054",
+  "display_server": "Windows",
+  "engine": "4.6.2-stable (official)",
+  "layout": "idle 0..3, walk 4..9; each cell 32x32; anchor (16,29); right-authored left-mirrored",
+  "live_profile": "res://src/world/npc/presentation/profiles/temporary_escort.tres",
+  "live_profile_sha256": "daf972022b1356f7ef06268138c14adb3b48d95374dd478a3566fbe5becea766",
+  "original_generated_sources": "NOT_VERIFIED_HERE_REQUIRES_SEPARATE_TRANSFER_AND_PROVENANCE",
+  "pages": [
+    {
+      "image": "res://tools/art/escort_animation_review/engine/escort_idle_1x_native_review.png",
+      "image_sha256": "0bbd691ad83520634b7935a0666541f725bbacd90962f3b5ffdc9f98a6d95ccc",
+      "samples": [
+        {
+          "anchor_xy": [
+            132.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 0,
+          "state": "idle",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            252.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 1,
+          "state": "idle",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            372.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 2,
+          "state": "idle",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            492.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 3,
+          "state": "idle",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            132.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 0,
+          "state": "idle",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            252.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 1,
+          "state": "idle",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            372.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 2,
+          "state": "idle",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            492.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 3,
+          "state": "idle",
+          "zoom": 1
+        }
+      ],
+      "state": "idle",
+      "zoom": 1
+    },
+    {
+      "image": "res://tools/art/escort_animation_review/engine/escort_idle_2x_native_review.png",
+      "image_sha256": "2387b95532a7b99a53b8866e0d7597b782c8932d74484e6ff2e264a8a107be7a",
+      "samples": [
+        {
+          "anchor_xy": [
+            132.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 0,
+          "state": "idle",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            252.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 1,
+          "state": "idle",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            372.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 2,
+          "state": "idle",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            492.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 3,
+          "state": "idle",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            132.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 0,
+          "state": "idle",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            252.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 1,
+          "state": "idle",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            372.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 2,
+          "state": "idle",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            492.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 3,
+          "state": "idle",
+          "zoom": 2
+        }
+      ],
+      "state": "idle",
+      "zoom": 2
+    },
+    {
+      "image": "res://tools/art/escort_animation_review/engine/escort_walk_1x_native_review.png",
+      "image_sha256": "f352c78f78997373e05730ff6969e78f9363d04a933c61af65c8672ab2273695",
+      "samples": [
+        {
+          "anchor_xy": [
+            88.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 4,
+          "state": "walk",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            188.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 5,
+          "state": "walk",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            288.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 6,
+          "state": "walk",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            388.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 7,
+          "state": "walk",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            488.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 8,
+          "state": "walk",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            588.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 9,
+          "state": "walk",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            88.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 4,
+          "state": "walk",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            188.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 5,
+          "state": "walk",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            288.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 6,
+          "state": "walk",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            388.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 7,
+          "state": "walk",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            488.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 8,
+          "state": "walk",
+          "zoom": 1
+        },
+        {
+          "anchor_xy": [
+            588.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 9,
+          "state": "walk",
+          "zoom": 1
+        }
+      ],
+      "state": "walk",
+      "zoom": 1
+    },
+    {
+      "image": "res://tools/art/escort_animation_review/engine/escort_walk_2x_native_review.png",
+      "image_sha256": "5d4eb55fa16a287be49e402787231fd415268926ca65ee4a4ab2607c5a04423b",
+      "samples": [
+        {
+          "anchor_xy": [
+            88.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 4,
+          "state": "walk",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            188.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 5,
+          "state": "walk",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            288.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 6,
+          "state": "walk",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            388.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 7,
+          "state": "walk",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            488.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 8,
+          "state": "walk",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            588.0,
+            128.0
+          ],
+          "direction": "right",
+          "flip_h": false,
+          "frame": 9,
+          "state": "walk",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            88.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 4,
+          "state": "walk",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            188.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 5,
+          "state": "walk",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            288.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 6,
+          "state": "walk",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            388.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 7,
+          "state": "walk",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            488.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 8,
+          "state": "walk",
+          "zoom": 2
+        },
+        {
+          "anchor_xy": [
+            588.0,
+            280.0
+          ],
+          "direction": "left",
+          "flip_h": true,
+          "frame": 9,
+          "state": "walk",
+          "zoom": 2
+        }
+      ],
+      "state": "walk",
+      "zoom": 2
+    }
+  ],
+  "production_profile_modified": false,
+  "renderer": "gl_compatibility",
+  "review_seconds_per_frame_not_approved_cadence": 0.125,
+  "static_identity": "res://assets/art/npc/escort_anchor_v01.png",
+  "static_sha256": "2cfa01c99e1716c168a69aff61cda8593c9ebac7e06e4ba39aa23d764aafd84e",
+  "status": "REVIEW_ONLY_UNACCEPTED_NOT_LIVE",
+  "viewport": [
+    640,
+    360
+  ]
+}

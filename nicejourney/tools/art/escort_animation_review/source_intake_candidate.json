@@ -1,0 +1,33 @@
+{
+  "schema": "escort-source-intake-candidate/v1",
+  "status": "PENDING_ORIGINAL_ZIP_PINNED_RECIPE_NOT_SOURCE_VERIFIED_NOT_LIVE",
+  "required_external_zip_name": "escort_animation_intake_candidate_20260921.zip",
+  "expected_zip_size_bytes": 1348574,
+  "expected_zip_sha256": "83e47ae896201c05f417808278e0db5349998ae9e249846b1eeda9ed6e06e9bf",
+  "expected_originals": {
+    "idle": {
+      "size": [2172, 724],
+      "mode": "RGBA",
+      "sha256": "c5277c8808795b1e04976abceafd5f2d13d7060d74d824dbc86ed8a3870b2535",
+      "immutable_destination": "res://assets/art/generated_sources/imagegen/npc/escort_animation_v01/originals/escort_idle_original.png"
+    },
+    "walk": {
+      "size": [2172, 724],
+      "mode": "RGBA",
+      "sha256": "fdac1a8dc4987fea6ff039f238151a6ce9230ef526df9e96b696715b3df03c70",
+      "immutable_destination": "res://assets/art/generated_sources/imagegen/npc/escort_animation_v01/originals/escort_walk_original.png"
+    }
+  },
+  "static_escort_anchor_sha256": "2cfa01c99e1716c168a69aff61cda8593c9ebac7e06e4ba39aa23d764aafd84e",
+  "review_derivative": "res://assets/art/generated_sources/imagegen/npc/review/escort_idle_walk_320x32_review_20260921.png",
+  "review_derivative_sha256": "184ef03d9b91f1f1d5b31361a02d22da6e4c5162a0d66c528a9326113c923054",
+  "required_derivation": {
+    "schema": "escort-source-body-normalization-v1",
+    "recipe": "res://tools/art/escort_animation_review/source_crop_recipe_v01.json",
+    "frame_order": "idle 0-3, walk 4-9",
+    "method": "pinned alpha>=24 LOCAL XYXY boxes in per-state 543px idle or 362px walk cells; convert to global boxes; source-height idle595/walk478 to target26 using Python round and NEAREST; post-resize RGBA zero if alpha<24; alpha-composite x=14-round(width/2), y=31-height; compare all atlas RGBA pixels exactly",
+    "original_zip_not_yet_present": true
+  },
+  "on_verified_intake": "preserve exact original PNG bytes without overwrite and write separate source_intake_verified.json",
+  "production_profile_or_manifest_changes_allowed": false
+}

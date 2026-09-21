@@ -1,0 +1,37 @@
+{
+  "schema": "escort-source-body-normalization-v1",
+  "review_only": true,
+  "source": {
+    "idle_sha256": "c5277c8808795b1e04976abceafd5f2d13d7060d74d824dbc86ed8a3870b2535",
+    "walk_sha256": "fdac1a8dc4987fea6ff039f238151a6ce9230ef526df9e96b696715b3df03c70"
+  },
+  "atlas_sha256": "184ef03d9b91f1f1d5b31361a02d22da6e4c5162a0d66c528a9326113c923054",
+  "normalization": {
+    "source_heights": {"idle": 595, "walk": 478},
+    "source_strides": {"idle": 543, "walk": 362},
+    "target_body_height": 26,
+    "bbox_alpha_at_least": 24,
+    "resampler": "nearest",
+    "rounding": "python_round_ties_to_even",
+    "alpha_below": 24,
+    "transparent_pixel_rgba": [0, 0, 0, 0],
+    "horizontal_center_x": 14,
+    "ground_baseline_y": 31,
+    "cell": [32, 32],
+    "composite": "Pillow Image.alpha_composite",
+    "png_optimize": false
+  },
+  "frames": [
+    {"frame": 0, "source": "idle", "local_box": [197, 74, 499, 666]},
+    {"frame": 1, "source": "idle", "local_box": [137, 71, 449, 666]},
+    {"frame": 2, "source": "idle", "local_box": [80, 91, 387, 665]},
+    {"frame": 3, "source": "idle", "local_box": [15, 74, 319, 665]},
+    {"frame": 4, "source": "walk", "local_box": [81, 125, 331, 603]},
+    {"frame": 5, "source": "walk", "local_box": [73, 125, 313, 600]},
+    {"frame": 6, "source": "walk", "local_box": [65, 125, 294, 600]},
+    {"frame": 7, "source": "walk", "local_box": [44, 125, 287, 600]},
+    {"frame": 8, "source": "walk", "local_box": [40, 125, 288, 603]},
+    {"frame": 9, "source": "walk", "local_box": [45, 125, 279, 600]}
+  ],
+  "status": "REVIEW_ONLY_RECIPE_NOT_WINDOWS_ORIGINAL_SOURCE_VERIFIED"
+}
